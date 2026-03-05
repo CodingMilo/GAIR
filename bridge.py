@@ -8,6 +8,90 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from supporting_scripts import OpenRouterClient, BenchmarkRunner, BenchmarkLogger
 
+def get_hard_question_ids():
+    """Identifies 'hard' questions based on previous failures of the Trinity model in the original GAIR repo."""
+    # We look into the original GAIR/outputs directory
+    base_dir = Path(__file__).parent.parent
+    outputs_path = base_dir / "GAIR" / "outputs"
+    
+    if not outputs_path.exists():
+        print(f"[WARN] Original outputs path {outputs_path} not found.")
+        return []
+
+    trinity_runs = list(outputs_path.glob("arcee-ai_trinity-large_preview_free_*"))
+    
+    if not trinity_runs:
+        print("[WARN] No Trinity logs found. Using all questions.")
+        return []
+        
+    # Take the most recent run
+    latest_run = max(trinity_runs, key=lambda p: p.stat().st_mtime)
+    results_file = latest_run / "df_results.csv"
+    
+    if not results_file.exists():
+        print(f"[WARN] File {results_file} missing.")
+        return []
+        
+    df_trinity = pd.read_csv(results_file)
+    
+    # Exclude the summary row (last one)
+    if len(df_trinity) > 0:
+        df_trinity = df_trinity.iloc[:-1]
+        
+    # Identify indices where Trinity failed (mean accuracy == 0)
+    # The index in the CSV corresponds to (question_id - 1)
+    hard_indices = df_trinity[df_trinity["mean"] == 0.0].index.tolist()
+    hard_ids = [idx + 1 for idx in hard_indices]
+    
+    print(f"[INFO] {len(hard_ids)} hard questions identified via Trinity logs.")
+    return hard_ids
+
+import pandas as pd
+import json
+import time
+from pathlib import Path
+from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from supporting_scripts import OpenRouterClient, BenchmarkRunner, BenchmarkLogger
+
+def get_hard_question_ids():
+    """Identifies 'hard' questions based on previous failures of the Trinity model in the original GAIR repo."""
+    # We look into the original GAIR/outputs directory
+    base_dir = Path(__file__).parent.parent
+    outputs_path = base_dir / "GAIR" / "outputs"
+    
+    if not outputs_path.exists():
+        print(f"[WARN] Original outputs path {outputs_path} not found.")
+        return []
+
+    trinity_runs = list(outputs_path.glob("arcee-ai_trinity-large_preview_free_*"))
+    
+    if not trinity_runs:
+        print("[WARN] No Trinity logs found. Using all questions.")
+        return []
+        
+    # Take the most recent run
+    latest_run = max(trinity_runs, key=lambda p: p.stat().st_mtime)
+    results_file = latest_run / "df_results.csv"
+    
+    if not results_file.exists():
+        print(f"[WARN] File {results_file} missing.")
+        return []
+        
+    df_trinity = pd.read_csv(results_file)
+    
+    # Exclude the summary row (last one)
+    if len(df_trinity) > 0:
+        df_trinity = df_trinity.iloc[:-1]
+        
+    # Identify indices where Trinity failed (mean accuracy == 0)
+    # The index in the CSV corresponds to (question_id - 1)
+    hard_indices = df_trinity[df_trinity["mean"] == 0.0].index.tolist()
+    hard_ids = [idx + 1 for idx in hard_indices]
+    
+    print(f"[INFO] {len(hard_ids)} hard questions identified via Trinity logs.")
+    return hard_ids
+
 def run_experiment(
     mode="train", 
     n_runs=1, 
@@ -44,11 +128,12 @@ def run_experiment(
         'dataset_path': str(dataset_path),
         'solution_path': str(solution_path),
         'testing_mode': mode == "test",
-        'enable_parallel': True, # We force parallel for speed
+        'enable_parallel': True, 
         'max_workers': max_workers,
-        'rate_limit_seconds': 0.5, # Faster rate for parallel
+        'rate_limit_seconds': 0.5,
         'rag_tex_path': str(scripts_dir / "rag.tex") if use_rag else None,
-        'system_prompt': custom_system_prompt
+        'system_prompt': custom_system_prompt,
+        'embedding_model': "text-embedding-3-small" # Default embedding model
     }
 
     # Save config to folder
@@ -63,86 +148,105 @@ def run_experiment(
     # Load data
     df = pd.read_csv(dataset_path)
     if hard_only and mode == "train":
-        # Example hard questions filtering - keep only problematic ones if you have a list
-        # For now, let's just take a sample to demonstrate
-        df = df.sample(min(15, len(df))) 
+        hard_ids = get_hard_question_ids()
+        if hard_ids:
+            if "question_id" in df.columns:
+                df = df[df["question_id"].isin(hard_ids)].copy()
+            else:
+                df = df.iloc[[idx for idx in range(len(df)) if (idx + 1) in hard_ids]].copy()
+            print(f"[FILTER] Restricted to {len(df)} hard questions.")
 
-    # --- TRUE PARALLEL EXECUTION ---
-    all_runs_results = {}
+    # --- TRUE PARALLEL EXECUTION WITH MAIN THREAD LOOP ---
+    all_runs_results = {i+1: [] for i in range(n_runs)}
     completed_count = 0
     total_total = len(df) * n_runs
 
-    # Ground truth for live accuracy
     ground_truth = {}
     if mode == "train":
         ground_truth = dict(zip(df['question_id'], df['answer']))
 
-    def process_run(run_idx):
-        results = []
-        # Parallelize QUESTIONS within the run for maximum speed
-        with ThreadPoolExecutor(max_workers=max_workers) as q_executor:
-            q_futures = {
-                q_executor.submit(runner.run_single_question, row['question'], row['question_id']): row 
-                for _, row in df.iterrows()
-            }
+    # Prepare flat list of tasks (Run ID, Question String, Question ID Integer)
+    tasks = []
+    for run_i in range(1, n_runs + 1):
+        for index, row_series in df.iterrows():
+            question_text = str(row_series['question'])
+            question_id_val = int(row_series['question_id'])
+            tasks.append({
+                "run_id": run_i,
+                "question_text": question_text,
+                "question_id": question_id_val
+            })
+
+    # Helper function for processing a single task
+    def process_task_wrapper(task_info, runner_ref, mode_ref, ground_truth_ref):
+        r_id = task_info["run_id"]
+        q_text = task_info["question_text"]
+        q_id = task_info["question_id"]
+        
+        # execution
+        result = runner_ref.run_single_question(q_text, q_id)
+        
+        # correctness check
+        is_corr = "N/A"
+        if mode_ref == "train":
+            correct_ans = ground_truth_ref.get(q_id)
+            is_corr = str(result['extracted_answer']).strip().lower() == str(correct_ans).strip().lower()
             
-            for q_future in as_completed(q_futures):
-                res = q_future.result()
+        return r_id, result, is_corr
+
+    # Single executor for all tasks to maximize parallelism
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        futures = []
+        for task in tasks:
+            f = executor.submit(process_task_wrapper, task, runner, mode, ground_truth)
+            futures.append(f)
+        
+        for future in as_completed(futures):
+            try:
+                run_i, res, is_correct = future.result()
                 
-                # Live feedback
-                nonlocal completed_count
+                all_runs_results[run_i].append(res)
                 completed_count += 1
                 
                 if progress_callback:
-                    is_correct = "N/A"
-                    if mode == "train":
-                        correct_ans = ground_truth.get(res['question_id'])
-                        is_correct = str(res['extracted_answer']).strip().lower() == str(correct_ans).strip().lower()
-
                     progress_callback({
                         "type": "update",
                         "completed": completed_count,
                         "total": total_total,
                         "last_log": {
-                            "run": run_idx,
+                            "run": run_i,
                             "question_id": res["question_id"],
-                            "prediction": res["extracted_answer"],
+                            "prediction": res['extracted_answer'], 
                             "is_correct": is_correct,
                             "cost": res.get("usage", {}).get("cost", 0)
                         }
                     })
-                results.append(res)
-        
-        # Sort by question_id to maintain order for logging
-        results.sort(key=lambda x: x['question_id'])
-        logger.log_run_results(run_idx, results)
-        return run_idx, results
+            except Exception as e:
+                print(f"Error in worker: {e}")
 
-    # Run repetitions in parallel
-    with ThreadPoolExecutor(max_workers=min(n_runs, 5)) as run_executor:
-        run_futures = [run_executor.submit(process_run, r) for r in range(1, n_runs + 1)]
-        for f in as_completed(run_futures):
-            r_idx, r_res = f.result()
-            all_runs_results[r_idx] = r_res
-
-    # Final reports (mimic engine behavior for dashboard archives)
-    # We need a dataframe for the logger
+    # Sort and Log results per run
     final_df = pd.DataFrame()
     final_df['question_id'] = df['question_id'].values
-    for r_idx, r_res in all_runs_results.items():
-        # Sort to match order
+
+
+    for r_idx in range(1, n_runs + 1):
+        r_res = all_runs_results[r_idx]
         r_res.sort(key=lambda x: x['question_id'])
+        logger.log_run_results(r_idx, r_res)
         final_df[f"prediction_{r_idx}"] = [x['extracted_answer'] for x in r_res]
 
-    if mode == "train":
-        correct_df = pd.read_csv(solution_path)
-        usage_summary = client.get_usage_summary()
-        logger.generate_result_report(final_df, correct_df, usage_summary, n_runs)
-        logger.generate_wrong_answers_report(final_df, correct_df, df)
+    # Force report generation
+    correct_df = pd.read_csv(solution_path)
+    usage_summary = client.get_usage_summary()
+    logger.generate_result_report(final_df, correct_df, usage_summary, n_runs)
+    logger.generate_wrong_answers_report(final_df, correct_df, df)
     
     # Save solution.csv
     solution_cols = ['question_id'] + [f'prediction_{i}' for i in range(1, n_runs+1)]
     final_df[solution_cols].to_csv(results_path / "solution.csv", index=False)
 
     return final_df
+
+
 

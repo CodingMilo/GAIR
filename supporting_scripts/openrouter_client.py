@@ -365,3 +365,55 @@ class OpenRouterClient:
         self.total_cached_tokens = 0
         self.request_count = 0
         self.api_calls = []
+
+    def get_embedding(self, text: str, model: str = "text-embedding-3-small") -> List[float]:
+        """
+        Get vector embedding for text.
+        
+        Args:
+            text: Input text
+            model: Embedding model name (default: text-embedding-3-small)
+            
+        Returns:
+            List of floats representing the embedding vector
+        """
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "model": model,
+            "input": text
+        }
+        
+        # Simple retry logic matching original client
+        max_retries = 3
+        retry_delay = 2
+        
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(
+                    "https://openrouter.ai/api/v1/embeddings",
+                    headers=headers,
+                    json=payload,
+                    timeout=30
+                )
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    # Calculate cost for embeddings roughly if needed, 
+                    # but usually negligible or not returned in same format
+                    # For now just return the vector
+                    return data["data"][0]["embedding"]
+                
+                logger.warning(f"Embedding API Error {response.status_code}: {response.text}")
+                
+            except Exception as e:
+                logger.error(f"Embedding request failed: {e}")
+            
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay)
+                
+        # Return zero vector as fallback (1536 dim for text-embedding-3-small)
+        return [0.0] * 1536
+

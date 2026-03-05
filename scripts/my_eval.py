@@ -177,12 +177,15 @@ def extract_answer(response_content: str) -> dict:
         if isinstance(answer_field, list):
             answers = [str(a).strip().lower() for a in answer_field if str(a).strip()]
             if answers:
-                result["answer"] = ', '.join(answers)
+                result["answer"] = ', '.join(sorted(set(answers)))
         elif isinstance(answer_field, str):
-            result["answer"] = answer_field.strip()
+            # Also handle potential comma-separated strings
+            answers = [str(a).strip().lower() for a in answer_field.split(',') if str(a).strip()]
+            result["answer"] = ', '.join(sorted(set(answers)))
 
         result["reasoning"] = reasoning_field.strip()
         return result
+
     except (json.JSONDecodeError, AttributeError, KeyError):
         pass
 
@@ -225,7 +228,8 @@ def extract_answer(response_content: str) -> dict:
     # Fallback to regex extraction (backward compatibility)
     letters = re.findall(r'\[([a-zA-Z])\]', response_content)
     if letters:
-        result["answer"] = ', '.join([l.lower() for l in letters])
+        result["answer"] = ', '.join(sorted(set(l.lower() for l in letters)))
+
 
     if '[Reason]' in response_content:
         parts = response_content.split('[Reason]')
@@ -237,7 +241,8 @@ def extract_answer(response_content: str) -> dict:
         after_answer = response_content.split('[Answer]')[-1]
         standalone = re.findall(r'\b([a-zA-Z])\b', after_answer)
         if standalone:
-            result["answer"] = ', '.join([s.lower() for s in standalone[:5]])
+            result["answer"] = ', '.join(sorted(set(s.lower() for s in standalone[:5])))
+
 
     return result
 
