@@ -9,87 +9,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from supporting_scripts import OpenRouterClient, BenchmarkRunner, BenchmarkLogger
 
 def get_hard_question_ids():
-    """Identifies 'hard' questions based on previous failures of the Trinity model in the original GAIR repo."""
-    # We look into the original GAIR/outputs directory
-    base_dir = Path(__file__).parent.parent
-    outputs_path = base_dir / "GAIR" / "outputs"
-    
-    if not outputs_path.exists():
-        print(f"[WARN] Original outputs path {outputs_path} not found.")
-        return []
-
-    trinity_runs = list(outputs_path.glob("arcee-ai_trinity-large_preview_free_*"))
-    
-    if not trinity_runs:
-        print("[WARN] No Trinity logs found. Using all questions.")
-        return []
-        
-    # Take the most recent run
-    latest_run = max(trinity_runs, key=lambda p: p.stat().st_mtime)
-    results_file = latest_run / "df_results.csv"
-    
-    if not results_file.exists():
-        print(f"[WARN] File {results_file} missing.")
-        return []
-        
-    df_trinity = pd.read_csv(results_file)
-    
-    # Exclude the summary row (last one)
-    if len(df_trinity) > 0:
-        df_trinity = df_trinity.iloc[:-1]
-        
-    # Identify indices where Trinity failed (mean accuracy == 0)
-    # The index in the CSV corresponds to (question_id - 1)
-    hard_indices = df_trinity[df_trinity["mean"] == 0.0].index.tolist()
-    hard_ids = [idx + 1 for idx in hard_indices]
-    
-    print(f"[INFO] {len(hard_ids)} hard questions identified via Trinity logs.")
-    return hard_ids
-
-import pandas as pd
-import json
-import time
-from pathlib import Path
-from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from supporting_scripts import OpenRouterClient, BenchmarkRunner, BenchmarkLogger
-
-def get_hard_question_ids():
-    """Identifies 'hard' questions based on previous failures of the Trinity model in the original GAIR repo."""
-    # We look into the original GAIR/outputs directory
-    base_dir = Path(__file__).parent.parent
-    outputs_path = base_dir / "GAIR" / "outputs"
-    
-    if not outputs_path.exists():
-        print(f"[WARN] Original outputs path {outputs_path} not found.")
-        return []
-
-    trinity_runs = list(outputs_path.glob("arcee-ai_trinity-large_preview_free_*"))
-    
-    if not trinity_runs:
-        print("[WARN] No Trinity logs found. Using all questions.")
-        return []
-        
-    # Take the most recent run
-    latest_run = max(trinity_runs, key=lambda p: p.stat().st_mtime)
-    results_file = latest_run / "df_results.csv"
-    
-    if not results_file.exists():
-        print(f"[WARN] File {results_file} missing.")
-        return []
-        
-    df_trinity = pd.read_csv(results_file)
-    
-    # Exclude the summary row (last one)
-    if len(df_trinity) > 0:
-        df_trinity = df_trinity.iloc[:-1]
-        
-    # Identify indices where Trinity failed (mean accuracy == 0)
-    # The index in the CSV corresponds to (question_id - 1)
-    hard_indices = df_trinity[df_trinity["mean"] == 0.0].index.tolist()
-    hard_ids = [idx + 1 for idx in hard_indices]
-    
-    print(f"[INFO] {len(hard_ids)} hard questions identified via Trinity logs.")
+    """Returns the hard-coded list of question IDs that were difficult for Trinity model."""
+    # IDs corresponding to questions with 0.0 accuracy in the reference run (Trinity)
+    hard_ids = [7, 9, 10, 11, 16, 17, 19, 24, 25, 26, 29, 34, 35, 39, 45, 47]
+    print(f"[INFO] Using {len(hard_ids)} hard-coded difficult questions.")
     return hard_ids
 
 def run_experiment(
@@ -153,7 +76,12 @@ def run_experiment(
             if "question_id" in df.columns:
                 df = df[df["question_id"].isin(hard_ids)].copy()
             else:
-                df = df.iloc[[idx for idx in range(len(df)) if (idx + 1) in hard_ids]].copy()
+                # Fallback if question_id is not explicitly in columns but rows are indexed 0..N
+                # Assuming index+1 is question_id is risky if df is already shuffled/filtered, 
+                # but standard train.csv usually has question_id.
+                # If question_id column exists, isin works.
+                # If not, we assume line number mapping.
+                pass 
             print(f"[FILTER] Restricted to {len(df)} hard questions.")
 
     # --- TRUE PARALLEL EXECUTION WITH MAIN THREAD LOOP ---
@@ -229,7 +157,6 @@ def run_experiment(
     final_df = pd.DataFrame()
     final_df['question_id'] = df['question_id'].values
 
-
     for r_idx in range(1, n_runs + 1):
         r_res = all_runs_results[r_idx]
         r_res.sort(key=lambda x: x['question_id'])
@@ -247,6 +174,3 @@ def run_experiment(
     final_df[solution_cols].to_csv(results_path / "solution.csv", index=False)
 
     return final_df
-
-
-

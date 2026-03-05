@@ -275,14 +275,17 @@ class BenchmarkLogger:
             run_usage = self.calculate_run_usage(run_idx)
             run_usage_data.append(run_usage)
 
-            # Calculate Kaggle score for this run (if we have accuracy)
-            if run_accuracy is not None and run_usage['cost'] > 0:
+            # Calculate Kaggle score for this run.
+            # Use cost from usage_summary (authoritative, consistent with the Summary section).
+            # Per-question JSON costs can be overcounted when parallel workers share client state.
+            # Project actual run cost to 75 questions (the standard competition run size).
+            if run_accuracy is not None and total_count > 0:
                 calculate_kaggle_score = _get_calculate_kaggle_score()
-                cost_per_run = run_usage['cost']
-                run_kaggle_score = calculate_kaggle_score(run_accuracy, cost_per_run)
+                actual_cost = usage_summary.get('cumulative_cost', 0) / num_repetitions if usage_summary else run_usage['cost']
+                cost_for_kaggle = actual_cost * 75 / total_count
+                run_kaggle_score = calculate_kaggle_score(run_accuracy, cost_for_kaggle)
                 run_kaggle_scores.append(run_kaggle_score)
             else:
-                # If no accuracy or cost, append None or 0
                 run_kaggle_scores.append(0.0)
 
         # Calculate overall statistics
@@ -295,13 +298,15 @@ class BenchmarkLogger:
             else:
                 report_lines.append(f"- **Accuracy**: {mean_accuracy:.4f}\n")
 
-        # Calculate Mean Kaggle Score using mean accuracy and average cost per run
-        # Formula: kaggle = mean_accuracy - 0.15 * (total_cost / n_runs)
+        # Calculate Mean Kaggle Score using mean accuracy and projected cost for 75 questions.
+        # Formula: kaggle = mean_accuracy - 0.15 * (avg_cost_per_question * 75)
         if run_accuracies and usage_summary:
             mean_accuracy = np.mean(run_accuracies)
+            n_questions = len(predictions_df)
             avg_cost_per_run = usage_summary['cumulative_cost'] / num_repetitions
+            projected_cost_75 = (avg_cost_per_run / n_questions) * 75 if n_questions > 0 else avg_cost_per_run
             calculate_kaggle_score = _get_calculate_kaggle_score()
-            mean_kaggle = calculate_kaggle_score(mean_accuracy, avg_cost_per_run)
+            mean_kaggle = calculate_kaggle_score(mean_accuracy, projected_cost_75)
             report_lines.append(f"- **Mean Kaggle Score**: {mean_kaggle:.4f}\n")
 
         total_tokens = usage_summary.get('total_tokens', 0)
@@ -357,10 +362,10 @@ class BenchmarkLogger:
         report_lines.append("### Overall Metrics\n\n")
         if run_accuracies and mean_accuracy > 0:
             # Cost per 1 percentage point of accuracy
-            cost_per_acc_pct = total_cost / num_repetitions / mean_accuracy
+            cost_per_acc_pct = total_cost / num_repetitions / (mean_accuracy * 100)
             # Tokens per 1 percentage point of accuracy
             tokens_per_acc_pct = total_tokens / num_repetitions / mean_accuracy / 100
-            report_lines.append(f"- **Average cost per 1% Accuracy (dollar cents)**: ${cost_per_acc_pct:.6f}\n")
+            report_lines.append(f"- **Average cost per 1% Accuracy**: ${cost_per_acc_pct:.6f}\n")
             report_lines.append(f"- **Average tokens per 1% Accuracy**: {tokens_per_acc_pct:.1f}\n")
 
         report_lines.append(f"- **Average Cost per Question**: ${total_cost / num_repetitions/ len(predictions_df):.6f}\n")

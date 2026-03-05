@@ -81,9 +81,6 @@ def evaluate_question(
     }
     """
 
-    # Get usage summary before API call
-    usage_before = client.get_usage_summary()
-
     # Single LLM call
     response = client.chat_completion(
         model=model,
@@ -96,25 +93,24 @@ def evaluate_question(
         max_reasoning_tokens=config.get('max_reasoning_tokens')
     )
 
-
-    # Get usage summary after API call
-    usage_after = client.get_usage_summary()
-
     raw_response = response['choices'][0]['message']['content']
 
     # Extract answer from raw response
     parsed = extract_answer(raw_response)
     answer_extracted = parsed['answer']
 
-    # Calculate per-question usage as difference
+    # Extract per-question usage directly from the API response (thread-safe).
+    # Using before/after cumulative differences is incorrect with parallel workers
+    # because multiple workers share the same client state simultaneously.
+    usage_data = response.get('usage', {}) or {}
     total_usage = {
-        'cost': usage_after['cumulative_cost'] - usage_before['cumulative_cost'],
-        'total_tokens': usage_after['total_tokens'] - usage_before['total_tokens'],
-        'prompt_tokens': usage_after['total_prompt_tokens'] - usage_before['total_prompt_tokens'],
-        'completion_tokens': usage_after['total_completion_tokens'] - usage_before['total_completion_tokens'],
-        'reasoning_tokens': usage_after['total_reasoning_tokens'] - usage_before['total_reasoning_tokens'],
-        'cached_tokens': usage_after['total_cached_tokens'] - usage_before['total_cached_tokens'],
-        'request_count': usage_after['request_count'] - usage_before['request_count']
+        'cost': usage_data.get('cost', 0.0) or 0.0,
+        'total_tokens': usage_data.get('total_tokens', 0) or 0,
+        'prompt_tokens': usage_data.get('prompt_tokens', 0) or 0,
+        'completion_tokens': usage_data.get('completion_tokens', 0) or 0,
+        'reasoning_tokens': (usage_data.get('completion_tokens_details') or {}).get('reasoning_tokens', 0),
+        'cached_tokens': (usage_data.get('prompt_tokens_details') or {}).get('cached_tokens', 0),
+        'request_count': 1,
     }
 
     return {
