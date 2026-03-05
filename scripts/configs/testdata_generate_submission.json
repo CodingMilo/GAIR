@@ -1,0 +1,19 @@
+{
+  "models": [
+    "qwen/qwen3-235b-a22b-2507"
+  ],
+  "results_path": "../experiments/test_data",
+  "dataset_path": "../experiments/test.csv",
+  "solution_path": "",
+  "eval_script_path": "./configs/my_eval_cot.py",
+  "temperature": 1.0,
+  "max_reasoning_tokens": 0,
+  "max_tokens": null,
+  "num_repetitions": 5,
+  "testing_mode": true,
+  "workers": 2,
+  "message": "Test dataset. We force the model not the reason, but 'think lound' using a chain-of-thoughts.",
+  "enable_parallel": true,
+  "max_workers_per_model": 5,
+  "rate_limit_seconds": 1.0
+}

@@ -1,0 +1,1402 @@
+[
+  {
+    "raw_response": "```json\n{\n  \"answer\": [\n    \"b\"\n  ]\n}\n```",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 197,
+      "completion_tokens": 1089,
+      "total_tokens": 1286,
+      "cost": 0.0004553,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004553,
+        "upstream_inference_prompt_cost": 1.97e-05,
+        "upstream_inference_completions_cost": 0.0004356
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1062
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 1,
+    "question": "[Question]: 2.  Battery life has been measured as normally distributed with a mean  equal to 150 hours and a variance of 400 hours. Find the B10 life.\n\n[Choices]: [a] 128.1 hrs  | [b] 124.4 hrs  | [c] 122.6hrs | [d] 110hrs"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"b\"]\n}",
+    "extracted_answer": "a, b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 246,
+      "completion_tokens": 4015,
+      "total_tokens": 4261,
+      "cost": 0.0016306,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0016306,
+        "upstream_inference_prompt_cost": 2.46e-05,
+        "upstream_inference_completions_cost": 0.001606
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3997
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 2,
+    "question": "[Question]: 3.  Failure rate data is acquired from MIL-HDBK-217 for reliability  modeling of a new circuit board design. The failure rate for the entire  circuit board is acquired by summing the MIL-HDBK-217 failure rates for each component on the circuit board. Choose the correct statement(s) regarding the underlying assumptions behind this approach:\n\n[Choices]: [a] The individual component failure  rates are constants. | [b]  The system has a series system architecture. | [c]  The system has a warm standby architecture. | [d]  The individual component has a failure rate that is a bathtub shape."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 171,
+      "completion_tokens": 1802,
+      "total_tokens": 1973,
+      "cost": 0.0007379,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0007379,
+        "upstream_inference_prompt_cost": 1.71e-05,
+        "upstream_inference_completions_cost": 0.0007208
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1787
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 3,
+    "question": "[Question]: 4.  Each of the following test acceleration models is most often  used with only one varying stress type, except for which?\n\n[Choices]: [a] Arrhenius | [b] Coffin-Manson | [c] Inverse Power Law  | [d] Eyring"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 199,
+      "completion_tokens": 648,
+      "total_tokens": 847,
+      "cost": 0.0002791,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002791,
+        "upstream_inference_prompt_cost": 1.99e-05,
+        "upstream_inference_completions_cost": 0.0002592
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 637
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 4,
+    "question": "[Question]: 6.  Suppose that six bad golf balls get mixed up with eight good  golf balls. If two balls are drawn simultaneously, what is the  probability that both are good? \n\n[Choices]: [a]  0.1563  | [b]  0.3077 | [c]  0.2857 | [d]  0.3956"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 180,
+      "completion_tokens": 1697,
+      "total_tokens": 1877,
+      "cost": 0.0006968,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006968,
+        "upstream_inference_prompt_cost": 1.8e-05,
+        "upstream_inference_completions_cost": 0.0006788
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1686
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 5,
+    "question": "[Question]: 7.  Which of the following choices is the best type of control chart for  depicting the average number of defects found in a particular make and  model of a refrigerator?\n\n[Choices]: [a]  X-bar and R-chart | [b]  np chart | [c] A normal curve  | [d] U chart"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 290,
+      "completion_tokens": 2179,
+      "total_tokens": 2469,
+      "cost": 0.0009006,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0009006,
+        "upstream_inference_prompt_cost": 2.9e-05,
+        "upstream_inference_completions_cost": 0.0008716
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2168
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 6,
+    "question": "[Question]: 8.  Sample Variance of resistance for the 20-unit sample of electronic  components was 4 ohms. 95% confidence interval for the population  variance is: \n\n[Choices]: [a] 2.31  $ \\leq $   $ \\sigma $ 2  $ \\leq $  8.53  | [b] 2.93  $ \\leq $   $ \\sigma $ 2  $ \\leq $  10.43 | [c] 2.52  $ \\leq $   $ \\sigma $ 2  $ \\leq $  7.51 | [d] 3.18  $ \\leq $   $ \\sigma $ 2  $ \\leq $  9.21"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\n    \"a\"\n  ]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 279,
+      "completion_tokens": 6988,
+      "total_tokens": 7267,
+      "cost": 0.0028231,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0028231,
+        "upstream_inference_prompt_cost": 2.79e-05,
+        "upstream_inference_completions_cost": 0.0027952
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 6966
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 282,
+      "completion_tokens": 2001,
+      "total_tokens": 2283,
+      "cost": 0.0008286,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0008286,
+        "upstream_inference_prompt_cost": 2.82e-05,
+        "upstream_inference_completions_cost": 0.0008004
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1990
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 8,
+    "question": "[Question]: 10.  50 samples of an electronic component selected at random at incoming  inspection measures an average resistance of 10 ohms and a standard  deviation of 2 ohms. 95% confidence interval for the population mean is:\n\n[Choices]: [a] 9.53 $ \\leq $   $ \\mu $  $ \\leq $  10.47 | [b] 8 $ \\leq $   $ \\mu $  $ \\leq $  12 | [c] 6 $ \\leq $   $ \\mu $  $ \\leq $ 14  | [d] 9.43 $ \\leq $   $ \\mu $  $ \\leq $  10.57"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"a\", \"b\"]\n}",
+    "extracted_answer": "a, b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 218,
+      "completion_tokens": 3294,
+      "total_tokens": 3512,
+      "cost": 0.0013394,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0013394,
+        "upstream_inference_prompt_cost": 2.18e-05,
+        "upstream_inference_completions_cost": 0.0013176
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3275
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs. Choose the correct statement(s): \n\n[Choices]: [a] The failure rate is $2\\times 10^{-5}$ $hrs^{-1}$  | [b] The time to 10% failure is 5268 hrs   | [c] The time to 10% failure is 5450 hrs | [d]  The B10 life is 5333 hrs"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\"\n]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 247,
+      "completion_tokens": 6997,
+      "total_tokens": 7244,
+      "cost": 0.0028235,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0028235,
+        "upstream_inference_prompt_cost": 2.47e-05,
+        "upstream_inference_completions_cost": 0.0027988
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 6979
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\"\n]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 268,
+      "completion_tokens": 11588,
+      "total_tokens": 11856,
+      "cost": 0.004662,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.004662,
+        "upstream_inference_prompt_cost": 2.68e-05,
+        "upstream_inference_completions_cost": 0.0046352
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 11570
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 218,
+      "completion_tokens": 3871,
+      "total_tokens": 4089,
+      "cost": 0.0015702,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0015702,
+        "upstream_inference_prompt_cost": 2.18e-05,
+        "upstream_inference_completions_cost": 0.0015484
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3860
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 12,
+    "question": "[Question]: 7.  For a certain 3-engine airplane, at least two out of its three engines  must function. The engine reliability at time t is 0.995. Find the  probability that the airplane flies successfully for T hours, assuming  identical and independent engines.\n\n[Choices]: [a] 0.9998 | [b] 0.985 | [c] 0.99945  | [d] 0.999925"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\",\n\"b\",\n\"c\"\n]\n}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 198,
+      "completion_tokens": 7470,
+      "total_tokens": 7668,
+      "cost": 0.0030078,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0030078,
+        "upstream_inference_prompt_cost": 1.98e-05,
+        "upstream_inference_completions_cost": 0.002988
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7445
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 13,
+    "question": "[Question]: 1. Which of the following is true about the Taguchi DOE approach? \n\n[Choices]: [a] It includes the concept of loss function in factorial experiments. | [b] It assumes losses occur when a process fails to meet a target value. | [c] It assumes losses are due to variability within the process.  | [d] It assumes that the loss function is a step function relative to the specification limits."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\",\n\"b\",\n\"c\",\n\"d\"\n]\n}",
+    "extracted_answer": "a, b, c, d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 178,
+      "completion_tokens": 4027,
+      "total_tokens": 4205,
+      "cost": 0.0016286,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0016286,
+        "upstream_inference_prompt_cost": 1.78e-05,
+        "upstream_inference_completions_cost": 0.0016108
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3999
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 14,
+    "question": "[Question]: 2. In general, reliability testing is performed for which of the following reasons? \n\n[Choices]: [a] To detect unanticipated failure modes. | [b] To compare estimated failure rates to actual failure rates. | [c] To monitor reliability growth over time.  | [d] To meet or exceed customer expectations."
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\"a\"]\n}\n```",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 212,
+      "completion_tokens": 4013,
+      "total_tokens": 4225,
+      "cost": 0.0016264,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0016264,
+        "upstream_inference_prompt_cost": 2.12e-05,
+        "upstream_inference_completions_cost": 0.0016052
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3993
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 15,
+    "question": "[Question]: 3. The time to failure of a component is Weibull distributed,  $ \\beta $ =0.5,  $ \\eta $ =10,000 hours.What is the probability that the component will still be operational after one year? \n\n[Choices]: [a] 0.3922  | [b] 0.3214 | [c] 0.3680 | [d] 0.6320"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 303,
+      "completion_tokens": 9929,
+      "total_tokens": 10232,
+      "cost": 0.0040019,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0040019,
+        "upstream_inference_prompt_cost": 3.03e-05,
+        "upstream_inference_completions_cost": 0.0039716
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9918
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\"\n]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 262,
+      "completion_tokens": 7554,
+      "total_tokens": 7816,
+      "cost": 0.0030478,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0030478,
+        "upstream_inference_prompt_cost": 2.62e-05,
+        "upstream_inference_completions_cost": 0.0030216
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7536
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 214,
+      "completion_tokens": 1517,
+      "total_tokens": 1731,
+      "cost": 0.0006282,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006282,
+        "upstream_inference_prompt_cost": 2.14e-05,
+        "upstream_inference_completions_cost": 0.0006068
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1506
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 18,
+    "question": "[Question]: 7.  Brand X aircraft manufacturing company has a backup control system that  operates independently of the primary control. Each of the systems has a  probability of 0.01 of failing on a particular mission.What is the probability of at least one system functioning properly? \n\n[Choices]: [a] 0.9999  | [b] 0.9801 | [c] 0.9808 | [d] 0.99999"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\n        \"a\",\n        \"c\"\n    ]\n}",
+    "extracted_answer": "a, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 290,
+      "completion_tokens": 4877,
+      "total_tokens": 5167,
+      "cost": 0.0019798,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0019798,
+        "upstream_inference_prompt_cost": 2.9e-05,
+        "upstream_inference_completions_cost": 0.0019508
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4850
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\n\n[Choices]: [a] $ F(t) = \\lambda t^{\\beta-1} $   | [b] $ F(t) = \\lambda \\beta t^{\\beta-1} $  | [c] $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $  | [d] $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 217,
+      "completion_tokens": 5857,
+      "total_tokens": 6074,
+      "cost": 0.0023645,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0023645,
+        "upstream_inference_prompt_cost": 2.17e-05,
+        "upstream_inference_completions_cost": 0.0023428
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5840
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 20,
+    "question": "[Question]: 9.  In constructing programs for environmental stress screening(ESS), the  selection of the stress levels and the choice of exposure times is a  challenging task. Which of the following are true:\n\n[Choices]: [a] ESS is not a test. ESS is a screening process | B. ESS is not Burn-in, ESS stresses a product to operational extremes | [c] ESS is used in manufacturing/production to catch latent failures.  | [d] All items in a product line should be exposed to ESS."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 278,
+      "completion_tokens": 2136,
+      "total_tokens": 2414,
+      "cost": 0.0008822,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0008822,
+        "upstream_inference_prompt_cost": 2.78e-05,
+        "upstream_inference_completions_cost": 0.0008544
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2125
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 21,
+    "question": "[Question]: 10.  A test was done on ultrasonic inspection kits to determine how  effective they are in discovering microscopic cracks in aircraft parts.  When a crack was present, the equipment signaled a crack 98% of the  time. There was a \ufffd\ufffdfalse alarm\ufffd\ufffd on 3% of the parts which had no cracks.  Suppose five percent of all the parts have a crack in them. If the  percentages in the test can be assumed to be the true probabilities,  find the probability that a part is really bad when a kit signals a  crack.\n\n[Choices]: [a] 0.9215 | B.0.9225.  | [c] 0.6322.  | [d] 0.7533."
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\n    \"c\"\n  ]\n}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 206,
+      "completion_tokens": 1129,
+      "total_tokens": 1335,
+      "cost": 0.0004722,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004722,
+        "upstream_inference_prompt_cost": 2.06e-05,
+        "upstream_inference_completions_cost": 0.0004516
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1107
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 22,
+    "question": "[Question]: 1. A computer chip manufacturer averages 7 defects per chip. What is the probability of a chip containing less than 3 defects? Choose a plausible distribution by yourself by adding least additional assumptions on parameter values.\n\n[Choices]: [a] 0.00638 | [b] 0.02234  | [c] 0.02963  | [d] 0.02872"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\n    \"b\"\n  ]\n}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 329,
+      "completion_tokens": 8622,
+      "total_tokens": 8951,
+      "cost": 0.0034817,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0034817,
+        "upstream_inference_prompt_cost": 3.29e-05,
+        "upstream_inference_completions_cost": 0.0034488
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8600
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 23,
+    "question": "[Question]: 2. Given the following data: (where (-) indicates censored) -309,229,386,-104,180,-217,-167,168,122,138Determine the best fit Weibull parameters  $ \\beta $ , $ \\eta $ , t0?\n\n[Choices]: [a]  $ \\beta $ =2.76, $ \\eta $ =261.1, t0= 0.0  | [b]  $ \\beta $ =0.88, $ \\eta $ =147.86, t0=113.76  | [c]  $ \\beta $ =2.61, $ \\eta $ =278.2, t0=85. | [d]  $ \\beta $ =1.53, $ \\eta $ =183, t0= 0.03  ."
+  },
+  {
+    "raw_response": "The question asks which issue can be prevented with Preventive Maintenance.\n\nAnalysis of the options based on Reliability Engineering and Maintenance principles:\n1.  **Inadequate design (d):** This is an engineering issue fixed before the equipment is built or purchased. Maintenance cannot prevent a design flaw, though it might mitigate its effects.\n2.  **Poor Quality Control (b):** This relates to manufacturing and inspection processes before the equipment reaches the user. Preventive Maintenance occurs after the equipment is in service and cannot prevent manufacturing QC errors (defects).\n3.  **Improper installation (c):** This is a commissioning or setup issue. While maintenance might detect and correct the *consequences* of poor installation (e.g., loose bolts), it cannot prevent the act of improper installation itself, which occurs prior to the maintenance phase.\n4.  **Handling Damage (a):** During the lifecycle of equipment, including during maintenance tasks, components can be damaged. Preventive Maintenance involves scheduling activities, using proper procedures, and training personnel to handle equipment carefully during inspections and servicing. Among the given choices, Handling Damage is the only factor that occurs during the operational and maintenance lifecycle where specific maintenance protocols (part of the Preventive Maintenance program) can be enforced to prevent the damage from occurring. Standard reliability theory often states that Maintenance cannot fix Design, Quality, or Installation issues, leaving Handling (within the maintenance context) as the viable option in this specific multiple-choice elimination scenario.\n\nTherefore, by elimination of the upstream factors (Design, Quality, Installation) that are outside the control of the maintenance function post-commissioning, Handling Damage is the intended answer.\n\n{\n  \"answer\": [\n    \"a\"\n  ]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 159,
+      "completion_tokens": 3572,
+      "total_tokens": 3731,
+      "cost": 0.0014447,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0014447,
+        "upstream_inference_prompt_cost": 1.59e-05,
+        "upstream_inference_completions_cost": 0.0014288
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3213
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:\n\n[Choices]: [a] Handling Damage,  | [b] Poor Quality Control  | [c] Improper installation | [d] Inadequate design"
+  },
+  {
+    "raw_response": "```json\n{\n \"answer\": [\n  \"b\"\n ]\n}\n```\nThe question asks how much more testing is required to meet a failure rate of 1/1000 hours.\n1.  **Analyze the Data:**\n    *   Target Failure Rate ($\\lambda$): $\\le 1/1000$ (or $\\text{MTBF} \\ge 1000$ hours).\n    *   Observed Failures ($N$): 4 (at 30, 600, 1400, 2500 hours).\n    *   Current Total Operating Time ($T_{current}$): 2500 hours (assuming a single system undergoing testing where time accumulates until the last failure).\n\n2.  **Determine Required Total Time:**\n    *   In reliability testing, to statistically demonstrate a failure rate (or MTBF), a common rule of thumb (especially in multiple-choice contexts without confidence intervals specified) is to accumulate time equivalent to $N \\times \\text{Target MTBF}$, often rounding the number of failures to the next integer or assuming a minimum count (e.g., 5 failures for significance) to ensure the goal is met even with expected occurrences.\n    *   **Scenario 1 (No additional failures assumed):** If the \"fixing\" implies 0 additional failures, we need to dilute the 4 historical failures over a total time.\n        $$ \\frac{4}{T_{total}} \\le \\frac{1}{1000} \\implies T_{total} \\ge 4000 \\text{ hours} $$\n        $$ \\text{Additional Time} = 4000 - 2500 = 1500 \\text{ hours} $$\n        (1500 is not an option; next highest is 2000).\n    *   **Scenario 2 (Anticipating 5th failure / Rule of 5):** Reliability engineering often uses a minimum of 5 failures to establish reliability parameters. If we expect a 5th failure, the calculation for 5 failures to meet the 1/1000 rate is:\n        $$ \\frac{5}{T_{total}} \\le \\frac{1}{1000} \\implies T_{total} \\ge 5000 \\text{ hours} $$\n        $$ \\text{Additional Time} = 5000 - 2500 = 2500 \\text{ hours} $$\n    *   Comparing with options: 1500 vs 2500. The options are 2000, 2500, 4500, 5000.\n    *   The value **2500 hours** (Option [b]) corresponds to reaching a total test time of 5000 hours, which aligns with the expectation of observing 5 failures (a common benchmark for \"statistical significance\" in failure demonstrating, i.e., $5 \\times 1000$) or simply doubling the test duration to be conservative.\n\n3.  **Conclusion:** The calculation yielding 2500 hours fits Option [b] exactly under the assumption of needing 5000 total hours for 5 failures (or to round up the requirement).\n\n```json\n{\n \"answer\": [\n  \"b\"\n ]\n}\n```\n</think>\n\n```json\n{\n \"answer\": [\n  \"b\"\n ]\n}\n```",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 240,
+      "completion_tokens": 10184,
+      "total_tokens": 10424,
+      "cost": 0.0040976,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0040976,
+        "upstream_inference_prompt_cost": 2.4e-05,
+        "upstream_inference_completions_cost": 0.0040736
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9408
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve",
+    "raw_response": "",
+    "extracted_answer": "",
+    "script_executed": false,
+    "usage": {}
+  },
+  {
+    "raw_response": "{ \"answer\": [\"b\"] }",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 165,
+      "completion_tokens": 1435,
+      "total_tokens": 1600,
+      "cost": 0.0005905,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0005905,
+        "upstream_inference_prompt_cost": 1.65e-05,
+        "upstream_inference_completions_cost": 0.000574
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1422
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 27,
+    "question": "[Question]: 7. What is the Best time for Reliability Test Planning?\n\n[Choices]: [a] Production phase,  | [b] Early stage of the product development phase,  | [c] Before the production phase | [d] Field return failure analysis phase"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 163,
+      "completion_tokens": 895,
+      "total_tokens": 1058,
+      "cost": 0.0003743,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003743,
+        "upstream_inference_prompt_cost": 1.63e-05,
+        "upstream_inference_completions_cost": 0.000358
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 884
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 28,
+    "question": "[Question]: 1. Compared to quality, reliability engineering is more concerned with :\n\n[Choices]: [a] Failure rate over time. | [b] Manufacturing errors | [c] Defective rate at a point in time.  | [d] Product design."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 246,
+      "completion_tokens": 4953,
+      "total_tokens": 5199,
+      "cost": 0.0020058,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0020058,
+        "upstream_inference_prompt_cost": 2.46e-05,
+        "upstream_inference_completions_cost": 0.0019812
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4942
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "```json\n{\n  \"answer\": [\n    \"b\"\n  ]\n}\n```",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 167,
+      "completion_tokens": 2033,
+      "total_tokens": 2200,
+      "cost": 0.0008299,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0008299,
+        "upstream_inference_prompt_cost": 1.67e-05,
+        "upstream_inference_completions_cost": 0.0008132
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2006
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 30,
+    "question": "[Question]: 9. When prioritizing actions to be taken in an FMEA, which of the following priority rankings should be considered first? \n\n[Choices]: [a] Overall RPN (Risk Priority Number)  | [b] Highest severity ranking  | [c] Highest occurrence ranking"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 173,
+      "completion_tokens": 1228,
+      "total_tokens": 1401,
+      "cost": 0.0005085,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0005085,
+        "upstream_inference_prompt_cost": 1.73e-05,
+        "upstream_inference_completions_cost": 0.0004912
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1217
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 31,
+    "question": "[Question]: 1. Battery life has been measured as normally distributed with  mean equal to 150 hours and variance of 400 hours. Find the B10 life. \n\n[Choices]: [a] 124.4 hrs  | [b] 175.6 hrs"
+  },
+  {
+    "raw_response": "{\n{\n  \"answer\": [\"c\"]\n}\n}",
+    "extracted_answer": "",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 180,
+      "completion_tokens": 1473,
+      "total_tokens": 1653,
+      "cost": 0.0006072,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006072,
+        "upstream_inference_prompt_cost": 1.8e-05,
+        "upstream_inference_completions_cost": 0.0005892
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1453
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 32,
+    "question": "[Question]: 2. How should a Reliability Engineer react when a corrective action was rejected by management?\n\n[Choices]: [a] Insist the corrective action must be implemented, | [b] Implement corrective action by oneself,  | [c] Agree with management and document the findings,  | [d] Agree with management and discard the findings"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"c\"\n]\n}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 219,
+      "completion_tokens": 3702,
+      "total_tokens": 3921,
+      "cost": 0.0015027,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0015027,
+        "upstream_inference_prompt_cost": 2.19e-05,
+        "upstream_inference_completions_cost": 0.0014808
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3684
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 33,
+    "question": "[Question]: 3.  Among the various reliability tests that are performed on products at  various stages of development, which of the following tests are most  useful in determining the minimum mean time to failure requirements:1) Reliability growth testing,2) Environmental stress screening,3) Reliability qualification testing,4) Acceptance testing\n\n[Choices]: [a] 1&amp;2, | [b] 2&amp;3,  | [c] 3&amp;4,  | [d] 4&amp;1"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 240,
+      "completion_tokens": 1538,
+      "total_tokens": 1778,
+      "cost": 0.0006392,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006392,
+        "upstream_inference_prompt_cost": 2.4e-05,
+        "upstream_inference_completions_cost": 0.0006152
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1527
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"c\"\n]\n}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 14558,
+      "total_tokens": 14814,
+      "cost": 0.0058488,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0058488,
+        "upstream_inference_prompt_cost": 2.56e-05,
+        "upstream_inference_completions_cost": 0.0058232
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 14540
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 232,
+      "completion_tokens": 3917,
+      "total_tokens": 4149,
+      "cost": 0.00159,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00159,
+        "upstream_inference_prompt_cost": 2.32e-05,
+        "upstream_inference_completions_cost": 0.0015668
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3902
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 36,
+    "question": "[Question]: 4.  Five motors are run to failure. Failure times are (in hours):  632,3450,816,928,150. Assuming an exponential distribution, what are the  90% confidence bounds for the MTTF?\n\n[Choices]: [a] 1051, 1942 | [b] 847, 2650 | [c] 347, 3747  | [d] 653, 3034"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"b\"\n]\n}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 227,
+      "completion_tokens": 5585,
+      "total_tokens": 5812,
+      "cost": 0.0022567,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0022567,
+        "upstream_inference_prompt_cost": 2.27e-05,
+        "upstream_inference_completions_cost": 0.002234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5566
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 37,
+    "question": "[Question]: 6.  There is a contractual requirement to demonstrate with 90% confidence  that a vehicle can achieve a 100-km mission with a reliability of 99%.  The acceptance test is performed by running 10 vehicles over a 50,000-  km test track. What is the contractual MTTF?\n\n[Choices]: [a] 5000 km  | [b] 9950 km  | [c] 8525 km | [d] 1950"
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\n\"b\"\n]\n}\n```",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 212,
+      "completion_tokens": 2900,
+      "total_tokens": 3112,
+      "cost": 0.0011812,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0011812,
+        "upstream_inference_prompt_cost": 2.12e-05,
+        "upstream_inference_completions_cost": 0.00116
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2876
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 38,
+    "question": "[Question]: 7.  The one-month reliability on an indicator lamp is 0.95 with the failure  rate specified as constant. What is the probability that more than two  spare bulbs will be needed during the first year of operation? (Ignore  replacement time.)\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 214,
+      "completion_tokens": 14226,
+      "total_tokens": 14440,
+      "cost": 0.0057118,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0057118,
+        "upstream_inference_prompt_cost": 2.14e-05,
+        "upstream_inference_completions_cost": 0.0056904
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 14211
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{ \"answer\": [ \"d\" ] }",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 4204,
+      "total_tokens": 4404,
+      "cost": 0.0017016,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0017016,
+        "upstream_inference_prompt_cost": 2e-05,
+        "upstream_inference_completions_cost": 0.0016816
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4189
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 40,
+    "question": "[Question]: 10. Find the variance in the time to failure, assuming a constant failure rate  $ \\lambda $ , for two units in active parallel.\n\n[Choices]: [a] 2/3 $ \\lambda $  | [b] 3/2 $ \\lambda $  | [c] 3/4 $ \\lambda $ 2  | [d] 5/4  $ \\lambda $ 2"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\n    \"d\"\n  ]\n}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 169,
+      "completion_tokens": 403,
+      "total_tokens": 572,
+      "cost": 0.0001781,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001781,
+        "upstream_inference_prompt_cost": 1.69e-05,
+        "upstream_inference_completions_cost": 0.0001612
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 381
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 41,
+    "question": "[Question]: 1. The usual consequences of management assuming human error as the \ufffd\ufffdroot cause\ufffd\ufffd of a failure is\n\n[Choices]: [a] Repeat of the same failure | [b] Disciplinary action for the employee | [c] Less productivity  | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 171,
+      "completion_tokens": 517,
+      "total_tokens": 688,
+      "cost": 0.0002239,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002239,
+        "upstream_inference_prompt_cost": 1.71e-05,
+        "upstream_inference_completions_cost": 0.0002068
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 506
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 42,
+    "question": "[Question]: 2. \ufffd\ufffdBurn-in\ufffd\ufffd testing is conducted on electronic assemblies for systems to:\n\n[Choices]: [a] Establish system failure rate. | [b] Extend product life | [c] Increase the total number of failure occurrences.   | [d] Minimize early life failure occurrences."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 171,
+      "completion_tokens": 1193,
+      "total_tokens": 1364,
+      "cost": 0.0004943,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004943,
+        "upstream_inference_prompt_cost": 1.71e-05,
+        "upstream_inference_completions_cost": 0.0004772
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1182
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 43,
+    "question": "[Question]: 3.  When testing to establish failure rate and reliability predictions,  which of the following is not normally a feasible acceleration factor  with respect to rated conditions: \n\n[Choices]: [a] Longer time  | [b] Greater humidity | [c] Higher temperature | [d] Higher voltage"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 189,
+      "completion_tokens": 591,
+      "total_tokens": 780,
+      "cost": 0.0002553,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002553,
+        "upstream_inference_prompt_cost": 1.89e-05,
+        "upstream_inference_completions_cost": 0.0002364
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 580
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 44,
+    "question": "[Question]: 5. What is meant by \ufffd\ufffdFail Safe Design\ufffd\ufffd? \n\n[Choices]: [a] Designed such that a failure will not adversely affect the safe operation of the system   | [b] Designed such that the failure probability is low if the system is operated safely. | [c] Designed such that the system cannot fail if operated safely, | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 820,
+      "total_tokens": 1020,
+      "cost": 0.000348,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000348,
+        "upstream_inference_prompt_cost": 2e-05,
+        "upstream_inference_completions_cost": 0.000328
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 809
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"c\"\n]\n}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 227,
+      "completion_tokens": 5887,
+      "total_tokens": 6114,
+      "cost": 0.0023775,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0023775,
+        "upstream_inference_prompt_cost": 2.27e-05,
+        "upstream_inference_completions_cost": 0.0023548
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5869
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 46,
+    "question": "[Question]: 7. Five items were placed on test, one item failed after 42 hrs, and the remaining four items were removed after 50 hrs. It is known that the time to failure for these items follows a Weibull with  $ \\beta $ =2.2. Determine the 95% lower confidence limit for the characteristic life.\n\n[Choices]: [a] 13.5 hrs | [b] 39.8 hrs   | [c] 49.7 hrs.   | [d] None of the above"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 213,
+      "completion_tokens": 4217,
+      "total_tokens": 4430,
+      "cost": 0.0017081,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0017081,
+        "upstream_inference_prompt_cost": 2.13e-05,
+        "upstream_inference_completions_cost": 0.0016868
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4201
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\n\"a\"\n]\n}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 179,
+      "completion_tokens": 4624,
+      "total_tokens": 4803,
+      "cost": 0.0018675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0018675,
+        "upstream_inference_prompt_cost": 1.79e-05,
+        "upstream_inference_completions_cost": 0.0018496
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4606
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 48,
+    "question": "[Question]: 10.  An engineer just ran 50 compressor start tests with no failures, he  needs to pass the customer\ufffd\ufffds requirement of 80% confidence of 0.90  reliability. Has he done that? \n\n[Choices]: [a] Yes   | [b] Almost | [c] No way"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 165,
+      "completion_tokens": 618,
+      "total_tokens": 783,
+      "cost": 0.0002637,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002637,
+        "upstream_inference_prompt_cost": 1.65e-05,
+        "upstream_inference_completions_cost": 0.0002472
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 607
+      }
+    },
+    "metadata": {
+      "model": "qwen/qwen3.5-flash-02-23",
+      "finish_reason": "stop"
+    },
+    "question_id": 49,
+    "question": "[Question]: 2. The distribution used to describe the time between failures which occur independently and at a constant rate, is the:\n\n[Choices]: [a] Log normal. | [b] Weibull. | [c] Gamma. | [d] Exponential."
+  }
+]

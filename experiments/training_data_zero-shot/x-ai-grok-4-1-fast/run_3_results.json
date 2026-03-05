@@ -1,0 +1,1423 @@
+[
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 317,
+      "completion_tokens": 481,
+      "total_tokens": 798,
+      "cost": 0.0002565,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 316
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002565,
+        "upstream_inference_prompt_cost": 1.6e-05,
+        "upstream_inference_completions_cost": 0.0002405
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 475
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 1,
+    "question": "[Question]: 2.  Battery life has been measured as normally distributed with a mean  equal to 150 hours and a variance of 400 hours. Find the B10 life.\n\n[Choices]: [a] 128.1 hrs  | [b] 124.4 hrs  | [c] 122.6hrs | [d] 110hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\"]}",
+    "extracted_answer": "a, b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 374,
+      "completion_tokens": 388,
+      "total_tokens": 762,
+      "cost": 0.0002466,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 148
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002466,
+        "upstream_inference_prompt_cost": 5.26e-05,
+        "upstream_inference_completions_cost": 0.000194
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 379
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 2,
+    "question": "[Question]: 3.  Failure rate data is acquired from MIL-HDBK-217 for reliability  modeling of a new circuit board design. The failure rate for the entire  circuit board is acquired by summing the MIL-HDBK-217 failure rates for each component on the circuit board. Choose the correct statement(s) regarding the underlying assumptions behind this approach:\n\n[Choices]: [a] The individual component failure  rates are constants. | [b]  The system has a series system architecture. | [c]  The system has a warm standby architecture. | [d]  The individual component has a failure rate that is a bathtub shape."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 302,
+      "completion_tokens": 442,
+      "total_tokens": 744,
+      "cost": 0.000243,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000243,
+        "upstream_inference_prompt_cost": 2.2e-05,
+        "upstream_inference_completions_cost": 0.000221
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 436
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 3,
+    "question": "[Question]: 4.  Each of the following test acceleration models is most often  used with only one varying stress type, except for which?\n\n[Choices]: [a] Arrhenius | [b] Coffin-Manson | [c] Inverse Power Law  | [d] Eyring"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 325,
+      "completion_tokens": 207,
+      "total_tokens": 532,
+      "cost": 0.0001457,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 152
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001457,
+        "upstream_inference_prompt_cost": 4.22e-05,
+        "upstream_inference_completions_cost": 0.0001035
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 201
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 4,
+    "question": "[Question]: 6.  Suppose that six bad golf balls get mixed up with eight good  golf balls. If two balls are drawn simultaneously, what is the  probability that both are good? \n\n[Choices]: [a]  0.1563  | [b]  0.3077 | [c]  0.2857 | [d]  0.3956"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 313,
+      "completion_tokens": 708,
+      "total_tokens": 1021,
+      "cost": 0.0003938,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 152
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003938,
+        "upstream_inference_prompt_cost": 3.98e-05,
+        "upstream_inference_completions_cost": 0.000354
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 702
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 5,
+    "question": "[Question]: 7.  Which of the following choices is the best type of control chart for  depicting the average number of defects found in a particular make and  model of a refrigerator?\n\n[Choices]: [a]  X-bar and R-chart | [b]  np chart | [c] A normal curve  | [d] U chart"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 403,
+      "completion_tokens": 2125,
+      "total_tokens": 2528,
+      "cost": 0.0011203,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 152
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0011203,
+        "upstream_inference_prompt_cost": 5.78e-05,
+        "upstream_inference_completions_cost": 0.0010625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2119
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 6,
+    "question": "[Question]: 8.  Sample Variance of resistance for the 20-unit sample of electronic  components was 4 ohms. 95% confidence interval for the population  variance is: \n\n[Choices]: [a] 2.31  $ \\leq $   $ \\sigma $ 2  $ \\leq $  8.53  | [b] 2.93  $ \\leq $   $ \\sigma $ 2  $ \\leq $  10.43 | [c] 2.52  $ \\leq $   $ \\sigma $ 2  $ \\leq $  7.51 | [d] 3.18  $ \\leq $   $ \\sigma $ 2  $ \\leq $  9.21"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 404,
+      "completion_tokens": 4863,
+      "total_tokens": 5267,
+      "cost": 0.00245185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 403
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00245185,
+        "upstream_inference_prompt_cost": 2.035e-05,
+        "upstream_inference_completions_cost": 0.0024315
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4857
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 393,
+      "completion_tokens": 1621,
+      "total_tokens": 2014,
+      "cost": 0.0008303,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 392
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0008303,
+        "upstream_inference_prompt_cost": 1.98e-05,
+        "upstream_inference_completions_cost": 0.0008105
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1615
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 8,
+    "question": "[Question]: 10.  50 samples of an electronic component selected at random at incoming  inspection measures an average resistance of 10 ohms and a standard  deviation of 2 ohms. 95% confidence interval for the population mean is:\n\n[Choices]: [a] 9.53 $ \\leq $   $ \\mu $  $ \\leq $  10.47 | [b] 8 $ \\leq $   $ \\mu $  $ \\leq $  12 | [c] 6 $ \\leq $   $ \\mu $  $ \\leq $ 14  | [d] 9.43 $ \\leq $   $ \\mu $  $ \\leq $  10.57"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\"]}",
+    "extracted_answer": "a, b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 338,
+      "completion_tokens": 1627,
+      "total_tokens": 1965,
+      "cost": 0.00083055,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 337
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00083055,
+        "upstream_inference_prompt_cost": 1.705e-05,
+        "upstream_inference_completions_cost": 0.0008135
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1618
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs. Choose the correct statement(s): \n\n[Choices]: [a] The failure rate is $2\\times 10^{-5}$ $hrs^{-1}$  | [b] The time to 10% failure is 5268 hrs   | [c] The time to 10% failure is 5450 hrs | [d]  The B10 life is 5333 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 368,
+      "completion_tokens": 3243,
+      "total_tokens": 3611,
+      "cost": 0.0016471,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0016471,
+        "upstream_inference_prompt_cost": 2.56e-05,
+        "upstream_inference_completions_cost": 0.0016215
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3237
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 383,
+      "completion_tokens": 7265,
+      "total_tokens": 7648,
+      "cost": 0.0036611,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0036611,
+        "upstream_inference_prompt_cost": 2.86e-05,
+        "upstream_inference_completions_cost": 0.0036325
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7259
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 338,
+      "completion_tokens": 637,
+      "total_tokens": 975,
+      "cost": 0.00033555,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 337
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033555,
+        "upstream_inference_prompt_cost": 1.705e-05,
+        "upstream_inference_completions_cost": 0.0003185
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 631
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 12,
+    "question": "[Question]: 7.  For a certain 3-engine airplane, at least two out of its three engines  must function. The engine reliability at time t is 0.995. Find the  probability that the airplane flies successfully for T hours, assuming  identical and independent engines.\n\n[Choices]: [a] 0.9998 | [b] 0.985 | [c] 0.99945  | [d] 0.999925"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 1370,
+      "total_tokens": 1702,
+      "cost": 0.00070175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 331
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00070175,
+        "upstream_inference_prompt_cost": 1.675e-05,
+        "upstream_inference_completions_cost": 0.000685
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1358
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 13,
+    "question": "[Question]: 1. Which of the following is true about the Taguchi DOE approach? \n\n[Choices]: [a] It includes the concept of loss function in factorial experiments. | [b] It assumes losses occur when a process fails to meet a target value. | [c] It assumes losses are due to variability within the process.  | [d] It assumes that the loss function is a step function relative to the specification limits."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 311,
+      "completion_tokens": 1600,
+      "total_tokens": 1911,
+      "cost": 0.0008238,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0008238,
+        "upstream_inference_prompt_cost": 2.38e-05,
+        "upstream_inference_completions_cost": 0.0008
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1588
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 14,
+    "question": "[Question]: 2. In general, reliability testing is performed for which of the following reasons? \n\n[Choices]: [a] To detect unanticipated failure modes. | [b] To compare estimated failure rates to actual failure rates. | [c] To monitor reliability growth over time.  | [d] To meet or exceed customer expectations."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 333,
+      "completion_tokens": 1548,
+      "total_tokens": 1881,
+      "cost": 0.0007908,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 332
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0007908,
+        "upstream_inference_prompt_cost": 1.68e-05,
+        "upstream_inference_completions_cost": 0.000774
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1542
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 15,
+    "question": "[Question]: 3. The time to failure of a component is Weibull distributed,  $ \\beta $ =0.5,  $ \\eta $ =10,000 hours.What is the probability that the component will still be operational after one year? \n\n[Choices]: [a] 0.3922  | [b] 0.3214 | [c] 0.3680 | [d] 0.6320"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 412,
+      "completion_tokens": 17732,
+      "total_tokens": 18144,
+      "cost": 0.00888675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 411
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00888675,
+        "upstream_inference_prompt_cost": 2.075e-05,
+        "upstream_inference_completions_cost": 0.008866
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 17726
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 383,
+      "completion_tokens": 5443,
+      "total_tokens": 5826,
+      "cost": 0.0027408,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 382
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0027408,
+        "upstream_inference_prompt_cost": 1.93e-05,
+        "upstream_inference_completions_cost": 0.0027215
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5437
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 338,
+      "completion_tokens": 224,
+      "total_tokens": 562,
+      "cost": 0.00012905,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 337
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012905,
+        "upstream_inference_prompt_cost": 1.705e-05,
+        "upstream_inference_completions_cost": 0.000112
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 218
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 18,
+    "question": "[Question]: 7.  Brand X aircraft manufacturing company has a backup control system that  operates independently of the primary control. Each of the systems has a  probability of 0.01 of failing on a particular mission.What is the probability of at least one system functioning properly? \n\n[Choices]: [a] 0.9999  | [b] 0.9801 | [c] 0.9808 | [d] 0.99999"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"c\"]}",
+    "extracted_answer": "a, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 413,
+      "completion_tokens": 697,
+      "total_tokens": 1110,
+      "cost": 0.0003735,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 384
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003735,
+        "upstream_inference_prompt_cost": 2.5e-05,
+        "upstream_inference_completions_cost": 0.0003485
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 688
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\n\n[Choices]: [a] $ F(t) = \\lambda t^{\\beta-1} $   | [b] $ F(t) = \\lambda \\beta t^{\\beta-1} $  | [c] $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $  | [d] $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 349,
+      "completion_tokens": 1474,
+      "total_tokens": 1823,
+      "cost": 0.0007876,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0007876,
+        "upstream_inference_prompt_cost": 5.06e-05,
+        "upstream_inference_completions_cost": 0.000737
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1462
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 20,
+    "question": "[Question]: 9.  In constructing programs for environmental stress screening(ESS), the  selection of the stress levels and the choice of exposure times is a  challenging task. Which of the following are true:\n\n[Choices]: [a] ESS is not a test. ESS is a screening process | B. ESS is not Burn-in, ESS stresses a product to operational extremes | [c] ESS is used in manufacturing/production to catch latent failures.  | [d] All items in a product line should be exposed to ESS."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 399,
+      "completion_tokens": 553,
+      "total_tokens": 952,
+      "cost": 0.0002987,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 384
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002987,
+        "upstream_inference_prompt_cost": 2.22e-05,
+        "upstream_inference_completions_cost": 0.0002765
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 547
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 21,
+    "question": "[Question]: 10.  A test was done on ultrasonic inspection kits to determine how  effective they are in discovering microscopic cracks in aircraft parts.  When a crack was present, the equipment signaled a crack 98% of the  time. There was a \ufffd\ufffdfalse alarm\ufffd\ufffd on 3% of the parts which had no cracks.  Suppose five percent of all the parts have a crack in them. If the  percentages in the test can be assumed to be the true probabilities,  find the probability that a part is really bad when a kit signals a  crack.\n\n[Choices]: [a] 0.9215 | B.0.9225.  | [c] 0.6322.  | [d] 0.7533."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 327,
+      "completion_tokens": 637,
+      "total_tokens": 964,
+      "cost": 0.000335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 326
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000335,
+        "upstream_inference_prompt_cost": 1.65e-05,
+        "upstream_inference_completions_cost": 0.0003185
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 631
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 22,
+    "question": "[Question]: 1. A computer chip manufacturer averages 7 defects per chip. What is the probability of a chip containing less than 3 defects? Choose a plausible distribution by yourself by adding least additional assumptions on parameter values.\n\n[Choices]: [a] 0.00638 | [b] 0.02234  | [c] 0.02963  | [d] 0.02872"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}\n\n## Explanation\n\nThe reasoning process for selecting choice [b] as the best fit Weibull parameters involves standard reliability engineering practices for handling right-censored data, specifically using Kaplan-Meier (KM) estimates for probability plotting positions followed by least squares evaluation.\n\nThe data consists of 10 observations: failures at 122, 138, 168, 180, 229, 386 hours and right-censored at 104, 167, 217, 309 hours. Only failure times are plotted on the Weibull probability plot, with KM estimates providing the cumulative distribution function (CDF) values F_i at each failure.\n\nOrdered events yield KM survival estimates: F_1 = 1/9 \u2248 0.1111 at 122, F_2 = 2/9 \u2248 0.2222 at 138, F_3 = 3/9 \u2248 0.3333 at 168, F_4 = 4/9 \u2248 0.4444 at 180, F_5 = 5/9 \u2248 0.5556 at 229, F_6 = 6/9 \u2248 0.6667 at 386. The y-coordinates for the plot are computed as y_i = ln[-ln(1 - F_i)]:  \ny = [-2.1384, -1.3805, -0.9029, -0.5310, -0.2096, 0.0941].\n\nFor each choice, theoretical y_pred_i values are calculated using the Weibull equation y_pred_i = \u03b2 \u00d7 ln[(t_i - t_0)/\u03b7] for the six failure times t_i. The sum of squared errors (SSE) measures fit: SSE = \u03a3 (y_pred_i - y_obs_i)^2.\n\nComputed y_pred and SSE values:  \n- [a] (\u03b2=2.76, \u03b7=261.1, t_0=0): y_pred \u2248 [-2.099, -1.761, -1.215, -1.025, -0.363, 1.079], SSE \u2248 1.481.  \n- [b] (\u03b2=0.88, \u03b7=147.86, t_0=113.76): y_pred \u2248 [-2.541, -1.591, -0.882, -0.706, -0.220, 0.537], SSE \u2248 0.434.  \n- [c] (\u03b2=2.61, \u03b7=278.2, t_0=85): y_pred \u2248 [-5.262, -4.331, -3.158, -2.804, -1.718, 0.206], SSE >> 10 (large due to severe underprediction early).  \n- [d] (\u03b2=1.53, \u03b7=183, t_0=0.03): y_pred \u2248 [-0.620, -0.432, -0.131, -0.025, 0.344, 1.143], SSE \u2248 5.46.\n\nChoice [b] yields the lowest SSE (0.434), indicating the closest alignment of the Weibull model to the KM-based probability plot points. This confirms [b] as the best fit by the least squares criterion on the Weibull probability plot, a standard approximation to maximum likelihood estimation for censored data.",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 419,
+      "completion_tokens": 11968,
+      "total_tokens": 12387,
+      "cost": 0.0060102,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 384
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0060102,
+        "upstream_inference_prompt_cost": 2.62e-05,
+        "upstream_inference_completions_cost": 0.005984
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 11265
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 23,
+    "question": "[Question]: 2. Given the following data: (where (-) indicates censored) -309,229,386,-104,180,-217,-167,168,122,138Determine the best fit Weibull parameters  $ \\beta $ , $ \\eta $ , t0?\n\n[Choices]: [a]  $ \\beta $ =2.76, $ \\eta $ =261.1, t0= 0.0  | [b]  $ \\beta $ =0.88, $ \\eta $ =147.86, t0=113.76  | [c]  $ \\beta $ =2.61, $ \\eta $ =278.2, t0=85. | [d]  $ \\beta $ =1.53, $ \\eta $ =183, t0= 0.03  ."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 290,
+      "completion_tokens": 1930,
+      "total_tokens": 2220,
+      "cost": 0.00097965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 289
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00097965,
+        "upstream_inference_prompt_cost": 1.465e-05,
+        "upstream_inference_completions_cost": 0.000965
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1924
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:\n\n[Choices]: [a] Handling Damage,  | [b] Poor Quality Control  | [c] Improper installation | [d] Inadequate design"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 357,
+      "completion_tokens": 8072,
+      "total_tokens": 8429,
+      "cost": 0.004054,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 356
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.004054,
+        "upstream_inference_prompt_cost": 1.8e-05,
+        "upstream_inference_completions_cost": 0.004036
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8066
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 357,
+      "completion_tokens": 1189,
+      "total_tokens": 1546,
+      "cost": 0.0006125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 356
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006125,
+        "upstream_inference_prompt_cost": 1.8e-05,
+        "upstream_inference_completions_cost": 0.0005945
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1183
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 297,
+      "completion_tokens": 310,
+      "total_tokens": 607,
+      "cost": 0.00017,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 296
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017,
+        "upstream_inference_prompt_cost": 1.5e-05,
+        "upstream_inference_completions_cost": 0.000155
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 304
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 27,
+    "question": "[Question]: 7. What is the Best time for Reliability Test Planning?\n\n[Choices]: [a] Production phase,  | [b] Early stage of the product development phase,  | [c] Before the production phase | [d] Field return failure analysis phase"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 296,
+      "completion_tokens": 201,
+      "total_tokens": 497,
+      "cost": 0.0001369,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 152
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001369,
+        "upstream_inference_prompt_cost": 3.64e-05,
+        "upstream_inference_completions_cost": 0.0001005
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 195
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 28,
+    "question": "[Question]: 1. Compared to quality, reliability engineering is more concerned with :\n\n[Choices]: [a] Failure rate over time. | [b] Manufacturing errors | [c] Defective rate at a point in time.  | [d] Product design."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 363,
+      "completion_tokens": 3061,
+      "total_tokens": 3424,
+      "cost": 0.0015488,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 362
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0015488,
+        "upstream_inference_prompt_cost": 1.83e-05,
+        "upstream_inference_completions_cost": 0.0015305
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3055
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 300,
+      "completion_tokens": 409,
+      "total_tokens": 709,
+      "cost": 0.0002261,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002261,
+        "upstream_inference_prompt_cost": 2.16e-05,
+        "upstream_inference_completions_cost": 0.0002045
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 403
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 30,
+    "question": "[Question]: 9. When prioritizing actions to be taken in an FMEA, which of the following priority rankings should be considered first? \n\n[Choices]: [a] Overall RPN (Risk Priority Number)  | [b] Highest severity ranking  | [c] Highest occurrence ranking"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 298,
+      "completion_tokens": 356,
+      "total_tokens": 654,
+      "cost": 0.00019305,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 297
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019305,
+        "upstream_inference_prompt_cost": 1.505e-05,
+        "upstream_inference_completions_cost": 0.000178
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 350
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 31,
+    "question": "[Question]: 1. Battery life has been measured as normally distributed with  mean equal to 150 hours and variance of 400 hours. Find the B10 life. \n\n[Choices]: [a] 124.4 hrs  | [b] 175.6 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 312,
+      "completion_tokens": 330,
+      "total_tokens": 642,
+      "cost": 0.00018075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 311
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018075,
+        "upstream_inference_prompt_cost": 1.575e-05,
+        "upstream_inference_completions_cost": 0.000165
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 324
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 32,
+    "question": "[Question]: 2. How should a Reliability Engineer react when a corrective action was rejected by management?\n\n[Choices]: [a] Insist the corrective action must be implemented, | [b] Implement corrective action by oneself,  | [c] Agree with management and document the findings,  | [d] Agree with management and discard the findings"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 350,
+      "completion_tokens": 7775,
+      "total_tokens": 8125,
+      "cost": 0.0039383,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0039383,
+        "upstream_inference_prompt_cost": 5.08e-05,
+        "upstream_inference_completions_cost": 0.0038875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7769
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 33,
+    "question": "[Question]: 3.  Among the various reliability tests that are performed on products at  various stages of development, which of the following tests are most  useful in determining the minimum mean time to failure requirements:1) Reliability growth testing,2) Environmental stress screening,3) Reliability qualification testing,4) Acceptance testing\n\n[Choices]: [a] 1&amp;2, | [b] 2&amp;3,  | [c] 3&amp;4,  | [d] 4&amp;1"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 353,
+      "completion_tokens": 3466,
+      "total_tokens": 3819,
+      "cost": 0.0017556,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0017556,
+        "upstream_inference_prompt_cost": 2.26e-05,
+        "upstream_inference_completions_cost": 0.001733
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3460
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}\n\n## Explanation\n\nThe reasoning",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 372,
+      "completion_tokens": 30195,
+      "total_tokens": 30567,
+      "cost": 0.01511625,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 371
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.01511625,
+        "upstream_inference_prompt_cost": 1.875e-05,
+        "upstream_inference_completions_cost": 0.0150975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 30183
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 338,
+      "completion_tokens": 1714,
+      "total_tokens": 2052,
+      "cost": 0.00087405,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 337
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00087405,
+        "upstream_inference_prompt_cost": 1.705e-05,
+        "upstream_inference_completions_cost": 0.000857
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1708
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 36,
+    "question": "[Question]: 4.  Five motors are run to failure. Failure times are (in hours):  632,3450,816,928,150. Assuming an exponential distribution, what are the  90% confidence bounds for the MTTF?\n\n[Choices]: [a] 1051, 1942 | [b] 847, 2650 | [c] 347, 3747  | [d] 653, 3034"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 344,
+      "completion_tokens": 1851,
+      "total_tokens": 2195,
+      "cost": 0.0009463,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0009463,
+        "upstream_inference_prompt_cost": 2.08e-05,
+        "upstream_inference_completions_cost": 0.0009255
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1845
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 37,
+    "question": "[Question]: 6.  There is a contractual requirement to demonstrate with 90% confidence  that a vehicle can achieve a 100-km mission with a reliability of 99%.  The acceptance test is performed by running 10 vehicles over a 50,000-  km test track. What is the contractual MTTF?\n\n[Choices]: [a] 5000 km  | [b] 9950 km  | [c] 8525 km | [d] 1950"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 336,
+      "completion_tokens": 1381,
+      "total_tokens": 1717,
+      "cost": 0.00070745,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 335
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00070745,
+        "upstream_inference_prompt_cost": 1.695e-05,
+        "upstream_inference_completions_cost": 0.0006905
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1375
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 38,
+    "question": "[Question]: 7.  The one-month reliability on an indicator lamp is 0.95 with the failure  rate specified as constant. What is the probability that more than two  spare bulbs will be needed during the first year of operation? (Ignore  replacement time.)\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}\n\n## Explanation\n\nThe reasoning",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 339,
+      "completion_tokens": 20425,
+      "total_tokens": 20764,
+      "cost": 0.0102323,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0102323,
+        "upstream_inference_prompt_cost": 1.98e-05,
+        "upstream_inference_completions_cost": 0.0102125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 20413
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 1107,
+      "total_tokens": 1439,
+      "cost": 0.00057025,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 331
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00057025,
+        "upstream_inference_prompt_cost": 1.675e-05,
+        "upstream_inference_completions_cost": 0.0005535
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1101
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 40,
+    "question": "[Question]: 10. Find the variance in the time to failure, assuming a constant failure rate  $ \\lambda $ , for two units in active parallel.\n\n[Choices]: [a] 2/3 $ \\lambda $  | [b] 3/2 $ \\lambda $  | [c] 3/4 $ \\lambda $ 2  | [d] 5/4  $ \\lambda $ 2"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 301,
+      "completion_tokens": 194,
+      "total_tokens": 495,
+      "cost": 0.0001188,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001188,
+        "upstream_inference_prompt_cost": 2.18e-05,
+        "upstream_inference_completions_cost": 9.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 188
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 41,
+    "question": "[Question]: 1. The usual consequences of management assuming human error as the \ufffd\ufffdroot cause\ufffd\ufffd of a failure is\n\n[Choices]: [a] Repeat of the same failure | [b] Disciplinary action for the employee | [c] Less productivity  | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 302,
+      "completion_tokens": 267,
+      "total_tokens": 569,
+      "cost": 0.0001747,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001747,
+        "upstream_inference_prompt_cost": 4.12e-05,
+        "upstream_inference_completions_cost": 0.0001335
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 261
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 42,
+    "question": "[Question]: 2. \ufffd\ufffdBurn-in\ufffd\ufffd testing is conducted on electronic assemblies for systems to:\n\n[Choices]: [a] Establish system failure rate. | [b] Extend product life | [c] Increase the total number of failure occurrences.   | [d] Minimize early life failure occurrences."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 305,
+      "completion_tokens": 302,
+      "total_tokens": 607,
+      "cost": 0.0001664,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 304
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001664,
+        "upstream_inference_prompt_cost": 1.54e-05,
+        "upstream_inference_completions_cost": 0.000151
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 296
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 43,
+    "question": "[Question]: 3.  When testing to establish failure rate and reliability predictions,  which of the following is not normally a feasible acceleration factor  with respect to rated conditions: \n\n[Choices]: [a] Longer time  | [b] Greater humidity | [c] Higher temperature | [d] Higher voltage"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 322,
+      "completion_tokens": 407,
+      "total_tokens": 729,
+      "cost": 0.00021975,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 321
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021975,
+        "upstream_inference_prompt_cost": 1.625e-05,
+        "upstream_inference_completions_cost": 0.0002035
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 401
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 44,
+    "question": "[Question]: 5. What is meant by \ufffd\ufffdFail Safe Design\ufffd\ufffd? \n\n[Choices]: [a] Designed such that a failure will not adversely affect the safe operation of the system   | [b] Designed such that the failure probability is low if the system is operated safely. | [c] Designed such that the system cannot fail if operated safely, | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 334,
+      "completion_tokens": 356,
+      "total_tokens": 690,
+      "cost": 0.00019485,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 333
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019485,
+        "upstream_inference_prompt_cost": 1.685e-05,
+        "upstream_inference_completions_cost": 0.000178
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 350
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}\n\n## Explanation\n\nThe reasoning follows standard reliability analysis for Weibull data with known shape parameter \u03b2=2.2 and right-censored observations. Transform the failure and censoring times to the exponential scale: u_i = t_i^\u03b2. The failure occurs at u_f = 42^{2.2} \u2248 3725.43, and four items are censored at u_c = 50^{2.2} \u2248 5466.82 each, yielding total time on test T_u = 3725.43 + 4 \u00d7 5466.82 \u2248 25592.71 hours.\n\nFor exponential lifetimes (in u-scale) with r=1 failure, 2 T_u / \u03b8 ~ \u03c7^2_{2r} = \u03c7^2_2, where \u03b8 = \u03b7^\u03b2. The 95% lower confidence limit for \u03b8 is \u03b8_L = 2 T_u / \u03c7^2_{0.95, 2}, with \u03c7^2_{0.95, 2} \u2248 5.99146. Thus, \u03b8_L \u2248 2 \u00d7 25592.71 / 5.99146 \u2248 8544.2.\n\nThe lower limit for \u03b7 is then \u03b7_L = (\u03b8_L)^{1/\u03b2} = 8544.2^{1/2.2}. Compute ln(8544.2) \u2248 9.0530, then 9.0530 / 2.2 \u2248 4.1150, and exp(4.1150) \u2248 61.25 hours.\n\nThis value, approximately 61.25 hours, does not match choices [a] 13.5 hrs, [b] 39.8 hrs, or [c] 49.7 hrs. Therefore, the correct choice is [d] None of the above.",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 352,
+      "completion_tokens": 9861,
+      "total_tokens": 10213,
+      "cost": 0.00494825,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 351
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00494825,
+        "upstream_inference_prompt_cost": 1.775e-05,
+        "upstream_inference_completions_cost": 0.0049305
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9481
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 46,
+    "question": "[Question]: 7. Five items were placed on test, one item failed after 42 hrs, and the remaining four items were removed after 50 hrs. It is known that the time to failure for these items follows a Weibull with  $ \\beta $ =2.2. Determine the 95% lower confidence limit for the characteristic life.\n\n[Choices]: [a] 13.5 hrs | [b] 39.8 hrs   | [c] 49.7 hrs.   | [d] None of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 339,
+      "completion_tokens": 1322,
+      "total_tokens": 1661,
+      "cost": 0.0006808,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006808,
+        "upstream_inference_prompt_cost": 1.98e-05,
+        "upstream_inference_completions_cost": 0.000661
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1316
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 309,
+      "completion_tokens": 1245,
+      "total_tokens": 1554,
+      "cost": 0.0006621,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 148
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0006621,
+        "upstream_inference_prompt_cost": 3.96e-05,
+        "upstream_inference_completions_cost": 0.0006225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1239
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 48,
+    "question": "[Question]: 10.  An engineer just ran 50 compressor start tests with no failures, he  needs to pass the customer\ufffd\ufffds requirement of 80% confidence of 0.90  reliability. Has he done that? \n\n[Choices]: [a] Yes   | [b] Almost | [c] No way"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 295,
+      "completion_tokens": 202,
+      "total_tokens": 497,
+      "cost": 0.0001159,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 294
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001159,
+        "upstream_inference_prompt_cost": 1.49e-05,
+        "upstream_inference_completions_cost": 0.000101
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 196
+      }
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 49,
+    "question": "[Question]: 2. The distribution used to describe the time between failures which occur independently and at a constant rate, is the:\n\n[Choices]: [a] Log normal. | [b] Weibull. | [c] Gamma. | [d] Exponential."
+  }
+]

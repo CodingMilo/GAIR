@@ -1,0 +1,16 @@
+{
+  "model": "openai/gpt-4.1-mini",
+  "llm_script": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\llm_reliability_engineering\\scripts_gair_2026\\devel\\experiments\\training_data_zero-shot_no_reasoning\\openai-gpt-4-1-mini\\my_eval.py",
+  "temperature": 1.0,
+  "max_tokens": null,
+  "max_reasoning_tokens": 0,
+  "num_repetitions": 5,
+  "dataset_path": "../../train.csv",
+  "solution_path": "../../train_solution.csv",
+  "testing_mode": false,
+  "message": "Training dataset. Baseline. Zeroshot. Forcing no reasoning.",
+  "enable_parallel": true,
+  "max_workers": 5,
+  "rate_limit_seconds": 3.0,
+  "system_prompt": "You will be given a CRE exam question. Do not reason and choose the correct answer(s) directly. Output your answer as a JSON object with the following format: {\\\"answer\\\": [\\\"a\\\"] or [\\\"a\\\", \\\"b\\\", \\\"c\\\"] for multiple answers}. For example: {\\\"answer\\\": [\\\"a\\\"]} or {\\\"answer\\\": [\\\"a\\\", \\\"b\\\", \\\"c\\\"]}. Output only the answer in json file, and nothing else."
+}

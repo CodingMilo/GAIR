@@ -1,0 +1,19 @@
+{
+  "models": [
+    "mistralai/mistral-large-2512"
+  ],
+  "results_path": "../experiments/training_think-step-by-step",
+  "dataset_path": "../experiments/train.csv",
+  "solution_path": "../experiments/train_solution.csv",
+  "eval_script_path": "./configs/my_eval_cot.py",
+  "temperature": 1.0,
+  "max_reasoning_tokens": 0,
+  "max_tokens": null,
+  "num_repetitions": 5,
+  "testing_mode": false,
+  "workers": 2,
+  "message": "Training dataset. We force the model not the reason, but 'think lound' using a chain-of-thoughts.",
+  "enable_parallel": true,
+  "max_workers_per_model": 5,
+  "rate_limit_seconds": 1.0
+}

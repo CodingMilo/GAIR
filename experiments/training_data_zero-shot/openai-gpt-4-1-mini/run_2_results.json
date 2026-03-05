@@ -1,0 +1,1472 @@
+[
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 179,
+      "completion_tokens": 8,
+      "total_tokens": 187,
+      "cost": 8.44e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.44e-05,
+        "upstream_inference_prompt_cost": 7.16e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 1,
+    "question": "[Question]: 2.  Battery life has been measured as normally distributed with a mean  equal to 150 hours and a variance of 400 hours. Find the B10 life.\n\n[Choices]: [a] 128.1 hrs  | [b] 124.4 hrs  | [c] 122.6hrs | [d] 110hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\"]}",
+    "extracted_answer": "a, b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 237,
+      "completion_tokens": 11,
+      "total_tokens": 248,
+      "cost": 0.0001124,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001124,
+        "upstream_inference_prompt_cost": 9.48e-05,
+        "upstream_inference_completions_cost": 1.76e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 2,
+    "question": "[Question]: 3.  Failure rate data is acquired from MIL-HDBK-217 for reliability  modeling of a new circuit board design. The failure rate for the entire  circuit board is acquired by summing the MIL-HDBK-217 failure rates for each component on the circuit board. Choose the correct statement(s) regarding the underlying assumptions behind this approach:\n\n[Choices]: [a] The individual component failure  rates are constants. | [b]  The system has a series system architecture. | [c]  The system has a warm standby architecture. | [d]  The individual component has a failure rate that is a bathtub shape."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 166,
+      "completion_tokens": 8,
+      "total_tokens": 174,
+      "cost": 7.92e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.92e-05,
+        "upstream_inference_prompt_cost": 6.64e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 3,
+    "question": "[Question]: 4.  Each of the following test acceleration models is most often  used with only one varying stress type, except for which?\n\n[Choices]: [a] Arrhenius | [b] Coffin-Manson | [c] Inverse Power Law  | [d] Eyring"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 187,
+      "completion_tokens": 8,
+      "total_tokens": 195,
+      "cost": 8.76e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.76e-05,
+        "upstream_inference_prompt_cost": 7.48e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 4,
+    "question": "[Question]: 6.  Suppose that six bad golf balls get mixed up with eight good  golf balls. If two balls are drawn simultaneously, what is the  probability that both are good? \n\n[Choices]: [a]  0.1563  | [b]  0.3077 | [c]  0.2857 | [d]  0.3956"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 175,
+      "completion_tokens": 8,
+      "total_tokens": 183,
+      "cost": 8.28e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.28e-05,
+        "upstream_inference_prompt_cost": 7e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 5,
+    "question": "[Question]: 7.  Which of the following choices is the best type of control chart for  depicting the average number of defects found in a particular make and  model of a refrigerator?\n\n[Choices]: [a]  X-bar and R-chart | [b]  np chart | [c] A normal curve  | [d] U chart"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 275,
+      "completion_tokens": 8,
+      "total_tokens": 283,
+      "cost": 0.0001228,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001228,
+        "upstream_inference_prompt_cost": 0.00011,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 6,
+    "question": "[Question]: 8.  Sample Variance of resistance for the 20-unit sample of electronic  components was 4 ohms. 95% confidence interval for the population  variance is: \n\n[Choices]: [a] 2.31  $ \\leq $   $ \\sigma $ 2  $ \\leq $  8.53  | [b] 2.93  $ \\leq $   $ \\sigma $ 2  $ \\leq $  10.43 | [c] 2.52  $ \\leq $   $ \\sigma $ 2  $ \\leq $  7.51 | [d] 3.18  $ \\leq $   $ \\sigma $ 2  $ \\leq $  9.21"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 266,
+      "completion_tokens": 8,
+      "total_tokens": 274,
+      "cost": 0.0001192,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001192,
+        "upstream_inference_prompt_cost": 0.0001064,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 265,
+      "completion_tokens": 8,
+      "total_tokens": 273,
+      "cost": 0.0001188,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001188,
+        "upstream_inference_prompt_cost": 0.000106,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 8,
+    "question": "[Question]: 10.  50 samples of an electronic component selected at random at incoming  inspection measures an average resistance of 10 ohms and a standard  deviation of 2 ohms. 95% confidence interval for the population mean is:\n\n[Choices]: [a] 9.53 $ \\leq $   $ \\mu $  $ \\leq $  10.47 | [b] 8 $ \\leq $   $ \\mu $  $ \\leq $  12 | [c] 6 $ \\leq $   $ \\mu $  $ \\leq $ 14  | [d] 9.43 $ \\leq $   $ \\mu $  $ \\leq $  10.57"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\", \"d\"]}",
+    "extracted_answer": "c, d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 202,
+      "completion_tokens": 11,
+      "total_tokens": 213,
+      "cost": 9.84e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.84e-05,
+        "upstream_inference_prompt_cost": 8.08e-05,
+        "upstream_inference_completions_cost": 1.76e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs. Choose the correct statement(s): \n\n[Choices]: [a] The failure rate is $2\\times 10^{-5}$ $hrs^{-1}$  | [b] The time to 10% failure is 5268 hrs   | [c] The time to 10% failure is 5450 hrs | [d]  The B10 life is 5333 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 230,
+      "completion_tokens": 8,
+      "total_tokens": 238,
+      "cost": 0.0001048,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001048,
+        "upstream_inference_prompt_cost": 9.2e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 246,
+      "completion_tokens": 8,
+      "total_tokens": 254,
+      "cost": 0.0001112,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001112,
+        "upstream_inference_prompt_cost": 9.84e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 8,
+      "total_tokens": 208,
+      "cost": 9.28e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.28e-05,
+        "upstream_inference_prompt_cost": 8e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 12,
+    "question": "[Question]: 7.  For a certain 3-engine airplane, at least two out of its three engines  must function. The engine reliability at time t is 0.995. Find the  probability that the airplane flies successfully for T hours, assuming  identical and independent engines.\n\n[Choices]: [a] 0.9998 | [b] 0.985 | [c] 0.99945  | [d] 0.999925"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 194,
+      "completion_tokens": 14,
+      "total_tokens": 208,
+      "cost": 0.0001,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001,
+        "upstream_inference_prompt_cost": 7.76e-05,
+        "upstream_inference_completions_cost": 2.24e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 13,
+    "question": "[Question]: 1. Which of the following is true about the Taguchi DOE approach? \n\n[Choices]: [a] It includes the concept of loss function in factorial experiments. | [b] It assumes losses occur when a process fails to meet a target value. | [c] It assumes losses are due to variability within the process.  | [d] It assumes that the loss function is a step function relative to the specification limits."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 174,
+      "completion_tokens": 14,
+      "total_tokens": 188,
+      "cost": 9.2e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.2e-05,
+        "upstream_inference_prompt_cost": 6.96e-05,
+        "upstream_inference_completions_cost": 2.24e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 14,
+    "question": "[Question]: 2. In general, reliability testing is performed for which of the following reasons? \n\n[Choices]: [a] To detect unanticipated failure modes. | [b] To compare estimated failure rates to actual failure rates. | [c] To monitor reliability growth over time.  | [d] To meet or exceed customer expectations."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 196,
+      "completion_tokens": 8,
+      "total_tokens": 204,
+      "cost": 9.12e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.12e-05,
+        "upstream_inference_prompt_cost": 7.84e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 15,
+    "question": "[Question]: 3. The time to failure of a component is Weibull distributed,  $ \\beta $ =0.5,  $ \\eta $ =10,000 hours.What is the probability that the component will still be operational after one year? \n\n[Choices]: [a] 0.3922  | [b] 0.3214 | [c] 0.3680 | [d] 0.6320"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 277,
+      "completion_tokens": 8,
+      "total_tokens": 285,
+      "cost": 0.0001236,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001236,
+        "upstream_inference_prompt_cost": 0.0001108,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 245,
+      "completion_tokens": 8,
+      "total_tokens": 253,
+      "cost": 0.0001108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001108,
+        "upstream_inference_prompt_cost": 9.8e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 8,
+      "total_tokens": 208,
+      "cost": 9.28e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.28e-05,
+        "upstream_inference_prompt_cost": 8e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 18,
+    "question": "[Question]: 7.  Brand X aircraft manufacturing company has a backup control system that  operates independently of the primary control. Each of the systems has a  probability of 0.01 of failing on a particular mission.What is the probability of at least one system functioning properly? \n\n[Choices]: [a] 0.9999  | [b] 0.9801 | [c] 0.9808 | [d] 0.99999"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\", \"d\"]}",
+    "extracted_answer": "b, d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 281,
+      "completion_tokens": 11,
+      "total_tokens": 292,
+      "cost": 0.00013,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013,
+        "upstream_inference_prompt_cost": 0.0001124,
+        "upstream_inference_completions_cost": 1.76e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\n\n[Choices]: [a] $ F(t) = \\lambda t^{\\beta-1} $   | [b] $ F(t) = \\lambda \\beta t^{\\beta-1} $  | [c] $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $  | [d] $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 212,
+      "completion_tokens": 14,
+      "total_tokens": 226,
+      "cost": 0.0001072,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001072,
+        "upstream_inference_prompt_cost": 8.48e-05,
+        "upstream_inference_completions_cost": 2.24e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 20,
+    "question": "[Question]: 9.  In constructing programs for environmental stress screening(ESS), the  selection of the stress levels and the choice of exposure times is a  challenging task. Which of the following are true:\n\n[Choices]: [a] ESS is not a test. ESS is a screening process | B. ESS is not Burn-in, ESS stresses a product to operational extremes | [c] ESS is used in manufacturing/production to catch latent failures.  | [d] All items in a product line should be exposed to ESS."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 262,
+      "completion_tokens": 8,
+      "total_tokens": 270,
+      "cost": 0.0001176,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001176,
+        "upstream_inference_prompt_cost": 0.0001048,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 21,
+    "question": "[Question]: 10.  A test was done on ultrasonic inspection kits to determine how  effective they are in discovering microscopic cracks in aircraft parts.  When a crack was present, the equipment signaled a crack 98% of the  time. There was a \ufffd\ufffdfalse alarm\ufffd\ufffd on 3% of the parts which had no cracks.  Suppose five percent of all the parts have a crack in them. If the  percentages in the test can be assumed to be the true probabilities,  find the probability that a part is really bad when a kit signals a  crack.\n\n[Choices]: [a] 0.9215 | B.0.9225.  | [c] 0.6322.  | [d] 0.7533."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 189,
+      "completion_tokens": 8,
+      "total_tokens": 197,
+      "cost": 8.84e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.84e-05,
+        "upstream_inference_prompt_cost": 7.56e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 22,
+    "question": "[Question]: 1. A computer chip manufacturer averages 7 defects per chip. What is the probability of a chip containing less than 3 defects? Choose a plausible distribution by yourself by adding least additional assumptions on parameter values.\n\n[Choices]: [a] 0.00638 | [b] 0.02234  | [c] 0.02963  | [d] 0.02872"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 284,
+      "completion_tokens": 8,
+      "total_tokens": 292,
+      "cost": 0.0001264,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001264,
+        "upstream_inference_prompt_cost": 0.0001136,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 23,
+    "question": "[Question]: 2. Given the following data: (where (-) indicates censored) -309,229,386,-104,180,-217,-167,168,122,138Determine the best fit Weibull parameters  $ \\beta $ , $ \\eta $ , t0?\n\n[Choices]: [a]  $ \\beta $ =2.76, $ \\eta $ =261.1, t0= 0.0  | [b]  $ \\beta $ =0.88, $ \\eta $ =147.86, t0=113.76  | [c]  $ \\beta $ =2.61, $ \\eta $ =278.2, t0=85. | [d]  $ \\beta $ =1.53, $ \\eta $ =183, t0= 0.03  ."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 154,
+      "completion_tokens": 8,
+      "total_tokens": 162,
+      "cost": 7.44e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.44e-05,
+        "upstream_inference_prompt_cost": 6.16e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:\n\n[Choices]: [a] Handling Damage,  | [b] Poor Quality Control  | [c] Improper installation | [d] Inadequate design"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 219,
+      "completion_tokens": 8,
+      "total_tokens": 227,
+      "cost": 0.0001004,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001004,
+        "upstream_inference_prompt_cost": 8.76e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 221,
+      "completion_tokens": 8,
+      "total_tokens": 229,
+      "cost": 0.0001012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001012,
+        "upstream_inference_prompt_cost": 8.84e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 159,
+      "completion_tokens": 8,
+      "total_tokens": 167,
+      "cost": 7.64e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.64e-05,
+        "upstream_inference_prompt_cost": 6.36e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 27,
+    "question": "[Question]: 7. What is the Best time for Reliability Test Planning?\n\n[Choices]: [a] Production phase,  | [b] Early stage of the product development phase,  | [c] Before the production phase | [d] Field return failure analysis phase"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 158,
+      "completion_tokens": 8,
+      "total_tokens": 166,
+      "cost": 7.6e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.6e-05,
+        "upstream_inference_prompt_cost": 6.32e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 28,
+    "question": "[Question]: 1. Compared to quality, reliability engineering is more concerned with :\n\n[Choices]: [a] Failure rate over time. | [b] Manufacturing errors | [c] Defective rate at a point in time.  | [d] Product design."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 226,
+      "completion_tokens": 8,
+      "total_tokens": 234,
+      "cost": 0.0001032,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001032,
+        "upstream_inference_prompt_cost": 9.04e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 163,
+      "completion_tokens": 8,
+      "total_tokens": 171,
+      "cost": 7.8e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.8e-05,
+        "upstream_inference_prompt_cost": 6.52e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 30,
+    "question": "[Question]: 9. When prioritizing actions to be taken in an FMEA, which of the following priority rankings should be considered first? \n\n[Choices]: [a] Overall RPN (Risk Priority Number)  | [b] Highest severity ranking  | [c] Highest occurrence ranking"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 160,
+      "completion_tokens": 8,
+      "total_tokens": 168,
+      "cost": 7.68e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.68e-05,
+        "upstream_inference_prompt_cost": 6.4e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 31,
+    "question": "[Question]: 1. Battery life has been measured as normally distributed with  mean equal to 150 hours and variance of 400 hours. Find the B10 life. \n\n[Choices]: [a] 124.4 hrs  | [b] 175.6 hrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 174,
+      "completion_tokens": 8,
+      "total_tokens": 182,
+      "cost": 8.24e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.24e-05,
+        "upstream_inference_prompt_cost": 6.96e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 32,
+    "question": "[Question]: 2. How should a Reliability Engineer react when a corrective action was rejected by management?\n\n[Choices]: [a] Insist the corrective action must be implemented, | [b] Implement corrective action by oneself,  | [c] Agree with management and document the findings,  | [d] Agree with management and discard the findings"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 212,
+      "completion_tokens": 8,
+      "total_tokens": 220,
+      "cost": 9.76e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.76e-05,
+        "upstream_inference_prompt_cost": 8.48e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 33,
+    "question": "[Question]: 3.  Among the various reliability tests that are performed on products at  various stages of development, which of the following tests are most  useful in determining the minimum mean time to failure requirements:1) Reliability growth testing,2) Environmental stress screening,3) Reliability qualification testing,4) Acceptance testing\n\n[Choices]: [a] 1&amp;2, | [b] 2&amp;3,  | [c] 3&amp;4,  | [d] 4&amp;1"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 216,
+      "completion_tokens": 8,
+      "total_tokens": 224,
+      "cost": 9.92e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.92e-05,
+        "upstream_inference_prompt_cost": 8.64e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "Given data:\n- Number of units, \\( n = 10 \\)\n- Current times \\( t_i = \\{25, 33, 40, 45, 50, 60, 64, 75, 80, 99\\} \\) hours\n- Weibull parameters: \\( \\beta = 3.02 \\), \\( \\eta = 88 \\) hours\n- Next time interval \\( \\Delta t = 5 \\) hours (predict failures over next 5 hours)\n\n**Step 1: Calculate the conditional probability of failure for each unit over the next 5 hours.**\n\nFor a Weibull distribution, the cumulative distribution function (CDF) is:\n\\[\nF(t) = 1 - e^{-(t/\\eta)^\\beta}\n\\]\n\nThe probability of failure between time \\( t_i \\) and \\( t_i + \\Delta t \\) given survival up to \\( t_i \\) is:\n\\[\nP(\\text{fail in } [t_i, t_i + \\Delta t]) = \\frac{F(t_i + \\Delta t) - F(t_i)}{1 - F(t_i)} = 1 - \\frac{1 - F(t_i + \\Delta t)}{1 - F(t_i)}\n\\]\n\n**Calculations:**\n\nCalculate \\( F(t_i) \\) and \\( F(t_i + 5) \\) for each unit.\n\nDefine:\n\\[\nF(t) = 1 - e^{-(t/88)^{3.02}}\n\\]\n\nCalculate the exponent for each \\( t \\):\n\nFor each \\( t_i \\):\n\n1. \\( t=25 \\)\n\\[\n(t/88)^{3.02} = (25/88)^{3.02} \\approx (0.2841)^{3.02} \\approx e^{3.02 \\ln(0.2841)} = e^{3.02 \\times (-1.258)} = e^{-3.802} = 0.0223\n\\]\nSo,\n\\[\nF(25) = 1 - e^{-0.0223} = 1 - 0.978 = 0.022\n\\]\n\n2. \\( t=30 \\) (25+5)\n\\[\n(30/88)^{3.02} = (0.3409)^{3.02} = e^{3.02 \\ln(0.3409)} = e^{3.02 \\times (-1.076)} = e^{-3.25} = 0.0388\n\\]\n\\[\nF(30) = 1 - e^{-0.0388} = 1 - 0.962 = 0.038\n\\]\n\nProbability fail in next 5 hours for unit 1:\n\\[\nP = \\frac{F(30) - F(25)}{1 - F(25)} = \\frac{0.038 - 0.022}{1 - 0.022} = \\frac{0.016}{0.978} = 0.01635\n\\]\n\nRepeat the same for other units:\n\nUnit 2:\n- \\( t=33 \\)\n\\[\n(33/88)^{3.02} = 0.375^{3.02} = e^{3.02 \\times \\ln(0.375)} = e^{3.02 \\times (-0.981)} = e^{-2.962} = 0.0518\n\\]\n\\[\nF(33) = 1 - e^{-0.0518} = 1 - 0.9495 = 0.0505\n\\]\n\n- \\( t=38 \\)\n\\[\n(38/88)^{3.02} = 0.432^{3.02} = e^{3.02 \\times \\ln(0.432)}= e^{3.02 \\times (-0.839)}= e^{-2.535} = 0.079\n\\]\n\\[\nF(38) = 1 - e^{-0.079} = 1 - 0.924 = 0.076\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.076 - 0.0505}{1 - 0.0505} = \\frac{0.0255}{0.9495} = 0.0268\n\\]\n\nUnit 3:\n- \\( t=40 \\):\n\\[\n(40/88)^{3.02} = 0.4545^{3.02} = e^{3.02 \\times (-0.789)}= e^{-2.386} = 0.0921\n\\]\n\\[\nF(40)=1 - e^{-0.0921}=1 - 0.912 = 0.088\n\\]\n\n- \\( t=45 \\):\n\\[\n(45/88)^{3.02} = 0.511^{3.02} = e^{3.02 \\times (-0.671)}= e^{-2.03}= 0.131\n\\]\n\\[\nF(45)=1 - e^{-0.131}=1 - 0.877=0.123\n\\]\n\nProbability fail:\n\\[\nP= \\frac{0.123 - 0.088}{1 - 0.088} = \\frac{0.035}{0.912} = 0.0384\n\\]\n\nUnit 4:\n- \\( t=45 \\): already above \\( F(45)=0.123 \\)\n- \\( t=50 \\):\n\\[\n(50/88)^{3.02} = 0.568^{3.02} = e^{3.02 \\times (-0.565)}= e^{-1.707} = 0.181\n\\]\n\\[\nF(50)=1 - e^{-0.181} = 1 - 0.834 = 0.166\n\\]\n\nProbability fail:\n\\[\nP= \\frac{0.166 - 0.123}{1 - 0.123} = \\frac{0.043}{0.877} = 0.0490\n\\]\n\nUnit 5:\n- \\( t=50 \\): \\(F(50)=0.166\\)\n- \\( t=55 \\):\n\\[\n(55/88)^{3.02} = 0.625^{3.02} = e^{3.02 \\times (-0.470)} = e^{-1.42} = 0.241\n\\]\n\\[\nF(55) = 1 - e^{-0.241} = 1 - 0.786 = 0.214\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.214 - 0.166}{1 - 0.166} = \\frac{0.048}{0.834} = 0.0576\n\\]\n\nUnit 6:\n- \\( t=60 \\):\n\\[\n(60/88)^{3.02} = 0.682^{3.02} = e^{3.02 \\times (-0.383)} = e^{-1.158} = 0.314\n\\]\n\\[\nF(60) = 1 - e^{-0.314} = 1 - 0.731 = 0.269\n\\]\n\n- \\( t=65 \\):\n\\[\n(65/88)^{3.02} = 0.739^{3.02} = e^{3.02 \\times (-0.303)}= e^{-0.916} = 0.4\n\\]\n\\[\nF(65)=1 - e^{-0.4} = 1 - 0.670 = 0.33\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.33 - 0.269}{1 - 0.269} = \\frac{0.061}{0.731} = 0.0835\n\\]\n\nUnit 7:\n- \\( t=64 \\): Calculate\n\\[\n(64/88)^{3.02} = 0.727^{3.02} = e^{3.02 \\times (-0.318)}  = e^{-0.96} = 0.383\n\\]\n\\[\nF(64) = 1 - e^{-0.383} = 1 - 0.681 = 0.319\n\\]\n\n- \\( t=69 \\):\n\\[\n(69/88)^{3.02} = 0.784^{3.02} = e^{3.02 \\times (-0.243)} = e^{-0.734} = 0.48\n\\]\n\\[\nF(69)=1 - e^{-0.48} = 1 - 0.619 = 0.381\n\\]\n\nProbability fail:\n\\[\nP= \\frac{0.381 - 0.319}{1 - 0.319} = \\frac{0.062}{0.681} = 0.0910\n\\]\n\nUnit 8:\n- \\( t=75 \\):\n\\[\n(75/88)^{3.02} = 0.852^{3.02} = e^{3.02 \\times (-0.160)}= e^{-0.483} = 0.617\n\\]\n\\[\nF(75) = 1 - e^{-0.617} = 1 - 0.54 = 0.46\n\\]\n\n- \\( t=80 \\):\n\\[\n(80/88)^{3.02} = 0.909^{3.02} = e^{3.02 \\times (-0.095)} = e^{-0.287} = 0.75\n\\]\n\\[\nF(80) = 1 - e^{-0.75} = 1 - 0.472 = 0.528\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.528 - 0.46}{1 - 0.46} = \\frac{0.068}{0.54} = 0.1259\n\\]\n\nUnit 9:\n- \\( t=80 \\): already calculated, \\(F(80)=0.528\\)\n- \\( t=85 \\):\n\\[\n(85/88)^{3.02} = 0.966^{3.02} = e^{3.02 \\times (-0.034)} = e^{-0.102} = 0.903\n\\]\n\\[\nF(85) = 1 - e^{-0.903} = 1 - 0.405 = 0.595\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.595 - 0.528}{1 - 0.528} = \\frac{0.067}{0.472} = 0.142\n\\]\n\nUnit 10:\n- \\( t=99 \\):\n\\[\n(99/88)^{3.02} = 1.125^{3.02} = e^{3.02 \\times 0.117} = e^{0.353} = 1.42\n\\]\n\\[\nF(99) = 1 - e^{-1.42} = 1 - 0.242 = 0.758\n\\]\n\n- \\( t=104 \\):\n\\[\n(104/88)^{3.02} = 1.18^{3.02} = e^{3.02 \\times 0.165} = e^{0.498} = 1.645\n\\]\n\\[\nF(104)=1 - e^{-1.645} = 1 - 0.193 = 0.807\n\\]\n\nProbability fail:\n\\[\nP = \\frac{0.807 - 0.758}{1 - 0.758} = \\frac{0.049}{0.242} = 0.202\n\\]\n\n**Step 2: Sum the probabilities for all units to get expected number of failures in next 5 hours.**\n\n\\[\n\\sum P = 0.01635 + 0.0268 + 0.0384 + 0.0490 + 0.0576 + 0.0835 + 0.0910 + 0.1259 + 0.142 + 0.202\n\\]\n\nCalculating sum:\n\n\\[\n0.01635 + 0.0268 = 0.04315 \\\\\n0.04315 + 0.0384 = 0.08155 \\\\\n0.08155 + 0.049 = 0.13055 \\\\\n0.13055 + 0.0576 = 0.18815 \\\\\n0.18815 + 0.0835 = 0.27165 \\\\\n0.27165 + 0.091 = 0.36265 \\\\\n0.36265 + 0.1259 = 0.48855 \\\\\n0.48855 + 0.142 = 0.63055 \\\\\n0.63055 + 0.202 = 0.83255 \n\\]\n\nSo, expected number of failures = approximately 0.83.\n\nHowever, the answers provided are 5.44, 6.44, 7.44, 8.44 \u2014 much larger values.\n\nGiven this huge difference, maybe the question expects the **expected number of failures within the next 5 hours** from time zero, not conditional on survival till now. Another possibility is that the question assumes \"How many units would fail in the interval (current time + 5 hours)\" considering all units' lifetime to be \\( t_i + 5 \\), not conditioning on survival.\n\nOr, question expects the sum of the differences in cumulative failures at times \\( t_i + 5 \\) for each unit, but not conditional.\n\nAlternatively, just calculate:\n\nFor each unit, compute:\n\n\\[\n\\text{Failure increment} = F(t_i + 5) - F(t_i)\n\\]\n\nSum all these increments: this is the expected number of failures over next 5 hours considering all 10 units.\n\nWe already have \\( F(t_i) \\) and \\( F(t_i + 5) \\) from above for each unit.\n\nSummations of these increments (non-conditional):\n\n\\[\n(0.038 - 0.022) = 0.016 \\\\\n(0.076 - 0.0505) = 0.0255 \\\\\n(0.123 - 0.088) = 0.035 \\\\\n(0.166 - 0.123) = 0.043 \\\\\n(0.214 - 0.166) = 0.048 \\\\\n(0.269 - 0.214) = 0.055 \\text{ (adjusted)} \\\\\n\\]\n\nWait last calculation for \\( F(60) \\) was 0.269 and \\( F(65) \\) 0.33, so difference is:\n\\[\n0.33 - 0.269 = 0.061\n\\]\n\nContinue:\n\nUnit 7 difference: \\( 0.381 - 0.319 = 0.062 \\)\n\nUnit 8 difference: \\( 0.528 - 0.46 = 0.068 \\)\n\nUnit 9 difference: \\( 0.595 - 0.528 = 0.067 \\)\n\nUnit 10 difference: \\( 0.807 - 0.758 = 0.049 \\)\n\nSum all:\n\n\\[\n0.016 + 0.0255 + 0.035 + 0.043 + 0.048 + 0.061 + 0.062 + 0.068 + 0.067 + 0.049 = ?\n\\]\n\nCalculating:\n\n\\[\n0.016 + 0.0255 = 0.0415 \\\\\n0.0415 + 0.035 = 0.0765 \\\\\n0.0765 + 0.043 = 0.1195 \\\\\n0.1195 + 0.048 = 0.1675 \\\\\n0.1675 + 0.061 = 0.2285 \\\\\n0.2285 + 0.062 = 0.2905 \\\\\n0.2905 + 0.068 = 0.3585 \\\\\n0.3585 + 0.067 = 0.4255 \\\\\n0.4255 + 0.049 = 0.4745\n\\]\n\nSum expected failures over next 5 hours is about 0.4745, which is still << 5.44.\n\nThis suggests the question expects the total **expected failures over next 5 hours** from some other perspective.\n\nAnother possibility is that the times provided are the cumulative times units have run, so survival times \\(t_i\\), and question wants to find predicted failures in next 5 hours for all 10 units starting at time zero, meaning usage time for each unit will be \\( t_i + 5 \\). Then, sum of \\( F(t_i+5) \\) minus sum of \\( F(t_i) \\) = expected failures in next 5 hours.\n\nSum \\( F(t_i) \\):\n\n\\[\nF(25) + F(33) + F(40) + F(45) + F(50) + F(60) + F(64) + F(75) + F(80) + F(99) = ?\n\\]\n\nValues:\n\n- \\( F(25) = 0.022 \\)\n- \\( F(33) = 0.0505 \\)\n- \\( F(40) = 0.088 \\)\n- \\( F(45) = 0.123 \\)\n- \\( F(50) = 0.166 \\)\n- \\( F(60) = 0.269 \\)\n- \\( F(64) = 0.319 \\)\n- \\( F(75) = 0.46 \\)\n- \\( F(80) = 0.528 \\)\n- \\( F(99) = 0.758 \\)\n\nSum:\n\\[\n0.022 + 0.0505 = 0.0725 \\\\\n0.0725 + 0.088 = 0.1605 \\\\\n0.1605 + 0.123 = 0.2835 \\\\\n0.2835 + 0.166 = 0.4495 \\\\\n0.4495 + 0.269 = 0.7185 \\\\\n0.7185 + 0.319 = 1.0375 \\\\\n1.0375 + 0.46 = 1.4975 \\\\\n1.4975 + 0.528 = 2.0255 \\\\\n2.0255 + 0.758 = 2.7835\n\\]\n\nSum \\( F(t_i + 5) \\):\n\nCalculate \\( F(t_i + 5) \\):\n\n- \\( F(30) = 0.038 \\)\n- \\( F(38) = 0.076 \\)\n- \\( F(45) = 0.123 \\)\n- \\( F(50) = 0.166 \\)\n- \\( F(55) = 0.214 \\)\n- \\( F(65) = 0.33 \\)\n- \\( F(69) = 0.381 \\)\n- \\( F(80) = 0.528 \\)\n- \\( F(85) = 0.595 \\)\n- \\( F(104) = 0.807 \\)\n\nSum:\n\\[\n0.038 + 0.076 = 0.114 \\\\\n0.114 + 0.123 = 0.237 \\\\\n0.237 + 0.166 = 0.403 \\\\\n0.403 + 0.214 = 0.617 \\\\\n0.617 + 0.33 = 0.947 \\\\\n0.947 + 0.381 = 1.328 \\\\\n1.328 + 0.528 = 1.856 \\\\\n1.856 + 0.595 = 2.451 \\\\\n2.451 + 0.807 = 3.258\n\\]\n\nTotal expected failures over next 5 hour interval:\n\\[\n3.258 - 2.7835 = 0.4745\n\\]\n\nStill does not match answers.\n\nSince these numeric attempts do not align with answers, maybe question expects the predicted number of failures over next 5 hours if all 10 units started at zero hours (i.e., at 0, predict number of failures in 5 hours).\n\nCalculate:\n\n\\[\n\\text{Expected failures} = n \\times F(5)\n\\]\n\nCalculate \\( F(5) \\):\n\n\\[\n(5/88)^{3.02} = (0.0568)^{3.02} = e^{3.02 \\times \\ln(0.0568)} = e^{3.02 \\times (-2.868)} = e^{-8.67} = 0.000172\n\\]\n\\[\nF(5) = 1 - e^{-0.000172} = 1 - 0.99983 = 0.00017\n\\]\n\nSo \\( n \\times F(5) = 10 \\times 0.00017 = 0.0017 \\) failure in first 5 hours. Not matching answers either.\n\nGiven this, the most reasonable interpretation given current times, Weibull parameters, and question of expected number of failures over next 5 hours is to sum the conditional failure probabilities for each unit in next 5 hours, which we found to be ~0.83, and the closest answer to it is 5.44, which is way off.\n\nAlternatively, maybe the choices are typographical or the parameters are such that the calculation is done using approximation.\n\nGiven the parameter set and the most appropriate calculation, the expected number of failures over next 5 hours is approximately 0.83, none of the answers matches this directly.\n\nIn such a case, the closest answer from choices is [a] 5.44.\n\nAlternatively, as the values in options differ by exactly 1 (5.44, 6.44, 7.44, 8.44), possibility that a constant is added to expected fail count.\n\nSo the predicted failures over next 5 hours is - Choose [a] 5.44.\n\nFinal answer:\n\n{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 234,
+      "completion_tokens": 4759,
+      "total_tokens": 4993,
+      "cost": 0.007708,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.007708,
+        "upstream_inference_prompt_cost": 9.36e-05,
+        "upstream_inference_completions_cost": 0.0076144
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 201,
+      "completion_tokens": 8,
+      "total_tokens": 209,
+      "cost": 9.32e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.32e-05,
+        "upstream_inference_prompt_cost": 8.04e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 36,
+    "question": "[Question]: 4.  Five motors are run to failure. Failure times are (in hours):  632,3450,816,928,150. Assuming an exponential distribution, what are the  90% confidence bounds for the MTTF?\n\n[Choices]: [a] 1051, 1942 | [b] 847, 2650 | [c] 347, 3747  | [d] 653, 3034"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 207,
+      "completion_tokens": 8,
+      "total_tokens": 215,
+      "cost": 9.56e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.56e-05,
+        "upstream_inference_prompt_cost": 8.28e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 37,
+    "question": "[Question]: 6.  There is a contractual requirement to demonstrate with 90% confidence  that a vehicle can achieve a 100-km mission with a reliability of 99%.  The acceptance test is performed by running 10 vehicles over a 50,000-  km test track. What is the contractual MTTF?\n\n[Choices]: [a] 5000 km  | [b] 9950 km  | [c] 8525 km | [d] 1950"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 198,
+      "completion_tokens": 8,
+      "total_tokens": 206,
+      "cost": 9.2e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.2e-05,
+        "upstream_inference_prompt_cost": 7.92e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 38,
+    "question": "[Question]: 7.  The one-month reliability on an indicator lamp is 0.95 with the failure  rate specified as constant. What is the probability that more than two  spare bulbs will be needed during the first year of operation? (Ignore  replacement time.)\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 202,
+      "completion_tokens": 8,
+      "total_tokens": 210,
+      "cost": 9.36e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.36e-05,
+        "upstream_inference_prompt_cost": 8.08e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 194,
+      "completion_tokens": 8,
+      "total_tokens": 202,
+      "cost": 9.04e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.04e-05,
+        "upstream_inference_prompt_cost": 7.76e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 40,
+    "question": "[Question]: 10. Find the variance in the time to failure, assuming a constant failure rate  $ \\lambda $ , for two units in active parallel.\n\n[Choices]: [a] 2/3 $ \\lambda $  | [b] 3/2 $ \\lambda $  | [c] 3/4 $ \\lambda $ 2  | [d] 5/4  $ \\lambda $ 2"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 165,
+      "completion_tokens": 8,
+      "total_tokens": 173,
+      "cost": 7.88e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.88e-05,
+        "upstream_inference_prompt_cost": 6.6e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 41,
+    "question": "[Question]: 1. The usual consequences of management assuming human error as the \ufffd\ufffdroot cause\ufffd\ufffd of a failure is\n\n[Choices]: [a] Repeat of the same failure | [b] Disciplinary action for the employee | [c] Less productivity  | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 165,
+      "completion_tokens": 8,
+      "total_tokens": 173,
+      "cost": 7.88e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.88e-05,
+        "upstream_inference_prompt_cost": 6.6e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 42,
+    "question": "[Question]: 2. \ufffd\ufffdBurn-in\ufffd\ufffd testing is conducted on electronic assemblies for systems to:\n\n[Choices]: [a] Establish system failure rate. | [b] Extend product life | [c] Increase the total number of failure occurrences.   | [d] Minimize early life failure occurrences."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 167,
+      "completion_tokens": 8,
+      "total_tokens": 175,
+      "cost": 7.96e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.96e-05,
+        "upstream_inference_prompt_cost": 6.68e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 43,
+    "question": "[Question]: 3.  When testing to establish failure rate and reliability predictions,  which of the following is not normally a feasible acceleration factor  with respect to rated conditions: \n\n[Choices]: [a] Longer time  | [b] Greater humidity | [c] Higher temperature | [d] Higher voltage"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 184,
+      "completion_tokens": 8,
+      "total_tokens": 192,
+      "cost": 8.64e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.64e-05,
+        "upstream_inference_prompt_cost": 7.36e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 44,
+    "question": "[Question]: 5. What is meant by \ufffd\ufffdFail Safe Design\ufffd\ufffd? \n\n[Choices]: [a] Designed such that a failure will not adversely affect the safe operation of the system   | [b] Designed such that the failure probability is low if the system is operated safely. | [c] Designed such that the system cannot fail if operated safely, | [d] All of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 196,
+      "completion_tokens": 8,
+      "total_tokens": 204,
+      "cost": 9.12e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.12e-05,
+        "upstream_inference_prompt_cost": 7.84e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 215,
+      "completion_tokens": 8,
+      "total_tokens": 223,
+      "cost": 9.88e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.88e-05,
+        "upstream_inference_prompt_cost": 8.6e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 46,
+    "question": "[Question]: 7. Five items were placed on test, one item failed after 42 hrs, and the remaining four items were removed after 50 hrs. It is known that the time to failure for these items follows a Weibull with  $ \\beta $ =2.2. Determine the 95% lower confidence limit for the characteristic life.\n\n[Choices]: [a] 13.5 hrs | [b] 39.8 hrs   | [c] 49.7 hrs.   | [d] None of the above"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 202,
+      "completion_tokens": 8,
+      "total_tokens": 210,
+      "cost": 9.36e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.36e-05,
+        "upstream_inference_prompt_cost": 8.08e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 171,
+      "completion_tokens": 8,
+      "total_tokens": 179,
+      "cost": 8.12e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.12e-05,
+        "upstream_inference_prompt_cost": 6.84e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 48,
+    "question": "[Question]: 10.  An engineer just ran 50 compressor start tests with no failures, he  needs to pass the customer\ufffd\ufffds requirement of 80% confidence of 0.90  reliability. Has he done that? \n\n[Choices]: [a] Yes   | [b] Almost | [c] No way"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "script_executed": false,
+    "usage": {
+      "prompt_tokens": 159,
+      "completion_tokens": 8,
+      "total_tokens": 167,
+      "cost": 7.64e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.64e-05,
+        "upstream_inference_prompt_cost": 6.36e-05,
+        "upstream_inference_completions_cost": 1.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0
+      }
+    },
+    "metadata": {
+      "model": "openai/gpt-4.1-mini",
+      "finish_reason": "stop"
+    },
+    "question_id": 49,
+    "question": "[Question]: 2. The distribution used to describe the time between failures which occur independently and at a constant rate, is the:\n\n[Choices]: [a] Log normal. | [b] Weibull. | [c] Gamma. | [d] Exponential."
+  }
+]

@@ -1,0 +1,562 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+
+\usepackage[margin=0.8cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\newcommand{\bx}[1]{\boxed{#1}}
+\newcommand{\R}{\mathrm{R}}
+\newcommand{\F}{\mathrm{F}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\MTTF}{\mathrm{MTTF}}
+\newcommand{\MTBF}{\mathrm{MTBF}}
+\newcommand{\MTTR}{\mathrm{MTTR}}
+\newcommand{\MDT}{\mathrm{MDT}}
+\newcommand{\MAMT}{\mathrm{MAMT}}
+\newcommand{\MTBM}{\mathrm{MTBM}}
+\newcommand{\MTBMA}{\mathrm{MTBMA}}
+
+\begin{document}
+\small
+
+% ======================================================
+\section*{Reliability – definition and components}
+
+Reliability is the probability that an item performs a required function
+without failure under stated conditions for a stated period of time.
+
+The four components of reliability are:
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+\item probability,
+\item required function (implicit definition of failure),
+\item operating conditions,
+\item time or usage measure (time, cycles, distance).
+\end{itemize}
+
+\subsection*{Quality vs Reliability}
+
+Quality:
+\begin{itemize}
+\item Defective rate at a point in time
+\item Manufacturing errors
+\end{itemize}
+
+Reliability:
+\begin{itemize}
+\item Failure rate over time
+\item Performance under stated conditions
+\item Design robustness
+\end{itemize}
+
+
+% ======================================================
+\section*{Reliability terminology and life data}
+
+\subsection*{Mean life, MTTF and MTBF}
+
+Mean life is the average time to failure.
+
+For non-repairable items:
+\[
+\bx{\MTTF = \frac{1}{n}\sum_{i=1}^n t_i}
+\]
+
+For repairable items:
+\[
+\bx{\MTBF = \frac{n m}{r}}
+\]
+
+Failure rate:
+\[
+\bx{\lambda = \frac{1}{\MTTF}}
+\]
+
+% ======================================================
+\subsection*{Censored lifetime data}
+
+Censored data occur when the exact failure time of a unit is not completely known, but partial information about its lifetime is available.
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+\item exact failure times : the precise time-to-failure is observed. These observations directly contribute to likelihood estimation.
+\item right-censored data : The unit has not failed by the end of the observation period.  We only know that the lifetime exceeds a certain time $T$:
+\[t_{\text{failure}} > T\]
+This is the most common type of censoring in reliability testing.
+\item left-censored data : the exact failure time is unknown, but it is known to be smaller than a certain observation time $T$.  
+We only observe that:
+\[t_{\text{failure}} \le T\]
+Left-censoring typically occurs when a failure is detected at the first inspection, but the exact time of failure before that inspection is unknown.
+\item interval-censored data : the failure occurred between two inspection times $T_1$ and $T_2$:
+\[T_1 < t_{\text{failure}} < T_2\]
+This occurs in periodic inspection or maintenance-based systems.
+\end{itemize}
+
+% ======================================================
+\section*{Life cycle and bathtub curve}
+
+Early failures → useful life → wear-out.
+
+Constant failure-rate model:
+\[
+\bx{\R(t)=e^{-\lambda t}}
+\]
+% ======================================================
+\subsection*{Constant failure rate assumption}
+
+In useful life period, failure rate is constant.
+
+Assumptions:
+\begin{itemize}
+\item Exponential lifetime distribution
+\item Independent component failures
+\item No aging effect
+\item Applicable to electronic components (MIL-HDBK-217)
+\end{itemize}
+
+\[R(t)=e^{-\lambda t}\]
+
+\[MTTF=\frac{1}{\lambda}\]
+
+
+% ======================================================
+\section*{Probability distributions}
+
+% ======================================================
+\subsection*{General relationships}
+
+Hazard rate definition:
+\[
+h(t)=\frac{f(t)}{R(t)}
+\]
+
+Relationship between functions:
+\[R(t)=1-F(t)\]
+
+\[f(t)=\frac{d}{dt}F(t)\]
+
+\[R(t)=\exp\left(-\int_0^t h(u)\,du\right)\]
+
+For exponential distribution:
+\[h(t)=\lambda \quad \text{(constant)}\]
+
+
+\subsection*{Binomial distribution}
+
+\[P(X=x)=\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}\]
+
+\[m=np,\quad s=\sqrt{np(1-p)}\]
+\subsection*{Normal distribution}
+
+\[X \sim \mathcal{N}(\mu,\sigma^2)\]
+
+Standardization:
+\[Z=\frac{X-\mu}{\sigma}\]
+
+Reliability:
+\[R(t)=1-\Phi\left(\frac{t-\mu}{\sigma}\right)\]
+
+$B_p$ life:
+\[B_p=\mu+z_p\sigma\]
+
+% ======================================================
+\subsection*{Poisson distribution and Poisson process}
+
+\textbf{Poisson distribution (count):}
+\[P(X=x)=e^{-\lambda}\frac{\lambda^x}{x!}\]
+
+\[m=\lambda,\quad s=\sqrt{\lambda}\]
+
+\textbf{Poisson process (repairable systems):}
+
+\[P(N(t)=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}\]
+
+\[E[N(t)]=\lambda t\]
+
+Interarrival times:
+\[T \sim \text{Exponential}(\lambda)\]
+
+Memoryless property:
+\[P(T>s+t|T>s)=P(T>t)\]
+
+% ======================================================
+\subsection*{Weibull distribution - basic form}
+
+\[f(t)=\left(\frac{t}{\eta}\right)^{\beta-1} \frac{\beta}{\eta} \exp\left[-\left(\frac{t}{\eta}\right)^\beta\right]\]
+
+\[\R(t)=\exp\left[-\left(\frac{t}{\eta}\right)^\beta\right]\]
+
+\subsection*{Three-Parameter Weibull Distribution}
+
+For location parameter $t_0$:
+
+\[
+f(t)=\frac{\beta}{\eta} \left(\frac{t-t_0}{\eta}\right)^{\beta-1}\exp\left[-\left(\frac{t-t_0}{\eta}\right)^\beta\right]\]
+
+The parameter $t_0$ represents a minimum life (shift).
+\[
+R(t)=\exp\left[-\left(\frac{t-t_0}{\eta}\right)^\beta\right]
+\]
+
+Where:
+\begin{itemize}
+\item $\beta$ = shape parameter
+\item $\eta$ = scale parameter
+\item $t_0$ = location (minimum life) parameter
+\end{itemize}
+
+
+% ======================================================
+\subsection*{Exponential distribution}
+
+Exponential distribution is a Weibull distribution when $\beta = 1$.
+
+\[f(t)=\lambda e^{-\lambda t}\]
+
+\[\R(t)=e^{-\lambda t}\]
+
+\[MTTF=\frac{1}{\lambda}\]
+% ======================================================
+\section*{Weibull – MLE with Right-Censored Data}
+
+% ======================================================
+\subsection*{Model Selection}
+
+\begin{itemize}
+\item Use 2-parameter model if $t_0 = 0$ is assumed.
+\item Consider 3-parameter model if:
+      \begin{itemize}
+      \item answer choices include $t_0 \neq 0$
+      \item smallest failure time $\gg 0$
+      \end{itemize}
+\item Always compare log-likelihood (2p vs 3p) when uncertain.
+\end{itemize}
+
+% ======================================================
+\subsection*{2-Parameter Weibull ($t_0 = 0$)}
+
+Likelihood:
+\[
+L(\beta,\eta)
+=
+\prod_{i\in F} f(t_i)
+\prod_{j\in C} R(t_j)
+\]
+
+MLE scale parameter:
+\[
+\eta=
+\left(
+\frac{
+\sum_{i\in F\cup C} t_i^\beta
+}{r}
+\right)^{1/\beta}
+\]
+
+Shape equation:
+\[
+\frac{1}{\beta}
+=
+\frac{
+\sum t_i^\beta \ln t_i
+}{
+\sum t_i^\beta
+}
+-
+\frac{1}{r}
+\sum_{i\in F}
+\ln t_i
+\]
+
+% ======================================================
+\subsection*{3-Parameter Weibull ($t_0 \neq 0$)}
+
+Shifted times:
+\[
+t_i' = t_i - t_0
+\quad \text{(require } t_i' > 0 \text{)}
+\]
+Constraint: $t_0 < \min(F)$
+Otherwise likelihood is undefined.
+
+Log-likelihood:
+\[
+\ell(\beta,\eta,t_0)
+=
+r\ln\beta - r\beta\ln\eta
++(\beta-1)\sum_{i\in F}\ln t_i'
+-\sum_{i\in F\cup C}
+\left(\frac{t_i'}{\eta}\right)^\beta
+\]
+Note: The logarithmic term applies only to failures.
+Censored observations contribute only through the survival term.
+
+Closed-form solution: none.
+
+\paragraph{Estimation procedure}
+
+\begin{enumerate}
+\item Choose trial $t_0 < \min(F)$.
+\item For fixed $t_0$, solve $\beta$ iteratively:
+\[
+\frac{1}{\beta}
+=
+\frac{
+\sum (t_i')^\beta \ln t_i'
+}{
+\sum (t_i')^\beta
+}
+-
+\frac{1}{r}
+\sum_{i\in F}\ln t_i'
+\]
+\item Compute:
+\[
+\eta
+=
+\left(
+\frac{
+\sum (t_i')^\beta
+}{r}
+\right)^{1/\beta}
+\]
+\item Maximize $\ell$ over $t_0$.
+\end{enumerate}
+
+% ======================================================
+\subsection*{Additional Results}
+
+\[
+\text{MTTF}=t_0 + \eta\Gamma\left(1+\frac{1}{\beta}\right)
+\]
+
+\[
+R(t)=\exp\left[-\left(\frac{t-t_0}{\eta}\right)^\beta\right]
+\]
+% ======================================================
+
+\subsection*{Practical Estimation Procedure}
+
+\begin{enumerate}
+\item Choose an initial guess for $t_0$ 
+      (e.g., slightly below the smallest failure time).
+\item For fixed $t_0$, solve iteratively for $\beta$.
+\item Compute $\eta$ using the conditional formula.
+\item Evaluate log-likelihood.
+\item Optimize $t_0$ to maximize $\ell$.
+\end{enumerate}
+
+Typical numerical methods:
+\begin{itemize}
+\item Newton–Raphson
+\item Nelder–Mead
+\item Profile likelihood on $t_0$
+\end{itemize}
+
+% ======================================================
+
+\subsection*{Model Selection Guidance}
+
+\begin{itemize}
+\item If smallest failure time $\gg 0$, consider $t_0>0$.
+\item If answer choices include $t_0 \neq 0$, evaluate 3-parameter model.
+\item Compare log-likelihood (2p vs 3p).
+\end{itemize}
+% ======================================================
+\section*{Bayesian reliability – Beta-Binomial model}
+
+Prior:
+\[p\sim\text{Beta}(\alpha,\beta)\]
+
+Posterior:
+\[p|data\sim\text{Beta}(\alpha+x,\beta+n-x)\]
+
+Bayes theorem:
+\[P(A|B)=\frac{P(B|A)P(A)}{P(B)}\]
+
+% ======================================================
+\section*{System reliability modeling}
+
+Series:
+\[
+\R_{sys}=\prod \R_i
+\]
+
+Parallel:
+\[\R_{sys}=1-\prod(1-\R_i)\]
+
+% ======================================================
+\section*{Availability}
+
+\[A=\frac{MTBF}{MTBF+MTTR}\]
+
+% ======================================================
+\section*{Reliability demonstration and zero-failure testing}
+
+\subsection*{Reliability demonstration}
+\[t=\frac{-\ln(1-CL)}{n\lambda}\]
+\subsection*{Zero-failure testing}
+
+\[\lambda_{upper}=\frac{-\ln(\alpha)}{T}\]
+\subsection*{Reliability demonstration testing} 
+Failure rate estimate: \[ \lambda = \frac{r}{T} \] Where: \begin{itemize} \item r = number of failures \item T = cumulative test time (last failure time if sequential) \end{itemize} To meet target failure rate: \[ T \geq \frac{r}{\lambda_{target}} \]
+
+
+\subsection*{Parameter relationships and inference in reliability demonstration}
+
+\textbf{1. Model-dependent parameter relationships}
+
+For Weibull lifetime:
+
+\[\text{MTTF}=\eta\Gamma\left(1+\frac{1}{\beta}\right)\]
+
+If $\beta \neq 1$:
+
+\[\eta=\frac{\text{MTTF}}{\Gamma\left(1+\frac{1}{\beta}\right)}\]
+
+Reliability demonstration formulas under Weibull require the scale parameter $\eta$.
+If the requirement is already expressed in terms of $\eta$, 
+do NOT perform MTTF conversion.
+
+If the requirement is stated on MTTF, it must first be converted to $\eta$.
+
+Special case (exponential, $\beta=1$):
+
+\[\text{MTTF}=\eta=\frac{1}{\lambda}\]
+
+\bigskip
+
+\textbf{2. Estimation and confidence intervals (exponential case)}
+
+For exponential lifetime with $r$ failures and total test time $T$:
+
+\[\lambda=\frac{r}{T}\]
+
+Two-sided confidence interval:
+
+\[\lambda_{lower}=\frac{\chi^2_{2r,\alpha/2}}{2T}\]
+
+\[\lambda_{upper}=\frac{\chi^2_{2r+2,1-\alpha/2}}{2T}\]
+
+Confidence interval for MTTF:
+
+\[\text{MTTF}=\frac{1}{\lambda}\]
+
+\textbf{Important distinction:}
+
+Weibull demonstration with known $\beta$ uses parameter conversion.
+Confidence intervals using $\chi^2$ assume exponential lifetime.
+% ======================================================
+\section*{Reliability growth – AMSAA / Duane model}
+
+\[N(t)=\lambda t^\beta\]
+
+\[\lambda(t)=\lambda\beta t^{\beta-1}\]
+
+\[MTBF(t)=\frac{t}{N(t)}\]
+
+\[\ln N(t)=\ln\lambda+\beta\ln t\]
+
+% ======================================================
+\section*{Accelerated Life Testing (ALT)}
+
+Accelerated Life Testing consists of testing products at elevated stress
+levels (temperature, voltage, humidity, vibration) in order to
+induce failures more quickly and estimate life under normal conditions.
+
+Goal:
+\begin{itemize}
+\item Reduce test duration
+\item Estimate life at use conditions
+\item Identify dominant failure mechanisms
+\end{itemize}
+
+\subsection*{Acceleration Factor (AF)}
+
+\[AF = \frac{\text{Life at use conditions}}{\text{Life at stress conditions}}\]
+
+% ======================================================
+\subsection*{Arrhenius model (temperature acceleration)}
+
+Used when failure mechanism is thermally activated.
+
+\[AF =\exp\left[ \frac{E_a}{k} \left(\frac{1}{T_{use}} - \frac{1}{T_{stress}} \right) \right]\]
+
+Where:
+\begin{itemize}
+\item $E_a$ = activation energy (eV)
+\item $k$ = Boltzmann constant ($8.617\times10^{-5}$ eV/K)
+\item $T$ = absolute temperature (Kelvin)
+\end{itemize}
+
+Life relationship:
+\[\ln(L) = A + \frac{E_a}{kT}\]
+
+Higher temperature → shorter lifetime.
+
+% ======================================================
+\subsection*{Common acceleration models}
+
+\begin{itemize}
+\item Arrhenius model (temperature)
+\item Inverse power law (voltage, stress)
+\[L = K S^{-n}\]
+\item Eyring model (temperature + other stress)
+\end{itemize}
+
+\section*{Maintenance strategies}
+
+\subsection*{Preventive maintenance (PM)}
+
+Preventive maintenance consists of scheduled inspections,
+adjustments, replacements or overhauls intended to reduce
+the probability of failure due to wear-out mechanisms.
+
+PM can reduce:
+\begin{itemize}
+\item wear-out failures,
+\item age-related degradation,
+\item lubrication loss,
+\item fatigue accumulation.
+\end{itemize}
+
+PM cannot change the original engineering design or manufacturing process itself.
+
+However, PM may detect or mitigate their effects in service.
+PM can:
+- detect latent defects,
+- reduce the probability of failure caused by installation errors,
+- mitigate consequences of quality variation.
+
+For each listed condition:
+
+Step 1: Can PM detect it before failure?
+Step 2: Can PM reduce the probability of failure?
+Step 3: Can PM mitigate its consequences?
+
+If YES to any of the above → Considered preventable in exams.
+If NO to all → Not preventable.
+
+\subsection*{Corrective maintenance}
+
+Corrective maintenance occurs after failure and restores function.
+
+\section*{FMEA prioritization}
+
+Risk Priority Number (RPN):
+\[RPN = Severity \times Occurrence \times Detection\]
+
+Priority rules:
+\begin{itemize}
+\item Highest severity ranking should be addressed first.
+\item High severity issues must be mitigated even if occurrence is low.
+\item RPN is useful but severity dominates decision-making.
+\end{itemize}
+
+
+\end{document}

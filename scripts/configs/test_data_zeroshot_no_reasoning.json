@@ -1,0 +1,18 @@
+{
+  "models": [
+    "mistralai/mistral-large-2512"
+  ],
+  "results_path": "../experiments/zero_shot_no_reasoning",
+  "dataset_path": "../experiments/test.csv",
+  "eval_script_path": "./configs/my_eval_zeroshot_no_reasoning.py",
+  "temperature": 1.0,
+  "max_reasoning_tokens": 0,
+  "max_tokens": null,
+  "num_repetitions": 5,
+  "testing_mode": true,
+  "workers": 1,
+  "message": "Test dataset. We force the model not the reason, and directly answer.",
+  "enable_parallel": true,
+  "max_workers_per_model": 5,
+  "rate_limit_seconds": 1.0
+}

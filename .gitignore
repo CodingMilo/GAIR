@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# API Keys and Secrets
+.env
+secret.json
+credentials.json
+scripts/secret.json
+
+# Results and logs
+outputs/
+results/
+experiments/results/
+*.log
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/

@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.1-fast",
+  "llm_script": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\scripts_gair_2026\\experiments\\training_think-step-by-step\\x-ai-grok-4.1-fast_20260304_233153\\my_eval.py",
+  "temperature": 1.0,
+  "max_tokens": null,
+  "max_reasoning_tokens": 0,
+  "num_repetitions": 5,
+  "dataset_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\scripts_gair_2026\\experiments\\train.csv",
+  "solution_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\scripts_gair_2026\\experiments\\train_solution.csv",
+  "testing_mode": false,
+  "message": "Training dataset. We force the model not the reason, but 'think lound' using a chain-of-thoughts.",
+  "enable_parallel": true,
+  "max_workers": 5,
+  "rate_limit_seconds": 1.0,
+  "results_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\scripts_gair_2026\\experiments\\training_think-step-by-step"
+}

@@ -1,0 +1,1 @@
+You will be given a CRE exam question. Do not reason and choose the correct answer(s) directly. Output your answer as a JSON object with the following format: {\"answer\": [\"a\"] or [\"a\", \"b\", \"c\"] for multiple answers}. For example: {\"answer\": [\"a\"]} or {\"answer\": [\"a\", \"b\", \"c\"]}. Output only the answer in json file, and nothing else.

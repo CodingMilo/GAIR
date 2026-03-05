@@ -1,0 +1,50 @@
+question_id,prediction_1,prediction_2,prediction_3,prediction_4,prediction_5
+1,b,b,b,b,b
+2,"a, b","a, b","a, b","a, b","a, b"
+3,d,d,,d,d
+4,b,d,b,b,b
+5,d,d,d,d,d
+6,a,,a,a,b
+7,d,d,d,d,d
+8,,a,a,d,a
+9,"a, b","a, b","a, b","a, b","a, b"
+10,b,b,b,b,b
+11,b,b,,,
+12,d,d,d,d,c
+13,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c"
+14,"a, b, c, d","a, b, c, d","a, b, c, d","a, b, c, d","a, b, c, d"
+15,a,a,a,c,c
+16,a,a,a,a,a
+17,a,a,a,a,a
+18,a,a,a,a,a
+19,"b, d","b, d","b, d","b, d","b, d"
+20,"a, b, c, d","a, c, d","a, b, c","a, b, c","a, b, c"
+21,c,c,c,c,c
+22,c,c,c,c,c
+23,a,a,a,a,a
+24,c,c,c,c,c
+25,c,c,c,d,c
+26,d,d,d,d,d
+27,b,b,b,b,b
+28,a,a,a,a,a
+29,d,,d,d,d
+30,,b,b,b,b
+31,a,a,a,a,a
+32,c,c,c,c,c
+33,c,c,c,b,b
+34,c,c,c,c,c
+35,b,b,b,b,a
+36,b,d,b,b,b
+37,b,b,b,b,b
+38,b,b,b,b,b
+39,,c,c,d,c
+40,c,c,c,c,c
+41,d,d,d,d,d
+42,d,d,d,d,d
+43,a,a,a,,a
+44,a,a,a,a,a
+45,d,d,d,d,d
+46,b,b,c,c,c
+47,a,a,b,a,a
+48,a,a,a,a,a
+49,d,d,d,d,d

@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.1-fast",
+  "llm_script": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\llm_reliability_engineering\\scripts_gair_2026\\devel\\experiments\\training_data_zero-shot\\x-ai-grok-4-1-fast_20260303_122653\\my_eval.py",
+  "temperature": 1.0,
+  "max_tokens": null,
+  "max_reasoning_tokens": 600,
+  "num_repetitions": 5,
+  "dataset_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\llm_reliability_engineering\\scripts_gair_2026\\devel\\experiments\\train.csv",
+  "solution_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\llm_reliability_engineering\\scripts_gair_2026\\devel\\experiments\\train_solution.csv",
+  "testing_mode": false,
+  "message": "Training dataset. Baseline. Zeroshot. Allow reasoning for reasoning model.",
+  "enable_parallel": true,
+  "max_workers": 3,
+  "rate_limit_seconds": 3.0,
+  "results_path": "C:\\Users\\zzg_s\\OneDrive - CentraleSupelec\\Code\\Python\\llm_reliability_engineering\\scripts_gair_2026\\devel\\experiments\\training_data_zero-shot"
+}

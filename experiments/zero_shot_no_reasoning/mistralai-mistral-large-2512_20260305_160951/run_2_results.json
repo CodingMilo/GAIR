@@ -1,0 +1,1427 @@
+[
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.000114,
+      "total_tokens": 212,
+      "prompt_tokens": 204,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 1,
+    "question": "[Question]: A fault tree analysis (FTA) is a design analysis technique constructed from a \"top event\". A basic problem with this technique in comparison to a FMECA would be which of the following ? [Choices]: a. Only electronic systems can be analyzed. | b. Needing a different FTA for each defined top event. | c. Assigning probabilities to the various events. | d. Understanding logical symbols."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0001105,
+      "total_tokens": 203,
+      "prompt_tokens": 194,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 2,
+    "question": "[Question]: A company is in a multi-products, competitive market. Which of the following is the MOST appropriate strategy to help capture the maximum market share ? [Choices]: a. Increasing the reliability of current product. | b. Improving the capacity of manufacturing process. | c. Reducing cycle time while introducing new, reliable products. | d. Performing aggressive field-testing."
+  },
+  {
+    "raw_response": "For a system with components in series, the overall system reliability \\( R_s \\) is the product of the reliabilities of the individual components:\n\n\\[ R_s = R_1 \\times R_2 \\times R_3 \\times R_4 \\times R_5 \\]\n\nGiven:\n- \\( R_s = 0.96 \\)\n- \\( R_1 = 0.992 \\)\n- \\( R_2 = 0.991 \\)\n- \\( R_3 = 0.994 \\)\n- \\( R_4 = 0.992 \\)\n- \\( R_5 = ? \\)\n\nWe can rearrange the formula to solve for \\( R_5 \\):\n\n\\[ R_5 = \\frac{R_s}{R_1 \\times R_2 \\times R_3 \\times R_4} \\]\n\nFirst, calculate the product of the known reliabilities:\n\n\\[ R_1 \\times R_2 \\times R_3 \\times R_4 = 0.992 \\times 0.991 \\times 0.994 \\times 0.992 \\]\n\nCalculate step-by-step:\n1. \\( 0.992 \\times 0.991 = 0.983072 \\)\n2. \\( 0.983072 \\times 0.994 = 0.977173568 \\)\n3. \\( 0.977173568 \\times 0.992 = 0.96935618 \\]\n\nNow, solve for \\( R_5 \\):\n\n\\[ R_5 = \\frac{0.96}{0.96935618} \\approx 0.99035 \\]\n\nRounding to three decimal places, \\( R_5 \\approx 0.990 \\).\n\n{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0007515,
+      "total_tokens": 657,
+      "prompt_tokens": 234,
+      "completion_tokens": 423,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 3,
+    "question": "[Question]: A system made up of 5 series components has a design reliability of .96. Subsequently, 4 of the components have reliabilities apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the reliability apportionment for the 5th subsystem be ? [Choices]: a. 0.970 | b. 0.992 | c. 0.969 | d. 0.990"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.750000000000004e-05,
+      "total_tokens": 179,
+      "prompt_tokens": 171,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 4,
+    "question": "[Question]: Which of the following is the BEST approach to recover product reliability from manufacturing ? [Choices]: a. Increase receiving inspection. | b. Reduce product variability. | c. Reduce scheduled product maintenance. | d. Improve the suppler selection process."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0001020000000000001,
+      "total_tokens": 188,
+      "prompt_tokens": 180,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 5,
+    "question": "[Question]: In the area of risk assessment, hazard severity categories are used to provide a measure of the seriousness involved. A system failure causing major environmental damage would be classified as : [Choices]: a. Critical. | b. Negligible. | c. Catastrophic. | d. Marginal."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\", \"d\"]}",
+    "extracted_answer": "a, b, c, d",
+    "usage": {
+      "cost": 0.00010749999999999996,
+      "total_tokens": 181,
+      "prompt_tokens": 164,
+      "completion_tokens": 17,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 6,
+    "question": "[Question]: Eliminating hazards can be accomplished several ways. Which of the following does NOT eliminate a hazard ? [Choices]: a. Procedure analysis | b. Fault-tree analysis | c. FMEA | d. Contingency analysis"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00010300000000000001,
+      "total_tokens": 190,
+      "prompt_tokens": 182,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: Which of the following BEST describe a critical item in reliability ? [Choices]: a. An item that affects safety and mission goals. | b. A highly reliable item used in a critical product. | c. An item manufactured by an unproven technology. | d. A critical reliability design methodology and process."
+  },
+  {
+    "raw_response": "The concept of mean-time-between-failures (MTBF) is least applicable to systems that are **non-repairable** or **one-shot devices**, where failure typically results in the end of the system's useful life without the possibility of repair or reuse.\n\nAmong the given choices:\n- **Power generator (a)**, **automobile (b)**, and **radar set (d)** are all repairable systems. They can undergo maintenance, repairs, and continued operation after failures, making MTBF a relevant metric for them.\n- **Rocket motor (c)** is typically a one-shot device. Once it is used (e.g., in a launch), it cannot be repaired or reused in the same mission. MTBF is not meaningful for such systems because they are not designed for repeated failure-repair cycles.\n\nThus, MTBF is least applicable to the rocket motor.\n\n```json\n{\"answer\": [\"c\"]}\n```",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.00037149999999999987,
+      "total_tokens": 359,
+      "prompt_tokens": 167,
+      "completion_tokens": 192,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 8,
+    "question": "[Question]: To which of the following types of systems is the concept mean-time-between-failures LEAST applicable ? [Choices]: a. Power generator. | b. Automobile. | c. Rocket motor. | d. Radar set."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00010650000000000004,
+      "total_tokens": 197,
+      "prompt_tokens": 189,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: Which answer BEST describes the events and operating conditions an item experiences from mission initiation to completion ? The events may include the research and development phase, product manufacturing, warehousing, and so on, to mission completion. [Choices]: a. Design adequacy. | b. Mission reliability. | c. Operational readiness. | d. Mission profile."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.899999999999991e-05,
+      "total_tokens": 182,
+      "prompt_tokens": 174,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: A first step in the FMECA is to : [Choices]: a. Establish ground rules to which the FMECA is performed. | b. Identify failure modes. | c. Define the system requirements. | d. Compile a critical items list."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00010449999999999999,
+      "total_tokens": 193,
+      "prompt_tokens": 185,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 11,
+    "question": "[Question]: Given that your company produces a product that many consumers use, lawsuits are always possible. You feel very good about your reliability program, under which of the following legal descriptions can your records be obtained ? [Choices]: a. Discovery. | b. Negligence. | c. Due care. | d. Warranty."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.30000000000002e-05,
+      "total_tokens": 170,
+      "prompt_tokens": 162,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 12,
+    "question": "[Question]: The influence of FMEA on reliability is maximized at which of the following stages of development ? [Choices]: a. Design. | b. Prototype. | c. Operation. | d. Test."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"c\", \"d\"]\n}",
+    "extracted_answer": "c, d",
+    "usage": {
+      "cost": 9.699999999999986e-05,
+      "total_tokens": 170,
+      "prompt_tokens": 158,
+      "completion_tokens": 12,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 13,
+    "question": "[Question]: Which of the following statistical distributions can be used to compare sample means ? [Choices]: a. Exponential. | b. Chi-square. | c. t test. | d. Normal."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.449999999999997e-05,
+      "total_tokens": 173,
+      "prompt_tokens": 165,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 14,
+    "question": "[Question]: When designing experiments, which term describes the situation in which the effects of two factors are not separable ? [Choices]: a. Collinear. | b. Confounded. | c. Interactive. | d. Covariate."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00011749999999999998,
+      "total_tokens": 217,
+      "prompt_tokens": 208,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 15,
+    "question": "[Question]: A fault tree analysis (FTA) differs from a failure mode and effects analysis (FMEA) in that an FTA : [Choices]: a. Is typically used in conjunction with a cause-and-effect diagram. | b. Does not take into account human factors such as incorrect operation. | c. Starts by considering individual or combined lower level failure first. | d. Starts by considering system failure effects or top events first."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"c\", \"d\"]\n}",
+    "extracted_answer": "a, c, d",
+    "usage": {
+      "cost": 0.00011349999999999989,
+      "total_tokens": 197,
+      "prompt_tokens": 182,
+      "completion_tokens": 15,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: A failure reporting and corrective action system should ensure that all steps are taken to : [Choices]: a. Identify, investigate and analyze failures. | b. Define the goals of the FRACAS team. | c. Determine responsibilities for failures. | d. Record costs associated with the corrective action."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"c\"]\n}",
+    "extracted_answer": "a, c",
+    "usage": {
+      "cost": 0.00013349999999999994,
+      "total_tokens": 243,
+      "prompt_tokens": 231,
+      "completion_tokens": 12,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 17,
+    "question": "[Question]: A system is made up of four independent components in series each having a failure rate of .005 failures per hour. If time to failure is exponential, choose the correct statement(s) : [Choices]: a. The system-level failure rate is 0.02 | b. The system lifetime does not follow an exponential distribution any more | c. The reliability of the system at 10 hours is 0.8187 | d. Then the reliability of the system at 10 hours is 0.9512"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"d\", \"e\"]\n}",
+    "extracted_answer": "a, d, e",
+    "usage": {
+      "cost": 0.00010850000000000009,
+      "total_tokens": 187,
+      "prompt_tokens": 172,
+      "completion_tokens": 15,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 18,
+    "question": "[Question]: A Reliability Engineering Department is conducting a training needs assessment. Which of these techniques are used for a training needs assessment ? [Choices]: a. Personal observations | b. External customer surveys | c. Costs analysis | d. Work sampling | e. Interviews"
+  },
+  {
+    "raw_response": "To enhance the reliability of an extruder producing plastic film, the applied operational and environmental stresses should be maintained at levels that prevent overstressing while avoiding underutilization. Operating at the **rated nominal ratings** ensures the system is used within its designed capacity, minimizing wear and tear while maintaining consistent performance. This approach balances reliability and efficiency without inducing premature failure or unnecessary stress.\n\n{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0002149999999999999,
+      "total_tokens": 264,
+      "prompt_tokens": 181,
+      "completion_tokens": 83,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: In order to enhance the reliability of an extruder producing plastic film, the applied operational and environmental stresses should be : [Choices]: a. Significantly above nominal ratings. | b. At the rated nominal ratings. | c. Slightly above nominal ratings. | d. Significantly below nominal ratings."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 9.500000000000003e-05,
+      "total_tokens": 172,
+      "prompt_tokens": 163,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 20,
+    "question": "[Question]: Detection of trends of product failure is MOST important when system failure are [Choices]: a. Identified by the customer. | b. Hard to identify. | c. Safety-related. | d. Expensive."
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\"a\", \"b\", \"c\"]\n}\n```",
+    "extracted_answer": "a, b, c",
+    "usage": {
+      "cost": 0.00011200000000000012,
+      "total_tokens": 186,
+      "prompt_tokens": 167,
+      "completion_tokens": 19,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 21,
+    "question": "[Question]: Human factors in product safety planning are assessed for which of the following reasons ? [Choices]: a. To allocate the proper balance between man and machine | b. To address the limitations of human beings | c. To determine the user hardware interaction"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 9.600000000000017e-05,
+      "total_tokens": 176,
+      "prompt_tokens": 168,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 22,
+    "question": "[Question]: Which of the following is the MOST effective technique for prioritizing critical factors for problem-solving ? [Choices]: a. Venn diagram. | b. Scatter diagram. | c. Cause-and-effect diagram. | d. Pareto diagram"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.349999999999983e-05,
+      "total_tokens": 171,
+      "prompt_tokens": 163,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 23,
+    "question": "[Question]: The most valid source of failure rate data is : [Choices]: a. The manufacturing process. | b. Operational data. | c. Environmental test data. | d. Test data obtained under very closely controlled conditions."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00010900000000000016,
+      "total_tokens": 202,
+      "prompt_tokens": 194,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: Which of the following is the BEST description of a process FMECA ? [Choices]: a. It analyzes the specific hardware details of a device. | b. It analyzes a system design and how failure modes affect the system. | c. It analyzes the manufacturing operation and how manufacturing failures affect the product operation. | d. It analyzes the functional output of a device."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.600000000000017e-05,
+      "total_tokens": 174,
+      "prompt_tokens": 165,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: In consumer products, the complaint rate is MOST directly a measure of : [Choices]: a. Customer satisfaction. | b. Rejection rate and specification conformance. | c. Market value. | d. Product quality."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"b\", \"c\"]\n}",
+    "extracted_answer": "b, c",
+    "usage": {
+      "cost": 0.00010850000000000009,
+      "total_tokens": 193,
+      "prompt_tokens": 181,
+      "completion_tokens": 12,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 26,
+    "question": "[Question]: Which of the following is TRUE about an effective safety system ? [Choices]: a. It identifies risks as hazards occur. | b. It is an integral part of top management responsibilities. | c. It reduce the hazards through a feedback system. | d. It depends on conformance to OSHA standards."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"c\", \"d\"]\n}",
+    "extracted_answer": "a, c, d",
+    "usage": {
+      "cost": 0.00012550000000000018,
+      "total_tokens": 221,
+      "prompt_tokens": 206,
+      "completion_tokens": 15,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 27,
+    "question": "[Question]: To ensure the collection of accurate and usable data, the reliability department should contributors. [Choices]: a. Develop a documented data collection system with forms, instruction, and training for key | b. Budget adequate resources to develop method of analysis and corrective action. | c. Ask key contributors to develop data collection methods and establish clear definitions of failure. | d. Audit sources of data and review validity of corrective action requests generated."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.00010549999999999969,
+      "total_tokens": 193,
+      "prompt_tokens": 184,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 28,
+    "question": "[Question]: Software reliability planning includes all of the following EXCEPT [Choices]: a. Trade-offs involving cost, schedule, and failure intensity of software products | b. Selecting models for data analysis and prediction. | c. Modeling acquisition of computer software systems. | d. Trade-offs of general purpose programs vs. commercially available programs."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.750000000000036e-05,
+      "total_tokens": 177,
+      "prompt_tokens": 168,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 29,
+    "question": "[Question]: Reliability prediction is : [Choices]: a. A continuous process starting with paper predictions. | b. A one time estimation process. | c. A popular method as simulation theory. | d. More important than reliability attained in the field."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00011300000000000025,
+      "total_tokens": 210,
+      "prompt_tokens": 202,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 30,
+    "question": "[Question]: The term \"failure mode\" is defined as the : [Choices]: a. Consequence of the mechanism through which a failure occurs. | b. Event or inoperable state in which an item or part of an item does not perform as specifed. | c. Failure caused by the failure of an associated items. | d. Physical, chemical, electrical, or thermal process that results in failure."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"b\", \"c\", \"d\"]\n}",
+    "extracted_answer": "a, b, c, d",
+    "usage": {
+      "cost": 0.0001429999999999999,
+      "total_tokens": 250,
+      "prompt_tokens": 232,
+      "completion_tokens": 18,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 31,
+    "question": "[Question]: The function below has a density distribution where X is a continuous random variable: f(X) = 0.25, 1 <= X <= 5. Choose the correct statement(s). [Choices]: a. The probability that X = 6.0 is 0.00 | b. The probability that X <= 3.0 is 0.40 | c. The probability that X <= 4.0 is 0.75 | d. The probability that X = 4.0 is 0.00"
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\"d\"]\n}\n```",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00015550000000000026,
+      "total_tokens": 285,
+      "prompt_tokens": 272,
+      "completion_tokens": 13,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 32,
+    "question": "[Question]: What is the reliability of this system ? This is a system with five components A, B, C, D and E. The system is connected in a bridge system configuration: There are two main paths: A->B and C->D. Component E creates a bridge betwwen the two paths: so A->E->D and C->E->B are also possible. Component reliabilities are A = 0.80        B = 0.95         C = 0.82 D = 0.85        E = 0.75 [Choices]: a. 0.96 | b. 0.10 | c. 0.04 | d. 0.90"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00011050000000000035,
+      "total_tokens": 205,
+      "prompt_tokens": 197,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 33,
+    "question": "[Question]: Certain functional tests can be conducted for electronic equipment in the areas of :  I. Endurance testing.  II. Voltage transients.  III. Electromagnetic effects.  IV. Wearout determination. [Choices]: a. II and III only | b. I, II and III only | c. I, II, III and IV | d. I and II only"
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00011099999999999999,
+      "total_tokens": 206,
+      "prompt_tokens": 198,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: The reliability centered maintenance (RCM) approach has potential for use in many areas of industry, having been successfully employed in the aircraft and nuclear power industries. A major premise of RCM is which of the following ? [Choices]: a. Eliminate corrective maintenance. | b. Safeguard major equipment investments | c. Preserve equipment function. | d. Preserve system function."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00014199999999999977,
+      "total_tokens": 266,
+      "prompt_tokens": 257,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 35,
+    "question": "[Question]: Which is the MOST appropriate approach for calculating the total reliability of the system block diagram shown. (The system will function if either component I or II is operating, but component III must be working for the system to be working).  [Choices]: a. Take the reliability for III and combine it with the reliability for II and then combine that result with reliability of I | b. Take the reliability for I and combine it with the reliability for II and then combine that result with the component III | c. Multiply the reliabilities of I times II times III | d. Take the reliability for I and combine it with the reliability for III and then combine that result with reliability for II"
+  },
+  {
+    "raw_response": "The CORRECT measurement of reliability to use for nonrepairable systems is:\n\n{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00012700000000000038,
+      "total_tokens": 206,
+      "prompt_tokens": 182,
+      "completion_tokens": 24,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 36,
+    "question": "[Question]: What is the CORRECT measurement of reliability to use for nonrepairable systems ? [Choices]: a. Mean time between repairs (MTBR) | b. Mean time to repairs (MTTR) | c. Mean time between failures (MTBF) | d. Mean time to failure (MTTF)"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00010150000000000003,
+      "total_tokens": 185,
+      "prompt_tokens": 176,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 37,
+    "question": "[Question]: It is often observed that unscheduled maintenance : [Choices]: a. Isolates failure causes more quickly than scheduled maintenance. | b. Never isolates the specific causes of failure. | c. Always isolates the specific causes of failure. | d. Does not necessarily isolate failure causes."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00010150000000000003,
+      "total_tokens": 185,
+      "prompt_tokens": 176,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 38,
+    "question": "[Question]: In establishing a budget for a new maintainability program, you should allocate more maintainability funds during which of the following periods ? [Choices]: a. Customer service phase. | b. Demonstration verification phase. | c. Operational phase. | d. Initial design and development phase."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.30000000000002e-05,
+      "total_tokens": 168,
+      "prompt_tokens": 159,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 39,
+    "question": "[Question]: Which of the following BEST describes complete data ? [Choices]: a. Exact life. | b. Truncated. | c. Left-censored. | d. Right-censored."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\", \"c\"]}",
+    "extracted_answer": "b, c",
+    "usage": {
+      "cost": 0.00010700000000000032,
+      "total_tokens": 192,
+      "prompt_tokens": 181,
+      "completion_tokens": 11,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 40,
+    "question": "[Question]: Which of the following tools are classified as structured root cause analysis tools ? [Choices]: a. 5P | b. 7D, 8D or 9D problem solving | c. Management oversight and risk tree analysis (MORT) | d. Human performance evaluation system (HPE)"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00011099999999999999,
+      "total_tokens": 204,
+      "prompt_tokens": 195,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 41,
+    "question": "[Question]: Which of the following is NOT a major management product safety responsibility ? [Choices]: a. Assure that a mechanism exists to segregate and dispose of any non-conforming product. | b. Promote employee safety through training and education. | c. Formulate a product safety policy. | d. Ensure that the company complies with all product safety standards and liability laws."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.650000000000023e-05,
+      "total_tokens": 177,
+      "prompt_tokens": 169,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 42,
+    "question": "[Question]: Which of the following forms of reliability data will BEST provide valuable information on product usage and reliability ? [Choices]: a. In-house test results. | b. Field support data. | c. Independent lab results. | d. Quality control data."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.900000000000013e-05,
+      "total_tokens": 182,
+      "prompt_tokens": 174,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 43,
+    "question": "[Question]: Which of the following types of control charts detects degradation phenomena most quickly ? [Choices]: a. $p, s, OC, c$ | b. Cusum | c. $\\bar{X}$ and $\\sigma$ | d. $\\bar{X}$ and $R$"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00010600000000000019,
+      "total_tokens": 194,
+      "prompt_tokens": 185,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 44,
+    "question": "[Question]: Maintainability engineering is performed for all of the following reasons EXCEPT to [Choices]: a. Estimate system availability. | b. Restore equipment to operational condition after failure has occurred. | c. Influence design to achieve each of maintenance. | d. Estimate the labor hours and other resources required for performing maintenance."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.55000000000001e-05,
+      "total_tokens": 175,
+      "prompt_tokens": 167,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: The MOST desirable outcome of an FMEA is [Choices]: a. A recommended action. | b. An estimated of the detection number. | c. A risk priority number. | d. An estimated of the occurrence number."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00010600000000000019,
+      "total_tokens": 196,
+      "prompt_tokens": 188,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 46,
+    "question": "[Question]: The failure rate for an IC chip is 0.0023 per hour of operation. Calculate the MTBF given that the failure rate is constant. [Choices]: a. 486 hrs | b. 37.6 hrs | c. 43 hrs | d. 434.78 hrs"
+  },
+  {
+    "raw_response": "For components operating in series, the system fails if either component fails. Assuming exponential failure distributions (constant failure rate), the failure rate \u03bb for each component is the reciprocal of the mean-time-to-failure (MTTF):\n\n\u03bb = 1 / 200 = 0.005 failures per hour.\n\nThe probability of failure for one component in one hour is approximately \u03bb * t, where t = 1 hour:\n\nP(failure of one component in 1 hour) = 0.005 * 1 = 0.005.\n\nSince the components are independent, the probability that both survive one hour is:\n\nP(both survive) = (1 - 0.005) * (1 - 0.005) = (0.995)^2 \u2248 0.990025.\n\nTherefore, the probability that the system fails (at least one component fails) in one hour is:\n\nP(system failure) = 1 - P(both survive) = 1 - 0.990025 \u2248 0.009975 \u2248 0.010.\n\n{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00047599999999999986,
+      "total_tokens": 450,
+      "prompt_tokens": 199,
+      "completion_tokens": 251,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: Given mean-time-to-failure of 200 hours for each of two components, what is the probability of failure if both components operate in series for one hour ? [Choices]: a. P = 0.002 | b. P = 0.001 | c. P = 0.990 | d. P = 0.010"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.49999999999996e-05,
+      "total_tokens": 174,
+      "prompt_tokens": 166,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 48,
+    "question": "[Question]: Pascal's triangle presents a simple means of determining which of the various terms of the binomial expansion ? [Choices]: a. Coefficients. | b. Exponents. | c. Combinations. | d. Permutations."
+  },
+  {
+    "raw_response": "{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 9.55000000000001e-05,
+      "total_tokens": 175,
+      "prompt_tokens": 167,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 49,
+    "question": "[Question]: A failure that occurs without being caused by the failure of any other item is known as : [Choices]: a. An intermittent failure. | b. A dependent failure. | c. A pattern failure. | d. An independent failure."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\", \"d\"]}",
+    "extracted_answer": "b, d",
+    "usage": {
+      "cost": 0.00010899999999999972,
+      "total_tokens": 196,
+      "prompt_tokens": 185,
+      "completion_tokens": 11,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 50,
+    "question": "[Question]: In order to sustain a high system reliability in the field, it is BEST to : [Choices]: a. Lubricate the equipment exactly to manufacturing specifications. | b. Fully analyze all failed components. | c. Write detailed reports on major failure modes. | d. Follow a preventive maintenance program with scheduled diagnostic checks."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.55000000000001e-05,
+      "total_tokens": 173,
+      "prompt_tokens": 164,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 51,
+    "question": "[Question]: Highly repetitive operations should be assigned to : [Choices]: a. A machine. | b. An operator assisted by a computer. | c. An operator. | d. A machine and operator performing the task alternately."
+  },
+  {
+    "raw_response": "A standardization program tends to emphasize reducing variety and increasing commonality across products or systems. This often involves minimizing the number of unique parts to simplify inventory, reduce costs, and improve efficiency. Among the given choices, the most aligned with this goal is limiting the number of distinct part numbers to promote reuse and interchangeability.\n\n{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0001910000000000002,
+      "total_tokens": 240,
+      "prompt_tokens": 169,
+      "completion_tokens": 71,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 52,
+    "question": "[Question]: There is a subtle difference between a standard parts program and a standardization program. A standardization program tends to emphasize : [Choices]: a. Limited part numbers. | b. Limited part applications. | c. Limited sizes. | d. Limited suppliers."
+  },
+  {
+    "raw_response": "{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 9.449999999999997e-05,
+      "total_tokens": 173,
+      "prompt_tokens": 165,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 53,
+    "question": "[Question]: The distribution used to describe the time between failures which occur independently and at a constant rate, is the : [Choices]: a. Weibull. | b. Log normal. | c. Exponential. | d. Gamma."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0001004999999999999,
+      "total_tokens": 183,
+      "prompt_tokens": 174,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 54,
+    "question": "[Question]: All of the following elements should be included in training plans for project personnel EXCEPT : [Choices]: a. Relevant theory and application. | b. In-depth training in selected area. | c. A broad view of the project. | d. A qualification matrix."
+  },
+  {
+    "raw_response": "To ensure a reliability plan is most effective, the reliability tasks should be closely aligned and integrated with the processes that directly influence the product's inherent reliability. Among the given choices, the integration with **product design and development** is critical because reliability is largely determined during the design phase. Decisions made during design and development\u2014such as material selection, redundancy, stress analysis, and testing\u2014have the greatest impact on the product\u2019s long-term reliability. Integrating reliability tasks (e.g., reliability predictions, design reviews, failure mode analysis, and testing) with the product design and development plan ensures that reliability considerations are embedded from the outset, reducing the need for costly fixes later.\n\nWhile reliability centered maintenance (option d) is important for sustaining reliability during operation, it focuses on maintenance strategies after the product is in use. Product distribution (option a) and product sales (option c) are downstream activities that do not directly influence the product\u2019s inherent reliability.\n\n{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0003820000000000004,
+      "total_tokens": 368,
+      "prompt_tokens": 170,
+      "completion_tokens": 198,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 55,
+    "question": "[Question]: For a reliability plan to be most effective, the reliability tasks should be integrated with which of the following plan ? [Choices]: a. Product distribution | b. Product design and development. | c. Product sales. | d. Reliability centered maintenance."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.949999999999976e-05,
+      "total_tokens": 183,
+      "prompt_tokens": 175,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 56,
+    "question": "[Question]: Failure data are analyzed and a proportion of items survive to the end of the test. Data on these types of samples are referred as : [Choices]: a. Non-parameter data. | b. Censored Data. | c. Parameter data. | d. Control data"
+  },
+  {
+    "raw_response": "To find the minimum reliability of the subsystem to meet the system reliability goal, we can model the system reliability using the law of total probability. Let \\( R_s \\) be the system reliability, \\( R_g \\) be the reliability goal, \\( R_1 \\) be the reliability when the subsystem is functioning, \\( R_2 \\) be the reliability when the subsystem is not functioning, and \\( R_{sub} \\) be the reliability of the subsystem.\n\nGiven:\n- \\( R_g = 0.995 \\)\n- \\( R_1 = 0.999 \\) (system reliability when subsystem is functioning)\n- \\( R_2 = 0.90 \\) (system reliability when subsystem is not functioning)\n\nThe system reliability can be expressed as:\n\\[ R_s = R_{sub} \\cdot R_1 + (1 - R_{sub}) \\cdot R_2 \\]\n\nWe want \\( R_s \\geq R_g \\), so:\n\\[ R_{sub} \\cdot R_1 + (1 - R_{sub}) \\cdot R_2 \\geq R_g \\]\n\nSubstitute the given values:\n\\[ R_{sub} \\cdot 0.999 + (1 - R_{sub}) \\cdot 0.90 \\geq 0.995 \\]\n\nSimplify the inequality:\n\\[ 0.999 R_{sub} + 0.90 - 0.90 R_{sub} \\geq 0.995 \\]\n\\[ (0.999 - 0.90) R_{sub} + 0.90 \\geq 0.995 \\]\n\\[ 0.099 R_{sub} \\geq 0.095 \\]\n\\[ R_{sub} \\geq \\frac{0.095}{0.099} \\]\n\\[ R_{sub} \\geq 0.9596 \\]\n\nRounding to three decimal places, the minimum reliability for the subsystem is approximately **0.960**.\n\n{\"answer\": [\"c\"]}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0007645000000000004,
+      "total_tokens": 657,
+      "prompt_tokens": 221,
+      "completion_tokens": 436,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 57,
+    "question": "[Question]: The reliability goal for a complex system is 0.995. The predicted reliability for the system is 0.999 when one of the subsystems is functioning and 0.90 when that subsystem is not functioning. What is the minimum reliability for this subsystem to meet the system reliability goal ? [Choices]: a. 0.998 | b. 0.929 | c. 0.960 | d. 0.899"
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00010849999999999922,
+      "total_tokens": 201,
+      "prompt_tokens": 193,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 58,
+    "question": "[Question]: A resistor is rated at 1 watt. One example of using this resistor in a derated condition is using : [Choices]: a. Two of the resistors in series. | b. The resistor in a 0.5 watt application. | c. The resistor in a 2 watt application. | d. The resistor as a standby unit."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00010849999999999922,
+      "total_tokens": 201,
+      "prompt_tokens": 193,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 59,
+    "question": "[Question]: Which of the following are the MOST desirable basic skills required of a reliability engineer assigned to a cross-functional product team ? [Choices]: a. Reliability trouble shooting, data collection and analysis. | b. Communication, co-operation, and technical knowledge. | c. Experience with FMECA and FTA. | d. Reliability planning, testing and measurement."
+  },
+  {
+    "raw_response": "The primary goal of accelerated testing is to evaluate the reliability and durability of a product in a shorter time frame by subjecting it to stress conditions that are more severe than normal operating conditions. This helps identify potential failures and weaknesses quickly.\n\n{\"answer\": [\"d\"]}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00016049999999999918,
+      "total_tokens": 213,
+      "prompt_tokens": 159,
+      "completion_tokens": 54,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 60,
+    "question": "[Question]: Which of the following is the primary goal of accelerated testing ? [Choices]: a. Reduced development time. | b. Increased quality. | c. Reduced development cost. | d. Increased reliability."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 9.750000000000036e-05,
+      "total_tokens": 177,
+      "prompt_tokens": 168,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 61,
+    "question": "[Question]: In product development planning, which of the following BEST assures the success of the product ? [Choices]: a. Maximum product quality. | b. Maximum product reliability. | c. Minimum unit cost. | d. Minimum life cycle cost."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00011049999999999949,
+      "total_tokens": 203,
+      "prompt_tokens": 194,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 62,
+    "question": "[Question]: When a defense is prepared for a product liability action, all of the following would be considered elements of the assumption of risk the plaintiff must have EXCEPT: [Choices]: a. Voluntarily undertaken the risk. | b. Understood the consequence of the risk. | c. Had knowledge of the risk. | d. Contributed to the injury through negligence."
+  },
+  {
+    "raw_response": "{\"answer\": [\"b\"]}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 9.849999999999963e-05,
+      "total_tokens": 181,
+      "prompt_tokens": 173,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 63,
+    "question": "[Question]: Failure data collection, analysis, and corrective action : [Choices]: a. Should be conducted by a competent staff using an electronic computer | b. Is a requirement of MIL-STD-785 | c. Always pays for itself in the long run"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00010899999999999972,
+      "total_tokens": 200,
+      "prompt_tokens": 191,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 64,
+    "question": "[Question]: How is the level of significance defined ? [Choices]: a. The probability of accepting a null hypothesis when it is true. | b. The probability of not accepting a null hypothesis when it is true. | c. The probability of not rejecting a null hypothesis when it is true. | d. The probability of rejecting a null hypothesis when it is true."
+  },
+  {
+    "raw_response": "Maintainability considerations are crucial in the design of systems where long-term reliability, ease of repair, and cost-effective maintenance are essential. These factors are particularly important for complex and high-value products that are expected to operate over extended periods or in environments where servicing is challenging.\n\n- **Integrated circuits (a)**: While integrated circuits are designed for reliability, their maintainability is inherently limited due to their microscopic scale and integration into larger systems. Once fabricated, they are typically replaced rather than repaired, so maintainability is less of a focus in their design.\n\n- **Consumer televisions (b)**: Modern consumer televisions are designed with some level of maintainability in mind, such as modular components or software updates. However, they are generally considered disposable or low-cost items where repair is often not economically viable compared to replacement. Thus, maintainability is a secondary consideration.\n\n- **Modern automobiles (c)**: Maintainability is a critical aspect of automobile design. Vehicles are expected to last for years, and their components must be accessible for routine maintenance, repairs, and replacements. Designers prioritize ease of servicing, availability of spare parts, and diagnostic tools to ensure vehicles remain operational and cost-effective to maintain.\n\n- **Unmanned satellites (d)**: Maintainability is a significant challenge for unmanned satellites because they operate in remote and inaccessible environments. While satellites are designed for extreme reliability, their maintainability is limited due to the impracticality of physical repairs. Redundancy and fault tolerance are prioritized over traditional maintainability.\n\nGiven these considerations, maintainability is most explicitly and critically addressed in the design of **modern automobiles**, as they require regular servicing and repairs throughout their operational life.\n\n```json\n{\"answer\": [\"c\"]}\n```",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0006119999999999997,
+      "total_tokens": 514,
+      "prompt_tokens": 159,
+      "completion_tokens": 355,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 65,
+    "question": "[Question]: Maintainability considerations are important in the design of : [Choices]: a. Integrated circuits. | b. Consumer televisions. | c. Modern automobiles. | d. Unmanned satellites."
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00011350000000000075,
+      "total_tokens": 209,
+      "prompt_tokens": 200,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 66,
+    "question": "[Question]: Which of the following is NOT true concerning computer collection and reporting of data ? I. It is more accurate that manual collection and reporting. II. It is faster than manual collection and reporting. III. It can reduce the expenses of collection and reporting data. [Choices]: a. I and III only | b. I only | c. II and III only | d. I, II, III only"
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\"a\", \"b\", \"c\"]\n}\n```",
+    "extracted_answer": "a, b, c",
+    "usage": {
+      "cost": 0.00010149999999999916,
+      "total_tokens": 165,
+      "prompt_tokens": 146,
+      "completion_tokens": 19,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 67,
+    "question": "[Question]: Basic sources of reliability data are : [Choices]: a. In-plant testing | b. Field testing | c. Operation by user"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00014300000000000077,
+      "total_tokens": 268,
+      "prompt_tokens": 259,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 68,
+    "question": "[Question]: The hazard rate function h(t) for a device is given by the relationship on the left, where t is time in hours. $h(t) = 0.5t, t >= 0$, $h(t)=0, otherwise$. Choose the correct statement(s). [Choices]: a. The probability density function of lifetime at t = 2 is 0.368. | b. The hazard rate at t = 2 hours is 0.238. | c. The cumulative failure probability at t = 2 hours is 0.632. | d. The reliability at t = 2 hours is 0.368."
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "usage": {
+      "cost": 9.649999999999936e-05,
+      "total_tokens": 165,
+      "prompt_tokens": 151,
+      "completion_tokens": 14,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 69,
+    "question": "[Question]: Maintainability of equipment may be measured in terms of : [Choices]: a. Maintenance dollar cost | b. Maintenance man-hours | c. Repair time"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "usage": {
+      "cost": 0.00010399999999999993,
+      "total_tokens": 180,
+      "prompt_tokens": 166,
+      "completion_tokens": 14,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 70,
+    "question": "[Question]: In general, one should select the highest component parameter ratings feasible so that : [Choices]: a. Failure rates may be minimized | b. Probability of secondary failure is minimized | c. Safety margins are offered against unforeseen transients"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\", \"b\", \"c\", \"e\"]\n}",
+    "extracted_answer": "a, b, c, e",
+    "usage": {
+      "cost": 0.00012249999999999935,
+      "total_tokens": 209,
+      "prompt_tokens": 191,
+      "completion_tokens": 18,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 71,
+    "question": "[Question]: What functions can normally be expected to be assigned to the Reliability Engineering Department of a company that emphasizes product reliability ? [Choices]: a. Maintain a failure reporting system | b. Establish reliability growth | c. Oversee use of statistical tools | d. Evaluate customer surveys regarding product costs | e. Establish and maintain a corrective action system"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\"]}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00011700000000000078,
+      "total_tokens": 218,
+      "prompt_tokens": 210,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 72,
+    "question": "[Question]: What is System Effectiveness, if Operational Readiness is 0.89, Design Adequacy is 95%, Availability is 98%, Maintainability is 0.93, and Mission Reliability is 0.99 ? [Choices]: a. 0.820 | b. 0.881 | c. 0.837 | d. 0.763"
+  },
+  {
+    "raw_response": "{\"answer\": [\"a\", \"b\", \"c\"]}",
+    "extracted_answer": "a, b, c",
+    "usage": {
+      "cost": 0.00010600000000000019,
+      "total_tokens": 184,
+      "prompt_tokens": 170,
+      "completion_tokens": 14,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 73,
+    "question": "[Question]: Which of the following considerations should a criticality analysis (CA) take into account ? [Choices]: a. Consequences of a failure | b. Consequential damage of a failure | c. Damage to the environment | d. Potential increase in efficiencies"
+  },
+  {
+    "raw_response": "{\n\"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 9.699999999999986e-05,
+      "total_tokens": 176,
+      "prompt_tokens": 167,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 74,
+    "question": "[Question]: In a corrective action system, trend analysis can be defined as : [Choices]: a. Long-term movement | b. The short term status of problems | c. A cyclical component of a time series | d. Seasonal variations"
+  },
+  {
+    "raw_response": "```json\n{\n\"answer\": [\"b\", \"d\"]\n}\n```",
+    "extracted_answer": "b, d",
+    "usage": {
+      "cost": 0.00011549999999999928,
+      "total_tokens": 199,
+      "prompt_tokens": 183,
+      "completion_tokens": 16,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "mistralai/mistral-large-2512",
+      "finish_reason": "stop"
+    },
+    "question_id": 75,
+    "question": "[Question]: All of the following statements are TRUE about confidence interval EXCEPT [Choices]: a. A smaller sample size would yield a larger width. | b. A larger sample size would yield a larger width. | c. The width indicate the uncertainty in estimates. | d. The width does not depend on the confidence level."
+  }
+]

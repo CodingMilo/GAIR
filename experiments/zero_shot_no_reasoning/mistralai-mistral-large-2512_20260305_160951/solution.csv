@@ -1,0 +1,76 @@
+question_id,prediction_1,prediction_2,prediction_3,prediction_4,prediction_5
+1,b,b,b,b,b
+2,c,c,c,c,
+3,d,d,d,d,d
+4,b,b,b,b,b
+5,c,c,c,c,c
+6,"a, b, c, d","a, b, c, d","a, b, c, d","a, b, c, d","a, b, c, d"
+7,a,a,a,a,a
+8,c,c,c,c,c
+9,d,d,d,d,d
+10,a,a,a,a,a
+11,a,a,a,a,a
+12,a,a,a,a,a
+13,"c, d","c, d","c, d","c, d","c, d"
+14,b,b,b,b,b
+15,d,d,d,d,d
+16,a,"a, c, d",a,"a, c, d","a, c, d"
+17,"a, c","a, c","a, c","a, c","a, c"
+18,"a, d, e","a, d, e","a, d, e","a, d, e","a, d, e"
+19,d,b,d,d,d
+20,c,c,c,c,c
+21,"a, b, c","a, b, c","a, b","a, b, c","a, b, c"
+22,d,d,d,d,d
+23,b,b,b,b,b
+24,b,b,b,b,b
+25,a,a,a,a,a
+26,"b, c","b, c",b,"b, c",b
+27,"a, c, d","a, c, d","a, c, d","a, c, d","a, c, d"
+28,c,c,c,c,c
+29,a,a,a,a,a
+30,b,b,b,b,b
+31,"a, c, d","a, b, c, d","a, b, c, d","a, b, c, d","a, c, d"
+32,d,d,d,a,a
+33,b,b,b,c,b
+34,d,d,d,d,d
+35,b,b,b,b,b
+36,d,d,d,d,d
+37,d,d,d,d,d
+38,d,d,d,d,d
+39,a,a,a,a,a
+40,"b, c","b, c","b, c","b, c","b, c"
+41,b,b,b,b,b
+42,b,b,b,b,b
+43,b,b,b,b,b
+44,b,b,b,b,b
+45,a,a,a,a,a
+46,d,d,d,d,d
+47,d,d,d,d,d
+48,a,a,a,a,a
+49,d,d,d,d,d
+50,"b, d","b, d",d,d,"b, d"
+51,a,a,a,a,a
+52,a,a,a,a,a
+53,c,c,c,c,c
+54,b,b,b,b,b
+55,b,b,b,b,b
+56,b,b,b,b,b
+57,c,c,c,a,c
+58,b,b,b,b,b
+59,b,b,b,b,b
+60,d,d,d,d,d
+61,d,d,d,d,d
+62,d,d,d,d,d
+63,b,b,b,b,b
+64,d,d,d,d,d
+65,c,c,c,c,c
+66,d,d,d,d,d
+67,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c"
+68,d,d,d,d,d
+69,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c"
+70,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c"
+71,"a, b, c, e","a, b, c, e","a, b, c, e","a, b, c, e","a, b, c, e"
+72,a,a,a,a,a
+73,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c"
+74,a,a,a,a,a
+75,"b, d","b, d","b, d","b, d","b, d"

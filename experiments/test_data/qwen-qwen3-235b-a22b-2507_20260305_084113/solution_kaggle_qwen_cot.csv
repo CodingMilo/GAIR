@@ -1,0 +1,76 @@
+question_id,prediction_1,prediction_2,prediction_3,prediction_4,prediction_5,Average cost per run
+1,b,b,b,b,b,0.026217
+2,c,c,c,c,c,0.026217
+3,d,d,d,d,no solution or nan generated,0.026217
+4,b,b,b,b,b,0.026217
+5,c,c,c,c,a,0.026217
+6,d,d,d,d,d,0.026217
+7,a,a,a,a,a,0.026217
+8,c,c,c,c,c,0.026217
+9,d,d,d,d,d,0.026217
+10,c,a,c,c,a,0.026217
+11,a,a,a,a,a,0.026217
+12,a,a,a,a,a,0.026217
+13,"c, d","c, d","c, d","c, d","c, d",0.026217
+14,b,b,b,b,b,0.026217
+15,d,d,d,d,d,0.026217
+16,a,a,a,a,a,0.026217
+17,"a, c","a, c","a, c","a, c","a, c",0.026217
+18,"a, d, e","a, d, e","a, d, e","a, d, e","a, d, e",0.026217
+19,d,d,d,d,d,0.026217
+20,c,c,c,c,c,0.026217
+21,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c",0.026217
+22,d,d,d,d,d,0.026217
+23,b,b,b,b,b,0.026217
+24,c,c,c,c,c,0.026217
+25,a,a,a,a,a,0.026217
+26,b,b,b,b,b,0.026217
+27,a,a,"a, d","a, d","a, c, d",0.026217
+28,c,c,d,d,c,0.026217
+29,a,a,a,a,a,0.026217
+30,b,b,b,b,b,0.026217
+31,"a, c, d","a, c, d","a, c, d","a, c, d","a, c, d",0.026217
+32,a,a,a,a,a,0.026217
+33,b,b,b,b,b,0.026217
+34,d,d,d,d,d,0.026217
+35,b,b,b,b,b,0.026217
+36,d,d,d,d,d,0.026217
+37,d,d,d,d,d,0.026217
+38,d,d,d,d,d,0.026217
+39,a,a,a,a,a,0.026217
+40,"b, c, d","b, c, d","b, c, d","b, c, d","b, c, d",0.026217
+41,b,b,b,b,b,0.026217
+42,b,b,b,b,b,0.026217
+43,b,b,b,b,b,0.026217
+44,b,no solution or nan generated,b,b,b,0.026217
+45,a,a,a,a,a,0.026217
+46,d,d,d,d,d,0.026217
+47,d,d,d,d,d,0.026217
+48,a,"a, c",a,a,a,0.026217
+49,d,d,d,d,d,0.026217
+50,d,d,d,d,d,0.026217
+51,a,a,a,a,a,0.026217
+52,a,a,a,a,a,0.026217
+53,c,c,c,c,c,0.026217
+54,b,d,b,d,b,0.026217
+55,b,b,b,b,b,0.026217
+56,b,no solution or nan generated,b,b,b,0.026217
+57,c,c,c,c,c,0.026217
+58,b,"a, b",b,b,b,0.026217
+59,b,b,b,b,b,0.026217
+60,a,a,a,a,a,0.026217
+61,d,d,d,d,d,0.026217
+62,d,d,d,d,d,0.026217
+63,b,b,b,b,b,0.026217
+64,d,d,d,d,d,0.026217
+65,c,"c, d","c, d",c,"c, d",0.026217
+66,no solution or nan generated,b,no solution or nan generated,b,no solution or nan generated,0.026217
+67,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c",0.026217
+68,"a, c, d","a, c, d","a, c, d","a, c, d","a, c, d",0.026217
+69,"b, c","b, c","b, c","b, c","b, c",0.026217
+70,"a, c","a, c","a, c","a, b, c","a, c",0.026217
+71,"a, b, c, e","a, b, c, e","a, b, c, e","a, b, c, e","a, b, c, e",0.026217
+72,a,c,c,c,d,0.026217
+73,"a, b, c","a, b, c","a, b, c","a, b, c","a, b, c",0.026217
+74,a,a,a,a,a,0.026217
+75,"b, d","b, d","b, d","b, d","b, d",0.026217
