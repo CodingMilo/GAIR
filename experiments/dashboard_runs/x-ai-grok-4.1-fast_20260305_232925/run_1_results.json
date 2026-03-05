@@ -1,0 +1,192 @@
+[
+  {
+    "raw_response": "{\n\"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00030555,
+      "total_tokens": 897,
+      "prompt_tokens": 318,
+      "completion_tokens": 579,
+      "reasoning_tokens": 571,
+      "cached_tokens": 317,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 1,
+    "question": "[Question]: 2.  Battery life has been measured as normally distributed with a mean  equal to 150 hours and a variance of 400 hours. Find the B10 life.\n\n[Choices]: [a] 128.1 hrs  | [b] 124.4 hrs  | [c] 122.6hrs | [d] 110hrs"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00024015,
+      "total_tokens": 813,
+      "prompt_tokens": 370,
+      "completion_tokens": 443,
+      "reasoning_tokens": 434,
+      "cached_tokens": 369,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 2,
+    "question": "[Question]: 3.  Failure rate data is acquired from MIL-HDBK-217 for reliability  modeling of a new circuit board design. The failure rate for the entire  circuit board is acquired by summing the MIL-HDBK-217 failure rates for  each component on the circuit board. The most likely assumptions made by  the engineer for this analysis are that individual component failure  rates are _____ with time and are modeled in a ______ configuration. \n\n[Choices]: [a] Constant; series  | [b]  Decreasing; series | [c]  Increasing; series | [d]  Constant; parallel"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0003744,
+      "total_tokens": 969,
+      "prompt_tokens": 303,
+      "completion_tokens": 666,
+      "reasoning_tokens": 657,
+      "cached_tokens": 128,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 3,
+    "question": "[Question]: 4.  Each of the following test acceleration models is most often  used with only one varying stress type, except for which?\n\n[Choices]: [a] Arrhenius | [b] Coffin-Manson | [c] Inverse Power Law  | [d] Eyring"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00021995000000000012,
+      "total_tokens": 733,
+      "prompt_tokens": 326,
+      "completion_tokens": 407,
+      "reasoning_tokens": 398,
+      "cached_tokens": 325,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 4,
+    "question": "[Question]: 6.  Suppose that six bad golf balls get mixed up with eight good  golf balls. If two balls are drawn simultaneously, what is the  probability that both are good? \n\n[Choices]: [a]  0.1563  | [b]  0.3077 | [c]  0.2857 | [d]  0.3956"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0003793500000000001,
+      "total_tokens": 1041,
+      "prompt_tokens": 314,
+      "completion_tokens": 727,
+      "reasoning_tokens": 718,
+      "cached_tokens": 313,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 5,
+    "question": "[Question]: 7.  Which of the following choices is the best type of control chart for  depicting the average number of defects found in a particular make and  model of a refrigerator?\n\n[Choices]: [a]  X-bar and R-chart | [b]  np chart | [c] A normal curve  | [d] U chart"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00321185,
+      "total_tokens": 6787,
+      "prompt_tokens": 404,
+      "completion_tokens": 6383,
+      "reasoning_tokens": 6374,
+      "cached_tokens": 403,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 6,
+    "question": "[Question]: 8.  Sample Variance of resistance for the 20-unit sample of electronic  components was 4 ohms. 95% confidence interval for the population  variance is: \n\n[Choices]: [a] 2.31  $ \\leq $   $ \\sigma $ 2  $ \\leq $  8.53  | [b] 2.93  $ \\leq $   $ \\sigma $ 2  $ \\leq $  10.43 | [c] 2.52  $ \\leq $   $ \\sigma $ 2  $ \\leq $  7.51 | [d] 3.18  $ \\leq $   $ \\sigma $ 2  $ \\leq $  9.21"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0017726499999999997,
+      "total_tokens": 3833,
+      "prompt_tokens": 405,
+      "completion_tokens": 3428,
+      "reasoning_tokens": 3419,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00138775,
+      "total_tokens": 3056,
+      "prompt_tokens": 394,
+      "completion_tokens": 2662,
+      "reasoning_tokens": 2653,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 8,
+    "question": "[Question]: 10.  50 samples of an electronic component selected at random at incoming  inspection measures an average resistance of 10 ohms and a standard  deviation of 2 ohms. 95% confidence interval for the population mean is:\n\n[Choices]: [a] 9.53 $ \\leq $   $ \\mu $  $ \\leq $  10.47 | [b] 8 $ \\leq $   $ \\mu $  $ \\leq $  12 | [c] 6 $ \\leq $   $ \\mu $  $ \\leq $ 14  | [d] 9.43 $ \\leq $   $ \\mu $  $ \\leq $  10.57"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0003875500000000004,
+      "total_tokens": 1004,
+      "prompt_tokens": 308,
+      "completion_tokens": 696,
+      "reasoning_tokens": 687,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs.. What is the time to 10% failure?\n\n[Choices]: [a] 5000 hrs  | [b] 5268 hrs   | [c] 5450 hrs | [d]  5333 hrs"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.002726599999999999,
+      "total_tokens": 5713,
+      "prompt_tokens": 369,
+      "completion_tokens": 5344,
+      "reasoning_tokens": 5335,
+      "cached_tokens": 128,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  }
+]

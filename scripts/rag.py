@@ -38,6 +38,7 @@ UTILISATION :
 
 import re
 import numpy as np
+from pathlib import Path
 from typing import List, Optional
 from tqdm import tqdm
 from sklearn.metrics.pairwise import cosine_similarity
@@ -52,6 +53,7 @@ class RAGEngine:
 
     def _initialize_docs(self):
         """Charge le fichier rag.tex et le découpe en sections."""
+        from pathlib import Path
         try:
             # Handle both object-like and dict-like config
             rag_path = self.config.get('rag_tex_path') if isinstance(self.config, dict) else getattr(self.config, 'rag_tex_path', None)

@@ -2,8 +2,10 @@ import sys
 import os
 import pandas as pd
 import json
+import time
 from pathlib import Path
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from supporting_scripts import OpenRouterClient, BenchmarkRunner, BenchmarkLogger
 
 def run_experiment(
@@ -28,7 +30,6 @@ def run_experiment(
     # Create experiments folder
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     model_safe = model_name.replace("/", "-")
-    # Save in a subfolder "dashboard_runs" within experiments to keep it tidy
     results_path = base_dir / "experiments" / "dashboard_runs" / f"{model_safe}_{timestamp}"
     results_path.mkdir(parents=True, exist_ok=True)
 
@@ -43,9 +44,9 @@ def run_experiment(
         'dataset_path': str(dataset_path),
         'solution_path': str(solution_path),
         'testing_mode': mode == "test",
-        'enable_parallel': n_runs > 1,
+        'enable_parallel': True, # We force parallel for speed
         'max_workers': max_workers,
-        'rate_limit_seconds': 1.0,
+        'rate_limit_seconds': 0.5, # Faster rate for parallel
         'rag_tex_path': str(scripts_dir / "rag.tex") if use_rag else None,
         'system_prompt': custom_system_prompt
     }
@@ -62,38 +63,86 @@ def run_experiment(
     # Load data
     df = pd.read_csv(dataset_path)
     if hard_only and mode == "train":
-        # Simplified hard question filtering (can be improved)
-        df = df.head(10) 
+        # Example hard questions filtering - keep only problematic ones if you have a list
+        # For now, let's just take a sample to demonstrate
+        df = df.sample(min(15, len(df))) 
 
-    # Run!
-    # Note: We wrap the runner to provide progress updates to the dashboard
-    class DashboardLogger(BenchmarkLogger):
-        def log_run_results(self, run_idx, results):
-            log_file = super().log_run_results(run_idx, results)
-            if progress_callback:
-                for i, res in enumerate(results):
+    # --- TRUE PARALLEL EXECUTION ---
+    all_runs_results = {}
+    completed_count = 0
+    total_total = len(df) * n_runs
+
+    # Ground truth for live accuracy
+    ground_truth = {}
+    if mode == "train":
+        ground_truth = dict(zip(df['question_id'], df['answer']))
+
+    def process_run(run_idx):
+        results = []
+        # Parallelize QUESTIONS within the run for maximum speed
+        with ThreadPoolExecutor(max_workers=max_workers) as q_executor:
+            q_futures = {
+                q_executor.submit(runner.run_single_question, row['question'], row['question_id']): row 
+                for _, row in df.iterrows()
+            }
+            
+            for q_future in as_completed(q_futures):
+                res = q_future.result()
+                
+                # Live feedback
+                nonlocal completed_count
+                completed_count += 1
+                
+                if progress_callback:
+                    is_correct = "N/A"
+                    if mode == "train":
+                        correct_ans = ground_truth.get(res['question_id'])
+                        is_correct = str(res['extracted_answer']).strip().lower() == str(correct_ans).strip().lower()
+
                     progress_callback({
                         "type": "update",
-                        "completed": i + 1,
-                        "total": len(results),
+                        "completed": completed_count,
+                        "total": total_total,
                         "last_log": {
+                            "run": run_idx,
                             "question_id": res["question_id"],
                             "prediction": res["extracted_answer"],
-                            "is_correct": "N/A"
+                            "is_correct": is_correct,
+                            "cost": res.get("usage", {}).get("cost", 0)
                         }
                     })
-            return log_file
+                results.append(res)
+        
+        # Sort by question_id to maintain order for logging
+        results.sort(key=lambda x: x['question_id'])
+        logger.log_run_results(run_idx, results)
+        return run_idx, results
 
-    dash_logger = DashboardLogger(str(results_path), config)
+    # Run repetitions in parallel
+    with ThreadPoolExecutor(max_workers=min(n_runs, 5)) as run_executor:
+        run_futures = [run_executor.submit(process_run, r) for r in range(1, n_runs + 1)]
+        for f in as_completed(run_futures):
+            r_idx, r_res = f.result()
+            all_runs_results[r_idx] = r_res
 
+    # Final reports (mimic engine behavior for dashboard archives)
+    # We need a dataframe for the logger
+    final_df = pd.DataFrame()
+    final_df['question_id'] = df['question_id'].values
+    for r_idx, r_res in all_runs_results.items():
+        # Sort to match order
+        r_res.sort(key=lambda x: x['question_id'])
+        final_df[f"prediction_{r_idx}"] = [x['extracted_answer'] for x in r_res]
+
+    if mode == "train":
+        correct_df = pd.read_csv(solution_path)
+        usage_summary = client.get_usage_summary()
+        logger.generate_result_report(final_df, correct_df, usage_summary, n_runs)
+        logger.generate_wrong_answers_report(final_df, correct_df, df)
     
-    # Execute
-    results_df = runner.run_benchmark(
-        dataset_df=df,
-        num_repetitions=n_runs,
-        logger=dash_logger,
-        enable_parallel=config['enable_parallel'],
-        max_workers=max_workers
-    )
+    # Save solution.csv
+    solution_cols = ['question_id'] + [f'prediction_{i}' for i in range(1, n_runs+1)]
+    final_df[solution_cols].to_csv(results_path / "solution.csv", index=False)
 
-    return results_df
+    return final_df
+
