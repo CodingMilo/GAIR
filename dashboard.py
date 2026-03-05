@@ -82,7 +82,7 @@ class ProgressCallback:
                 self.status_msg.text(f"Processed {info['completed']}/{info['total']} questions...")
             if self.live_table:
                 ldf = pd.DataFrame(st.session_state.live_data)
-                self.live_table.dataframe(ldf[["question_id", "prediction", "is_correct"]].tail(10), use_container_width=True)
+                self.live_table.dataframe(ldf[["question_id", "prediction", "is_correct"]].tail(10), width='stretch')
         return self.stop_requested
 
 if 'callback' not in st.session_state:
@@ -96,7 +96,7 @@ edited_prompt = st.text_area("System Prompt Editor", prompts_dict[prompt_choice]
 
 col_run, col_stop = st.columns([1, 1])
 
-if col_run.button("🔥 RUN CAMPAIGN", type="primary", use_container_width=True, disabled=st.session_state.is_running):
+if col_run.button("🔥 RUN CAMPAIGN", type="primary", width='stretch', disabled=st.session_state.is_running):
     st.session_state.live_data = []
     st.session_state.progress = 0.0
     st.session_state.is_running = True
@@ -104,7 +104,7 @@ if col_run.button("🔥 RUN CAMPAIGN", type="primary", use_container_width=True,
     st.rerun()
 
 if st.session_state.is_running:
-    if col_stop.button("🛑 STOP FORCE", type="secondary", use_container_width=True):
+    if col_stop.button("🛑 STOP FORCE", type="secondary", width='stretch'):
         st.session_state.callback.stop_requested = True
         st.warning("Stop signal sent... waiting for current workers to finish.")
 
@@ -194,7 +194,7 @@ elif st.session_state.live_data:
         s3.write(f"**Estimated 75q Cost:** ${avg_cost*75:.4f}")
         
         st.divider()
-        st.dataframe(ldf, use_container_width=True)
+        st.dataframe(ldf, width='stretch')
     
     with tab_analysis:
         # Search for the latest report in experiments
@@ -228,7 +228,7 @@ if runs:
     with t1:
         if solution_file.exists():
             df = pd.read_csv(solution_file)
-            st.dataframe(df, use_container_width=True)
+            st.dataframe(df, width='stretch')
             
             # Improved stats for historical view
             train_data_path = Path(__file__).parent / "data" / "train.csv"

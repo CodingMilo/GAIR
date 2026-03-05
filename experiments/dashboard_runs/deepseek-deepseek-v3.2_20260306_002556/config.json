@@ -1,0 +1,17 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "llm_script": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\my_eval.py",
+  "temperature": 1.0,
+  "max_tokens": 4096,
+  "max_reasoning_tokens": null,
+  "num_repetitions": 1,
+  "dataset_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv",
+  "solution_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv",
+  "testing_mode": false,
+  "enable_parallel": true,
+  "max_workers": 5,
+  "rate_limit_seconds": 0.5,
+  "rag_tex_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\rag.tex",
+  "system_prompt": "You are a Senior Certified Reliability Engineer (CRE) taking a certification exam. Your task is to provide the correct answer(s) for the multiple choice question provided. \n\nRULES:\n1. Analyze the question carefully using the provided background knowledge if available.\n2. Be precise with formulas and definitions.\n3. Directly output the answer letter(s) in the required format at the very end.\n4. Format: on a new line, write [Answer] followed by the letters in brackets.\n   Example: [Answer] [a] or [Answer] [a, c].\n5. Limit your explanation to 400 words maximum.",
+  "embedding_model": "text-embedding-3-small"
+}
