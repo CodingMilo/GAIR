@@ -32,11 +32,17 @@ import json
 from pathlib import Path
 import sys
 
-# Import RAG
+# Ensure the scripts directory is in path for imports
+scripts_dir = str(Path(__file__).parent)
+if scripts_dir not in sys.path:
+    sys.path.append(scripts_dir)
+
 try:
     from rag import RAGEngine
 except ImportError:
-    from .rag import RAGEngine
+    # Fallback for different execution contexts
+    import scripts.rag as rag
+    RAGEngine = rag.RAGEngine
 
 # Global RAG instance to persist across calls
 # We store it in sys to survive module re-execution by BenchmarkRunner

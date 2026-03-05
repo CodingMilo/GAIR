@@ -156,15 +156,22 @@ elif st.session_state.live_data and not st.session_state.is_running:
 # --- HISTORY ---
 st.divider()
 st.header("📊 Results History")
-outputs_dir = Path(__file__).parent / "results"
+outputs_dir = Path(__file__).parent / "experiments" / "dashboard_runs"
 if not outputs_dir.exists():
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
-runs = sorted([d for d in outputs_dir.iterdir() if d.is_dir()], key=lambda x: x.stat().st_mtime, reverse=True)
+# Also check teacher's standard folders
+teacher_dirs = [d for d in (Path(__file__).parent / "experiments").iterdir() if d.is_dir() and d.name != "dashboard_runs"]
+
+all_runs = []
+for d in [outputs_dir] + teacher_dirs:
+    all_runs.extend([r for r in d.iterdir() if r.is_dir() and (r / "config.json").exists()])
+
+runs = sorted(all_runs, key=lambda x: x.stat().st_mtime, reverse=True)
 
 if runs:
-    selected_run = st.selectbox("Select a previous run to analyze", [r.name for r in runs])
-    run_path = outputs_dir / selected_run
+    selected_run_name = st.selectbox("Select a previous run to analyze", [f"{r.parent.name}/{r.name}" for r in runs])
+    run_path = next(r for r in runs if f"{r.parent.name}/{r.name}" == selected_run_name)
     
     solution_file = run_path / "solution.csv"
     summary_file = run_path / "run_1_results.json" # Teacher stores usage here

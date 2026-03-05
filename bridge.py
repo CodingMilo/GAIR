@@ -25,10 +25,11 @@ def run_experiment(
     dataset_path = base_dir / "data" / ("train.csv" if mode == "train" else "test.csv")
     solution_path = base_dir / "data" / ("train.csv" if mode == "train" else "sample_submission.csv")
     
-    # Create results folder
+    # Create experiments folder
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     model_safe = model_name.replace("/", "-")
-    results_path = base_dir / "results" / f"{model_safe}_{timestamp}"
+    # Save in a subfolder "dashboard_runs" within experiments to keep it tidy
+    results_path = base_dir / "experiments" / "dashboard_runs" / f"{model_safe}_{timestamp}"
     results_path.mkdir(parents=True, exist_ok=True)
 
     # Config for BenchmarkRunner
@@ -68,10 +69,9 @@ def run_experiment(
     # Note: We wrap the runner to provide progress updates to the dashboard
     class DashboardLogger(BenchmarkLogger):
         def log_run_results(self, run_idx, results):
-            super().log_run_results(run_idx, results)
+            log_file = super().log_run_results(run_idx, results)
             if progress_callback:
                 for i, res in enumerate(results):
-                    # Mocking the update info expected by dashboard
                     progress_callback({
                         "type": "update",
                         "completed": i + 1,
@@ -79,11 +79,13 @@ def run_experiment(
                         "last_log": {
                             "question_id": res["question_id"],
                             "prediction": res["extracted_answer"],
-                            "is_correct": "N/A" # In bridge we don't always have ground truth here
+                            "is_correct": "N/A"
                         }
                     })
+            return log_file
 
     dash_logger = DashboardLogger(str(results_path), config)
+
     
     # Execute
     results_df = runner.run_benchmark(
