@@ -1,0 +1,1031 @@
+[
+  {
+    "raw_response": "{\n  \"reasoning\": \"The problem asks for the B10 life of a battery, which is the time by which 10% of the population is expected to fail. The battery life follows a normal distribution with a mean (\u03bc) of 150 hours and a variance (\u03c3\u00b2) of 400 hours. \\n\\n1. Calculate the standard deviation (\u03c3): \u03c3 = \u221a400 = 20 hours.\\n2. The B10 life corresponds to the 10th percentile of the normal distribution. The formula is B10 = \u03bc + (z_0.10 * \u03c3).\\n3. Using the standard normal distribution table, the z-score for the 10th percentile (where the area to the left is 0.10) is approximately -1.2815.\\n4. Calculate B10: B10 = 150 + (-1.2815 * 20) = 150 - 25.63 = 124.37 hours.\\n\\nComparing this result to the given choices, 124.37 hours is closest to 124.4 hours.\",\n  \"selected_option_text\": \"124.4 hrs\",\n  \"selected_letter\": \"b\"\n}\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.007858,
+      "total_tokens": 13331,
+      "prompt_tokens": 12854,
+      "completion_tokens": 477,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 1,
+    "question": "[Question]: 2.  Battery life has been measured as normally distributed with a mean  equal to 150 hours and a variance of 400 hours. Find the B10 life.\n\n[Choices]: [a] 128.1 hrs  | [b] 124.4 hrs  | [c] 122.6hrs | [d] 110hrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question describes a common reliability modeling approach using MIL-HDBK-217. According to the manual and standard reliability theory: 1) MIL-HDBK-217 assumes a constant failure rate (exponential distribution) for electronic components during their useful life. 2) Summing individual failure rates (\u03bb_total = \u03bb1 + \u03bb2 + ... + \u03bbn) to find the system failure rate is the mathematical definition of a series configuration, where the failure of any single component causes the failure of the entire board. Therefore, the assumptions are that failure rates are constant with time and the components are in a series configuration.\",\n  \"selected_option_text\": \"Constant; series\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0043549999999999995,
+      "total_tokens": 7255,
+      "prompt_tokens": 6964,
+      "completion_tokens": 291,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 2,
+    "question": "[Question]: 3.  Failure rate data is acquired from MIL-HDBK-217 for reliability  modeling of a new circuit board design. The failure rate for the entire  circuit board is acquired by summing the MIL-HDBK-217 failure rates for  each component on the circuit board. The most likely assumptions made by  the engineer for this analysis are that individual component failure  rates are _____ with time and are modeled in a ______ configuration. \n\n[Choices]: [a] Constant; series  | [b]  Decreasing; series | [c]  Increasing; series | [d]  Constant; parallel"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks which acceleration model is most often used with more than one varying stress type. \\n\\n1. **Arrhenius model**: Primarily used for temperature acceleration (single stress).\\n2. **Coffin-Manson model**: Primarily used for thermal cycling (fatigue), where the stress is the temperature range (single stress type).\\n3. **Inverse Power Law**: Primarily used for non-thermal stresses like voltage, pressure, or vibration (single stress).\\n4. **Eyring model**: This model is an extension of the Arrhenius model that allows for the inclusion of additional stresses (such as humidity or voltage) alongside temperature. It is specifically designed to handle multiple stress types simultaneously (e.g., Temperature-Humidity models).\",\n  \"selected_option_text\": \"Eyring\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0071719999999999996,
+      "total_tokens": 12854,
+      "prompt_tokens": 12556,
+      "completion_tokens": 298,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 3,
+    "question": "[Question]: 4.  Each of the following test acceleration models is most often  used with only one varying stress type, except for which?\n\n[Choices]: [a] Arrhenius | [b] Coffin-Manson | [c] Inverse Power Law  | [d] Eyring"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To find the probability that both balls drawn are good, we use the hypergeometric distribution (sampling without replacement). \\n1. Total number of balls = 6 (bad) + 8 (good) = 14.\\n2. Total ways to choose 2 balls from 14 is calculated as C(14, 2) = 14! / (2! * 12!) = (14 * 13) / 2 = 91.\\n3. Ways to choose 2 good balls from the 8 available good balls is C(8, 2) = 8! / (2! * 6!) = (8 * 7) / 2 = 28.\\n4. The probability is the ratio of favorable outcomes to total outcomes: P = 28 / 91.\\n5. Calculation: 28 / 91 \u2248 0.307692.\\nRounding to four decimal places, we get 0.3077.\",\n  \"selected_option_text\": \"0.3077\",\n  \"selected_letter\": \"b\"\n}\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.007134000000000001,
+      "total_tokens": 12308,
+      "prompt_tokens": 11916,
+      "completion_tokens": 392,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 4,
+    "question": "[Question]: 6.  Suppose that six bad golf balls get mixed up with eight good  golf balls. If two balls are drawn simultaneously, what is the  probability that both are good? \n\n[Choices]: [a]  0.1563  | [b]  0.3077 | [c]  0.2857 | [d]  0.3956"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine the best control chart, we must distinguish between 'defects' (nonconformities) and 'defectives' (nonconforming units), and between variable and attribute data. \\n\\n1. **X-bar and R-charts** (a) are used for variable data (continuous measurements like weight or length), not counts of defects.\\n2. **np charts** (b) are used for the number of *defective items* (pass/fail) in a constant sample size, not the number of defects within an item.\\n3. **A normal curve** (c) is a probability distribution, not a control chart.\\n4. **U charts** (d) are used for the number of *defects per unit* (average number of defects). Since a refrigerator can have multiple defects (e.g., a scratch, a loose handle, and a cooling issue), and we are interested in the average number of these defects found, the U chart is the appropriate statistical tool for tracking nonconformities per unit.\",\n  \"selected_option_text\": \"U chart\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00603755,
+      "total_tokens": 13329,
+      "prompt_tokens": 12856,
+      "completion_tokens": 473,
+      "reasoning_tokens": 0,
+      "cached_tokens": 4021,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 5,
+    "question": "[Question]: 7.  Which of the following choices is the best type of control chart for  depicting the average number of defects found in a particular make and  model of a refrigerator?\n\n[Choices]: [a]  X-bar and R-chart | [b]  np chart | [c] A normal curve  | [d] U chart"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To find the 95% confidence interval for the population variance (\u03c3\u00b2) given a sample variance (s\u00b2) of 4 ohms and a sample size (n) of 20, we use the Chi-square distribution formula: [(n-1)s\u00b2 / \u03c7\u00b2_{\u03b1/2, n-1}] \u2264 \u03c3\u00b2 \u2264 [(n-1)s\u00b2 / \u03c7\u00b2_{1-\u03b1/2, n-1}]. \\n\\n1. Degrees of freedom (df) = n - 1 = 20 - 1 = 19.\\n2. Confidence level = 0.95, so \u03b1 = 0.05. The critical values are \u03c7\u00b2_{0.025, 19} and \u03c7\u00b2_{0.975, 19}.\\n3. Using the Chi-square table or calculation:\\n   - \u03c7\u00b2_{0.975, 19} (upper tail) \u2248 32.852\\n   - \u03c7\u00b2_{0.025, 19} (lower tail) \u2248 8.907\\n4. Lower bound for \u03c3\u00b2 = (19 * 4) / 32.852 \u2248 2.313\\n5. Upper bound for \u03c3\u00b2 = (19 * 4) / 8.907 \u2248 8.533\\n\\nThe resulting interval is approximately 2.31 \u2264 \u03c3\u00b2 \u2264 8.53.\",\n  \"selected_option_text\": \"2.31  $ \\\\leq $   $ \\\\sigma $ 2  $ \\\\leq $  8.53\",\n  \"selected_letter\": \"a\"\n}\n[Answer] [a]",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.008455500000000001,
+      "total_tokens": 13641,
+      "prompt_tokens": 12987,
+      "completion_tokens": 654,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 6,
+    "question": "[Question]: 8.  Sample Variance of resistance for the 20-unit sample of electronic  components was 4 ohms. 95% confidence interval for the population  variance is: \n\n[Choices]: [a] 2.31  $ \\leq $   $ \\sigma $ 2  $ \\leq $  8.53  | [b] 2.93  $ \\leq $   $ \\sigma $ 2  $ \\leq $  10.43 | [c] 2.52  $ \\leq $   $ \\sigma $ 2  $ \\leq $  7.51 | [d] 3.18  $ \\leq $   $ \\sigma $ 2  $ \\leq $  9.21"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine if the new average yield is statistically different from the historical yield, we perform a hypothesis test or construct a confidence interval. \\n\\n1. Historical yield: 85% (given as a lower 95% confidence limit).\\n2. New data: n = 10, sample mean = 86%, standard deviation = 1%.\\n3. Standard Error (SE) = 1% / sqrt(10) \u2248 0.316%.\\n4. Degrees of Freedom (df) = 10 - 1 = 9.\\n5. For a 95% confidence level (two-tailed), the t-critical value for df=9 is 2.262.\\n6. The 95% Confidence Interval (CI) for the new yield is: 86% \u00b1 (2.262 * 0.316%) = 86% \u00b1 0.715% = [85.285%, 86.715%].\\n7. Since the historical yield (85%) is outside (below) this confidence interval, the new yield is statistically different from the historical yield.\\n8. The question asks for the 'average yield' at the 95% confidence level. In statistical inference, the population mean (average yield) is estimated to be within the confidence interval. Since the interval is [85.285%, 86.715%], the lower bound (85.285%) is less than the sample average of 86%. \\n9. Comparing the choices: The data indicates the average yield is statistically different (since 85% is not in the interval) and the lower bound of our estimate is less than the sample mean of 86%.\",\n  \"selected_option_text\": \"less than the sample average yield of 86% and is statistically different\",\n  \"selected_letter\": \"a\"\n}\n[Answer] [a]",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0090005,
+      "total_tokens": 14161,
+      "prompt_tokens": 13393,
+      "completion_tokens": 768,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To calculate the 95% confidence interval for the population mean (\u03bc) given a sample size (n = 50), sample mean (x\u0304 = 10), and sample standard deviation (s = 2), we use the formula: CI = x\u0304 \u00b1 t(\u03b1/2, n-1) * (s / \u221an). \\n\\n1. Identify parameters: n = 50, x\u0304 = 10, s = 2, \u03b1 = 0.05.\\n2. Degrees of freedom (df) = n - 1 = 49.\\n3. Find the critical value t for 49 degrees of freedom at 95% confidence (two-tailed): t(0.025, 49) \u2248 2.0096.\\n4. Calculate the standard error: SE = s / \u221an = 2 / \u221a50 \u2248 0.2828.\\n5. Calculate the margin of error: ME = 2.0096 * 0.2828 \u2248 0.5684.\\n6. Calculate the bounds: Lower = 10 - 0.5684 = 9.4316; Upper = 10 + 0.5684 = 10.5684.\\n\\nRounding to two decimal places, the interval is 9.43 \u2264 \u03bc \u2264 10.57, which matches option [d].\",\n  \"selected_option_text\": \"9.43 $ \\\\leq $   $ \\mu $  $ \\leq $  10.57\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.006578,
+      "total_tokens": 9531,
+      "prompt_tokens": 8806,
+      "completion_tokens": 725,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 8,
+    "question": "[Question]: 10.  50 samples of an electronic component selected at random at incoming  inspection measures an average resistance of 10 ohms and a standard  deviation of 2 ohms. 95% confidence interval for the population mean is:\n\n[Choices]: [a] 9.53 $ \\leq $   $ \\mu $  $ \\leq $  10.47 | [b] 8 $ \\leq $   $ \\mu $  $ \\leq $  12 | [c] 6 $ \\leq $   $ \\mu $  $ \\leq $ 14  | [d] 9.43 $ \\leq $   $ \\mu $  $ \\leq $  10.57"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the time to 10% failure using an exponential distribution with an MTTF of 50,000 hours. For an exponential distribution, the reliability function is R(t) = exp(-t/MTTF) and the failure function is F(t) = 1 - R(t). We are looking for the time 't' such that F(t) = 0.10. This implies R(t) = 0.90. Solving the equation 0.90 = exp(-t / 50,000) for t: \\nln(0.90) = -t / 50,000 \\nt = -50,000 * ln(0.90) \\nt \u2248 -50,000 * (-0.10536) \\nt \u2248 5268.03 hours. This matches option [b].\",\n  \"selected_option_text\": \"5268 hrs\",\n  \"selected_letter\": \"b\"\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.005207,
+      "total_tokens": 8334,
+      "prompt_tokens": 7918,
+      "completion_tokens": 416,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs.. What is the time to 10% failure?\n\n[Choices]: [a] 5000 hrs  | [b] 5268 hrs   | [c] 5450 hrs | [d]  5333 hrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine the test duration for a zero-failure reliability demonstration test under a Weibull distribution, we use the relationship between the reliability of the units and the confidence level. For $n$ units tested for time $t$ with zero failures, the confidence level $CL$ that the characteristic life is at least $\\eta$ is given by $1 - CL = [R(t)]^n$. For the Weibull distribution, $R(t) = \\exp(-(t/\\eta)^\\beta)$. Substituting this in: $1 - CL = \\exp(-n \\cdot (t/\\eta)^\\beta)$. Solving for $t$: $\\ln(1 - CL) = -n \\cdot (t/\\eta)^\\beta \\Rightarrow (t/\\eta)^\\beta = -\\ln(1 - CL) / n \\Rightarrow t = \\eta \\cdot [-\\ln(1 - CL) / n]^{(1/\\beta)}$. Given $\\eta = 1000$, $\\beta = 2.5$, $n = 5$, and $CL = 0.90$ ($\\alpha = 0.10$): $t = 1000 \\cdot [-\\ln(0.10) / 5]^{(1/2.5)} = 1000 \\cdot [2.302585 / 5]^{0.4} = 1000 \\cdot [0.460517]^{0.4} \\approx 1000 \\cdot 0.7333 = 733.3$ hours.\",\n  \"selected_option_text\": \"733hrs\",\n  \"selected_letter\": \"a\"\n}\n[Answer] [a]",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.007969,
+      "total_tokens": 12698,
+      "prompt_tokens": 12050,
+      "completion_tokens": 648,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine if the new bearing design has doubled the characteristic life (eta) with 95% confidence, we perform a Weibull analysis with a known shape parameter (beta = 2). \\n\\n1. **Data**: 10 bearings tested. 5 failures at 700, 900, 1000, 1100, 1300 hrs. 5 units censored at 1800 hrs.\\n2. **MLE for Scale Parameter (eta)**: For a known beta, the Maximum Likelihood Estimate (MLE) for eta is calculated as: \\n   eta_mle = [ (sum(t_i^beta)) / r ]^(1/beta)\\n   sum(t_i^2) = (700^2 + 900^2 + 1000^2 + 1100^2 + 1300^2) + 5 * (1800^2)\\n   sum(t_i^2) = (490,000 + 810,000 + 1,000,000 + 1,210,000 + 1,690,000) + 5 * (3,240,000)\\n   sum(t_i^2) = 5,200,000 + 16,200,000 = 21,400,000\\n   eta_mle = (21,400,000 / 5)^(1/2) = sqrt(4,280,000) \u2248 2068.8 hrs.\\n3. **Confidence Interval**: For a known beta, the quantity 2*r*(eta_mle/eta)^beta follows a Chi-square distribution with 2r degrees of freedom. To find the 95% lower confidence bound (LCB) for eta:\\n   eta_lower = eta_mle * [ (2*r) / Chi2(0.95, 2r) ]^(1/beta)\\n   r = 5, so degrees of freedom = 10. Chi2(0.95, 10) \u2248 18.307.\\n   eta_lower = 2068.8 * (10 / 18.307)^(1/2) \u2248 2068.8 * 0.739 \u2248 1529 hrs.\\n4. **Comparison**: The target characteristic life is 2 * 600 = 1200 hrs. Since the 95% lower confidence bound (1529 hrs) is greater than the target (1200 hrs), we can conclude with 95% confidence that the characteristic life has indeed doubled.\",\n  \"selected_option_text\": \"YES\",\n  \"selected_letter\": \"a\"\n}\n[Answer] [a]",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0106025,
+      "total_tokens": 15655,
+      "prompt_tokens": 14545,
+      "completion_tokens": 1110,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The problem describes a k-out-of-n system where n=3 (total engines) and k=2 (minimum required to function). The engines are identical and independent with a reliability (p) of 0.995. The probability of system success is the sum of the probabilities that exactly 2 engines function and exactly 3 engines function, calculated using the binomial distribution formula: P(X >= 2) = P(X=2) + P(X=3). \\n\\nUsing the formula P(X=x) = C(n, x) * p^x * (1-p)^(n-x):\\n1. P(X=3) = C(3, 3) * (0.995)^3 * (0.005)^0 = 1 * 0.985074875 * 1 = 0.985074875\\n2. P(X=2) = C(3, 2) * (0.995)^2 * (0.005)^1 = 3 * 0.990025 * 0.005 = 0.014850375\\n\\nTotal Probability = 0.985074875 + 0.014850375 = 0.99992525. \\n\\nComparing this result to the given choices, 0.999925 matches option [d].\",\n  \"selected_option_text\": \"0.999925\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.005831,
+      "total_tokens": 8782,
+      "prompt_tokens": 8206,
+      "completion_tokens": 576,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 12,
+    "question": "[Question]: 7.  For a certain 3-engine airplane, at least two out of its three engines  must function. The engine reliability at time t is 0.995. Find the  probability that the airplane flies successfully for T hours, assuming  identical and independent engines.\n\n[Choices]: [a] 0.9998 | [b] 0.985 | [c] 0.99945  | [d] 0.999925"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The Taguchi approach to Design of Experiments (DOE) and quality engineering is centered on the 'Loss Function' concept. Statement I is true: Taguchi integrates the loss function into experimental design. Statement II is true: Taguchi assumes that any deviation from the target value (T) results in a loss, even if the product is within specification limits. Statement III is true: Taguchi attributes these losses to variability within the process. Statement IV is FALSE: Taguchi specifically rejected the 'goalpost' or 'step function' philosophy (where loss is zero within specs and jumps to a fixed value outside). Instead, Taguchi proposed a quadratic loss function, L(y) = k(y - T)^2, where loss increases continuously as the value deviates from the target. Therefore, IV is the only statement that is NOT true.\",\n  \"selected_option_text\": \"IV only\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.005126,
+      "total_tokens": 8667,
+      "prompt_tokens": 8350,
+      "completion_tokens": 317,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 13,
+    "question": "[Question]: 1. Which of the following is NOT true about the Taguchi DOE approach?I. It includes the concept of loss function in factorial experiments.II. It assumes losses occur when a process fails to meet a target value.III. It assumes losses are due to variability within the process.IV. It assumes that the loss function is a step function relative to the specification limits.\n\n[Choices]: [a] I only | [b] II only | [c] III only  | [d] IV only"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Reliability testing serves multiple strategic and technical purposes: \\nI. It identifies unanticipated failure modes (discovery of design weaknesses).\\nII. It validates reliability models by comparing predicted (estimated) failure rates with empirical (actual) test data.\\nIII. It is the primary method for monitoring reliability growth (e.g., using the AMSAA/Duane model) during the development cycle.\\nIV. It ensures the product meets the reliability requirements defined by customer expectations and contractual obligations. \\nSince all four statements are standard objectives of a reliability testing program, the correct choice is I, II, III, and IV.\",\n  \"selected_option_text\": \"I, II, III and IV\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.006730999999999999,
+      "total_tokens": 11827,
+      "prompt_tokens": 11500,
+      "completion_tokens": 327,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 14,
+    "question": "[Question]: 2. In general, reliability testing is performed for which of the following reasons?I. To detect unanticipated failure modes.II. To compare estimated failure rates to actual failure rates.III. To monitor reliability growth over time.IV. To meet or exceed customer expectations.\n\n[Choices]: [a] I and III only | [b] II and IV only | [c] I, II and III only  | [d] I, II, III and IV"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the probability that a component will still be operational after one year, which is the reliability R(t) at t = 1 year. The time to failure follows a Weibull distribution with shape parameter \u03b2 = 0.5 and scale parameter \u03b7 = 10,000 hours. First, we convert the time period of one year into hours: 1 year = 365 days * 24 hours/day = 8,760 hours. The reliability function for a Weibull distribution is R(t) = exp(-(t/\u03b7)^\u03b2). Substituting the values: R(8760) = exp(-(8760 / 10000)^0.5) = exp(-(0.876)^0.5) \u2248 exp(-0.9359487) \u2248 0.3922136. This matches option [a].\",\n  \"selected_option_text\": \"0.3922\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0051199999999999996,
+      "total_tokens": 8625,
+      "prompt_tokens": 8302,
+      "completion_tokens": 323,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 15,
+    "question": "[Question]: 3. The time to failure of a component is Weibull distributed,  $ \\beta $ =0.5,  $ \\eta $ =10,000 hours.What is the probability that the component will still be operational after one year? \n\n[Choices]: [a] 0.3922  | [b] 0.3214 | [c] 0.3680 | [d] 0.6320"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Sudden-death testing involves dividing a sample into groups and testing each group until the first failure occurs. The distribution of the first failure in a group of size 'n' relates to the population distribution. For a Weibull distribution with shape parameter beta and scale parameter eta_pop, the distribution of the minimum of 'n' items is also Weibull with the same shape parameter beta and a scale parameter eta_min = eta_pop / (n^(1/beta)). \\n\\n1. The data provided are the first failure times of 6 groups of 12 bearings: {110, 75, 165, 310, 210, 270}.\\n2. Using Maximum Likelihood Estimation (MLE) on these 6 data points to find the parameters of the 'first failure' distribution yields beta \u2248 2.516 and eta_min \u2248 214.96.\\n3. The population scale parameter is eta_pop = eta_min * (12^(1/2.516)) \u2248 577.10.\\n4. The 0.90 Reliability (B10 life) is the time 't' such that R(t) = 0.90. Using the formula t = eta_pop * [-ln(0.90)]^(1/beta), we get t = 577.10 * [-ln(0.90)]^(1/2.516) \u2248 235.96 hours.\\n5. Testing various beta values (from 1.0 to 3.0) consistently results in a B10 life between 232 and 240 hours. The closest answer choice to these calculated values is 241 hrs.\",\n  \"selected_option_text\": \"241 hrs\",\n  \"selected_letter\": \"c\"\n}\n[Answer] [c]",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0180718,
+      "total_tokens": 29829,
+      "prompt_tokens": 27854,
+      "completion_tokens": 1975,
+      "reasoning_tokens": 0,
+      "cached_tokens": 3956,
+      "request_count": 5
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine the reliability growth coefficient (beta) for the slicer, we apply the Duane or Crow-AMSAA reliability growth model. In reliability growth analysis, the coefficient beta is typically the slope of the cumulative number of failures versus cumulative time on a log-log scale. Using the provided failure times (1.1, 3.9, 6.2, 17.8, 79.7, 113.1, 206.4, 239.1), we perform a linear regression of ln(i) (log of cumulative failures) against ln(t_i) (log of cumulative time). The slope of this regression line represents the growth parameter beta. Calculation: ln(t) = [0.095, 1.361, 1.825, 2.879, 4.378, 4.728, 5.330, 5.477] and ln(i) = [0, 0.693, 1.099, 1.386, 1.609, 1.792, 1.946, 2.079]. The slope of the line of best fit for these points is approximately 0.3396. This matches the choice 0.34.\",\n  \"selected_option_text\": \"0.34\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.01236435,
+      "total_tokens": 23740,
+      "prompt_tokens": 22137,
+      "completion_tokens": 1603,
+      "reasoning_tokens": 0,
+      "cached_tokens": 7807,
+      "request_count": 5
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The problem describes a redundant system consisting of a primary control and an independent backup control. Each system has a probability of failure (P_f) of 0.01. For the overall system to function properly, at least one of the two systems must work. This is a parallel reliability configuration. The probability that both systems fail is P_f(primary) * P_f(backup) = 0.01 * 0.01 = 0.0001. The probability that at least one system functions properly is 1 - P(both fail) = 1 - 0.0001 = 0.9999.\",\n  \"selected_option_text\": \"0.9999\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.004126,
+      "total_tokens": 6722,
+      "prompt_tokens": 6416,
+      "completion_tokens": 306,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 18,
+    "question": "[Question]: 7.  Brand X aircraft manufacturing company has a backup control system that  operates independently of the primary control. Each of the systems has a  probability of 0.01 of failing on a particular mission.What is the probability of at least one system functioning properly? \n\n[Choices]: [a] 0.9999  | [b] 0.9801 | [c] 0.9808 | [d] 0.99999"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The AMSAA-Duane model defines the expected number of failures as N(t) = \u03bbt^\u03b2. \\n1. Cumulative Failure Rate (CFR) is defined as the total number of failures divided by the total time: CFR(t) = N(t) / t = (\u03bbt^\u03b2) / t = \u03bbt^(\u03b2-1). This matches function I.\\n2. Cumulative MTBF (CMTBF) is the reciprocal of the cumulative failure rate: CMTBF(t) = t / N(t) = t / (\u03bbt^\u03b2) = (1/\u03bb)t^(1-\u03b2). This matches function III.\\n3. Function II (\u03bb\u03b2t^(\u03b2-1)) represents the instantaneous failure rate (intensity function), not the cumulative rate.\\n4. Function IV (1/(\u03bb\u03b2) * t^(1-\u03b2)) represents the instantaneous MTBF.\\nTherefore, functions I and III are the correct models for plotting cumulative failure rate and cumulative MTBF respectively.\",\n  \"selected_option_text\": \"I. & III.\",\n  \"selected_letter\": \"b\"\n}\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.007657499999999999,
+      "total_tokens": 12875,
+      "prompt_tokens": 12387,
+      "completion_tokens": 488,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\nI. $ F(t) = \\lambda t^{\\beta-1} $ \nII. $ F(t) = \\lambda \\beta t^{\\beta-1} $ \nIII. $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $ \nIV. $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $\n\n[Choices]: [a] I. &amp; II  | [b] I. &amp; III.  | [c] II. &amp; IV. | [d] II. &amp; III."
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Environmental Stress Screening (ESS) is a critical manufacturing process designed to improve product reliability by precipitating latent defects into observable failures before the product leaves the factory. \\n\\n1. Statement I is true: ESS is fundamentally a screening process, not a reliability demonstration test or a design verification test. Its goal is to filter out 'infant mortality' units.\\n2. Statement II is true: While often confused with burn-in (which typically uses steady-state high temperature), ESS utilizes more aggressive, dynamic stresses such as rapid thermal cycling and random vibration, often pushing the product to its operational extremes to stimulate defects.\\n3. Statement III is true: The primary application of ESS is in the manufacturing/production phase to identify latent defects (e.g., poor solder joints, weak components) that would otherwise fail early in the customer's hands.\\n4. Statement IV is true: Unlike sampling tests, a screening process must be applied to 100% of the population (all items in the product line) to ensure that every unit shipped is free of the latent defects the screen is designed to catch.\\n\\nSince all four statements are correct, the correct choice is (d).\",\n  \"selected_option_text\": \"I.,II.,III.,& IV.\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0072925,
+      "total_tokens": 12205,
+      "prompt_tokens": 11729,
+      "completion_tokens": 476,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 20,
+    "question": "[Question]: 9.  In constructing programs for environmental stress screening(ESS), the  selection of the stress levels and the choice of exposure times is a  challenging task. Which of the following are true:I. ESS is not a test. ESS is a screening process II. ESS is not Burn-in, ESS stresses a product to operational extremesIII. ESS is used in manufacturing/production to catch latent failures. IV. All items in a product line should be exposed to ESS.\n\n[Choices]: [a] I., II., IV. | B.I.,III., IV. | [c] II., III., IV.  | [d] I.,II.,III.,&amp; IV."
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To find the probability that a part is really bad (has a crack) given that the kit signals a crack, we use Bayes' Theorem. \\n\\nLet C be the event that a crack is present, and S be the event that the kit signals a crack.\\nGiven:\\n- P(S|C) = 0.98 (True Positive Rate)\\n- P(S|not C) = 0.03 (False Positive Rate)\\n- P(C) = 0.05 (Prevalence)\\n- P(not C) = 1 - 0.05 = 0.95\\n\\nWe need to find P(C|S):\\nP(C|S) = [P(S|C) * P(C)] / P(S)\\n\\nFirst, calculate the total probability of a signal P(S):\\nP(S) = [P(S|C) * P(C)] + [P(S|not C) * P(not C)]\\nP(S) = (0.98 * 0.05) + (0.03 * 0.95)\\nP(S) = 0.049 + 0.0285 = 0.0775\\n\\nNow, calculate P(C|S):\\nP(C|S) = 0.049 / 0.0775 \u2248 0.632258\\n\\nRounding to four decimal places, we get 0.6323, which matches option [c].\",\n  \"selected_option_text\": \"0.6322.\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.005997000000000001,
+      "total_tokens": 8539,
+      "prompt_tokens": 7848,
+      "completion_tokens": 691,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 21,
+    "question": "[Question]: 10.  A test was done on ultrasonic inspection kits to determine how  effective they are in discovering microscopic cracks in aircraft parts.  When a crack was present, the equipment signaled a crack 98% of the  time. There was a \ufffd\ufffdfalse alarm\ufffd\ufffd on 3% of the parts which had no cracks.  Suppose five percent of all the parts have a crack in them. If the  percentages in the test can be assumed to be the true probabilities,  find the probability that a part is really bad when a kit signals a  crack.\n\n[Choices]: [a] 0.9215 | B.0.9225.  | [c] 0.6322.  | [d] 0.7533."
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The problem asks for the probability of a chip containing less than 3 defects, given an average of 7 defects per chip. The number of defects in a given area or unit (like a computer chip) is best modeled by the Poisson distribution, which requires only the mean (lambda = 7) as a parameter. To find the probability of 'less than 3' defects, we calculate P(X < 3) = P(X=0) + P(X=1) + P(X=2). Using the Poisson formula P(X=k) = (e^-\u03bb * \u03bb^k) / k!:\\n- P(X=0) = (e^-7 * 7^0) / 0! = 0.00091188\\n- P(X=1) = (e^-7 * 7^1) / 1! = 0.00638317\\n- P(X=2) = (e^-7 * 7^2) / 2! = 0.02234111\\nSumming these: 0.00091188 + 0.00638317 + 0.02234111 = 0.02963616. This matches option [c].\",\n  \"selected_option_text\": \"0.02963\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.005679,
+      "total_tokens": 8868,
+      "prompt_tokens": 8370,
+      "completion_tokens": 498,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 22,
+    "question": "[Question]: 1. A computer chip manufacturer averages 7 defects per chip. What is the probability of a chip containing less than 3 defects? Choose a plausible distribution by yourself by adding least additional assumptions on parameter values.\n\n[Choices]: [a] 0.00638 | [b] 0.02234  | [c] 0.02963  | [d] 0.02872"
+  },
+  {
+    "raw_response": "",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.017616700000000002,
+      "total_tokens": 29584,
+      "prompt_tokens": 27035,
+      "completion_tokens": 2549,
+      "reasoning_tokens": 0,
+      "cached_tokens": 7884,
+      "request_count": 5
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "tool_calls",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 23,
+    "question": "[Question]: 2. Given the following data: (where (-) indicates censored) -309,229,386,-104,180,-217,-167,168,122,138Determine the best fit Weibull parameters  $ \\beta $ , $ \\eta $ , t0?\n\n[Choices]: [a]  $ \\beta $ =2.76, $ \\eta $ =261.1, t0= 0.0  | [b]  $ \\beta $ =0.88, $ \\eta $ =147.86, t0=113.76  | [c]  $ \\beta $ =2.61, $ \\eta $ =278.2, t0=85. | [d]  $ \\beta $ =1.53, $ \\eta $ =183, t0= 0.03  ."
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"According to the provided background knowledge on maintenance strategies, Preventive Maintenance (PM) is considered 'preventable' if it can detect the condition before failure, reduce the probability of failure, or mitigate its consequences. Specifically: \\n1. Handling Damage (I): PM inspections can detect physical damage before it leads to a functional failure.\\n2. Poor Quality Control (II): The text states PM can 'mitigate consequences of quality variation' and 'detect latent defects'.\\n3. Improper Installation (III): The text explicitly states PM can 'reduce the probability of failure caused by installation errors'.\\n4. Inadequate Design (IV): While PM cannot change the design, the text states PM may 'detect or mitigate their effects in service'.\\nSince all four conditions meet the criteria of being detectable or mitigatable through PM, they are all considered preventable in the context of the exam.\",\n  \"selected_option_text\": \"All of the above\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0068855,
+      "total_tokens": 10856,
+      "prompt_tokens": 10273,
+      "completion_tokens": 583,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:I. Handling Damage, II. Poor Quality Control, III. Improper installation, IV. Inadequate design\n\n[Choices]: [a] I &amp; III,  | [b] I, II &amp; III  | [c] None of the above | [d] All of the above"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The target failure rate is \u03bb = 1/1000 hours (or 0.001 failures/hour). The cumulative test time recorded so far is 2500 hours (the time of the last failure). The number of failures observed is r = 4. According to the reliability demonstration formula \u03bb = r/T, to achieve a failure rate of 0.001 with 4 failures, the total cumulative time required is T = r / \u03bb = 4 / 0.001 = 4000 hours. However, 4000 - 2500 = 1500 hours is not an option. If we consider the requirement to demonstrate the failure rate for the next potential failure (r=5), the total time required would be T = 5 / 0.001 = 5000 hours. The additional testing required from the current 2500 hours would be 5000 - 2500 = 2500 hours. This matches option [b].\",\n  \"selected_option_text\": \"2500hrs\",\n  \"selected_letter\": \"b\"\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.008493,
+      "total_tokens": 10966,
+      "prompt_tokens": 9762,
+      "completion_tokens": 1204,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"According to the Product Development Maturity Path defined in the background knowledge, the 5 phases follow a specific sequential order: \\n1. Launch (Initial introduction)\\n2. Stabilize (Establish statistical control and predictable performance)\\n3. Streamline (Improve efficiency and reduce waste - this requires a stable process first)\\n4. Standardize (Document best practices to prevent regression)\\n5. Continuously Improve (Ongoing incremental improvements on the standardized foundation).\\n\\nMapping this sequence to the choices:\\n- Choice [a] starts with Continuously Improve (incorrect).\\n- Choice [b] places Streamline before Stabilize (incorrect).\\n- Choice [c] follows the sequence: Launch -> Stabilize -> Streamline -> Standardize -> Continuously Improve (correct).\\n- Choice [d] places Standardize before Streamline (incorrect).\",\n  \"selected_option_text\": \"Launch, Stabilize, Streamline, Standardize, and Continuously Improve\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0019565,
+      "total_tokens": 2813,
+      "prompt_tokens": 2593,
+      "completion_tokens": 220,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Reliability test planning is most effective when integrated into the early stages of the product development phase. Early planning allows for the identification of potential failure modes through design analysis (like FMEA), ensures that reliability requirements are clearly defined before the design is finalized, and allows for the allocation of resources and time for testing (such as HALT or ALT) that can influence the design. Waiting until the production phase or field return phase is reactive and significantly increases the cost of changes.\",\n  \"selected_option_text\": \"Early stage of the product development phase\",\n  \"selected_letter\": \"b\"\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.004079,
+      "total_tokens": 7283,
+      "prompt_tokens": 7108,
+      "completion_tokens": 175,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 27,
+    "question": "[Question]: 7. What is the Best time for Reliability Test Planning?\n\n[Choices]: [a] Production phase,  | [b] Early stage of the product development phase,  | [c] Before the production phase | [d] Field return failure analysis phase"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Based on the provided background knowledge and standard reliability engineering principles: \\n1. Reliability is defined as the probability of performing a function over a period of time, focusing on the failure rate over time (I) and the robustness of the product design (IV).\\n2. Quality is typically concerned with the state of the product at a specific point in time (e.g., at the end of the production line), focusing on manufacturing errors (II) and the defective rate at a point in time (III).\\nTherefore, reliability engineering is more concerned with items I and IV.\",\n  \"selected_option_text\": \"I and IV only\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0062035,
+      "total_tokens": 10987,
+      "prompt_tokens": 10703,
+      "completion_tokens": 284,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 28,
+    "question": "[Question]: 1. Compared to quality, reliability engineering is more concerned with :I. . Failure rate over time.II. . Manufacturing errors.III. . Defective rate at a point in time.IV. . Product design.\n\n[Choices]: [a] I and II only | [b] II and III only | [c] I, II, III and IV  | [d] I and IV only"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The problem asks for the probability of finding 7 or more defective parts in a sample of 25, given a manufacturing process that is 90% defect-free (meaning the probability of a part being defective is p = 0.10). This follows a Binomial distribution with n = 25 and p = 0.10. We need to calculate P(X \u2265 7), which is equal to 1 - P(X \u2264 6). Using the Binomial cumulative distribution function: P(X \u2264 6) = \u03a3 [C(25, x) * (0.10)^x * (0.90)^(25-x)] for x from 0 to 6. Calculation: P(X \u2264 6) \u2248 0.99052. Therefore, P(X \u2265 7) = 1 - 0.99052 = 0.009476. This matches option [c].\",\n  \"selected_option_text\": \"0.009476\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.005325,
+      "total_tokens": 8805,
+      "prompt_tokens": 8436,
+      "completion_tokens": 369,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"According to the FMEA prioritization rules provided in the background knowledge, the highest severity ranking should be addressed first. While the Risk Priority Number (RPN) is a useful metric for overall risk assessment, severity is the dominant factor in decision-making. High severity issues must be mitigated regardless of their occurrence or detection rankings to ensure safety and critical function integrity.\",\n  \"selected_option_text\": \"Highest severity ranking\",\n  \"selected_letter\": \"b\"\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.004047,
+      "total_tokens": 7204,
+      "prompt_tokens": 7026,
+      "completion_tokens": 178,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 30,
+    "question": "[Question]: 9. When prioritizing actions to be taken in an FMEA, which of the following priority rankings should be considered first? \n\n[Choices]: [a] Overall RPN (Risk Priority Number)  | [b] Highest severity ranking  | [c] Highest occurrence ranking"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the B10 life of a battery with a normal distribution (mean = 150 hours, variance = 400 hours). The B10 life is defined as the time by which 10% of the population is expected to fail, which corresponds to the 10th percentile of the distribution. \\n\\n1. Identify parameters: Mean (\u03bc) = 150, Variance (\u03c3\u00b2) = 400, so Standard Deviation (\u03c3) = \u221a400 = 20.\\n2. Formula for Bp life in a normal distribution: Bp = \u03bc + z_p * \u03c3.\\n3. For B10, p = 0.10. The z-score for the 10th percentile (z_0.10) is approximately -1.2816.\\n4. Calculation: B10 = 150 + (-1.2816 * 20) = 150 - 25.632 = 124.368 hours.\\n\\nRounding to one decimal place, we get 124.4 hours.\",\n  \"selected_option_text\": \"124.4 hrs\",\n  \"selected_letter\": \"a\"\n}\n[Answer] [a]",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.007748,
+      "total_tokens": 13196,
+      "prompt_tokens": 12736,
+      "completion_tokens": 460,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 31,
+    "question": "[Question]: 1. Battery life has been measured as normally distributed with  mean equal to 150 hours and variance of 400 hours. Find the B10 life. \n\n[Choices]: [a] 124.4 hrs  | [b] 175.6 hrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"In a professional engineering environment, when management rejects a recommended corrective action, the Reliability Engineer's responsibility is to ensure that the risk assessment and the proposed solution are clearly communicated and documented. Management ultimately holds the authority to accept business risks (such as cost vs. reliability trade-offs). By documenting the findings and the decision, the engineer maintains professional integrity, ensures traceability for future failures, and provides a record that the risk was identified and communicated. Options (a) and (b) are often impractical or unprofessional, while (d) is unethical and violates engineering standards for data retention.\",\n  \"selected_option_text\": \"Agree with management and document the findings\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0046195,
+      "total_tokens": 7514,
+      "prompt_tokens": 7169,
+      "completion_tokens": 345,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 32,
+    "question": "[Question]: 2. How should a Reliability Engineer react when a corrective action was rejected by management?\n\n[Choices]: [a] Insist the corrective action must be implemented, | [b] Implement corrective action by oneself,  | [c] Agree with management and document the findings,  | [d] Agree with management and discard the findings"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks which tests are most useful in determining (verifying) the minimum Mean Time To Failure (MTTF) requirements. \\n\\n1. Reliability Growth Testing (1) is focused on identifying failure modes and improving the design to increase reliability over time, rather than verifying a specific minimum requirement.\\n2. Environmental Stress Screening (ESS) (2) is a production process used to precipitate latent defects (infant mortality) and does not measure or verify the design's MTTF.\\n3. Reliability Qualification Testing (RQT) (3) is specifically designed to demonstrate with statistical confidence that a product meets its specified reliability requirements (like MTTF) before it enters service.\\n4. Acceptance Testing (4) is performed on production lots to ensure they continue to meet the established performance and reliability standards (including minimum MTTF) before being accepted by the customer.\\n\\nTherefore, options 3 and 4 are the most relevant for verifying that minimum MTTF requirements are met.\",\n  \"selected_option_text\": \"3&4\",\n  \"selected_letter\": \"c\"\n}\n[Answer] [c]",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.005936,
+      "total_tokens": 9597,
+      "prompt_tokens": 9142,
+      "completion_tokens": 455,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 33,
+    "question": "[Question]: 3.  Among the various reliability tests that are performed on products at  various stages of development, which of the following tests are most  useful in determining the minimum mean time to failure requirements:1) Reliability growth testing,2) Environmental stress screening,3) Reliability qualification testing,4) Acceptance testing\n\n[Choices]: [a] 1&amp;2, | [b] 2&amp;3,  | [c] 3&amp;4,  | [d] 4&amp;1"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The system consists of 5 components in series. For a series system, the total reliability is the product of the individual component reliabilities: R_sys = R1 * R2 * R3 * R4 * R5. Given R_sys = 0.96 and the reliabilities of four components (0.992, 0.991, 0.994, 0.992), we solve for R5: R5 = 0.96 / (0.992 * 0.991 * 0.994 * 0.992). Calculation: 0.96 / 0.969356... = 0.990348. Rounding to three decimal places gives 0.990.\",\n  \"selected_option_text\": \"0.990\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.003717,
+      "total_tokens": 5704,
+      "prompt_tokens": 5358,
+      "completion_tokens": 346,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the expected number of units predicted to fail over the next 5 hours given 10 units with specific current operating times, a Weibull shape parameter (beta) of 3.02, and a scale parameter (eta) of 88 hours. The expected number of failures for a population of units that have already survived to time 't' over an additional interval 'delta_t' is calculated as the sum of the conditional probabilities of failure: P(t < T < t + delta_t | T > t) = [R(t) - R(t + delta_t)] / R(t). Using the provided times (25, 33, 40, 45, 50, 60, 64, 75, 80, 99) and delta_t = 5, the calculated expected failures is approximately 0.833. However, none of the provided choices (5.44, 6.44, 7.44, 8.44) match this result. If we evaluate the total expected failures from time 0 to (t + 50) hours, the result is approximately 7.81. If we evaluate the expected failures over the next 50 hours (instead of 5), the result is approximately 5.03. Given the options, there is a significant discrepancy between the standard reliability calculation and the choices provided. Re-evaluating the calculation for 'expected failures in the next 50 hours' or 'total failures' does not yield a perfect match. However, in many CRE contexts, if the question implies a different interval or a cumulative count, choice [a] 5.44 is the closest to the calculated value for a 50-hour window (5.03) or potentially a different interpretation of the population. Given the specific options, [a] is the most plausible intended answer despite the numerical mismatch with the '5 hours' text.\",\n  \"selected_option_text\": \"5.44\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.013056499999999999,
+      "total_tokens": 19258,
+      "prompt_tokens": 17887,
+      "completion_tokens": 1371,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 4
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the 90% confidence bounds for the Mean Time To Failure (MTTF) of five motors, assuming an exponential distribution. The failure times are 632, 3450, 816, 928, and 150 hours. \\n\\n1. Calculate the total test time (T): T = 632 + 3450 + 816 + 928 + 150 = 5976 hours.\\n2. Number of failures (r) = 5.\\n3. For an exponential distribution with complete data (all units failed), the confidence interval for MTTF is given by:\\n   Lower Bound = (2 * T) / \u03c7\u00b2(2r, \u03b1/2)\\n   Upper Bound = (2 * T) / \u03c7\u00b2(2r, 1-\u03b1/2)\\n   where \u03b1 = 1 - confidence level = 0.10, and df = 2r = 10.\\n4. Using the chi-square distribution table or calculation:\\n   \u03c7\u00b2(10, 0.05) = 18.307\\n   \u03c7\u00b2(10, 0.95) = 3.940\\n5. Calculate the bounds:\\n   Lower Bound = (2 * 5976) / 18.307 \u2248 652.86\\n   Upper Bound = (2 * 5976) / 3.940 \u2248 3033.50\\n6. Comparing these results to the choices, option [d] (653, 3034) is the closest match.\",\n  \"selected_option_text\": \"653, 3034\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.006415,
+      "total_tokens": 9035,
+      "prompt_tokens": 8276,
+      "completion_tokens": 759,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 36,
+    "question": "[Question]: 4.  Five motors are run to failure. Failure times are (in hours):  632,3450,816,928,150. Assuming an exponential distribution, what are the  90% confidence bounds for the MTTF?\n\n[Choices]: [a] 1051, 1942 | [b] 847, 2650 | [c] 347, 3747  | [d] 653, 3034"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the contractual Mean Time To Failure (MTTF) based on a reliability requirement. Reliability is defined as R(t) = exp(-t/MTTF) for the exponential distribution, which is the standard model for such contractual demonstrations unless otherwise specified. Given a mission distance (t) of 100 km and a required reliability (R) of 0.99, we solve for MTTF: \\n\\nR(t) = exp(-t/MTTF)\\n0.99 = exp(-100/MTTF)\\nln(0.99) = -100/MTTF\\nMTTF = -100 / ln(0.99)\\n\\nUsing the calculation: MTTF = -100 / -0.01005033585 = 9949.916 km. \\n\\nRounding to the nearest choice, we get 9950 km. Note that the confidence level and the test track distance (10 vehicles over 50,000 km) are parameters for the *demonstration test plan* (determining if the requirement is met), but the 'contractual MTTF' itself is derived directly from the reliability requirement for the mission.\",\n  \"selected_option_text\": \"9950 km\",\n  \"selected_letter\": \"b\"\n}\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.006705,
+      "total_tokens": 11235,
+      "prompt_tokens": 10800,
+      "completion_tokens": 435,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 37,
+    "question": "[Question]: 6.  There is a contractual requirement to demonstrate with 90% confidence  that a vehicle can achieve a 100-km mission with a reliability of 99%.  The acceptance test is performed by running 10 vehicles over a 50,000-  km test track. What is the contractual MTTF?\n\n[Choices]: [a] 5000 km  | [b] 9950 km  | [c] 8525 km | [d] 1950"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"1. Identify the failure rate: The reliability for one month is given as R(1) = 0.95 with a constant failure rate \u03bb. Using R(t) = e^(-\u03bbt), we find \u03bb = -ln(0.95) \u2248 0.05129 per month.\\n2. Determine the expected number of failures (\u03bc) for the first year (12 months): \u03bc = \u03bb * t = 0.05129 * 12 \u2248 0.6155.\\n3. Identify the distribution: The number of failures X in a period follows a Poisson distribution with mean \u03bc.\\n4. Define the requirement: The question asks for the probability that 'more than two spare bulbs' will be needed. Since the system starts with one active bulb, the first failure requires the first spare, the second failure requires the second spare, and the third failure requires the third spare. Therefore, needing 'more than two spares' means having more than 2 failures (X > 2).\\n5. Calculate P(X > 2): P(X > 2) = 1 - P(X \u2264 2) = 1 - [P(0) + P(1) + P(2)].\\n6. Using the Poisson formula P(x) = (e^-\u03bc * \u03bc^x) / x!:\\n   P(0) = e^-0.6155 \u2248 0.5404\\n   P(1) = (e^-0.6155 * 0.6155^1) / 1! \u2248 0.3326\\n   P(2) = (e^-0.6155 * 0.6155^2) / 2! \u2248 0.1023\\n   P(X \u2264 2) = 0.5404 + 0.3326 + 0.1023 = 0.9753\\n   P(X > 2) = 1 - 0.9753 = 0.0247.\\n7. Comparing with the choices, 0.0246 is the closest match.\",\n  \"selected_option_text\": \"0.0246\",\n  \"selected_letter\": \"b\"\n}\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0091625,
+      "total_tokens": 13925,
+      "prompt_tokens": 13045,
+      "completion_tokens": 880,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 38,
+    "question": "[Question]: 7.  The one-month reliability on an indicator lamp is 0.95 with the failure  rate specified as constant. What is the probability that more than two  spare bulbs will be needed during the first year of operation? (Ignore  replacement time.)\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "\n\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0064195,
+      "total_tokens": 11244,
+      "prompt_tokens": 10925,
+      "completion_tokens": 319,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To find the variance in the time to failure for two units in active parallel with a constant failure rate \u03bb, we first determine the system reliability function R(t). For a single unit, R_u(t) = e^(-\u03bbt). For two units in parallel, R_sys(t) = 1 - (1 - R_u(t))^2 = 1 - (1 - 2e^(-\u03bbt) + e^(-2\u03bbt)) = 2e^(-\u03bbt) - e^(-2\u03bbt). \\n\\nThe mean time to failure (MTTF) is the integral of R_sys(t) from 0 to infinity: E[T] = \u222b(2e^(-\u03bbt) - e^(-2\u03bbt)) dt = 2/\u03bb - 1/(2\u03bb) = 3/(2\u03bb). \\n\\nThe second moment E[T^2] is given by \u222b 2t * R_sys(t) dt = 2 * \u222b t(2e^(-\u03bbt) - e^(-2\u03bbt)) dt = 2 * [2/\u03bb^2 - 1/(4\u03bb^2)] = 2 * [7/(4\u03bb^2)] = 7/(2\u03bb^2). \\n\\nThe variance is Var(T) = E[T^2] - (E[T])^2 = 7/(2\u03bb^2) - (3/(2\u03bb))^2 = 14/(4\u03bb^2) - 9/(4\u03bb^2) = 5/(4\u03bb^2). \\n\\nComparing this to the options, choice [d] is 5/4 \u03bb^2, which is the standard notation for 5/(4\u03bb^2) in many reliability contexts where the exponent is written next to the variable.\",\n  \"selected_option_text\": \"5/4  \u03bb 2\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0065645,
+      "total_tokens": 9069,
+      "prompt_tokens": 8257,
+      "completion_tokens": 812,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 40,
+    "question": "[Question]: 10. Find the variance in the time to failure, assuming a constant failure rate  $ \\lambda $ , for two units in active parallel.\n\n[Choices]: [a] 2/3 $ \\lambda $  | [b] 3/2 $ \\lambda $  | [c] 3/4 $ \\lambda $ 2  | [d] 5/4  $ \\lambda $ 2"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"When management identifies 'human error' as the root cause of a failure, it typically stops the investigation before reaching the systemic or design-related issues that allowed the error to occur. This leads to several negative consequences: (a) the failure is likely to repeat because the underlying process flaw remains; (b) the focus shifts to the individual, often resulting in disciplinary action; and (c) productivity decreases due to low morale, a culture of fear, and the continued inefficiency of the uncorrected process. Therefore, all the listed choices are common consequences of this management approach.\",\n  \"selected_option_text\": \"All of the above\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.004596,
+      "total_tokens": 7532,
+      "prompt_tokens": 7200,
+      "completion_tokens": 332,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 41,
+    "question": "[Question]: 1. The usual consequences of management assuming human error as the \ufffd\ufffdroot cause\ufffd\ufffd of a failure is\n\n[Choices]: [a] Repeat of the same failure | [b] Disciplinary action for the employee | [c] Less productivity  | [d] All of the above"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Burn-in testing is a common reliability engineering practice used to address the 'infant mortality' phase of the bathtub curve. By operating electronic assemblies under stress (such as elevated temperature or voltage) for a specific duration before shipment, components with latent manufacturing defects or 'early-life' weaknesses are forced to fail. This process ensures that the units delivered to the customer have entered the 'useful life' phase (constant failure rate), thereby minimizing the occurrence of early life failures in the field. It does not extend the intrinsic product life (wear-out still occurs at the same time), nor is its primary purpose to establish the failure rate or increase the total number of failures.\",\n  \"selected_option_text\": \"Minimize early life failure occurrences.\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0036785000000000003,
+      "total_tokens": 5967,
+      "prompt_tokens": 5689,
+      "completion_tokens": 278,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 42,
+    "question": "[Question]: 2. \ufffd\ufffdBurn-in\ufffd\ufffd testing is conducted on electronic assemblies for systems to:\n\n[Choices]: [a] Establish system failure rate. | [b] Extend product life | [c] Increase the total number of failure occurrences.   | [d] Minimize early life failure occurrences."
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Accelerated Life Testing (ALT) involves increasing stress levels to induce failures more quickly than they would occur under normal operating conditions. Common acceleration factors (stresses) include temperature (Arrhenius model), voltage (Inverse Power Law), humidity, and vibration. 'Longer time' is not an acceleration factor; rather, the goal of using acceleration factors is to *reduce* the required test time. Testing for a longer time at rated conditions is simply a standard life test, not an accelerated one.\",\n  \"selected_option_text\": \"Longer time\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0044965000000000005,
+      "total_tokens": 7648,
+      "prompt_tokens": 7379,
+      "completion_tokens": 269,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 43,
+    "question": "[Question]: 3.  When testing to establish failure rate and reliability predictions,  which of the following is not normally a feasible acceleration factor  with respect to rated conditions: \n\n[Choices]: [a] Longer time  | [b] Greater humidity | [c] Higher temperature | [d] Higher voltage"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Fail-safe design is a fundamental reliability and safety engineering concept. It refers to a design feature that, in the event of a specific failure, ensures the system responds in a way that will cause no harm, or at least minimizes the harm, to other equipment, the environment, or people. \\n\\n- Option [a] correctly describes this: the system is designed so that a failure does not adversely affect safe operation (it 'fails' into a 'safe' state).\\n- Option [b] describes high reliability or safe operating envelopes, not fail-safe design.\\n- Option [c] describes an impossible 'zero-failure' condition, which is not the definition of fail-safe (fail-safe assumes a failure *will* occur and manages the consequence).\\n- Option [d] is incorrect because [b] and [c] are incorrect.\",\n  \"selected_option_text\": \"Designed such that a failure will not adversely affect the safe operation of the system\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.003261,
+      "total_tokens": 5252,
+      "prompt_tokens": 4998,
+      "completion_tokens": 254,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 44,
+    "question": "[Question]: 5. What is meant by \ufffd\ufffdFail Safe Design\ufffd\ufffd? \n\n[Choices]: [a] Designed such that a failure will not adversely affect the safe operation of the system   | [b] Designed such that the failure probability is low if the system is operated safely. | [c] Designed such that the system cannot fail if operated safely, | [d] All of the above"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"Based on the provided background knowledge on Human Factors and Reliability: \\n1. Understanding requirements (what and why) is explicitly listed as a factor that increases human reliability.\\n2. Complexity (challenging and complex tasks) is listed as a factor that decreases human reliability due to increased cognitive load.\\n3. Pressure and Penalties (penalizing failure) are listed as factors that decrease human reliability as they degrade performance (Yerkes-Dodson law).\\n4. Incentives aligned with quality and accuracy are listed as factors that increase human reliability.\\n\\nTherefore, statements 1 and 4 are correct, while 2 and 3 are incorrect.\",\n  \"selected_option_text\": \"1 & 4\",\n  \"selected_letter\": \"d\"\n}\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.006331,
+      "total_tokens": 11167,
+      "prompt_tokens": 10868,
+      "completion_tokens": 299,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To find the 95% lower confidence limit for the characteristic life (eta) of a Weibull distribution with a known shape parameter (beta = 2.2), we transform the data into an exponential distribution. Let Y = T^beta. The transformed data consists of one failure at 42^2.2 and four censored items at 50^2.2. The total transformed test time (V) is calculated as: V = (42^2.2) + 4 * (50^2.2) = 3744.4 + 4 * 5462.0 = 25592.4. For a time-terminated test with r failures, the lower confidence limit for the scale parameter in the transformed space (theta = eta^beta) is given by theta_L = 2V / chi^2(2r+2, alpha). Here, r = 1 and alpha = 0.05 (for 95% confidence). The degrees of freedom are 2(1)+2 = 4. The chi-square value for 4 degrees of freedom at 0.95 is 9.488. Thus, theta_L = (2 * 25592.4) / 9.488 = 5394.7. Converting back to the original scale: eta_L = (theta_L)^(1/beta) = (5394.7)^(1/2.2) \u2248 49.7 hrs.\",\n  \"selected_option_text\": \"49.7 hrs.\",\n  \"selected_letter\": \"c\"\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0072605,
+      "total_tokens": 9811,
+      "prompt_tokens": 8869,
+      "completion_tokens": 942,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 46,
+    "question": "[Question]: 7. Five items were placed on test, one item failed after 42 hrs, and the remaining four items were removed after 50 hrs. It is known that the time to failure for these items follows a Weibull with  $ \\beta $ =2.2. Determine the 95% lower confidence limit for the characteristic life.\n\n[Choices]: [a] 13.5 hrs | [b] 39.8 hrs   | [c] 49.7 hrs.   | [d] None of the above"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the design life (t) at a reliability of 90% (R=0.90) for a Weibull distribution with shape parameter beta = 4.5 and scale parameter eta = 9.3 years. The reliability function for a Weibull distribution is R(t) = exp(-(t/eta)^beta). To find t, we rearrange the formula: ln(R) = -(t/eta)^beta, which leads to t = eta * (-ln(R))^(1/beta). Substituting the given values: t = 9.3 * (-ln(0.90))^(1/4.5). Calculation: -ln(0.90) \u2248 0.10536. (0.10536)^(1/4.5) \u2248 0.60648. t = 9.3 * 0.60648 \u2248 5.6403 years.\",\n  \"selected_option_text\": \"5.64 yrs\",\n  \"selected_letter\": \"b\"\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0054325,
+      "total_tokens": 8970,
+      "prompt_tokens": 8591,
+      "completion_tokens": 379,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"To determine if the requirement is met, we use the zero-failure reliability demonstration formula. For a sample size of n = 50 with zero failures, the lower confidence bound for reliability at a confidence level CL is given by R_lower = (1 - CL)^(1/n). Here, CL = 0.80, so alpha = 0.20. Calculating R_lower = (0.20)^(1/50) results in approximately 0.9683. Since 0.9683 is greater than the required reliability of 0.90, the engineer has successfully demonstrated the requirement.\",\n  \"selected_option_text\": \"Yes\",\n  \"selected_letter\": \"a\"\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0045935,
+      "total_tokens": 7547,
+      "prompt_tokens": 7219,
+      "completion_tokens": 328,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 48,
+    "question": "[Question]: 10.  An engineer just ran 50 compressor start tests with no failures, he  needs to pass the customer\ufffd\ufffds requirement of 80% confidence of 0.90  reliability. Has he done that? \n\n[Choices]: [a] Yes   | [b] Almost | [c] No way"
+  },
+  {
+    "raw_response": "{\n  \"reasoning\": \"The question asks for the distribution that describes the time between failures when failures occur independently and at a constant rate. According to reliability theory, a constant failure rate (h(t) = \u03bb) is the defining characteristic of the exponential distribution. In a Poisson process, which models events occurring independently at a constant average rate, the inter-arrival times (time between failures) follow an exponential distribution. While the Weibull distribution can represent a constant failure rate when its shape parameter \u03b2 = 1, the exponential distribution is the specific distribution defined by this property. Log-normal and Gamma distributions typically represent varying failure rates.\",\n  \"selected_option_text\": \"Exponential.\",\n  \"selected_letter\": \"d\"\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.004994,
+      "total_tokens": 8703,
+      "prompt_tokens": 8446,
+      "completion_tokens": 257,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": false,
+      "used_self_critique": false
+    },
+    "question_id": 49,
+    "question": "[Question]: 2. The distribution used to describe the time between failures which occur independently and at a constant rate, is the:\n\n[Choices]: [a] Log normal. | [b] Weibull. | [c] Gamma. | [d] Exponential."
+  }
+]

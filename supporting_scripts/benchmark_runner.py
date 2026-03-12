@@ -57,18 +57,28 @@ class BenchmarkRunner:
         self.llm_script_path = config.get('llm_script')
         if not self.llm_script_path:
             raise ValueError("llm_script must be specified in config")
+        self._module = None
+        self._module_lock = threading.Lock()
 
     def load_user_script_module(self):
         """Load user's evaluation script using importlib."""
-        script_path = Path(self.llm_script_path)
-        if not script_path.exists():
-            raise FileNotFoundError(f"Evaluation script not found: {self.llm_script_path}")
+        if self._module is not None:
+            return self._module
 
-        spec = importlib.util.spec_from_file_location("user_eval", script_path)
-        module = importlib.util.module_from_spec(spec)
-        sys.modules["user_eval"] = module
-        spec.loader.exec_module(module)
-        return module
+        with self._module_lock:
+            if self._module is not None:
+                return self._module
+
+            script_path = Path(self.llm_script_path)
+            if not script_path.exists():
+                raise FileNotFoundError(f"Evaluation script not found: {self.llm_script_path}")
+
+            spec = importlib.util.spec_from_file_location("user_eval", script_path)
+            module = importlib.util.module_from_spec(spec)
+            sys.modules["user_eval"] = module
+            spec.loader.exec_module(module)
+            self._module = module
+            return module
 
     def run_single_question(self, question: str, question_id: int, rate_limiter=None) -> dict:
         """
@@ -86,11 +96,14 @@ class BenchmarkRunner:
         module = self.load_user_script_module()
 
         try:
+            local_config = dict(self.config)
+            local_config['current_question_id'] = question_id
+            local_config['current_question_text'] = question
             result = module.evaluate_question(
                 question=question,
                 client=self.client,
                 model=self.config['model'],
-                config=self.config
+                config=local_config
             )
 
             # Validate required fields

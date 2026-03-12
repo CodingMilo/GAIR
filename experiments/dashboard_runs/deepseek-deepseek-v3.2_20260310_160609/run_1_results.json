@@ -1,0 +1,306 @@
+[
+  {
+    "raw_response": "The historical average yield of 85% serves as a reference value, and the new sample data (n=10, mean=86%, s=1%) are used to test whether the new process mean differs from 85%. A one-sample t-test yields a t-statistic of 3.162, which exceeds the two-sided critical value of 2.262 at \u03b1=0.05 with 9 degrees of freedom. Thus, the new mean is statistically different from 85%. The 95% confidence interval for the new mean is (85.285%, 86.715%), which includes the sample mean of 86% but excludes 85%. Since the interval extends below 86%, the true mean could be less than the sample mean, though not definitively. Given the options, the data indicate the true mean is statistically different from 85% and could plausibly be less than the sample mean of 86%.\n\na",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.007791303,
+      "total_tokens": 19998,
+      "prompt_tokens": 1587,
+      "completion_tokens": 18411,
+      "reasoning_tokens": 18220,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "The time to 10% failure for an exponential distribution with MTTF = 50,000 hours is calculated by solving \\(1 - e^{-\\lambda t} = 0.10\\), where \\(\\lambda = 1/\\text{MTTF}\\). This yields \\(t = -\\ln(0.90) \\times \\text{MTTF} \\approx 0.1053605 \\times 50,000 = 5268.025\\) hours, which corresponds to choice b.\n\nb",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.001323,
+      "total_tokens": 1246,
+      "prompt_tokens": 546,
+      "completion_tokens": 700,
+      "reasoning_tokens": 599,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs.. What is the time to 10% failure?\n\n[Choices]: [a] 5000 hrs  | [b] 5268 hrs   | [c] 5450 hrs | [d]  5333 hrs"
+  },
+  {
+    "raw_response": "The question involves designing a zero-failure test for a Weibull distribution with known shape parameter \u03b2 = 2.5 and target characteristic life \u03b7 = 1000 hours. Using five samples (n = 5) and requiring 90% confidence (\u03b1 = 0.10), the test time per unit is calculated using the formula t = \u03b7 \u00d7 [\u2212ln(\u03b1) / n]^(1/\u03b2). Substituting the values: \u2212ln(0.10) \u2248 2.302585, divided by 5 gives 0.460517, and raising to 1/2.5 = 0.4 yields approximately 0.7332. Multiplying by 1000 gives 733.2 hours, matching option (a). Other options arise from incorrect assumptions, such as using an exponential distribution or misinterpreting the requirement.\n\na",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.002419679,
+      "total_tokens": 6472,
+      "prompt_tokens": 1291,
+      "completion_tokens": 5181,
+      "reasoning_tokens": 5004,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "We are given: \"A bearing manufacturer has a bearing with Weibull \u03b2=2 and \u03b7=600 hrs. The design team made a small change in the design and a change of material. They now hope they have doubled the characteristic life at 95% confidence. They tested 10 of the new design bearings for 1800 hrs and had 5 failures: 700, 900, 1000, 1100, and 1300 hrs. Did the new bearing design have 2X the characteristic life with 95% confidence?\"\n\nInterpretation: We have an existing bearing with known Weibull parameters: shape \u03b2=2, characteristic life \u03b7=600 hrs. The new design is hoped to have doubled the characteristic life, i.e., \u03b7_new = 2*600 = 1200 hrs, at the same shape parameter? Possibly the shape parameter remains the same? Usually, if the design change affects the characteristic life, it might keep the same shape parameter (failure pattern similar). The question asks: \"Did the new bearing design have 2X the characteristic life with 95% confidence?\" So we need to perform a hypothesis test or construct a confidence interval for \u03b7_new based on the test data, and see if we can conclude with 95% confidence that \u03b7_new > 1200? Or exactly if \u03b7_new is at least 1200? The phrasing \"have 2X the characteristic life with 95% confidence\" suggests we want to demonstrate with 95% confidence that the characteristic life is at least 1200 hrs. Alternatively, it might be: based on the test data, can we claim with 95% confidence that \u03b7_new is greater than 1200? Or maybe we need to check if the lower confidence bound for \u03b7_new is above 1200? That is typical for reliability demonstration: we want to show that with a certain confidence level, the reliability metric meets a target.\n\nGiven data: Tested 10 bearings, test duration 1800 hrs. There were 5 failures at times: 700, 900, 1000, 1100, 1300 hrs. The remaining 5 bearings survived until 1800 hrs without failure (right-censored at 1800 hrs). So we have failure times and censoring times.\n\nWe need to estimate the characteristic life \u03b7 for the new design, assuming the shape parameter \u03b2 is still 2? Or should we estimate \u03b2 as well? The problem statement says: \"A bearing manufacturer has a bearing with Weibull \u03b2=2 and \u03b7=600 hrs.\" That is for the old design. For the new design, they hope they have doubled the characteristic life. It doesn't explicitly say that \u03b2 remains the same. However, in reliability demonstration for Weibull, if we assume \u03b2 is known (often from prior knowledge), we can make inferences on \u03b7. Given that they specify \u03b2=2 for the old design, it might be reasonable to assume that the new design also has \u03b2=2, unless the design change alters the failure mode. But the problem might be testing whether \u03b7 has doubled, possibly assuming \u03b2 unchanged. Alternatively, we might need to estimate both parameters from the data. But with only 5 failures, estimating both parameters might be unreliable. The question likely expects using the known \u03b2=2 to perform a confidence interval or hypothesis test on \u03b7.\n\nLet's examine the choices: [a] YES, [b] NO. So we need to determine which one.\n\nWe have background knowledge from the CRE manual provided. It includes sections on reliability demonstration and zero-failure testing, and also on Weibull MLE with right-censored data. Specifically, it gives formulas for MLE of Weibull parameters with censored data. For 2-parameter Weibull (t0=0), the MLE scale parameter \u03b7 is given by:\n\u03b7 = ( (\u2211 t_i^\u03b2) / r )^(1/\u03b2), where the sum is over all units (failures and censored) using their times, and r is number of failures.\nAnd the shape parameter \u03b2 is found by solving an equation.\n\nBut if \u03b2 is known, we can directly compute \u03b7 using that formula.\n\nSo for the new design, if we assume \u03b2=2, we can compute the MLE of \u03b7 as:\n\u03b7_hat = ( (\u2211 t_i^2) / 5 )^(1/2), where t_i are the times for all 10 bearings (5 failures and 5 censored at 1800). Let's compute:\n\nFailure times: 700, 900, 1000, 1100, 1300.\nCensored times: 1800 for each of the 5 survivors.\n\nCompute squares:\n700^2 = 490000\n900^2 = 810000\n1000^2 = 1000000\n1100^2 = 1210000\n1300^2 = 1690000\n1800^2 = 3240000 (for each censored, so 5 * 3240000 = 16200000)\n\nSum of squares for failures: 490000+810000=1,300,000; +1,000,000=2,300,000; +1,210,000=3,510,000; +1,690,000=5,200,000.\nSo sum of squares for failures = 5,200,000.\nSum of squares for censored: 5 * 3,240,000 = 16,200,000.\nTotal sum = 5,200,000 + 16,200,000 = 21,400,000.\n\nDivide by r=5: 21,400,000 / 5 = 4,280,000.\nThen \u03b7_hat = sqrt(4,280,000) = sqrt(4.28e6) = sqrt(4.28)*1000 = about 2068.8? Let's compute exactly: 4,280,000 = 4280000? Wait: 4,280,000, sqrt(4,280,000) = sqrt(428 * 10^4) = sqrt(428)*100 = 20.688? Actually careful: 4,280,000 = 4.28e6, sqrt(4.28e6) = sqrt(4.28)*1e3 = 2.0688*1000 = 2068.8. So \u03b7_hat \u2248 2068.8 hrs. That is much higher than 1200. But we need to consider confidence. The MLE point estimate is above 1200, but we need to account for sampling variability. We need to determine if with 95% confidence we can say that \u03b7 > 1200. That is, we need a lower confidence bound for \u03b7 at 95% confidence. If the lower bound is above 1200, then we can say yes with 95% confidence.\n\nFor Weibull with known \u03b2, the distribution of \u03b7_hat? Actually, from the MLE theory, for known \u03b2, the MLE of \u03b7 is given by that formula. And note that if we define S = \u2211 t_i^\u03b2, then S/\u03b7^\u03b2 follows a chi-square distribution? Possibly. For exponential (\u03b2=1), total time on test divided by \u03b7 follows a chi-square with 2r degrees of freedom. For Weibull with known \u03b2, if we transform the data: y_i = t_i^\u03b2, then y_i are exponentially distributed with mean \u03b7^\u03b2. Because if T ~ Weibull(\u03b2, \u03b7), then T^\u03b2 ~ Exponential(\u03b7^\u03b2). Check: R(t) = exp(-(t/\u03b7)^\u03b2), so for Y = T^\u03b2, P(Y > y) = P(T > y^(1/\u03b2)) = exp(-(y/\u03b7^\u03b2)), so Y is exponential with mean \u03b7^\u03b2. So indeed, if we raise each time to the power \u03b2, we get exponential data with mean \u03b7^\u03b2. And the MLE for \u03b7^\u03b2 is (\u2211 y_i)/r. And for exponential data, the sum of exponential random variables divided by the mean follows a gamma distribution, specifically: 2\u2211 y_i / \u03b7^\u03b2 ~ \u03c7^2(2r) if all y_i are from exact exponential and no censoring? But here we have right-censored data. For censored exponential data, the total time on test statistic still follows a chi-square distribution under certain conditions. Actually, for Type II censored data? But here it's Type I censoring: test terminated at 1800 hrs. However, the result that for exponential distribution, the total time on test T_total = \u2211 t_i (where t_i are the actual observed times, including censored times) and the number of failures r, then 2\u03bb T_total ~ \u03c7^2(2r+2)? Actually, the standard result: For Type I censoring, the distribution of the MLE for \u03bb is not exactly chi-square, but there are approximations. However, a commonly used result is that for exponential life with Type I censoring, 2r\u03bb_hat/\u03bb ~ \u03c7^2(2r) approximately? Or exactly? Actually, for exponential distribution, when the test is time-censored (Type I), the number of failures r is random. The exact confidence intervals for \u03bb are based on the fact that 2\u03bbT ~ \u03c7^2(2r+2) for the upper bound and 2\u03bbT ~ \u03c7^2(2r) for the lower bound? Wait, the background knowledge provided says: \"Two-sided confidence interval: \u03bb_lower = \u03c7^2_{2r, \u03b1/2} / (2T), \u03bb_upper = \u03c7^2_{2r+2, 1-\u03b1/2} / (2T)\". That is for exponential distribution. So for exponential, with total time T and r failures, the confidence interval for \u03bb uses chi-square with degrees of freedom 2r for lower bound and 2r+2 for upper bound. That is a standard result.\n\nNow, for Weibull with known \u03b2, we transformed to exponential: y_i = t_i^\u03b2. Then y_i are exponentially distributed with mean \u03b8 = \u03b7^\u03b2. So we can apply exponential confidence interval methods to \u03b8. Specifically, we have r=5 failures, and total sum of y_i = \u2211 t_i^\u03b2 = 21,400,000 (since \u03b2=2, that's sum of squares). So \u03b8_hat = (\u2211 y_i)/r = 4,280,000. Then a lower confidence bound for \u03b8 at 95% confidence (one-sided) would be: \u03b8_lower = (2 * \u2211 y_i) / \u03c7^2_{2r, 0.95}? Actually careful: For exponential, a one-sided lower confidence bound for the mean \u03b8 (which is 1/\u03bb) is given by: \u03b8_lower = (2T)/\u03c7^2_{2r, 1-\u03b1}? Wait, the mean of exponential is 1/\u03bb. Typically, if we have T = total time on test, then 2\u03bbT ~ \u03c7^2(2r) for exact failure times? Actually, for Type II censoring, 2\u03bbT ~ \u03c7^2(2r). For Type I, it's approximate. But many texts use the same formulas. Alternatively, the confidence interval for the mean (MTTF) is: MTTF_lower = 2T/\u03c7^2_{2r, 1-\u03b1/2} for two-sided. For one-sided lower bound at confidence level 1-\u03b1, we want P(\u03b8 \u2265 \u03b8_L) = 1-\u03b1. That is equivalent to P(2T/\u03b8 \u2264 \u03c7^2_{2r, 1-\u03b1}) = 1-\u03b1? Actually, if 2T/\u03b8 ~ \u03c7^2(2r), then P(2T/\u03b8 \u2264 \u03c7^2_{2r, 1-\u03b1}) = 1-\u03b1, so \u03b8 \u2265 2T/\u03c7^2_{2r, 1-\u03b1}. So \u03b8_lower = 2T/\u03c7^2_{2r, 1-\u03b1}. But careful: T here is total time on test for the exponential data, i.e., \u2211 y_i. So T_y = \u2211 t_i^\u03b2 = 21,400,000. And r=5. So we need \u03c7^2 with 10 degrees of freedom (2r=10) for one-sided lower bound at 95% confidence: \u03c7^2_{10, 0.95}. Look up: \u03c7^2_{10, 0.95} = 18.307 (common value). So \u03b8_lower = 2 * 21,400,000 / 18.307 = 42,800,000 / 18.307 \u2248 2,337,000? Actually compute: 42,800,000 / 18.307 = ? Let's do: 18.307 * 2,337,000 =? Better: 42,800,000 \u00f7 18.307 \u2248 2,337,000 approximately. More precisely: 18.307 * 2,337,000 = 42,800,000? Actually 18.307 * 2,337,000 = 18.307 * 2.337e6 = 42.8e6? Let's calculate: 2,337,000 * 18.307 = 2,337,000 * 18 = 42,066,000; plus 2,337,000 * 0.307 = 717,159; total = 42,783,159, close to 42,800,000. So \u03b8_lower \u2248 2,337,000. Then since \u03b7 = \u03b8^(1/\u03b2) and \u03b2=2, \u03b7_lower = sqrt(\u03b8_lower) = sqrt(2,337,000) \u2248 sqrt(2.337e6) = sqrt(2.337)*1000 \u2248 1.528*1000 = 1528 hrs. That is > 1200. So based on this, the lower confidence bound for \u03b7 is about 1528 hrs, which is above 1200. So we can say with 95% confidence that \u03b7 > 1200? But careful: That is a one-sided lower confidence bound. The question says \"with 95% confidence\", likely meaning a one-sided confidence bound. So it seems we can claim yes.\n\nBut wait: Is the shape parameter really known to be 2 for the new design? Possibly we should check if the data are consistent with \u03b2=2. But the problem doesn't say we know \u03b2 for the new design. It says: \"A bearing manufacturer has a bearing with Weibull \u03b2=2 and \u03b7=600 hrs.\" That is the old bearing. The new design might have a different \u03b2. However, often in reliability demonstration, if we assume the failure mode is the same, we might assume \u03b2 unchanged. But the problem might be testing whether the characteristic life has doubled, so we need to estimate \u03b7 from the data, and maybe also estimate \u03b2. But with only 5 failures, estimating both parameters is tricky. The background knowledge includes MLE for Weibull with censored data. Possibly we need to compute the MLE for \u03b2 and \u03b7 from the data, and then see if we can claim \u03b7 > 1200 with 95% confidence. But constructing a confidence interval for \u03b7 when \u03b2 is also estimated is more complex. There is no simple chi-square result. Possibly we can use likelihood ratio methods. But the problem likely expects a simpler approach given the choices and the context.\n\nAlternatively, maybe we need to perform a hypothesis test: H0: \u03b7 = 1200 vs H1: \u03b7 > 1200, with known \u03b2=2. Using the transformed exponential data, we can test if the mean of the exponential is at least (1200)^2 = 1,440,000. Actually, if we want to test if \u03b7 \u2265 1200, that is equivalent to \u03b8 = \u03b7^2 \u2265 1,440,000. We have r=5, total sum = 21,400,000. Under H0: \u03b8 = 1,440,000, the test statistic? For exponential, the sum of squares (transformed data) divided by \u03b8 follows a chi-square with 2r degrees of freedom? Actually, if Y_i ~ Exp(\u03b8), then \u2211 Y_i ~ Gamma(r, \u03b8) and 2\u2211 Y_i/\u03b8 ~ \u03c7^2(2r). So under H0: \u03b8 = 1,440,000, we compute 2\u2211 Y_i / \u03b80 = 2*21,400,000 / 1,440,000 = 42,800,000 / 1,440,000 = 29.7222. This is a chi-square with 10 df. For a one-sided test at \u03b1=0.05, we reject H0 if the test statistic is greater than \u03c7^2_{10, 0.95} = 18.307. Since 29.7222 > 18.307, we reject H0. So we have evidence that \u03b7 > 1200. So again, yes.\n\nBut wait: The confidence interval approach gave \u03b7_lower \u2248 1528, which is > 1200. So both indicate yes.\n\nHowever, maybe there is a catch: The test was run for 1800 hrs, and there were 5 failures. The target \u03b7 is 1200. For Weibull with \u03b2=2, the characteristic life \u03b7 is the 63.2 percentile. The reliability at t=\u03b7 is about 0.368. So if \u03b7=1200, then the probability of failing before 1200 hrs is about 63.2%? Actually, R(\u03b7)=e^{-1}\u22480.368, so probability of failure before \u03b7 is 1-0.368=0.632. So if \u03b7=1200, we expect many failures before 1200. In our data, failures occurred at 700,900,1000,1100,1300. So 4 out of 5 failures are below 1200, and one is above. That might seem like \u03b7 is around 1000? But our computed \u03b7_hat is 2068, which seems high. That is because the censored times at 1800 are very large, and when squared they dominate the sum. So the MLE is pulled upward. That might be questionable. Possibly we should check if the assumption \u03b2=2 is valid. Maybe we need to estimate \u03b2 from the data. Let's try to estimate \u03b2 using the MLE equation for censored data. The background gives: 1/\u03b2 = (\u2211 t_i^\u03b2 ln t_i) / (\u2211 t_i^\u03b2) - (1/r) \u2211 ln t_i (for failures only). That equation must be solved iteratively. With only 5 failures, the estimate might be unstable. But we can try to see what \u03b2 might be. Alternatively, maybe the problem expects using the known \u03b2=2 because it's from the old design, and they want to see if the new design meets the target with 95% confidence using a standard reliability demonstration formula.\n\nLooking at the background knowledge, there is a section on \"Reliability demonstration and zero-failure testing\" with formulas like t = -ln(",
+    "extracted_answer": "a, b",
+    "usage": {
+      "cost": 0.0070325,
+      "total_tokens": 5873,
+      "prompt_tokens": 1777,
+      "completion_tokens": 4096,
+      "reasoning_tokens": 3608,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "length"
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "The problem involves estimating the 0.90 reliability life (B10 life) for bearings tested using the sudden-death technique, assuming a Weibull distribution. The sudden-death data consist of six first-failure times from groups of twelve bearings. Correct analysis requires accounting for the fact that these are minima of samples of size 12, not individual failure times. Using maximum likelihood estimation or rank regression methods with appropriate adjustments for censoring yields a B10 life around 236\u2013250 hours. Among the choices, 241 hours is the closest and most plausible, while the lower values (69, 79, 120) likely result from incorrect treatments of the data.\n\nc",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.00654834,
+      "total_tokens": 15917,
+      "prompt_tokens": 912,
+      "completion_tokens": 15005,
+      "reasoning_tokens": 14868,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "We are given a question about a reliability growth model. Specifically, failures occur at times, and after each failure, the design is refined to avert further failures from the same mechanism. This suggests a reliability growth process, possibly modeled by the AMSAA (or Duane) model. The AMSAA model is often used for tracking reliability growth during development testing. It models the cumulative number of failures N(t) as a power law: N(t) = \u03bb t^\u03b2. Alternatively, the Duane model has a similar form: cumulative failure rate vs cumulative time on log-log scale is linear. The parameter \u03b2 is the growth coefficient. For reliability growth, if \u03b2 < 1, we have improvement (decreasing failure rate over time); if \u03b2 = 1, it's constant (no growth); if \u03b2 > 1, it's deteriorating.\n\nThe question asks: \"Determine the reliability growth coefficient \u03b2 for the slicer.\" We have failure times: 1.1, 3.9, 6.2, 17.8, 79.7, 113.1, 206.4, 239.1 minutes. There are 8 failures. After each failure, the design is refined. So we have failure-fixing and then continued testing. This is typical of reliability growth testing.\n\nTo estimate \u03b2, we can use the AMSAA model. One common method is to use maximum likelihood estimation (MLE) for the AMSAA model parameters. However, the CRE exam may expect a simpler approach, perhaps using the Duane plot or a least squares fit on log-log scale. The question does not specify which method to use. But looking at the answer choices: 0.34, 0.93, 1.31, 1.15. One of these is correct.\n\nWe recall that for the AMSAA model, if we have failure times t1, t2, ..., tn (ordered), we can estimate \u03b2 using the Maximum Likelihood Estimator (MLE) for time-truncated testing (testing stops at a given time T) or failure-truncated (testing stops after a given number of failures). Here, we have 8 failure times, and it says \"After each failure, the design is refined to avert further failures from the same mechanism.\" It doesn't explicitly state that testing stops after the 8th failure or continues. But we are given only 8 failures, so likely it's failure-truncated (testing stops at the 8th failure). In failure-truncated testing, the total test time is the last failure time: T = 239.1 minutes. For failure-truncated AMSAA model, the MLE for \u03b2 is: \n\u03b2_hat = n / (\u2211_{i=1}^{n} ln(T / ti)) \nwhere n is the number of failures, T is the time of the last failure, and ti are the failure times. This is a common formula for the shape parameter in the power law process (which is the AMSAA model). Alternatively, for time-truncated, it's similar but with T being the truncation time, and denominator includes ln(T/ti) for all failures. But here since we have all failure times and no separate truncation time, it's likely failure-truncated.\n\nLet's verify: In many textbooks, for a power law process (non-homogeneous Poisson process with intensity \u03bb(t) = \u03bb \u03b2 t^(\u03b2-1)), the MLE for \u03b2 under failure-truncated testing is: \u03b2_hat = n / \u2211_{i=1}^n ln(T_n / t_i), where T_n is the time of the nth failure. For time-truncated, it's \u03b2_hat = n / \u2211_{i=1}^n ln(T / t_i) where T is the fixed truncation time. Here, since testing likely stops at the last failure, we use T = 239.1.\n\nWe should check if the data might be considered time-truncated? The problem doesn't say that testing continued beyond the last failure. So we assume failure-truncated.\n\nCompute: n = 8.\nCompute ln(T / ti) for each ti:\nT = 239.1\nti: 1.1, 3.9, 6.2, 17.8, 79.7, 113.1, 206.4, 239.1.\nBut note: For the last failure, ti = T, so ln(T/T) = ln(1) = 0. That term contributes 0 to the sum. So we need to compute the sum of ln(239.1/ti) for i=1 to 7 (since the 8th is 0). Let's compute carefully:\n\nWe'll compute:\n1. t1 = 1.1: ln(239.1/1.1) = ln(217.3636) = ? \n2. t2 = 3.9: ln(239.1/3.9) = ln(61.3077) = ?\n3. t3 = 6.2: ln(239.1/6.2) = ln(38.5645) = ?\n4. t4 = 17.8: ln(239.1/17.8) = ln(13.4326) = ?\n5. t5 = 79.7: ln(239.1/79.7) = ln(3.0) approximately? Actually 239.1/79.7 = 2.999, so ln(2.999) \u2248 1.0986? Wait, let's be precise.\n6. t6 = 113.1: ln(239.1/113.1) = ln(2.1149) = ?\n7. t7 = 206.4: ln(239.1/206.4) = ln(1.1584) = ?\n8. t8 = 239.1: ln(239.1/239.1)=0.\n\nWe'll compute numerically:\n\nFirst, maybe we can compute more accurately:\n239.1/1.1 = 217.36363636 \u2192 ln(217.3636) = ? \nI'll use natural log.\nCompute approximate values:\nln(217.3636): Since e^5.381 \u2248 217? Actually, ln(200)=5.2983, ln(217)=5.3799, so \u22485.381.\nBut let's do precise calculations: \nActually, I'll use calculator in mind:\nMaybe I can compute: \n239.1/1.1 = 2391/11 = 217.363636... so ln(217.3636) = ln(217.3636). I'll do: ln(217.3636) = ln(2.173636e2) = ln(2.173636)+ln(100)=0.776+4.605=5.381? Actually ln(100)=4.60517, ln(2.1736)\u22480.776, so sum \u22485.381. But we need more precision.\n\nBetter: Use approximations or compute step by step. Since we have answer choices that are not too close, maybe approximate is fine. Let's compute each term more carefully:\n\nWe can compute the ratios:\n1. 239.1/1.1 = 2391/11 = 217.363636... \nTake natural log: ln(217.3636). I know that ln(200)=5.298317, ln(217)=5.379897, so interpolate: difference 17 from 200 to 217 is 17/200=0.085, derivative 1/200=0.005, so add 0.085*0.005? That's not right. Actually derivative is 1/x, so at x=200, derivative=0.005, so increase of 17 gives about 17*0.005=0.085, so ln(217) \u2248 5.298317+0.085=5.3833, but actual ln(217)=5.3799, so maybe use exact: ln(217.3636). I'll compute using ln(a/b)=ln a - ln b. ln(239.1) and ln(1.1). That might be easier if I know ln(239.1) and ln(1.1).\n\nCompute ln(239.1): ln(239.1) = ln(2.391e2)=ln(2.391)+ln(100)=ln(2.391)+4.60517. ln(2.391): I know ln(2.4)=0.87547, ln(2.39)=? Actually, ln(2.39) \u2248 0.8713? Let's use: e^0.87=2.386, so ln(2.391)\u22480.8715. So ln(239.1)\u22480.8715+4.60517=5.47667.\nln(1.1)=0.09531. So ln(239.1/1.1)=5.47667-0.09531=5.38136.\nSo first term \u22485.3814.\n\n2. 239.1/3.9 = 2391/39 = 61.3076923. ln(61.3077)=? ln(61)=4.110873, ln(61.3077): difference 0.3077, derivative 1/61\u22480.01639, so add 0.3077*0.01639\u22480.00504, so \u22484.1159. Alternatively: ln(239.1)=5.47667, ln(3.9): ln(3.9)=ln(3.9)=? ln(3.9)=ln(39/10)=ln(39)-ln(10)=3.66356-2.30259=1.36098? Actually ln(39)=3.66356, ln(10)=2.30259, so 1.36097. So ln(239.1/3.9)=5.47667-1.36097=4.11570. So second term \u22484.1157.\n\n3. 239.1/6.2 = 2391/62 = 38.564516. ln(38.5645): ln(38.56)=? Use subtraction: ln(239.1)=5.47667, ln(6.2)= ln(6.2)=? ln(6.2)= ln(62/10)=ln(62)-ln(10)=4.127134-2.302585=1.824549. So ln(239.1/6.2)=5.47667-1.82455=3.65212. So third term \u22483.6521.\n\n4. 239.1/17.8 = 2391/178 = 13.4325843. ln(13.4326): ln(13.4326)=? ln(13.43)=? Alternatively: ln(239.1)=5.47667, ln(17.8)= ln(17.8)=? ln(17.8)= ln(178/10)=ln(178)-ln(10). ln(178)=5.181784, minus 2.302585=2.879199. So ln(239.1/17.8)=5.47667-2.87920=2.59747. So fourth term \u22482.5975.\n\n5. 239.1/79.7 = 2391/797 \u2248 3.000? Actually 239.1/79.7 = 3.000 (since 79.7*3=239.1 exactly? 79.7*3=239.1, yes exactly because 79.7*3=239.1. So ratio = 3 exactly. So ln(3)=1.0986123. So fifth term = 1.098612.\n\n6. 239.1/113.1 = ? 239.1/113.1 = 2.1149 approximately. Actually compute: 113.1*2.1149=239.1? More precisely: 239.1/113.1 = 2391/1131 = simplify? 2391 \u00f7 1131 = 2.114058... So ln(2.114058)=? ln(2.114) \u2248 0.748 (since e^0.748=2.112). Alternatively: ln(239.1)=5.47667, ln(113.1)=? ln(113.1)= ln(113.1)=? 113.1 = 1.131e2, ln(113.1)= ln(1.131)+ln(100)=0.1230+4.60517=4.72817. Actually careful: ln(113.1)=? I know ln(100)=4.60517, ln(113)=4.72738, so approx 4.72738 plus a tiny bit. So ln(113.1) \u2248 4.728. Then ln(239.1/113.1)=5.47667-4.728=0.74867. So sixth term \u22480.7487.\n\n7. 239.1/206.4 = ? 206.4*1.1584=239.1? Actually 206.4*1.1584 = 239.1 approximately. Compute exactly: 239.1/206.4 = 1.15843. ln(1.15843)=? Since ln(1+x)\u2248x for small x, 0.15843 gives approx 0.147? Actually ln(1.15843) =? I know ln(1.15)=0.13976, ln(1.16)=0.14842, so interpolate: 0.00843/0.01=0.843, difference 0.00866, so 0.13976+0.843*0.00866=0.13976+0.00730=0.14706. Alternatively: ln(1.15843)= ln(239.1)-ln(206.4). ln(206.4)= ln(2.064e2)= ln(2.064)+ln(100)=0.724+4.60517=5.32917? More accurately: ln(206.4)=? I'll compute: ln(206.4)=5.3297 (since e^5.33=206.7). Actually, let's do: ln(206.4)= ln(206.4). Use ln(200)=5.298317, plus ln(206.4/200)=ln(1.032)=0.0315, so 5.3298. So ln(239.1/206.4)=5.47667-5.3298=0.14687. So seventh term \u22480.1469.\n\n8. Eighth term: 0.\n\nNow sum these 7 terms (excluding the 8th):\nSum = 5.3814 + 4.1157 = 9.4971\n+3.6521 = 13.1492\n+2.5975 = 15.7467\n+1.098612 = 16.845312\n+0.7487 = 17.594012\n+0.1469 = 17.740912\n\nSo total sum of ln(T/ti) for i=1 to 7 is approximately 17.741. But wait, we should include the 8th term? Actually, for i=8, it's 0, so it doesn't add. So denominator = 17.741. Then \u03b2_hat = n / sum = 8 / 17.741 = 0.4508. That is not among the answer choices (0.34, 0.93, 1.31, 1.15). So maybe I made a mistake.\n\nPerhaps we need to sum from i=1 to n, including the last term? But last term is 0, so it doesn't change. So \u03b2 \u2248 0.45, which is not listed. Alternatively, maybe the formula uses sum of ln(T/ti) for i=1 to n, but sometimes it's sum of ln(T/ti) for i=1 to n-1? Actually, in some texts, for failure-truncated, the MLE is \u03b2_hat = (n-1) / \u2211_{i=1}^{n-1} ln(T_n / t_i). Let's check: For a non-homogeneous Poisson process (power law process), the MLE for failure-truncated data is: \u03b2_hat = n / \u2211_{i=1}^n ln(T_n / t_i). But sometimes it's given as \u03b2_hat = (n-1) / \u2211_{i=1}^{n-1} ln(T_n / t_i) because the last term is zero. Actually, many sources use: \u03b2_hat = n / \u2211_{i=1}^n ln(T_n / t_i) where T_n is the time of the nth failure, and note that when i=n, ln(T_n/t_n)=0, so effectively it's n / \u2211_{i=1}^{n-1} ln(T_n/t_i). So it's the same as what I did. So \u03b2 \u2248 0.45.\n\nBut maybe I miscalculated the sum. Let me recalculate more accurately, possibly with more precision. Alternatively, maybe the formula is different. Maybe we need to use the Duane plot method. The Duane model plots cumulative MTBF vs cumulative time on log-log scale. The growth coefficient is often denoted by \u03b2 as well, but in the Duane model, the cumulative failure rate follows a line: ln(N(t)/t) = ln(\u03bb) + (\u03b2-1) ln t? Actually, from N(t)=\u03bb t^\u03b2, then cumulative failure rate = N(t)/t = \u03bb t^{\u03b2-1}. So on log-log plot, ln(N(t)/t) vs ln t has slope \u03b2-1. Alternatively, ln N(t) vs ln t has slope \u03b2. So we can estimate \u03b2 by fitting a line to ln N(t) vs ln t. That might be simpler and is commonly used. Let's try that.\n\nWe have failure times: t_i: 1.1, 3.9, 6.2, 17.8, 79.7, 113.1, 206.4, 239.1.\nCorresponding cumulative failure count: i = 1,2,...,8.\nSo we have pairs (ln t_i, ln i) for i=1,...,8. But careful: In Duane plot, usually we plot ln t vs ln N(t) where N(t) is cumulative failures up to time t. At each failure time, N(t_i)=i. So we can do a simple linear regression of ln(i) on ln(t_i) to estimate \u03b2. Because from N(t)=\u03bb t^\u03b2, taking logs: ln N(t) = ln \u03bb + \u03b2 ln t. So \u03b2 is the slope of ln N",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.00211872,
+      "total_tokens": 5080,
+      "prompt_tokens": 984,
+      "completion_tokens": 4096,
+      "reasoning_tokens": 2818,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "length"
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "The correct functions for cumulative failure rate and cumulative MTBF in the AMSAA-Duane model are derived from \\(N(t) = \\lambda t^\\beta\\). Cumulative failure rate is \\(N(t)/t = \\lambda t^{\\beta-1}\\), corresponding to option I. Cumulative MTBF is \\(t/N(t) = (1/\\lambda) t^{1-\\beta}\\), corresponding to option III. Options II and IV represent instantaneous failure rate and instantaneous MTBF, respectively, which are not the requested cumulative measures.\n\nb",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00078759,
+      "total_tokens": 2322,
+      "prompt_tokens": 1251,
+      "completion_tokens": 1071,
+      "reasoning_tokens": 964,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\nI. $ F(t) = \\lambda t^{\\beta-1} $ \nII. $ F(t) = \\lambda \\beta t^{\\beta-1} $ \nIII. $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $ \nIV. $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $\n\n[Choices]: [a] I. &amp; II  | [b] I. &amp; III.  | [c] II. &amp; IV. | [d] II. &amp; III."
+  },
+  {
+    "raw_response": "Preventive maintenance (PM) can detect, reduce the probability of, or mitigate the consequences of certain failure causes before failure occurs. According to the CRE guidelines:\n- Handling Damage (I) can be detected through inspections and corrected, making it preventable.\n- Poor Quality Control (II) can be addressed by PM through detecting latent defects and mitigating quality variation effects.\n- Improper Installation (III) is explicitly mentioned as reducible by PM.\n- Inadequate Design (IV) cannot be changed by PM, and while it may be partially mitigated, it is not considered preventable in the typical exam sense.\n\nThus, I, II, and III are preventable with PM.\n\nb",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0015233,
+      "total_tokens": 4064,
+      "prompt_tokens": 682,
+      "completion_tokens": 3382,
+      "reasoning_tokens": 3296,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:I. Handling Damage, II. Poor Quality Control, III. Improper installation, IV. Inadequate design\n\n[Choices]: [a] I &amp; III,  | [b] I, II &amp; III  | [c] None of the above | [d] All of the above"
+  },
+  {
+    "raw_response": "The question requires determining the additional test time needed to demonstrate a failure rate of 1/1000 hours or less, given four failures at 30, 600, 1400, and 2500 hours. The target failure rate is \u03bb_target = 0.001 per hour. The total test time accumulated so far is the sum of the failure times (assuming a failure-terminated test), which is 30 + 600 + 1400 + 2500 = 4530 hours. To demonstrate compliance with 90% confidence, the upper confidence bound for the failure rate must be \u2264 0.001. Using the chi-squared formula for the upper bound with r = 4 failures and 1 - \u03b1 = 0.9, \u03c7\u00b2(8, 0.9) = 13.3616. The required total test time is T \u2265 \u03c7\u00b2(2r, 1-\u03b1) / (2\u03bb_target) = 13.3616 / (2 \u00d7 0.001) = 6680.8 hours. The additional test time needed is approximately 6680.8 - 4530 \u2248 2150 hours, which rounds to 2000 hours, matching option (a). Other confidence levels (e.g., 80%) yield similar results.\n\na",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00595148,
+      "total_tokens": 15952,
+      "prompt_tokens": 919,
+      "completion_tokens": 15033,
+      "reasoning_tokens": 14764,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "c",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0005247,
+      "total_tokens": 1438,
+      "prompt_tokens": 720,
+      "completion_tokens": 718,
+      "reasoning_tokens": 897,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "We are given: \"A supplier of parts claims it has a manufacturing process in which 90% of parts are defect free. To check this theory, a customer randomly samples 25 parts and finds seven that are defective. If the supplier's claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\"\n\nInterpretation: The claim is that 90% are defect free, so proportion defective is 0.10. We sample n=25 parts. We observed 7 defective. Under the claim (p=0.10), we want the probability that the number of defectives X is 7 or more. That is P(X >= 7) where X ~ Binomial(n=25, p=0.10). We need to compute this probability exactly.\n\nWe are given choices: \n[a] 0.9977\n[b] 0.9905\n[c] 0.009476\n[d] 0.0022616\n\nWe need to compute P(X >= 7). It might be easier to compute 1 - P(X <= 6) = 1 - sum_{x=0}^{6} C(25,x)*(0.1)^x*(0.9)^{25-x}.\n\nLet's compute step by step.\n\nWe can compute cumulative probability for x=0 to 6.\n\nAlternatively, we can use Poisson approximation? But we need exact. We can compute manually or trust that one of these numbers is correct.\n\nCompute each:\n\nFirst, compute P(X=0) = (0.9)^25 \u2248 0.0717897 (since 0.9^10=0.34867844, 0.9^20 = (0.9^10)^2 \u2248 0.12157665, then times 0.9^5 = 0.59049 gives 0.0717898 approximately). Actually more precisely: 0.9^25 = exp(25*ln(0.9)) = exp(25*(-0.1053605)) = exp(-2.63401) \u2248 0.071963 (using calculator maybe). But we'll do exact later.\n\nBetter: Let's compute binomial probabilities exactly.\n\nWe want sum_{x=0}^{6} P(X=x). p=0.1, q=0.9, n=25.\n\nI'll compute each term:\n\nP(X=x) = C(25,x) * (0.1)^x * (0.9)^{25-x}.\n\nWe can compute stepwise:\n\nC(25,0)=1, P(0)=1*(0.9)^25 = (0.9)^25.\n\n(0.9)^25 =? Let's compute accurately:\n\n0.9^2=0.81\n0.9^4=0.81^2=0.6561\n0.9^5=0.6561*0.9=0.59049\n0.9^10=(0.9^5)^2=0.59049^2=0.3486784401\n0.9^20=(0.9^10)^2=0.3486784401^2=0.12157665459056928801\n0.9^25=0.9^20 * 0.9^5 = 0.12157665459056928801 * 0.59049 \u2248 0.12157665459056928801 * 0.59049 = let's multiply: \n0.12157665459056928801 * 0.59049 = \n0.12157665459056928801 * 0.5 = 0.060788327295284644005\n0.12157665459056928801 * 0.09 = 0.0109418989131512359209\n0.12157665459056928801 * 0.00049 = 0.0000595725617493789491249\nSum: 0.060788327295284644005 + 0.0109418989131512359209 = 0.0717302262084358799259 + 0.0000595725617493789491249 = 0.0717897987701852588748\nSo P(0) \u2248 0.0717898.\n\nBut we need more precision? We'll do cumulative.\n\nBetter to use binomial formula directly:\n\nP(1)= C(25,1)*0.1*0.9^24 = 25*0.1*0.9^24.\n0.9^24 = 0.9^25 / 0.9 = 0.0717898/0.9 \u2248 0.07976644? Actually more accurately: 0.9^24 = 0.9^25/0.9 = 0.0717898/0.9 = 0.079766444... Actually we can compute: 0.9^24 = (0.9^25)/0.9 = so from above 0.0717898/0.9 = 0.07976644, but maybe we should compute more accurately. Alternatively, let's compute using logs or exact fractions.\n\nBut perhaps we can compute the cumulative probability using a calculator or known values. Given the choices, we can try to see which one matches.\n\nWe need P(X >= 7) = 1 - P(X <= 6). Let's compute P(X <= 6).\n\nWe can compute terms:\n\nx=0: C(25,0)=1, term: (0.9)^25 \u2248 0.0717898\nx=1: C(25,1)=25, term: 25*(0.1)*(0.9)^24 = 2.5*(0.9)^24. But (0.9)^24 = (0.9)^25/0.9 = 0.0717898/0.9 = 0.07976644, so P(1)=25*0.1*0.07976644 = 2.5*0.07976644 = 0.1994161.\nWait: Actually P(1)=25*0.1*0.9^24 = 2.5*0.9^24. But more precisely: 0.9^24 =? Let's compute exactly:\n\nI'll compute with more digits:\n\n0.9^25 = exp(25*ln(0.9)) = exp(25*(-0.10536051565782628)) = exp(-2.634012891445657) = 0.071789798 (this is okay). So 0.9^24 = 0.9^25/0.9 = 0.071789798/0.9 = 0.07976644222.\n\nThen P(1) = 25*0.1*0.07976644222 = 0.25*0.07976644222? Wait 25*0.1=2.5, times 0.07976644222 = 0.19941610555. So P(1) \u2248 0.199416.\n\nx=2: C(25,2)=300, term: 300*(0.1)^2*(0.9)^23 = 300*0.01*0.9^23 = 3*0.9^23.\n0.9^23 = 0.9^24/0.9 = 0.07976644222/0.9 = 0.08851826913.\nSo P(2)= 3*0.08851826913 = 0.26555480739.\nWait: careful: C(25,2)=25*24/2=300. So P(2)=300*(0.1)^2*(0.9)^23 = 300*0.01*0.9^23 = 3*0.9^23 = 3*0.08851826913 = 0.26555480739.\n\nx=3: C(25,3)=2300? Actually C(25,3)=25*24*23/(3*2*1)= (25*24*23)/6 = (13800)/6=2300. Term: 2300*(0.1)^3*(0.9)^22 = 2300*0.001*0.9^22 = 2.3*0.9^22.\n0.9^22 = 0.9^23/0.9 = 0.08851826913/0.9 = 0.09835363237.\nSo P(3)=2.3*0.09835363237 = 0.22621335445.\nWait: 2.3*0.09835363237 = 0.226213354451.\n\nx=4: C(25,4)=12650? C(25,4)=25*24*23*22/(4*3*2*1)= (25*24*23*22)/24 = 25*23*22 = 25*506=12650. Term: 12650*(0.1)^4*(0.9)^21 = 12650*0.0001*0.9^21 = 1.265*0.9^21.\n0.9^21 = 0.9^22/0.9 = 0.09835363237/0.9 = 0.10928181374.\nSo P(4)=1.265*0.10928181374 = 0.13824149438 (since 1.265*0.10928 \u2248 0.13824).\n\nx=5: C(25,5)=53130? C(25,5)=25*24*23*22*21/(5*4*3*2*1)= (25*24*23*22*21)/120 = (25*24=600, 23*22=506, 21=21, product=600*506=303600, times 21=6375600, divided by 120=53130). Term: 53130*(0.1)^5*(0.9)^20 = 53130*0.00001*0.9^20 = 0.5313*0.9^20.\n0.9^20 we computed earlier: 0.12157665459056929. So P(5)=0.5313*0.12157665459056929 = 0.064614 (approx). More precisely: 0.5313*0.12157665459056929 = 0.064603.\n\nx=6: C(25,6)=177100? C(25,6)=25*24*23*22*21*20/(6*5*4*3*2*1)= (25*24*23*22*21*20)/720. Compute: 25*24=600, 23*22=506, 21*20=420, product=600*506=303600, times 420=127512000, divided by 720=177100. Term: 177100*(0.1)^6*(0.9)^19 = 177100*0.000001*0.9^19 = 0.1771*0.9^19.\n0.9^19 = 0.9^20/0.9 = 0.12157665459056929/0.9 = 0.1350851717672992. So P(6)=0.1771*0.1350851717672992 = 0.023926 (approx). More precisely: 0.1771*0.1350851717672992 = 0.023922.\n\nNow sum P(0) through P(6):\n\nP(0)=0.0717898\nP(1)=0.1994161\nP(2)=0.2655548\nSum so far: 0.0717898+0.1994161=0.2712059; +0.2655548=0.5367607.\nP(3)=0.2262134 -> total: 0.5367607+0.2262134=0.7629741.\nP(4)=0.1382415 -> total: 0.7629741+0.1382415=0.9012156.\nP(5)=0.064603 -> total: 0.9012156+0.064603=0.9658186.\nP(6)=0.023922 -> total: 0.9658186+0.023922=0.9897406.\n\nSo P(X <= 6) \u2248 0.98974. Then P(X >= 7) = 1 - 0.98974 = 0.01026.\n\nBut the choices include: [c] 0.009476 and [d] 0.0022616. Our computed value is approximately 0.01026. That is closer to 0.009476? Actually 0.01026 vs 0.009476: difference of about 0.000784. Possibly due to rounding errors. Let's recalculate with more precision.\n\nWe need more accurate calculations. Perhaps use exact fractions or a better method.\n\nWe can compute using the binomial cumulative distribution function. Alternatively, we can compute exactly with more digits.\n\nI'll compute each term with more digits using known values or careful multiplication.\n\nLet p=0.1, q=0.9, n=25.\n\nCompute q^n = 0.9^25 exactly? Actually 0.9^25 = (9/10)^25 = 9^25 / 10^25. That is huge number but we can compute decimal precisely.\n\nBetter to use a series approach or known constants. Alternatively, we can compute using software. But since this is an exam, we expect the numbers to be precomputed.\n\nLet's compute P(X=0)=0.9^25. I'll compute more precisely:\n\n0.9^25 = exp(25*ln(0.9)) = exp(25*(-0.10536051565782628)) = exp(-2.634012891445657) = 1/exp(2.634012891445657). Compute exp(2.634012891445657): e^2.634 \u2248? e^2.634 = e^2 * e^0.634 \u2248 7.389056 * 1.8850 \u2248 13.93? Actually more precisely: e^2.6340129 =? Let's use: e^2.634 = 13.93 maybe. Actually using calculator: e^2.6340129 \u2248 13.927, so 1/13.927 \u2248 0.07181. That's fine.\n\nMaybe the exact sum is 0.990523...? Let's see: If P(X<=6)=0.990523, then P(X>=7)=0.009477, which is close to choice c (0.009476). Possibly our rounding gave 0.98974, but maybe we missed something. Check: For x=6, C(25,6)=177100, correct. p^6=0.1^6=0.000001, q^{19}=0.9^{19}. 0.9^19=? Let's compute precisely:\n\nCompute powers of 0.9 step by step with more digits:\n\n0.9^1 = 0.9\n0.9^2 = 0.81\n0.9^3 = 0.729\n0.9^4 = 0.6561\n0.9^5 = 0.59049\n0.9^6 = 0.531441\n0.9^7 = 0.4782969\n0.9^8 = 0.43046721\n0.9^9 = 0.387420489\n0.9^10 = 0.3486784401\n0.9^11 = 0.31381059609\n0.9^12 = 0.282429536481\n0.9^13 = 0.2541865828329\n0.9^14 = 0.22876792454961\n0.9^15 = 0.205891132094649\n0.9^16 = 0.1853020188851841\n0.9^17 = 0.1667718169966657\n0.9^18 = 0.15009463529699913\n0.9^19 = 0.13508517176729922\n0.9^20 = 0.1215766545905693\n0.9^21 = 0.10941898913151237\n0.9^22 = 0.09847709021836114\n0.9^23 = 0.08862938119652502\n0.9^24 = 0.07976644307687252\n0.9^25 = 0.07178979876918527\n\nI computed these stepwise: Starting from 0.9^10=0.3486784401, then multiply by 0.9 each time:\n0.9^11 = 0.3486784401*0.9 = 0.31381059609\n0.9^12 = 0.31381059609*0.9 = 0.282429536481\n0.9^13 = 0.282429536481*0.9 = 0.2541865828329\n0.9^14 = 0.2541865828329*0.9 = 0.22876792454961\n0.9^15 = 0.22876792454961*0.9 = 0.205891132094649\n0.9^16 = 0.205891132094649*0.9 = 0.1853020188851841\n0.9^17 = 0.1853020188851841*0.9 = 0.1667718169966657\n0.9^18 = 0.1667718169966657*0.9 = 0.15009463529699913\n0.9^19 = 0.15009463529699913*0.9 = 0.13508517176729922\n0.9^20 = 0.13508517176729922*0.9 = 0.1215766545905693\n0.9^21 = 0.1215766545905693*0.9 = 0.10941898913151237\n0.9^22 = 0.10941898913151237*0.9 = 0.09847709021836114\n0.9^23 = 0.09847709021836114*0.9 = 0.08862938119652502\n0.9^24 = 0.08862938119652502*0.9 = 0.079766443",
+    "extracted_answer": "a, b, c, d",
+    "usage": {
+      "cost": 0.00183936,
+      "total_tokens": 5216,
+      "prompt_tokens": 1120,
+      "completion_tokens": 4096,
+      "reasoning_tokens": 2362,
+      "cached_tokens": 64,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "length"
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "The system reliability for series components is the product of their individual reliabilities. Given a target system reliability of 0.96 and four components with reliabilities 0.992, 0.991, 0.994, and 0.992, the required reliability for the fifth component is calculated as \\( R_5 = \\frac{0.96}{0.992 \\times 0.991 \\times 0.994 \\times 0.992} \\).\n\nComputing the product of the four given reliabilities:\n- \\( 0.992 \\times 0.991 = 0.983072 \\)\n- \\( 0.983072 \\times 0.994 = 0.977173568 \\)\n- \\( 0.977173568 \\times 0.992 = 0.969356179456 \\)\n\nThen, \\( R_5 = \\frac{0.96}{0.969356179456} \\approx 0.990337 \\). Rounding to three decimal places gives 0.990.\n\nChecking the answer choices:\n- (a) 0.970 yields a system reliability of approximately 0.940, too low.\n- (b) 0.969 yields approximately 0.939, also too low.\n- (c) 0.990 yields approximately 0.960 when rounded to three decimals.\n- (d) 0.992 yields approximately 0.962, which is higher than the target.\n\nThus, the reliability apportionment for the fifth subsystem should be 0.990.\n\nc",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.001968939,
+      "total_tokens": 5129,
+      "prompt_tokens": 631,
+      "completion_tokens": 4498,
+      "reasoning_tokens": 4174,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.0,
+      "total_tokens": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": null
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.0,
+      "total_tokens": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": null
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "Humans perform tasks more reliably when they have clear understanding and positive motivation. Statement 1 is true because understanding requirements reduces errors. Statement 4 is true because incentives for quality encourage careful performance. Statements 2 and 3 are generally false: complex tasks increase error likelihood, and punitive pressure can induce stress and reduce reliability.\n\nd",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00040896,
+      "total_tokens": 1320,
+      "prompt_tokens": 772,
+      "completion_tokens": 548,
+      "reasoning_tokens": 481,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "The design life for a reliability of 90% is found using the Weibull reliability function \\( R(t) = e^{-(t/\\eta)^\\beta} \\). Setting \\( R(t) = 0.90 \\) and solving for \\( t \\) gives \\( t = \\eta \\left[ -\\ln(0.90) \\right]^{1/\\beta} \\). Substituting \\( \\eta = 9.3 \\) years, \\( \\beta = 4.5 \\), and \\( -\\ln(0.90) \\approx 0.1053605 \\) yields \\( t \\approx 9.3 \\times 0.1053605^{1/4.5} \\approx 9.3 \\times 0.1053605^{0.222222} = 9.3 \\times 0.60653 \\approx 5.64 \\) years.\n\nb",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00082545,
+      "total_tokens": 2325,
+      "prompt_tokens": 1007,
+      "completion_tokens": 1318,
+      "reasoning_tokens": 1132,
+      "cached_tokens": 0,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "deepseek/deepseek-v3.2",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  }
+]

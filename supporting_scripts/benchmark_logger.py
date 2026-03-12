@@ -199,10 +199,11 @@ class BenchmarkLogger:
     def generate_result_report(
         self,
         predictions_df: pd.DataFrame,
-        correct_df: pd.DataFrame,
+        correct_df,  # Optional[pd.DataFrame] — None in test mode
         usage_summary: dict,
         num_repetitions: int,
-        message: Optional[str] = None
+        message: Optional[str] = None,
+        testing_mode: bool = False
     ) -> str:
         """
         Generate result_analysis.md.
@@ -246,16 +247,19 @@ class BenchmarkLogger:
             report_lines.append(f"{message}\n\n")
 
         report_lines.append("## Results Summary\n\n")
-        # Calculate accuracy per run
+        # Calculate accuracy per run (skipped in test mode — no ground truth available)
         run_accuracies = []
         run_kaggle_scores = []
         run_usage_data = []
+
+        if testing_mode:
+            report_lines.append("- **Mode**: TEST (no ground truth — accuracy not available)\n")
 
         for run_idx in range(1, num_repetitions + 1):
             extracted_col = f'prediction_{run_idx}'
             run_accuracy = None
             total_count = 0
-            if extracted_col in predictions_df.columns:
+            if not testing_mode and correct_df is not None and extracted_col in predictions_df.columns:
                 correct_count = 0
                 total_count = 0
                 for idx, row in predictions_df.iterrows():
@@ -331,7 +335,7 @@ class BenchmarkLogger:
             extracted_col = f'prediction_{run_idx}'
             usage_data = run_usage_data[run_idx - 1]
 
-            if extracted_col in predictions_df.columns:
+            if not testing_mode and correct_df is not None and extracted_col in predictions_df.columns:
                 correct_count = 0
                 total_count = 0
                 for idx, row in predictions_df.iterrows():
@@ -351,7 +355,12 @@ class BenchmarkLogger:
                     line = f"| {run_idx} | {accuracy:.4f} | {kaggle_str} | {correct_count} / {total_count} | {cost_str} | {tokens_str} |\n"
                 else:
                     line = f"| {run_idx} | N/A | N/A | 0 / 0 | $0.0000 | 0 (0 + 0) |\n"
-                report_lines.append(line)
+            else:
+                # Test mode: no accuracy, only cost
+                cost_str = f"${usage_data['cost']:.4f}"
+                tokens_str = f"{usage_data['total_tokens']:,} ({usage_data['prompt_tokens']:,} + {usage_data['completion_tokens']:,})"
+                line = f"| {run_idx} | N/A (test) | N/A | N/A | {cost_str} | {tokens_str} |\n"
+            report_lines.append(line)
 
         report_lines.append("\n## Cost Efficiency Analysis\n\n")
 
@@ -360,7 +369,8 @@ class BenchmarkLogger:
         total_tokens = usage_summary.get('total_tokens', 0)
 
         report_lines.append("### Overall Metrics\n\n")
-        if run_accuracies and mean_accuracy > 0:
+        mean_accuracy = np.mean(run_accuracies) if run_accuracies else None
+        if mean_accuracy and mean_accuracy > 0:
             # Cost per 1 percentage point of accuracy
             cost_per_acc_pct = total_cost / num_repetitions / (mean_accuracy * 100)
             # Tokens per 1 percentage point of accuracy

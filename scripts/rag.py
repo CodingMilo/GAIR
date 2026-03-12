@@ -42,6 +42,7 @@ from pathlib import Path
 from typing import List, Optional
 from tqdm import tqdm
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 class RAGEngine:
     def __init__(self, client, config):
@@ -49,6 +50,8 @@ class RAGEngine:
         self.config = config
         self.doc_db: List[str] = []
         self.embeddings: Optional[np.ndarray] = None
+        self.tfidf_vectorizer: Optional[TfidfVectorizer] = None
+        self.tfidf_matrix = None
         self._initialize_docs()
 
     def _initialize_docs(self):
@@ -80,9 +83,41 @@ class RAGEngine:
             self.doc_db = [s.strip() for s in re.findall(pattern, content, flags=re.DOTALL) if s.strip()]
             
             print(f"RAG : {len(self.doc_db)} sections de documentation chargées.")
+
+            # Build TF-IDF keyword index (BM25-like) — no API calls needed
+            if self.doc_db:
+                self._build_tfidf_index()
+
         except Exception as e:
             print(f"[ERROR] Échec de l'initialisation du RAG : {e}")
             self.doc_db = []
+
+    @staticmethod
+    def _clean_for_bm25(text: str) -> str:
+        """Strip LaTeX commands to improve keyword matching quality."""
+        text = re.sub(r'\\[a-zA-Z]+\{[^}]*\}', ' ', text)
+        text = re.sub(r'\\[a-zA-Z]+', ' ', text)
+        text = re.sub(r'[{}$&%#_^~]', ' ', text)
+        return ' '.join(text.split())
+
+    def _build_tfidf_index(self) -> None:
+        """Build a TF-IDF index over doc_db for keyword (BM25-style) retrieval."""
+        try:
+            cleaned = [self._clean_for_bm25(doc) for doc in self.doc_db]
+            self.tfidf_vectorizer = TfidfVectorizer(
+                ngram_range=(1, 2),
+                min_df=1,
+                max_df=0.95,
+                sublinear_tf=True,        # BM25-like TF saturation
+                strip_accents='unicode',
+                token_pattern=r'(?u)\b[a-zA-Z_][a-zA-Z0-9_]+\b',
+            )
+            self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(cleaned)
+            print(f"RAG : TF-IDF index built ({self.tfidf_matrix.shape[1]} terms).")
+        except Exception as exc:
+            print(f"[WARN] TF-IDF index build failed: {exc}")
+            self.tfidf_vectorizer = None
+            self.tfidf_matrix = None
 
     def prepare_embeddings(self):
         """Génère les embeddings pour toute la base documentaire."""
@@ -102,28 +137,54 @@ class RAGEngine:
         self.embeddings = np.array(temp_embeddings)
         print("RAG : Indexation terminée.")
 
-    def get_context(self, query: str, k: int = 2) -> str:
-        """Récupère les k sections les plus pertinentes pour une question donnée."""
-        if self.embeddings is None or len(self.doc_db) == 0:
+    def get_context(self, query: str, k: int = 8) -> str:
+        """Retrieve the k most relevant sections using hybrid semantic + keyword search.
+
+        Combines dense cosine-similarity (60 %) with TF-IDF keyword scores (40 %)
+        so that exact reliability terms (e.g. 'Maturity Path', 'BOM') are not
+        missed by embeddings alone.
+        """
+        if len(self.doc_db) == 0:
             return ""
 
-        raw_emb = self.client.get_embedding(query)
-        if not raw_emb or len(raw_emb) == 0:
-            print("[WARN] Query embedding failed. No context retrieved.")
+        semantic_scores = None
+        if self.embeddings is not None and getattr(self.embeddings, "size", 0) > 0:
+            raw_emb = self.client.get_embedding(query)
+            if raw_emb and len(raw_emb) > 0:
+                query_emb = np.array(raw_emb).reshape(1, -1)
+                if self.embeddings.shape[1] > 0:
+                    semantic_scores = cosine_similarity(query_emb, self.embeddings)[0]
+            else:
+                print("[WARN] Query embedding failed. Falling back to TF-IDF retrieval.")
+
+        # ── Keyword (TF-IDF / BM25-like) scores ─────────────────────────────
+        keyword_scores = None
+        if self.tfidf_vectorizer is not None and self.tfidf_matrix is not None:
+            try:
+                q_tfidf = self.tfidf_vectorizer.transform(
+                    [self._clean_for_bm25(query)]
+                )
+                keyword_scores = np.asarray(
+                    self.tfidf_matrix.dot(q_tfidf.T).todense()
+                ).flatten()
+            except Exception:
+                keyword_scores = None
+
+        if semantic_scores is not None and keyword_scores is not None:
+            sem_max = semantic_scores.max() or 1.0
+            kw_max = keyword_scores.max() or 1.0
+            combined = (
+                0.6 * (semantic_scores / sem_max)
+                + 0.4 * (keyword_scores / kw_max)
+            )
+        elif semantic_scores is not None:
+            combined = semantic_scores
+        elif keyword_scores is not None:
+            combined = keyword_scores
+        else:
+            print("[WARN] Neither embeddings nor TF-IDF retrieval is available. No context retrieved.")
             return ""
-            
-        query_emb = np.array(raw_emb).reshape(1, -1)
         
-        # Vérification des dimensions des embeddings indexés
-        if self.embeddings.shape[1] == 0:
-             print("[ERROR] Document embeddings are empty. No context retrieved.")
-             return ""
-             
-        # Calcul de la similarité cosinus entre la question et la doc
-        similarities = cosine_similarity(query_emb, self.embeddings)[0]
-        
-        # Récupération des indices des k meilleurs résultats
-        top_k_indices = np.argsort(similarities)[-k:][::-1]
-        
+        top_k_indices = np.argsort(combined)[-k:][::-1]
         context_parts = [self.doc_db[i] for i in top_k_indices]
         return "\n\n".join(context_parts)

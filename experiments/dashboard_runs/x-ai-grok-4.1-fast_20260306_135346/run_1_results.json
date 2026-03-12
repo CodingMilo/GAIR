@@ -1,0 +1,306 @@
+[
+  {
+    "raw_response": "{\n  \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.0030904,
+      "total_tokens": 7097,
+      "prompt_tokens": 1453,
+      "completion_tokens": 5644,
+      "reasoning_tokens": 5635,
+      "cached_tokens": 148,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.000286,
+      "total_tokens": 884,
+      "prompt_tokens": 456,
+      "completion_tokens": 428,
+      "reasoning_tokens": 419,
+      "cached_tokens": 128,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs.. What is the time to 10% failure?\n\n[Choices]: [a] 5000 hrs  | [b] 5268 hrs   | [c] 5450 hrs | [d]  5333 hrs"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00222755,
+      "total_tokens": 5200,
+      "prompt_tokens": 1168,
+      "completion_tokens": 4032,
+      "reasoning_tokens": 4023,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00382825,
+      "total_tokens": 8660,
+      "prompt_tokens": 1598,
+      "completion_tokens": 7062,
+      "reasoning_tokens": 7053,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0040636,
+      "total_tokens": 8654,
+      "prompt_tokens": 805,
+      "completion_tokens": 7849,
+      "reasoning_tokens": 7840,
+      "cached_tokens": 146,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"a\"]\n}",
+    "extracted_answer": "a",
+    "usage": {
+      "cost": 0.00245185,
+      "total_tokens": 5480,
+      "prompt_tokens": 886,
+      "completion_tokens": 4594,
+      "reasoning_tokens": 4585,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.000379,
+      "total_tokens": 1764,
+      "prompt_tokens": 1134,
+      "completion_tokens": 630,
+      "reasoning_tokens": 621,
+      "cached_tokens": 1280,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\nI. $ F(t) = \\lambda t^{\\beta-1} $ \nII. $ F(t) = \\lambda \\beta t^{\\beta-1} $ \nIII. $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $ \nIV. $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $\n\n[Choices]: [a] I. &amp; II  | [b] I. &amp; III.  | [c] II. &amp; IV. | [d] II. &amp; III."
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00084255,
+      "total_tokens": 2085,
+      "prompt_tokens": 593,
+      "completion_tokens": 1492,
+      "reasoning_tokens": 1483,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:I. Handling Damage, II. Poor Quality Control, III. Improper installation, IV. Inadequate design\n\n[Choices]: [a] I &amp; III,  | [b] I, II &amp; III  | [c] None of the above | [d] All of the above"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.00714305,
+      "total_tokens": 14821,
+      "prompt_tokens": 818,
+      "completion_tokens": 14003,
+      "reasoning_tokens": 13994,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00061145,
+      "total_tokens": 1645,
+      "prompt_tokens": 629,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 1007,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.00127315,
+      "total_tokens": 3194,
+      "prompt_tokens": 1005,
+      "completion_tokens": 2189,
+      "reasoning_tokens": 2180,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"c\"]\n}",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0035957,
+      "total_tokens": 7591,
+      "prompt_tokens": 544,
+      "completion_tokens": 7047,
+      "reasoning_tokens": 7038,
+      "cached_tokens": 244,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.02209355,
+      "total_tokens": 45292,
+      "prompt_tokens": 1768,
+      "completion_tokens": 43524,
+      "reasoning_tokens": 43515,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"c\"]\n}\n\n## Explanation\n\nThe reasoning",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.01050185,
+      "total_tokens": 21487,
+      "prompt_tokens": 732,
+      "completion_tokens": 20755,
+      "reasoning_tokens": 20741,
+      "cached_tokens": 147,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "{\n  \"answer\": [\"d\"]\n}",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00035065,
+      "total_tokens": 1154,
+      "prompt_tokens": 680,
+      "completion_tokens": 474,
+      "reasoning_tokens": 465,
+      "cached_tokens": 149,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "{\n    \"answer\": [\"b\"]\n}",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.0013269,
+      "total_tokens": 3264,
+      "prompt_tokens": 895,
+      "completion_tokens": 2369,
+      "reasoning_tokens": 2360,
+      "cached_tokens": 244,
+      "request_count": 1
+    },
+    "metadata": {
+      "model": "x-ai/grok-4.1-fast",
+      "finish_reason": "stop"
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  }
+]

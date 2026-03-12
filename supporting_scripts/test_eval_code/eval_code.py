@@ -15,10 +15,11 @@ class ParticipantVisibleError(Exception):
 
 # Define the scoring function
 def calculate_kaggle_score(acc, cost):
-    if cost > 0.3:
+    # cost threshold is 0.4 per run (for 75 questions)
+    if cost > 0.4:
         return 0.0
     else:
-        kaggle_score_base = acc-.15*cost
+        kaggle_score_base = acc - 0.15 * cost
         kaggle_score = min(kaggle_score_base, 1.0)
         kaggle_score = max(kaggle_score, 0)
         return kaggle_score

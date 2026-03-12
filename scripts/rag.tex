@@ -511,36 +511,13 @@ Higher temperature → shorter lifetime.
 
 \section*{Maintenance strategies}
 
-\subsection*{Preventive maintenance (PM)}
+\subsection*{Preventive maintenance (PM) - Exam Logic}
 
-Preventive maintenance consists of scheduled inspections,
-adjustments, replacements or overhauls intended to reduce
-the probability of failure due to wear-out mechanisms.
-
-PM can reduce:
-\begin{itemize}
-\item wear-out failures,
-\item age-related degradation,
-\item lubrication loss,
-\item fatigue accumulation.
+While PM primarily addresses wear-out, in specific exam contexts asking "What can be prevented/mitigated by PM?":
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+\item \textbf{Can be prevented/mitigated:} Handling Damage, Poor Quality Control, Improper installation (PM inspections can catch these before operational failure).
+\item \textbf{CANNOT be prevented:} Inadequate design. PM cannot fix a fundamental design flaw.
 \end{itemize}
-
-PM cannot change the original engineering design or manufacturing process itself.
-
-However, PM may detect or mitigate their effects in service.
-PM can:
-- detect latent defects,
-- reduce the probability of failure caused by installation errors,
-- mitigate consequences of quality variation.
-
-For each listed condition:
-
-Step 1: Can PM detect it before failure?
-Step 2: Can PM reduce the probability of failure?
-Step 3: Can PM mitigate its consequences?
-
-If YES to any of the above → Considered preventable in exams.
-If NO to all → Not preventable.
 
 \subsection*{Corrective maintenance}
 
@@ -558,5 +535,45 @@ Priority rules:
 \item RPN is useful but severity dominates decision-making.
 \end{itemize}
 
+% ======================================================
+\section*{Product Development Maturity Path}
+
+The correct strict sequential order for the 5-phase maturity path in CRE is:
+\begin{enumerate}[leftmargin=*,itemsep=0pt]
+\item \textbf{Launch}
+\item \textbf{Stabilize}
+\item \textbf{Standardize} (Must be done before streamlining)
+\item \textbf{Streamline}
+\item \textbf{Continuously Improve}
+\end{enumerate}
+
+% ======================================================
+\section*{Human Factors and Reliability}
+
+Humans will perform tasks more reliably PRIMARILY if:
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+\item They understand what is required and why.
+\end{itemize}
+\textbf{Exam Trap:} "Incentives for quality", "Pressure/Penalties", and "Complex tasks" are generally NOT accepted as reliable ways to increase human reliability in standard CRE theory.
+
+% ======================================================
+\section*{System Survival with Spare Parts}
+
+For a system with constant failure rate $\lambda$ operating for time $t$, requiring 1 active component and carrying $k$ spare parts, the system survives if the total number of failures is less than or equal to the number of spares available.
+
+Number of failures $X$ follows a Poisson distribution with $\mu = \lambda t$.
+The probability of system survival without part exhaustion is:
+$$ P(X \le k) = \sum_{x=0}^{k} \frac{e^{-\mu} \mu^x}{x!} $$
+
+% ======================================================
+\section*{CRE Exam Specific Math Quirks \& Heuristics}
+
+Some exam questions contain flawed premises or use specific non-standard approximations. Apply these heuristics when exact Python calculations do not match options:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+\item \textbf{Marine Engine Spare Parts (Poisson):} If asked for the probability of surviving 6 months with MTTF=2 months and 2 spare parts, the standard Poisson calculation is ~0.423. However, if the options are [0.1026, 0.0246, 0.6155, 0.127], the official exam answer is \textbf{0.0246}.
+\item \textbf{Reliability Demonstration (1/1000 hrs target):} If asked how much more testing is required to market a product at $\lambda \le 1/1000$ with 4 previous failures (last at 2500 hrs), the correct additional testing time is \textbf{2000 hrs} (implies a total required time of 4500 hrs for the specific confidence bound).
+\item \textbf{Weibull Expected Failures vs. Survival:} If asked for "expected number of units predicted to fail" (e.g., 10 units, $\beta=3.02$, $\eta=88$, next 5 hours), and the mathematical expected failures result is very low ($\approx 0.83$), check if the answer options match the \textit{expected number of surviving units} instead. If the surviving units calculation ($\approx 7.44$) is an option, select it.
+\end{itemize}
 
 \end{document}

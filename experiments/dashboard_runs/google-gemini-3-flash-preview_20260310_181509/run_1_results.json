@@ -1,0 +1,338 @@
+[
+  {
+    "raw_response": "To determine if there is a statistically significant difference between the old process yield and the new process yield, we must analyze the confidence interval for the mean of the new batches.\n\n**1. Analyze the Old Process:**\nThe problem states the old process has a yield of 85%, which is defined as a \"lower 95% confidence limit.\" In statistical terms, this means we are 95% confident the true mean of the old process is at least 85%.\n\n**2. Analyze the New Process Data:**\n- Sample size ($n$): 10 batches\n- Sample average ($\\bar{x}$): 86%\n- Standard deviation ($s$): 1%\n- Confidence level: 95%\n\nSince we are dealing with a small sample size ($n < 30$), we use the t-distribution to calculate the confidence interval for the mean ($\\mu$):\nThe formula is: $CI = \\bar{x} \\pm t_{\\alpha/2, df} \\cdot \\frac{s}{\\sqrt{n}}$\n- Degrees of freedom ($df$) = $n - 1 = 9$\n- For a 95% confidence level, $\\alpha = 0.05$ and $\\alpha/2 = 0.025$.\n- Looking up the t-table for $df=9$ and $0.025$ tail probability: $t_{0.025, 9} \\approx 2.262$\n\n**3. Calculate the Confidence Interval:**\n- Margin of Error = $2.262 \\cdot \\frac{1\\%}{\\sqrt{10}} = 2.262 \\cdot 0.316\\% \\approx 0.715\\%$\n- Upper Bound = $86\\% + 0.715\\% = 86.715\\%$\n- Lower Bound = $86\\% - 0.715\\% = 85.285\\%$\n\nThe 95% Confidence Interval for the new process mean is roughly $[85.29\\%, 86.72\\%]$.\n\n**4. Compare and Conclude:**\n- **Is the true mean less than the sample average?** Statistically, there is a 50% probability the true mean is below 86% and a \nThe question asks to evaluate the new yield (86%) against the historical yield\n\n[SELF-CRITIQUE]\nTo determine the correct answer, we must evaluate the statistical significance of the new yield compared to the historical yield.\n\n1.  **Analyze the New Process Data:**\n    *   Sample size ($n$) = 10\n    *   Sample mean ($\\bar{x}$) = 86%\n    *   Sample standard deviation ($s$) = 1%\n    *   Confidence level = 95% ($\\alpha = 0.05$)\n\n2.  **Calculate the Confidence Interval for the New Mean:**\n    Since the sample size is small ($n=10$), we use the t-distribution with $df = 9$.\n    *   $t_{0.025, 9} = 2.262$\n    *   Standard Error ($SE$) = $s / \\sqrt{n} = 1 / \\sqrt{10} \\approx 0.3162$\n    *   Margin of Error ($MOE$) = $2.262 \\times 0.3162 \\approx 0.715$\n    *   95% Confidence Interval = $86\\% \\pm 0.715\\% = [85.285\\%, 86.715\\%]$\n\n3.  **Compare with the Historical Yield:**\n    *   The historical yield is 85%.\n    *   The lower bound of our 95% confidence interval for the new process is 85.285%.\n    *   Since the entire confidence interval $[85.285, 86.715]$ is above the historical value of 85%, the difference is statistically significant at the 95% level.\n\n4.  **Evaluate the Choices:**\n    *   The true population mean is estimated by the confidence interval. Statistically, the mean is expected to fall within the interval.\n    *   The question asks for the \"average yield\" based on the data. In statistical inference, the population mean is often \"less than the sample average\" if we consider the lower half of the distribution, but more importantly, we must determine if it is \"statistically different.\"\n    *   Since 85% (the old yield) is outside (below) the 95% confidence interval of the new yield, the new yield is statistically different",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.006976,
+      "total_tokens": 8792,
+      "prompt_tokens": 5028,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 7,
+    "question": "[Question]: 9.  A product has been produced for many years with an average yield of 85%  (That 85% is a lower 95% confidence limit). Ten batches were produced  using a new raw material with a sample average yield of 86% and a  standard deviation of 1%. At the 95% confidence level, the data indicate  the average yield is: \n\n[Choices]: [a] less than the sample average yield of 86% and is statistically different  | [b] greater than the sample average yield of 86% and is statistically different | [c] greater than the sample average yield of 86% and statistically there is no difference | [d] less than the sample average yield of 86% and statistically there is no difference"
+  },
+  {
+    "raw_response": "To solve for the time to 10% failure using an exponential distribution, we follow these steps:\n\n1.  **Identify the Distribution and Parameters**:\n    The problem specifies an exponential distribution with a Mean Time To Failure (MTTF) of 50,000 hours.\n    In the exponential distribution, the failure rate $\\lambda$ is the reciprocal of the MTTF:\n    $$\\lambda = \\frac{1}{MTTF} = \\frac{1}{50,000} = 0.00002 \\text{ failures/hour}$$\n\n2.  **Understand the Reliability Goal**:\n    The \"time to 10% failure\" means we are looking for the time $t$ at which 10% of the population has failed. This corresponds to a Cumulative Distribution Function (CDF) value of $F(t) = 0.10$.\n    Since reliability $R(t)$ is the complement of the CDF ($R(t) = 1 - F(t)$), we are looking for the time $t$ when the reliability is $R(t) = 1 - 0.10 = 0.90$.\n\n3.  **Apply the Reliability Formula**:\n    The reliability for an exponential distribution is given by:\n    $$R(t) = e^{-\\lambda t}$$\n    Substituting the values:\n    $$0.90 = e^{-(1/50,000) \\cdot t}$$\n\n4.  **Solve for $t$**:\n    Take the natural logarithm ($\\ln$) of both sides:\n    $$\\ln(0.90) = -\\frac{t}{50,000}$$\n    $$-0.1053605 = -\\frac{t}{50,000}$$\n    $$t = 0.1053605 \\times 50,000$$\n    $$t = 5,268.026... \\text{ hours}$$\n\n5.  **Evaluate Answer Choices**:\n    Comparing the calculated value (approximately 5268 hours) to the choices provided:\n    [a] 5000 hrs\n    [b] 5268 hrs\n    [c] 5450 hrs\n    [d] 533\n[Answer] [b]\n\n[SELF-CRITIQUE]\nThe problem asks for the time to 10% failure given an exponential distribution with an MTTF of 50,000 hours.\n\n1.  **Identify Parameters**:\n    *   MTTF = 50,000 hours.\n    *   For an exponential distribution, the failure rate $\\lambda = 1 / \\text{MTTF} = 1 / 50,000$.\n\n2.  **Define the Goal**:\n    *   \"Time to 10% failure\" refers to the time $t$ when the cumulative distribution function $F(t) = 0.10$.\n    *   This is equivalent to the time when reliability $R(t) = 1 - F(t) = 0.90$.\n\n3.  **Set up the Equation**:\n    *   The reliability function for the exponential distribution is $R(t) = e^{-\\lambda t}$.\n    *   $0.90 = e^{-(t / 50,000)}$.\n\n4.  **Solve for $t$**:\n    *   Take the natural logarithm of both sides: $\\ln(0.90) = -t / 50,000$.\n    *   $\\ln(0.90) \\approx -0.10536$.\n    *   $-0.10536 = -t / 50,000$.\n    *   $t = 0.10536 \\times 50,000$.\n    *   $t = 5,268.025$ hours.\n\n5.  **Review Pitfalls**:\n    *   **Instantaneous vs. Cumulative**: The question asks for a point in time based on cumulative failure (10%), which was correctly identified as $F(t)=0.10$.\n    *   **MTTF vs. MTBF**: In the context of the exponential distribution (constant failure rate), MTTF is the reciprocal of the failure rate.\n    *   **Calculation**: $\\ln(0.9) \\times 50,000$ is exactly $5,268.025$.\n\nThe calculation is correct and matches choice [b].\n\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.005095000000000001,
+      "total_tokens": 5130,
+      "prompt_tokens": 2595,
+      "completion_tokens": 1006,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 9,
+    "question": "[Question]: 1. Use the exponential distribution with MTTF=50,000 hrs.. What is the time to 10% failure?\n\n[Choices]: [a] 5000 hrs  | [b] 5268 hrs   | [c] 5450 hrs | [d]  5333 hrs"
+  },
+  {
+    "raw_response": "Testing for reliability using a zero-failure test plan (also known as a success-run test) is based on the relationship between reliability, confidence level, and sample size.\n\n**1. Define the Reliability Requirement:**\nWe are evaluating the characteristic life ($\\eta$, the scale parameter) of a Weibull distribution with a known shape parameter ($\\beta = 2.5$).\nThe reliability function for a Weibull distribution is:\n$R(t) = e^{-(t/\\eta)^\\beta}$\n\nAt $t = \\eta$:\n$R(\\eta) = e^{-(\\eta/\\eta)^\\beta} = e^{-1} \\approx 0.3678$ (the 36.8% reliability point).\n\nThe goal is to be 90% confident that the true $\\eta$ is at least 1000 hours.\n\n**2. Relate Confidence to the Binomial Success Probability:**\nThe confidence level ($CL$) for a zero-failure test is related to the reliability ($R$) and the number of samples ($n$) by:\n$1 - CL = R^n$\nwhere $R$ is the reliability at the test time $t$.\n\n**3. Substitute the Weibull Reliability Function:**\n$1 - CL = (e^{-(t/\\eta)^\\beta})^n$\n$1 - CL = e^{-n(t/\\eta)^\\beta}$\n\n**4. Solve for the Test Time ($t$):**\nTake the natural logarithm of both sides:\n$\\ln(1 - CL) = -n(t/\\eta)^\\beta$\n$\\ln(0.10) = -5(t/1000)^{2.5}$\n$-2.302585 = -5(t/1000)^{2.5}$\n\nDivide by $-5$:\n$0.460517 = (t/1000)^{2.5}$\n\nRaise both sides to the power of $(1/2.5)$ or $0.4$:\n$(0.460517)^{0.4} = t/1000$\n$0.73315 \\approx t/1000$\n\n$t = 1000 \\times 0.73315$\n$t \\approx 733.15$ hours\nBased on the Weibull zero-failure test formula $1 - CL = e\n\n[SELF-CRITIQUE]\nThe problem asks for the test duration ($t$) for a zero-failure test of 5 samples ($n=5$) to demonstrate with 90% confidence ($CL=0.90$) that the characteristic life ($\\eta$) of a Weibull distribution ($\\beta=2.5$) is at least 1000 hours.\n\n1.  **Identify the Reliability at the target $\\eta$:**\n    In a Weibull distribution, the reliability at the characteristic life ($t = \\eta$) is always $R = e^{-1} \\approx 0.3678$. However, we need to find the specific test time $t$ that satisfies the confidence requirement for the population parameter $\\eta$.\n\n2.  **Apply the Zero-Failure Test Formula:**\n    For a zero-failure test, the relationship between confidence ($CL$), sample size ($n$), and reliability ($R$) at test time $t$ is:\n    $1 - CL = R^n$\n    Given $CL = 0.90$ and $n = 5$:\n    $0.10 = R^5$\n    $R = (0.10)^{1/5} = 0.630957$\n\n3.  **Relate Reliability to Weibull Parameters:**\n    The Weibull reliability function is $R(t) = e^{-(t/\\eta)^\\beta}$.\n    Substitute the required $R$ and the given $\\beta = 2.5$ and $\\eta = 1000$:\n    $0.630957 = e^{-(t/1000)^{2.5}}$\n\n4.  **Solve for $t$:**\n    Take the natural log of both sides:\n    $\\ln(0.630957) = -(t/1000)^{2.5}$\n    $-0.460517 = -(t/1000)^{2.5}$\n    $0.460517 = (t/1000)^{2.5}$\n    $(0.460517)^{1/2.5} = t/1000$\n    $(0.460517)^{0.4} = t/1000$\n    $0.7331",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.006535,
+      "total_tokens": 7910,
+      "prompt_tokens": 4440,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 10,
+    "question": "[Question]: 3. You are asked to construct a Zero failure test for a redesigned ball bearing(   $ \\beta $ =2.5) that the design folks believe should have an    $ \\eta $ =1000hrs.  Program Mgmnt wants you to use only 5 tests. How long  should you test these five samples to be 90% confident that the ball  bearing design is better than 1000hrs? \n\n[Choices]: [a] 733hrs,   | [b] 851hrs | [c] 975hrs | [d] 1500.hrs"
+  },
+  {
+    "raw_response": "To determine if the new bearing design has doubled the characteristic life ($\\eta_{target} = 2 \\times 600 = 1200$ hours) at 95% confidence, we must perform a hypothesis test or estimate the lower confidence limit for the scale parameter $\\eta$.\n\n**1. Data Analysis:**\n*   Sample size ($n$): 10\n*   Shape parameter ($\\beta$): 2 (assumed constant, typical for such comparisons)\n*   Failures ($r$): 5 (at 700, 900, 1000, 1100, 1300 hrs)\n*   Censored ($n-r$): 5 (all at 1800 hrs)\n\n**2. Calculate the MLE for $\\eta$:**\nFor Weibull data with a known $\\beta$, the Maximum Likelihood Estimate (MLE) for $\\eta$ is:\n$$\\hat{\\eta} = \\left( \\frac{\\sum t_i^\\beta}{r} \\right)^{1/\\beta}$$\n$$\\sum t_i^\\beta = (700^2 + 900^2 + 1000^2 + 1100^2 + 1300^2) + 5(1800^2)$$\n$$\\sum t_i^\\beta = (490,000 + 810,000 + 1,000,000 + 1,210,000 + 1,690,000) + 5(3,240,000)$$\n$$\\sum t_i^\\beta = 5,200,000 + 16,200,000 = 21,400,000$$\n$$\\hat{\\eta} = \\left( \\frac{21,400,000}{5} \\right)^{1/2} = \\sqrt{4,280,000} \\approx 2068.8 \\text{ hours}$$\n\n**3. Calculate the Confidence Interval:**\nFor Weibull distributions with known $\\beta$, the distribution of $2r(\\hat{\\eta}/\\eta)^\\beta$ follows a Chi-\nTo determine if the new bearing design has doubled the characteristic life ($\\eta_{target\n\n[SELF-CRITIQUE]\nTo determine if the new bearing design has doubled the characteristic life ($\\eta_{target} = 2 \\times 600 = 1200$ hours) at 95% confidence, we evaluate the lower confidence limit of the scale parameter $\\eta$.\n\n**1. Identify the Parameters:**\n*   Shape parameter ($\\beta$): 2\n*   Target characteristic life ($\\eta_{target}$): 1200 hours\n*   Confidence Level ($CL$): 95% ($\\alpha = 0.05$)\n*   Sample size ($n$): 10\n*   Failures ($r$): 5 (at 700, 900, 1000, 1100, 1300 hrs)\n*   Censored units ($n-r$): 5 (at 1800 hrs)\n\n**2. Calculate the MLE for $\\eta$ ($\\hat{\\eta}$):**\nFor a Weibull distribution with known $\\beta$, the MLE for $\\eta$ is:\n$$\\hat{\\eta} = \\left( \\frac{\\sum t_i^\\beta}{r} \\right)^{1/\\beta}$$\n$$\\sum t_i^\\beta = (700^2 + 900^2 + 1000^2 + 1100^2 + 1300^2) + 5(1800^2)$$\n$$\\sum t_i^\\beta = (490,000 + 810,000 + 1,000,000 + 1,210,000 + 1,690,000) + 16,200,000$$\n$$\\sum t_i^\\beta = 5,200,000 + 16,200,000 = 21,400,000$$\n$$\\hat{\\eta} = \\sqrt{\\frac{21,400,000}{5}} = \\sqrt{4,280,000} \\approx 2068.8 \\text{ hours}$$\n\n**3. Determine the Lower Confidence Limit ($\\eta_L$):**\nFor Weibull data with",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.007416,
+      "total_tokens": 9672,
+      "prompt_tokens": 5614,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 11,
+    "question": "[Question]: 6. A bearing manufacturer has a bearing with Weibull  $ \\beta $ =2      and  $ \\eta $ =600 hrs. The design team made a small change  in     the design and a change of material. They now hope  they     have doubled the characteristic life at  95% confidence. They tested 10 of the new design bearings for 1800 hrs  and Had 5 failures : 700, 900, 1000, 1100, and 1300 hrs. Did the new  bearing design have 2X the characteristic life With 95% confidence? \n\n[Choices]: [a] YES  | [b] NO"
+  },
+  {
+    "raw_response": "To determine the reliability of the bearing population using the sudden-death testing technique, we follow these steps:\n\n**1. Understand Sudden-Death Testing:**\nIn sudden-death testing, $n$ groups of $m$ items are tested. For each group, the test is stopped as soon as the first failure occurs. In this case, we have $n=6$ groups of $m=12$ bearings. The first failure in each group represents the $B_{15.6}$ life (estimated median rank of the first failure in a group of 12).\n\n**2. Analyze the Group Data:**\nThe failure times for the first-to-fail in each group are: 75, 110, 165, 210, 270, and 310 hours.\nWe calculate the Median Ranks for these $n=6$ failures using Benard\u2019s Approximation: $MR = \\frac{i - 0.3}{n + 0.4}$.\n- For $i=1 (75): 0.7/6.4 = 0.1094$\n- For $i=2 (110): 1.7/6.4 = 0.2656$\n- For $i=3 (165): 2.7/6.4 = 0.4219$\n- For $i=4 (210): 3.7/6.4 = 0.5781$\n- For $i=5 (270): 4.7/6.4 = 0.7344$\n- For $i=6 (310): 5.7/6.4 = 0.8906$\n\n**3. Determine Weibull Parameters for the \"First Failure\" Distribution:**\nUsing the least squares method or Weibull probability plotting on these 6 points:\nA plot of $\\ln(\\ln(1/(1-MR)))$ vs $\\ln(t)$ yields:\nSlope ($\\beta$) $\\approx 1.5$\nCharacteristic Life of the first failures ($\\eta_{1}$) $\\approx 215$ hours.\n\n**4. Relate the Group Distribution to the Population Distribution:**\nIn Weibull statistics, the characteristic life of the population ($\\\nTo solve for the 0.90 reliability of the bearing population using sudden\n\n[SELF-CRITIQUE]\nTo solve for the 0.90 reliability ($B_{10}$ life) of the bearing population using the sudden-death testing technique, we follow these steps:\n\n1.  **Identify the Data:** We have $n=6$ groups, each with $m=12$ bearings. The first failure times in each group are: 75, 110, 165, 210, 270, and 310 hours.\n\n2.  **Estimate the Median Life of the First Failures:**\n    In sudden-death testing, the median of the first failures in groups of 12 represents the $B_{50}$ point of the \"first-to-fail\" distribution. Using the 6 data points, the median (the point where 50% of groups have had their first failure) can be estimated. Using median ranks for $n=6$, the 3rd and 4th values (165 and 210) bracket the 50% mark. A Weibull fit of these 6 points yields a shape parameter $\\beta \\approx 1.5$ and a characteristic life $\\eta_{1} \\approx 215$ hours.\n\n3.  **Relate the \"First Failure\" Distribution to the Population:**\n    The fundamental relationship in sudden-death testing for Weibull distributions is:\n    $\\eta_{pop} = \\eta_{1} \\cdot (m)^{1/\\beta}$\n    However, a simpler way to view this is that the median of the first failures ($t_{med, 1}$) corresponds to the $B_{p}$ life of the population, where $p = 1 - 0.5^{1/m}$.\n    For $m=12$: $p = 1 - 0.5^{1/12} \\approx 1 - 0.9439 = 0.0561$ (or the $B_{5.6}$ life).\n    Thus, the median of our 6 test points (approx. 185 hours) represents the $B_{5.6}$ life of the population.\n\n4.  **Calculate the $B_{10}$ Life:**\n    We need the $B_{10}$ life (0.90 reliability). Since $B_{5.6}",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.005827499999999999,
+      "total_tokens": 6495,
+      "prompt_tokens": 3496,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 16,
+    "question": "[Question]: 4. Seventy-two bearings are available for life testing. To save test time they are divided into six groups of twelve bearings and tested using thesudden-death technique. The Resultant Data is :   Group 1: Bearing #3 fails at 110 hrsGroup 2: Bearing #4 fails at75 hrsGroup 3: Bearing #11 fails at 165 hrsGroup 4: Bearing #5 fails at 310 hrsGroup 5: Bearing #7 fails at 210 hrsGroup 6: Bearing #12 fails at 270 hrs. Assuming that the bearing life follows a Weibull distribution, what is the 0.90 Reliability of the bearing population?\n\n[Choices]: [a] 69 hrs | [b] 79 hrs  | [c] 241 hrs  | [d] 120 hrs"
+  },
+  {
+    "raw_response": "The question involves Reliability Growth modeling, specifically the AMSAA-Duane model (Crow-AMSAA). We are given a set of failure times for a prototype where design refinements occur after each failure to prevent recurrence. This scenario fits the Duane/AMSAA model for developmental testing.\n\n**1. Model Identification:**\nHistorically, for a repairable system or a developmental prototype undergoing improvements, the relationship between the cumulative number of failures $N(t)$ and the cumulative test time $t$ is modeled by the power law equation:\n$$N(t) = \\lambda t^\\beta$$\nIn this specific context of the Duane or AMSAA model, $\\beta$ represents the growth coefficient. Note: In some growth models, $1-\\beta$ is cited as the growth rate, but usually, in the AMSAA model, $\\beta$ is the slope of the cumulative failures vs. cumulative time on a log-log scale.\n\n**2. Identifying the Data Points:**\nThe failure times (cumulative test time at each failure) are:\n$t_1 = 1.1, t_2 = 3.9, t_3 = 6.2, t_4 = 17.8, t_5 = 79.7, t_6 = 113.1, t_7 = 206.4, t_8 = 239.1$.\nHere, $N(t)$ is the count of the failures (1, 2, ..., 8).\n\n**3. Calculation Method:**\nTo find $\\beta$, we linearize the equation $N(t) = \\lambda t^\\beta$ using logarithms:\n$$\\ln(N(t)) = \\ln(\\lambda) + \\beta \\ln(t)$$\nThis is a simple linear regression where $y = \\ln(N)$ and $x = \\ln(t)$. The slope of the line through these points determines $\\beta$. Alternatively, the Maximum Likelihood Estimate (MLE) for $\\beta$ in a time-terminated test for the AMSAA model is:\n$$\\hat{\\beta} = \\frac{n}{\\sum_{i=1}^{n} \\ln(T/t_i)}$$\nHowever, for Duane growth analysis typically used in early prototype testing with small samples, determining the slope ($\\beta$) of the log-log plot of cumulative failures vs. cumulative time is standard.\n\n\nTo determine the reliability growth coefficient $\\beta$ for the Crow-AMSAA (\n\n[SELF-CRITIQUE]\nTo determine the reliability growth coefficient $\\beta$ for the Crow-AMSAA (Duane) model, we analyze the relationship between the cumulative number of failures $N(t)$ and the cumulative test time $t$. The model is defined by $N(t) = \\lambda t^\\beta$.\n\nThe given failure times (cumulative minutes) are:\n$t_1 = 1.1, t_2 = 3.9, t_3 = 6.2, t_4 = 17.8, t_5 = 79.7, t_6 = 113.1, t_7 = 206.4, t_8 = 239.1$.\nThe number of failures $n = 8$.\n\nIn the context of reliability growth (AMSAA model), the Maximum Likelihood Estimate (MLE) for the growth parameter $\\beta$ is calculated as:\n$$\\hat{\\beta} = \\frac{n}{\\sum_{i=1}^{n} \\ln(T/t_i)}$$\nwhere $T$ is the total test time (the time of the last failure for failure-terminated tests, $T = t_n = 239.1$).\n\nStep 1: Calculate $\\ln(T/t_i)$ for each failure:\n1. $\\ln(239.1 / 1.1) = \\ln(217.36) \\approx 5.3815$\n2. $\\ln(239.1 / 3.9) = \\ln(61.31) \\approx 4.1159$\n3. $\\ln(239.1 / 6.2) = \\ln(38.56) \\approx 3.6523$\n4. $\\ln(239.1 / 17.8) = \\ln(13.43) \\approx 2.5977$\n5. $\\ln(239.1 / 79.7) = \\ln(3.00) \\approx 1.0986$\n6. $\\ln(239.1 / 113.1) = \\ln(2.11) \\approx 0.7486$\n",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.0058235000000000006,
+      "total_tokens": 6487,
+      "prompt_tokens": 3491,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 17,
+    "question": "[Question]: 6.  A first prototype for a novel laser-powered sausage slicer is built.  Failures occur at the following numbers of minutes: 1.1, 3.9, 6.2, 17.8,  79.7, 113.1, 206.4 and 239.1. After each failure, the design is refined  to avert further failures from the same mechanism. Determine the  reliability grown coefficient  $ \\beta $  for the slicer. \n\n[Choices]: [a] 0.34  | [b] .93 | [c] 1.31 | [d] 1.15"
+  },
+  {
+    "raw_response": "The AMSAA-Duane model is a Power Law Process used for reliability growth analysis of repairable systems. The basic model for the expected number of failures $N(t)$ at time $t$ is:\n$N(t) = \\lambda t^\\beta$\n\nTo determine the functions for the cumulative failure rate and the cumulative MTBF, we apply the following reliability engineering definitions:\n\n1.  **Cumulative Failure Rate ($\\lambda_c$):**\n    By definition, the cumulative failure rate is the total number of failures divided by the total time.\n    $\\lambda_c(t) = \\frac{N(t)}{t} = \\frac{\\lambda t^\\beta}{t} = \\lambda t^{\\beta-1}$\n    This matches expression **I**.\n\n2.  **Cumulative MTBF ($MTBF_c$):**\n    The cumulative MTBF is the reciprocal of the cumulative failure rate. It represents the average time between failures from the start of the test up to time $t$.\n    $MTBF_c(t) = \\frac{1}{\\lambda_c(t)} = \\frac{1}{\\lambda t^{\\beta-1}} = \\left(\\frac{1}{\\lambda}\\right) t^{1-\\beta}$\n    This matches expression **III**.\n\n**Note on Instantaneous values (for context):**\n*   The instantaneous failure rate (intensity function) is the derivative of $N(t)$: $z(t) = \\frac{dN(t)}{dt} = \\lambda \\beta t^{\\beta-1}$ (Expression II).\n*   The instantaneous MTBF is the reciprocal of the instantaneous failure rate: $MTBF_i(t) = \\left(\\frac{1}{\\lambda \\beta}\\right) t^{1-\\beta}$ (Expression IV).\n\nSince the question specifically asks for the functions used for plotting **Cumulative Failure Rate** and **Cumulative MTBF**, the correct expressions are I and III.\n\n[Answer] [b]\n\n[SELF-CRITIQUE]\nThe AMSAA-Duane model (Power Law Process) is used to track reliability growth. To identify the correct functions for plotting, we must distinguish between cumulative and instantaneous metrics.\n\n1.  **Cumulative Failure Rate ($\\lambda_c$):**\n    The cumulative failure rate is defined as the total number of failures $N(t)$ divided by the total time $t$.\n    Given $N(t) = \\lambda t^\\beta$:\n    $\\lambda_c(t) = \\frac{N(t)}{t} = \\frac{\\lambda t^\\beta}{t} = \\lambda t^{\\beta-1}$\n    This corresponds to expression **I**.\n\n2.  **Cumulative MTBF ($MTBF_c$):**\n    The cumulative MTBF is the reciprocal of the cumulative failure rate.\n    $MTBF_c(t) = \\frac{1}{\\lambda_c(t)} = \\frac{1}{\\lambda t^{\\beta-1}} = \\left(\\frac{1}{\\lambda}\\right) t^{1-\\beta}$\n    This corresponds to expression **III**.\n\n**Comparison with other expressions:**\n*   Expression **II** ($\\lambda \\beta t^{\\beta-1}$) is the **instantaneous** failure rate (intensity function), derived as $dN(t)/dt$.\n*   Expression **IV** $(\\frac{1}{\\lambda \\beta}) t^{1-\\beta}$ is the **instantaneous** MTBF.\n\nThe question specifically asks for the functions used for plotting **cumulative** failure rate and **cumulative** MTBF. Therefore, expressions I and III are the correct choices.\n\n[Answer] [b]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.004311000000000001,
+      "total_tokens": 4757,
+      "prompt_tokens": 3984,
+      "completion_tokens": 773,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 19,
+    "question": "[Question]: 8.  While the AMSAA-Duane model is N(t)= $ \\\\lambda $ t $ \\\\beta $  ; the model can be rearranged  in a number of ways to satisfy a customer\\u951f\\u65a4\\u62f7s demands for reporting. Which  of the following functions could be used for plotting cumulative  Failure rate and Cumulative MTBF:\nI. $ F(t) = \\lambda t^{\\beta-1} $ \nII. $ F(t) = \\lambda \\beta t^{\\beta-1} $ \nIII. $ F(t) = (\\frac{1}{\\lambda}) t^{1-\\beta} $ \nIV. $ F(t) = (\\frac{1}{\\lambda \\beta}) t^{1-\\beta} $\n\n[Choices]: [a] I. &amp; II  | [b] I. &amp; III.  | [c] II. &amp; IV. | [d] II. &amp; III."
+  },
+  {
+    "raw_response": "The core objective of reliability engineering and maintenance strategy is to distinguish between failure causes and the effectiveness of maintenance actions. \n\n1. **Analysis of Maintenance Capabilities**:\n    *   **Preventive Maintenance (PM)**: PM consists of scheduled actions (inspections, replacements, adjustments) intended to reduce the probability of failure.\n    *   **I. Handling Damage**: Regular inspections (a form of PM) can identify physical damage caused by handling before it leads to a catastrophic functional failure. By detecting and correcting this damage early, the ultimate failure is prevented.\n    *   **II. Poor Quality Control**: While PM cannot fix the manufacturing process, it can identify components with quality defects (e.g., loose connections, metallurgical flaws detectable via NDT) during scheduled inspections, preventing them from failing in service.\n    *   **III. Improper Installation**: PM tasks specifically include \"scheduled inspections\" and \"adjustments.\" An inspection can identify a component that was installed incorrectly (e.g., misaligned shafts, improper torque) and correct it before the system fails.\n    *   **IV. Inadequate Design**: While PM cannot redesign the product, it can mitigate the effects of an inadequate design. For example, if a design has a fatigue limit lower than expected, increased PM frequency (inspections) can detect the crack propagation early enough to prevent the functional failure.\n\n2. **Evaluation of Choices**:\n    *   The provided \"Background Knowledge from CRE Manual\" explicitly states: \"PM can... detect latent defects, reduce the probability of failure caused by installation errors, mitigate consequences of quality variation.\"\n    *   Since PM can detect, mitigate, or reduce the probability of failure stemming from all four categories (Handling, Quality, Installation, and Design), all four are considered preventable or manageable through a robust PM program in the context of professional reliability examinations.\n\n3. **Conclusion**:\n    All listed factors represent failure causes that a comprehensive Preventive Maintenance program is designed to catch or mitigate before the system experiences a functional failure.\n\n[Answer] [d]\n\n[SELF-CRITIQUE]\nUpon re-evaluating the question against the specific definitions used in the ASQ CRE Body of Knowledge and the provided background material:\n\n1.  **Preventive Maintenance (PM) Scope**: PM is defined as actions performed to retain an item in a specified condition by providing systematic inspection, detection, and prevention of incipient failure.\n2.  **Evaluating the Items**:\n    *   **I. Handling Damage**: Can be detected during PM inspections (e.g., visual checks) and corrected before functional failure.\n    *   **II. Poor Quality Control**: PM can mitigate the effects of poor quality (e.g., early wear-out due to poor materials) through scheduled replacements or inspections.\n    *   **III. Improper Installation**: PM tasks often include checking for correct installation (e.g., torque checks, alignment) to prevent failure.\n    *   **IV. Inadequate Design**: While PM doesn't fix the design, it can prevent the *failure* resulting from the design flaw by replacing components before they reach a prematurely reached fatigue limit or by monitoring the weak point.\n3.  **CRE Pitfalls Check**: In reliability theory, \"prevented\" in the context of PM refers to preventing the *functional failure* of the system, not necessarily the root cause itself. The background text provided explicitly states: \"PM can: detect latent defects, reduce the probability of failure caused by installation errors, mitigate consequences of quality variation.\" This confirms that items II and III are included. Item I (Handling Damage) is a classic example of a defect detectable by inspection. Item IV (Inadequate Design) is often managed in the field via shortened PM intervals to prevent the failure from occurring.\n\nSince all four items describe conditions where PM can intervene to prevent a functional failure, the most comprehensive answer is \"All of the above.\"\n\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0037595,
+      "total_tokens": 3479,
+      "prompt_tokens": 2671,
+      "completion_tokens": 808,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 24,
+    "question": "[Question]: 4. Which of the following can be prevented with Preventive maintenance:I. Handling Damage, II. Poor Quality Control, III. Improper installation, IV. Inadequate design\n\n[Choices]: [a] I &amp; III,  | [b] I, II &amp; III  | [c] None of the above | [d] All of the above"
+  },
+  {
+    "raw_response": "1. **Identify the goal:** The requirement is a failure rate ($\\lambda_{target}$) of 1/1000 hours, which is $0.001$ failures/hour.\n2. **Analyze the current data:**\n   - The product has experienced $r = 4$ failures.\n   - The failures occurred at 30, 600, 1400, and 2500 hours.\n   - Since the goal is expressed as a simple failure rate (implying a constant failure rate model/exponential distribution), we use the relationship between total test time ($T$) and the number of failures ($r$).\n3. **Determine required total test time ($T_{total}$):**\n   To demonstrate or achieve a failure rate ($\\lambda$) of 1/1000, the relationship is:\n   $$\\lambda = \\frac{r}{T}$$\n   Rearranging to find the total time required for the observed 4 failures:\n   $$T_{total} = \\frac{r}{\\lambda_{target}} = \\frac{4}{0.001} = 4,000 \\text{ cumulative hours.}$$\n4. **Calculate current testing time ($T_{current}$):**\n   The testing has progressed to the last reported failure at 2500 hours. If we assume a single unit or equivalent cumulative time represented by the chronological failure of the product development cycle:\n   $$T_{current} = 2500 \\text{ hours.}$$\n5. **Calculate additional testing required:**\n   $$\\Delta T = T_{total} - T_{current}$$\n   $$\\Delta T = 4,000 - 2,500 = 1,500 \\text{ hours.}$$\n   *Self-Correction/Internal Logic Check:* In reliability growth or demonstration contexts, if the question asks for \"testing (and fixing),\" it often implies total cumulative time. However, looking at the provided choices: [a] 2000, [b] 2500, [c] 4500, [d] 5000. 1500 is not an option.\n   Let's re-evaluate the calculation. If the goal is a failure rate based on the cumulative time of 4000 hours and we are currently at\nBased on the requirement of a failure rate ($\\lambda$) of 1/1\n\n[SELF-CRITIQUE]\n1. **Identify the requirement:** The target failure rate ($\\lambda_{target}$) is 1/1000 hours, which is $0.001$ failures per hour.\n2. **Analyze the current data:** We have observed $r = 4$ failures. The times of these failures are 30, 600, 1400, and 2500 hours.\n3. **Determine the required total test time ($T_{total}$):** To achieve or demonstrate a failure rate of $\\lambda = 0.001$ with 4 failures, we use the formula:\n   $$\\lambda = \\frac{r}{T}$$\n   $$0.001 = \\frac{4}{T_{total}}$$\n   $$T_{total} = \\frac{4}{0.001} = 4,000 \\text{ hours}$$\n4. **Evaluate the current test time ($T_{current}$):** The testing has reached 2500 hours (the time of the last failure).\n5. **Calculate the additional time needed:**\n   $$\\text{Additional Time} = T_{total} - T_{current}$$\n   $$\\text{Additional Time} = 4,000 - 2,500 = 1,500 \\text{ hours}$$\n6. **Re-evaluating the choices and the question context:** The question asks \"How much more testing (and fixing) is required?\" and the choices are [a] 2000, [b] 2500, [c] 4500, [d] 5000. \n   If we interpret the question as needing to demonstrate the failure rate with a specific confidence level (e.g., 90% or 95%), the required time would increase. For a 90% confidence level (one-sided) with 4 failures, the Chi-square value $\\chi^2_{(2r+2, \\alpha)}$ or $\\chi^2_{(2r, \\alpha)}$ is used. \n   However, looking at the choices, if we assume the question implies that the *total* cumulative time needed to justify the 4 failures at that rate is 4000, and perhaps the \"fixing\" implies we need to reach a state where the *next",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.0057269999999999995,
+      "total_tokens": 6294,
+      "prompt_tokens": 3361,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 25,
+    "question": "[Question]: 5.  You are developing a new product. To effectively market this product  the failure rate of your product must be 1/1000 hours or less. In  testing to date, you have experienced failures at 30 hours, 600 hours,  1400 hours and 2500 hours. How much more testing (and fixing) is  required? \n\n[Choices]: [a] 2000hrs,  | [b] 2500hrs | [c] 4500hrs | [d] 5000hr"
+  },
+  {
+    "raw_response": "The question asks for the correct chronological order of the Product Development Maturity Path, which mirrors the standard process of maturing a capability or process within a business or engineering framework.\n\n1.  **Launch**: This is the initial stage where the product or process is introduced.\n2.  **Stabilize**: After launching, the first priority is to ensure the process or product performance is stable and predictable (removing \"chaos\" or high variability).\n3.  **Standardize**: Once stabilized, the methods and outputs are documented and standardized to ensure consistency across different units or operators.\n4.  **Streamline**: After standards are established, the focus shifts to efficiency\u2014removing waste and optimizing the flow (making it \"leaner\").\n5.  **Continuously Improve**: The final, ongoing phase involves iterative enhancements to performance, quality, and reliability based on feedback and data.\n\nEvaluating the choices:\n- [a] Incorrectly starts with continuous improvement.\n- [b] Incorrectly places Streamline before Stabilize.\n- [c] Incorrectly places Streamline before Standardize. (Standardization is typically required before a process can be effectively streamlined for efficiency).\n- [d] Follows the logical maturity progression: Launch, then ensure it is Stable, then set Standards, then Streamline for efficiency, and finally Improve continuously.\n\nFollowing the logic of reliability and process maturity models (such as CMMI or standard quality management paths), the sequence flows from creating stability to defining standards, then optimizing those standards.\n\n[Answer] [d]\n\n[SELF-CRITIQUE]\nThe question asks for the correct chronological order of the Product Development Maturity Path. This path represents the evolution of a process or product from its inception to a state of high efficiency and ongoing refinement.\n\n1.  **Launch**: The initial introduction of the product or process.\n2.  **Stabilize**: The phase where variability is reduced and the process becomes predictable. You cannot effectively standardize or improve a process that is out of control or unstable.\n3.  **Standardize**: Once the process is stable, best practices are documented and formalized to ensure consistency.\n4.  **Streamline**: With a standard in place, the process is then optimized to remove waste, reduce cycle times, and improve efficiency (Lean principles).\n5.  **Continuously Improve**: The final stage is the ongoing cycle of incremental improvements (Kaizen) based on performance data.\n\nReviewing the choices:\n- Choice [a] starts with improvement, which is the end of the cycle.\n- Choice [b] suggests streamlining before stabilizing, which leads to \"streamlining chaos.\"\n- Choice [c] suggests streamlining before standardizing. In quality management (and the CRE Body of Knowledge regarding process maturity), you must \"Standardize\" to create a baseline before you can effectively \"Streamline\" or \"Improve.\"\n- Choice [d] follows the logical progression: Launch -> Stabilize -> Standardize -> Streamline -> Continuously Improve.\n\nThis sequence aligns with the maturity models used in reliability and quality engineering to move from a reactive state to a proactive, optimized state.\n\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.0032240000000000003,
+      "total_tokens": 3223,
+      "prompt_tokens": 2578,
+      "completion_tokens": 645,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 26,
+    "question": "[Question]: 6. The Product Development Maturity Path consists of 5 Phases: Continuously Improve, Launch, Streamline, Stabilize, and Standardize Place them in order:\n\n[Choices]: [a] Continuously Improve, Launch, Streamline, Stabilize, and Standardize | [b] Launch, Streamline, Stabilize, Standardize, and Continuously Improve | [c] Launch, Stabilize, Streamline, Standardize, and Continuously Improve  | [d] Launch, Stabilize, Standardize, Streamline, and Continuously Improve"
+  },
+  {
+    "raw_response": "To find the probability that 7 or more parts out of 25 are defective, given a process where 10% of parts are defective (since 90% are defect-free), we use the Binomial Distribution.\n\n**1. Identify parameters:**\n*   Sample size ($n$) = 25\n*   Probability of a part being defective ($p$) = 1 - 0.90 = 0.10\n*   Number of defective parts found ($X$) = 7\n*   Goal: Find $P(X \\geq 7)$\n\n**2. Formulate the calculation:**\nThe probability of 7 or more defects is:\n$P(X \\geq 7) = 1 - P(X \\leq 6)$\n$P(X \\leq 6) = \\sum_{k=0}^{6} \\binom{25}{k} (0.10)^k (0.90)^{25-k}$\n\n**3. Calculate individual probabilities using $P(X=k) = \\binom{25}{k} (0.1)^k (0.9)^{25-k}$:**\n*   $P(0) = (0.9)^{25} \\approx 0.07179$\n*   $P(1) = 25 \\times (0.1) \\times (0.9)^{24} \\approx 0.19941$\n*   $P(2) = 300 \\times (0.1)^2 \\times (0.9)^{23} \\approx 0.26589$\n*   $P(3) = 2300 \\times (0.1)^3 \\times (0.9)^{22} \\approx 0.22650$\n*   $P(4) = 12650 \\times (0.1)^4 \\times (0.9)^{21} \\approx 0.13842$\n*   $P(5) = 53130 \\times (0.1)^5 \\times (0.9)^{20} \\approx 0.06459$\n*   $P(6) = 17710\nTo find the probability that 7 or more parts are defective out of a sample\n\n[SELF-CRITIQUE]\nTo find the probability that 7 or more parts out of 25 are defective, given the supplier's claim that 90% are defect-free (meaning 10% are defective), we use the Binomial Distribution.\n\n**1. Identify the parameters:**\n*   $n = 25$ (sample size)\n*   $p = 0.10$ (probability of a part being defective)\n*   $q = 1 - p = 0.90$ (probability of a part being defect-free)\n*   $X$ = number of defective parts in the sample.\n*   We need to find $P(X \\geq 7)$.\n\n**2. Set up the calculation:**\n$P(X \\geq 7) = 1 - P(X \\leq 6)$\n$P(X \\leq 6) = \\sum_{k=0}^{6} \\binom{25}{k} (0.10)^k (0.90)^{25-k}$\n\n**3. Calculate individual probabilities $P(X=k)$:**\n*   $P(0) = \\binom{25}{0} (0.1)^0 (0.9)^{25} \\approx 0.0717898$\n*   $P(1) = \\binom{25}{1} (0.1)^1 (0.9)^{24} \\approx 0.1994161$\n*   $P(2) = \\binom{25}{2} (0.1)^2 (0.9)^{23} \\approx 0.2658881$\n*   $P(3) = \\binom{25}{3} (0.1)^3 (0.9)^{22} \\approx 0.2265025$\n*   $P(4) = \\binom{25}{4} (0.1)^4 (0.9)^{21} \\approx 0.1384182$\n*   $P(5) = \\binom{25}{5} (0.1)^5 (0.9)^{20} \\approx 0.0645952$\n*   ",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.006204,
+      "total_tokens": 7248,
+      "prompt_tokens": 3998,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 29,
+    "question": "[Question]: 5.  A supplier of parts claims it has a manufacturing process in which 90%  of parts are defect free. To check this theory, a customer randomly  samples 25 parts and finds seven that are defective. If the supplier\ufffd\ufffds claim is true, what is the probability that 7 or more of the 25 sampled parts are defective? (Assume Binomial)\n\n[Choices]: [a] 0.9977 | [b] 0.9905  | [c] 0.009476  | [d] 0.0022616"
+  },
+  {
+    "raw_response": "To determine the reliability of the 5th subsystem in a series configuration, we use the fundamental principle of series reliability. In a series system, the total system reliability ($R_{sys}$) is the product of the individual component reliabilities ($R_i$).\n\n1.  **Identify the Given Values:**\n    *   Target System Reliability ($R_{sys}$): $0.96$\n    *   Number of components ($n$): 5\n    *   Reliability of Component 1 ($R_1$): $0.992$\n    *   Reliability of Component 2 ($R_2$): $0.991$\n    *   Reliability of Component 3 ($R_3$): $0.994$\n    *   Reliability of Component 4 ($R_4$): $0.992$\n    *   Reliability of Component 5 ($R_5$): Unknown ($x$)\n\n2.  **Set up the Equation:**\n    The formula for a series system is:\n    $R_{sys} = R_1 \\times R_2 \\times R_3 \\times R_4 \\times R_5$\n\n3.  **Substitute the Known Values:**\n    $0.96 = 0.992 \\times 0.991 \\times 0.994 \\times 0.992 \\times R_5$\n\n4.  **Perform the Calculations:**\n    First, calculate the product of the first four components:\n    $0.992 \\times 0.991 \\times 0.994 \\times 0.992 \\approx 0.969244$\n\n    Now, solve for $R_5$:\n    $0.96 = 0.969244 \\times R_5$\n    $R_5 = \\frac{0.96}{0.969244}$\n    $R_5 \\approx 0.99046$\n\n5.  **Evaluate the Choices:**\n    Comparing the calculated value ($0.99046$) to the provided choices:\n    [a] 0.970\n    [b] 0.969\n    [c\nBased on the calculation for a series system where $R_{sys} = R\n\n[SELF-CRITIQUE]\nTo determine the reliability apportionment for the 5th subsystem, we apply the formula for series system reliability. In a series configuration, the system reliability is the product of the individual component reliabilities.\n\n1.  **Identify the formula**:\n    $R_{sys} = R_1 \\times R_2 \\times R_3 \\times R_4 \\times R_5$\n\n2.  **Insert the known values**:\n    $0.96 = 0.992 \\times 0.991 \\times 0.994 \\times 0.992 \\times R_5$\n\n3.  **Calculate the product of the first four components**:\n    $0.992 \\times 0.991 = 0.983072$\n    $0.983072 \\times 0.994 = 0.977173568$\n    $0.977173568 \\times 0.992 = 0.969356179$\n\n4.  **Solve for $R_5$**:\n    $R_5 = \\frac{0.96}{0.969356179}$\n    $R_5 \\approx 0.990348$\n\n5.  **Compare with the choices**:\n    [a] 0.970\n    [b] 0.969\n    [c] 0.990\n    [d] 0.992\n\nThe calculated value of approximately 0.9903 matches choice [c]. My previous selection of [b] was incorrect as it likely confused the product of the first four components with the final answer for the 5th component.\n\n[Answer] [c]",
+    "extracted_answer": "c",
+    "usage": {
+      "cost": 0.0050385,
+      "total_tokens": 5397,
+      "prompt_tokens": 2827,
+      "completion_tokens": 920,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 34,
+    "question": "[Question]: 1. A system made up of 5 series components has a design  reliability of .96. Subsequently, 4 of the components have reliabilities  apportioned to them of 0.992, 0.991, 0.994, and 0.992. What should the  reliability apportionment for the 5th subsystem be?\n\n[Choices]: [a] 0.970 | [b] 0.969   | [c] 0.990   | [d] 0.992"
+  },
+  {
+    "raw_response": "To find the expected number of failures over a specific time interval for a set of units currently in operation, we must calculate the conditional probability of failure for each unit and then sum these probabilities.\n\n**1. Identify the given parameters:**\n*   Distribution: Weibull\n*   Shape parameter ($\\beta$) = 3.02\n*   Scale parameter ($\\eta$) = 88 hours\n*   Current times ($t_i$): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99\n*   Additional time interval ($\\Delta t$) = 5 hours\n\n**2. Formulate the conditional probability of failure ($P_{fi}$):**\nThe probability that a unit fails in the interval $(t_i, t_i + \\Delta t)$, given it has survived until $t_i$, is:\n$$P(t_i < T \\le t_i + \\Delta t \\mid T > t_i) = \\frac{R(t_i) - R(t_i + \\Delta t)}{R(t_i)}$$\nUsing the Weibull reliability function $R(t) = \\exp[-(t/\\eta)^\\beta]$:\n$$P_{fi} = 1 - \\exp\\left[ \\left(\\frac{t_i}{\\eta}\\right)^\\beta - \\left(\\frac{t_i + 5}{\\eta}\\right)^\\beta \\right]$$\n\n**3. Calculate $P_{fi}$ for each unit:**\n*   $t=25: 1 - \\exp[(25/88)^{3.02} - (30/88)^{3.02}] \\approx 0.0125$\n*   $t=33: 1 - \\exp[(33/88)^{3.02} - (38/88)^{3.02}] \\approx 0.0223$\n*   $t=40: 1 - \\exp[(40/88)^{3.02} - (45/88)^{3.02}] \\approx 0.0336$\n*   $t=45: 1 - \\exp[(45/88\nTo find the expected number of failures over the next 5 hours, we calculate\n\n[SELF-CRITIQUE]\nTo find the expected number of units predicted to fail over the next 5 hours, we calculate the conditional probability of failure for each of the 10 units and sum them.\n\nThe conditional probability that a unit fails in the interval $(t, t + \\Delta t)$, given it has survived to time $t$, is:\n$$P(t < T \\le t + \\Delta t \\mid T > t) = \\frac{R(t) - R(t + \\Delta t)}{R(t)} = 1 - \\frac{R(t + \\Delta t)}{R(t)}$$\nFor the Weibull distribution, $R(t) = \\exp[-(t/\\eta)^\\beta]$. Thus:\n$$P_{fail} = 1 - \\exp\\left[ \\left(\\frac{t}{\\eta}\\right)^\\beta - \\left(\\frac{t + \\Delta t}{\\eta}\\right)^\\beta \\right]$$\n\nGiven $\\beta = 3.02$, $\\eta = 88$, and $\\Delta t = 5$, we calculate $P_{fail}$ for each $t_i$:\n1.  $t=25: 1 - \\exp[(25/88)^{3.02} - (30/88)^{3.02}] \\approx 0.0125$\n2.  $t=33: 1 - \\exp[(33/88)^{3.02} - (38/88)^{3.02}] \\approx 0.0223$\n3.  $t=40: 1 - \\exp[(40/88)^{3.02} - (45/88)^{3.02}] \\approx 0.0336$\n4.  $t=45: 1 - \\exp[(45/88)^{3.02} - (50/88)^{3.02}] \\approx 0.0435$\n5.  $t=50: 1 - \\exp[(50/88)^{3.02} - (55/88)^{3.02}] \\approx 0.0551$\n6.  $t=60: 1 - \\exp[(6",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.0076755,
+      "total_tokens": 10191,
+      "prompt_tokens": 5960,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 35,
+    "question": "[Question]: 3.  10 units have entered the field in the last two months with current  times (hours): 25, 33, 40, 45, 50, 60, 64, 75, 80, 99. Failure distribution   $ \\beta $ =3.02,  $ \\eta $ =88 (hours) What is the expected number of units predicted to fail over the next 5 hours?\n\n[Choices]: [a] 5.44 | [b] 6.44  | [c] 7.44   | [d] 8.44"
+  },
+  {
+    "raw_response": "The problem involves determining the probability of a system surviving for a specific duration given a constant failure rate and a limited number of spares.\n\n**1. Identify the Distribution:**\nA constant failure rate ($\\lambda$) implies that the failure times follow an Exponential distribution. When considering the count of failures over time ($t$), the appropriate distribution is the **Poisson Distribution**.\n\n**2. Define the Parameters:**\n*   Mean Time To Failure (MTTF) = 2 months.\n*   The failure rate $\\lambda = 1 / \\text{MTTF} = 1 / 2 = 0.5$ failures per month.\n*   Mission duration ($t$) = 6 months.\n*   The expected number of failures ($\\mu$ or $np$) over the mission is:\n    $\\mu = \\lambda \\times t = 0.5 \\times 6 = 3.0$ failures.\n\n**3. Determine the Survival Criterion:**\nThe engine remains in use as long as the total number of failures does not exceed the number of available parts.\n*   Original part installed: 1\n*   Spare parts carried: 2\n*   Total parts available: 3\nThe system \"survives\" (does not lose use of the engine) if we have **3 or fewer failures** during the 6-month period (since the 3rd failure would consume the last spare, but not yet exhaust the supply such that the engine stops). However, standard reliability logic for \"spare parts\" problems defines exhaustion as needing more than the spares available to replace failures of the *operating* unit.\nSpecifically:\n*   $k = 0$: No failures (Original part lasts 6 months).\n*   $k = 1$: One failure (1 spare used).\n*   $k = 2$: Two failures (2 spares used).\nIf $k \\le 2$ failures occur, the engine remains operational using the original and the two spares. If 3 or more failures occur, we exhaust the spares.\n\n**4. Calculate Probabilities using Poisson:**\nThe Poisson formula is $P(k; \\mu) = \\frac{e^{-\\mu} \\cdot \\mu^k}{k!}$\n*   $P(0) = \\frac{e^{-3} \\cdot 3^0}{0!} = 0.049787$\n*   \nThe problem asks for the probability of surviving a six-month mission with a constant\n\n[SELF-CRITIQUE]\nTo determine the probability of surviving a six-month mission with two spare parts, we analyze the failure process using the Poisson distribution, which is appropriate for systems with a constant failure rate.\n\n**1. Identify Parameters:**\n*   **MTTF:** 2 months.\n*   **Failure Rate ($\\lambda$):** $1 / \\text{MTTF} = 0.5$ failures per month.\n*   **Mission Time ($t$):** 6 months.\n*   **Expected Number of Failures ($\\mu$):** $\\lambda \\times t = 0.5 \\times 6 = 3.0$.\n\n**2. Define Success Criteria:**\nThe system starts with one part in operation and has two spares. The engine remains operational if the total number of failures ($k$) during the 6-month period is less than or equal to the number of spares available to replace the failed units.\n*   If 0 failures occur: Success (Original part survives).\n*   If 1 failure occurs: Success (1st spare used).\n*   If 2 failures occur: Success (2nd spare used).\n*   If 3 or more failures occur: Failure (Spares exhausted).\n\n**3. Calculate Probabilities using the Poisson Distribution:**\nThe probability of exactly $k$ failures is given by $P(k) = \\frac{e^{-\\mu} \\cdot \\mu^k}{k!}$, where $\\mu = 3$.\n*   $P(0) = \\frac{e^{-3} \\cdot 3^0}{0!} = e^{-3} \\approx 0.049787$\n*   $P(1) = \\frac{e^{-3} \\cdot 3^1}{1!} = 3 \\cdot e^{-3} \\approx 0.149361$\n*   $P(2) = \\frac{e^{-3} \\cdot 3^2}{2!} = 4.5 \\cdot e^{-3} \\approx 0.224042$\n\n**4. Sum the Probabilities for Success:**\n$P(\\text{Survival}) = P(k \\le 2) = P(0) + P(1) + P(2)$\n$P(\\text{Survival}) = 0.049787",
+    "extracted_answer": "",
+    "usage": {
+      "cost": 0.00553,
+      "total_tokens": 5900,
+      "prompt_tokens": 3100,
+      "completion_tokens": 1016,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 3
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "length",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 39,
+    "question": "[Question]: 8.  A part for a marine engine with a constant failure rate has an MTTF of  two months. If two spare parts are carried, What is the probability of  surviving a six-month without losing the use of the engine as a result  of part exhaustion?\n\n[Choices]: [a] 0.1026  | [b] 0.0246  | [c] 0.6155 | [d] 0.127"
+  },
+  {
+    "raw_response": "To determine the factors that improve human reliability, we analyze each statement according to Human Factors Engineering (HFE) and reliability principles:\n\n1.  **They understand what is required and why**: This is a fundamental principle of human performance. Clarity of instruction and understanding the \"why\" reduces cognitive errors, increases compliance with procedures, and allows for better decision-making when unforeseen circumstances arise. This significantly increases reliability.\n2.  **The task is challenging and complex**: Increasing complexity and difficulty typically *decreases* human reliability. Human error rates (error probability) generally increase as the cognitive load, number of steps, and task complexity increase. This statement is incorrect.\n3.  **Pressure is applied which penalizes failure**: High pressure and fear of penalty are known to increase stress. According to the Yerkes-Dodson law and human reliability studies (like HEART or THERP), excessive stress leads to a higher probability of error and panic, thereby *decreasing* reliability. This statement is incorrect.\n4.  **There are incentives for quality**: Positive reinforcement and incentives for high-quality performance (rather than focusing on speed or punishing failure) generally encourage better adherence to standards and more careful execution of tasks, which *increases* reliability.\n\nEvaluating the choices:\n- Statement 1 is correct.\n- Statement 4 is correct.\n- Statements 2 and 3 reduce reliability.\n\nTherefore, the correct combination is 1 and 4.\n\n[Answer] [d]\n\n[SELF-CRITIQUE]\nThe question asks which factors contribute to humans performing tasks more reliably.\n\n1.  **They understand what is required and why**: This is a core principle of Human Factors Engineering. Clear communication and understanding reduce the likelihood of \"knowledge-based\" or \"rule-based\" errors. When an operator understands the purpose of a task, they are more likely to perform it correctly and recognize when a process is deviating from the norm. This increases reliability.\n2.  **The task is challenging and complex**: Increased complexity is a primary driver of human error. As cognitive load increases, the probability of error (Human Error Probability - HEP) increases. Reliability is maximized by simplifying tasks, not making them more complex.\n3.  **Pressure is applied which penalizes failure**: High-stress environments and the threat of punishment are known to increase error rates. Stress narrows the focus of attention and can lead to panic or the skipping of critical steps, thereby decreasing reliability.\n4.  **There are incentives for quality**: Incentives align the operator's goals with the desired outcome of error-free performance. Positive reinforcement for quality encourages attention to detail and adherence to procedures, which increases reliability.\n\nComparing these points to the choices:\n- Statement 1 is true.\n- Statement 4 is true.\n- Statements 2 and 3 are false in the context of increasing reliability.\n\nThe correct choice is 1 and 4.\n\n[Answer] [d]",
+    "extracted_answer": "d",
+    "usage": {
+      "cost": 0.00318,
+      "total_tokens": 3340,
+      "prompt_tokens": 2736,
+      "completion_tokens": 604,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 45,
+    "question": "[Question]: 6. Humans will perform tasks more reliably if:1. They understand what is required and why2. The task is challenging and complex 3. Pressure is applied which penalizes failure 4. There are incentives for quality \n\n[Choices]: [a] 1 only   | [b] 1 &amp; 2 | [c] 1 &amp; 3 | [d] 1 &amp; 4"
+  },
+  {
+    "raw_response": "To find the design life ($t$) at a specified reliability ($R(t)$) for a Weibull distribution, we use the reliability function formula:\n\n$$R(t) = e^{-(t/\\eta)^\\beta}$$\n\nWhere:\n- $R(t) = 0.90$ (90% reliability)\n- $\\beta = 4.5$ (shape parameter)\n- $\\eta = 9.3$ years (scale parameter/characteristic life)\n\n**Step 1: Rearrange the formula to solve for $t$.**\nTake the natural logarithm of both sides:\n$$\\ln(R(t)) = -(t/\\eta)^\\beta$$\nMultiply by -1:\n$$-\\ln(R(t)) = (t/\\eta)^\\beta$$\nTake the $\\beta$-th root of both sides:\n$$(-\\ln(R(t)))^{1/\\beta} = t/\\eta$$\nSolve for $t$:\n$$t = \\eta \\cdot [-\\ln(R(t))]^{1/\\beta}$$\n\n**Step 2: Substitute the known values into the equation.**\n$$t = 9.3 \\cdot [-\\ln(0.90)]^{1/4.5}$$\n\n**Step 3: Perform the calculations.**\n1. Calculate $\\ln(0.90)$:\n   $$\\ln(0.90) \\approx -0.10536$$\n2. Calculate $-\\ln(0.90)$:\n   $$-(-0.10536) = 0.10536$$\n3. Calculate the exponent $1/\\beta$:\n   $$1 / 4.5 \\approx 0.22222$$\n4. Raise $0.10536$ to the power of $0.22222$:\n   $$0.10536^{0.22222} \\approx 0.60596$$\n5. Multiply by $\\eta$:\n   $$t = 9.3 \\cdot 0.60596 \\approx 5.63548 \\text{ years}$$\n\n**Step 4: Compare with the choices.**\nThe calculated value is approximately 5.64 years.\n\n[Answer] [b]\n\n[SELF-CRITIQUE]\nThe problem asks for the design life ($t$) of a lawn mower engine given a Weibull distribution with shape parameter $\\beta = 4.5$ and scale parameter $\\eta = 9.3$ years, at a reliability $R(t) = 0.90$.\n\n**1. Formula Selection:**\nThe reliability function for the Weibull distribution is:\n$$R(t) = e^{-(t/\\eta)^\\beta}$$\n\n**2. Algebraic Rearrangement:**\nTo find the time $t$ for a specific reliability $R$:\n$$\\ln(R) = -(t/\\eta)^\\beta$$\n$$-\\ln(R) = (t/\\eta)^\\beta$$\n$$(-\\ln(R))^{1/\\beta} = t/\\eta$$\n$$t = \\eta \\cdot [-\\ln(R)]^{1/\\beta}$$\n\n**3. Calculation:**\n- $R = 0.90$\n- $\\beta = 4.5$\n- $\\eta = 9.3$\n\nStep-by-step:\n- $\\ln(0.90) \\approx -0.1053605$\n- $-\\ln(0.90) \\approx 0.1053605$\n- $1/\\beta = 1/4.5 \\approx 0.2222222$\n- $(0.1053605)^{0.2222222} \\approx 0.605963$\n- $t = 9.3 \\times 0.605963 \\approx 5.63545$\n\n**4. Evaluation of Pitfalls:**\n- **Instantaneous vs. Cumulative:** The question asks for design life at a specific reliability point, which correctly utilizes the cumulative reliability function $R(t)$.\n- **MTBF vs. MTTF:** Not applicable here as we are given the Weibull parameters directly.\n- **Censored vs. Complete Data:** The parameters $\\beta$ and $\\eta$ are already provided, so no estimation from raw data is required.\n- **Confidence Intervals:** The question asks for a point estimate of the design life, not a confidence limit.\n\nThe result $5.635$ years rounds to $5.64$ years.\n\n[Answer]",
+    "extracted_answer": "b",
+    "usage": {
+      "cost": 0.004841,
+      "total_tokens": 4632,
+      "prompt_tokens": 3622,
+      "completion_tokens": 1010,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "request_count": 2
+    },
+    "metadata": {
+      "model": "google/gemini-3-flash-preview",
+      "finish_reason": "stop",
+      "used_fewshot": true,
+      "used_self_critique": true
+    },
+    "question_id": 47,
+    "question": "[Question]: 9. A failure PDF for Lawn mower engine is assumed to be a Weibull distribution with  $ \\beta $ = 4.5 and  $ \\eta $  = 9.3 years. What is the design life at a reliability of 90%?\n\n[Choices]: [a] 4.82 yrs   | [b] 5.64 yrs   | [c] 6.66 yrs | [d] 3.35 yrs"
+  }
+]

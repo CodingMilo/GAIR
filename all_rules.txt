@@ -1,0 +1,321 @@
+Overview
+
+This data challenge is designed for the evaluation of the course Generative AI for Risk and Reliability at Centralesupélec. You will be given a set of multiple choice question testing basic knowledge on reliability engineering. Your goal is to train an LLM model to achieve highest accuracy in terms answering this question.
+
+This data challenge comprises of 75 multiple choice question from the Certified Reliability Engineer exam of American Society of Quality (ASQ). The CRE exam is one of the most widely accepted professional certification exam for reliability engineers. You are supposed to train a LLM model to achieve best performance in answering these questions.
+
+Resources:
+
+You will be given a training set of 49 questions, with their correct answers. You can design your model/algorithm based on these questions.
+All the questions are designed to cover the CRE body of knowledge: https://asqrrd.org/cre-bok/ You can use this information to train your model as well.
+
+Evaluation
+
+Your LLM should predict the correct answers for each test question. Please use a lower case letter to represent the correct answer. If you believe there are multiple correct answers seperate by a ",". For example, if you think choice "[a] XXX" is correct, output "a". If you think both "[a] XXX" and "[b] XXX" are correct, output "a, b".
+Submission File
+
+To consider the uncertainty, please repeat your prediction 5 times. Then, save the prediction from the five runs as a csv file with the following columns: "question_id", "prediction_1", "prediction_2", "prediction_3", "prediction_4", "prediction_5". Plesae refer to "sample_submission.csv" for an example submission file in the "Data section".
+Score
+
+You will be ranked based on the accuracy of your answers. The accuracy score will be computed as an average of your five predicitons. Please note that out of the 75 testing data, we randomly split around 50% to calculate the public leaderboard scores, where you can see directly after you made a submission. However, the winner will be decided based on the entire dataset, including the other 50% of "Private leaderboard", which is hidden from you during the competition. This is a common way to prevent overfitting your model.
+
+Below is the script used for calculating the score of your submission:
+
+
+
+The training dataset contains 49 multiple choice question from the Certified Reliability Engineer Exam (CRE) of American Society of Quality (ASQ). With the training dataset, you should develop an LLM-based AI model to predict the correct answers to these questions. You will be evaluated on the test dataset, which comprises of another 75 questions from CRE exams.
+Files
+
+    train.csv - the training set
+    test.csv - the test set
+    sample_submission.csv - a sample submission file in the correct format
+
+Columns
+
+    question_id - Index of the questions
+    question - A multiple choice question for reliability engineering where the LLM needs to predict the correct answer.
+    answer - The correct answer.
+
+
+PROJET : Generative AI for Reliability Engineering (CRE Exam Agent)
+
+OBJECTIF PRINCIPAL
+Développer un agent IA capable de répondre aux exigences de base d'un ingénieur en fiabilité certifié (Certified Reliability Engineer - CRE).
+L'objectif est d'entraîner/prompter un modèle LLM pour obtenir la meilleure précision possible aux questions de l'examen.
+
+ORGANISATION
+- Travail de groupe : Maximum 3 personnes par groupe.
+- Inscription :
+  1. Remplir le fichier sur SharePoint (lien dans les slides).
+  2. Créer une équipe sur Kaggle (le chef d'équipe crée, change le nom, invite les membres).
+- Compétition Kaggle : "Generative AI for reliability engineering - 2026".
+: -> tout ca est déjà fait
+
+DONNÉES
+- Training dataset (train.csv) : 49 questions à choix multiples (QCM) issues de l'examen CRE de l'ASQ, avec les réponses correctes.
+- Testing dataset (test.csv) : 75 questions d'examen passés (récemment mis à jour pour être tous des QCM).
+- Note : Une partie du leaderboard est publique (50%), l'autre est privée pour l'évaluation finale.
+
+MODÈLE ET CONTRAINTES
+- Aucun modèle imposé (utilisation via OpenRouter, 30 euros de token préparys).
+- Critères d'évaluation :
+  1. Performance du modèle (Précision/Accuracy).
+  2. Le prix (coût des tokens).
+
+TÂCHES TECHNIQUES À RÉALISER
+
+1. Configuration et API
+   - Créer un compte organisation sur OpenRouter (avec email étudiant).
+   - Générer une clé API et la stocker en variable d'environnement.
+   - Utiliser l'API pour envoyer des requêtes au modèle.
+-> Tout ca est déjà fait
+
+2. Développement du script de prédiction (Submission)
+   - Lire les données de test (test.csv).
+   - Créer une boucle pour traiter chaque question.
+   - Définir un "System Prompt" pour forcer le modèle à ne répondre que par la lettre correspondante (ex: [Answer] [a]).
+   - Extraire la lettre de la réponse.
+   - Générer 5 prédictions par question (pour gérer l'incertitude).
+   - Sauvegarder les résultats dans un fichier CSV respectant le format : "question_id", "prediction_1" ... "prediction_5".
+
+3. Analyse des erreurs (Failure Log)
+   - Écrire un script utilisant le dataset d'entraînement (train.csv).
+   - Demander au modèle de générer une réponse ET une explication.
+   - Comparer la réponse générée avec la réponse correcte.
+   - Si la réponse est fausse, enregistrer dans un fichier "failure_log.csv" : la prédiction erronée, la bonne réponse, et l'explication du modèle.
+
+LIVRABLES ET ÉCHÉANCES
+
+1. Assignment 1 : Analyse des patrons d'échec
+   - Tâche : Écrire un article (par groupe).
+   - Contenu :
+     * Pour chaque question du training set, résumer les erreurs typiques générées par le LLM.
+     * Analyser POURQUOI la réponse est fausse (analyse du failure_log).
+     * Tenter d'ajuster le prompt pour obtenir la bonne réponse (Prompt Engineering).
+   - Date limite : 08/02/2026 à 23h59.
+   - Dépôt : Lien Nextcloud fourni dans les slides.
+
+2. Projet Final (Soumission Kaggle)
+   - Date limite : 08/03/2026 à 23h59.
+
+
+# Structure du Projet (File System Context)
+
+Le projet est situé dans un dossier racine nommé `GAIR`.
+Voici l'organisation des fichiers et dossiers :
+
+## 1. Dossier `code/`
+Ce dossier contient les scripts Python exécutables.
+- `Prompt.py` : Module utilitaire contenant probablement les variables de texte pour les "System Prompts" (importé par les autres scripts).
+- `sample_code_one_run.py` : Script principal pour exécuter une prédiction ou un benchmark sur le test set (correspond au code "run_single_benchmark").
+- `sample_code_training_data.py` : Script dédié à l'analyse des données d'entraînement et à la génération des logs d'erreurs (correspond au code "extract_failed_answers").
+
+## 2. Dossier `data/`
+Ce dossier est au même niveau que `code/` (frère/sibling). Il contient les fichiers CSV sources.
+- `train.csv` : Dataset d'entraînement (49 questions avec réponses).
+- `test.csv` : Dataset de test (75 questions pour la compétition).
+- `sample_submission.csv` : Modèle de fichier pour la soumission Kaggle.
+
+## 3. Gestion des Chemins (Paths) pour le Code
+Attention aux chemins relatifs lors de l'exécution des scripts Python :
+
+- Si l'exécution se fait depuis la racine `GAIR/` (Working Directory par défaut dans VS Code) :
+  - Le chemin vers les données doit être : `data/train.csv`
+  
+- Si l'exécution se fait depuis l'intérieur du dossier `code/` :
+  - Le chemin vers les données doit remonter d'un cran : `../data/train.csv`
+
+## 4. Autres
+- `slides/` : Contient les supports de cours (PDFs).
+- `.vscode/` : Fichiers de configuration de l'éditeur.
+
+
+Liste des fichiers déjà présents :
+sample_code_training_data.py
+sample_code_one_run.py
+Prompt.py
+
+# Documentation du Script sample_code_training_data.py
+
+Ce script Python est conçu pour évaluer la performance d'un modèle de langage (via l'API OpenRouter) sur un dataset de questions à choix multiples (QCM) en ingénierie de la fiabilité, et pour analyser les erreurs commises.
+
+## 1. Dépendances et Configuration
+- **Bibliothèques principales :** `requests` (appels API), `pandas` (manipulation de données), `json`, `os`, `re` (expressions régulières).
+- **Authentification :** Le script attend une variable d'environnement `OPENROUTER_API_KEY`.
+
+## 2. Fonctions Principales
+
+### A. `run_single_benchmark`
+**Rôle :** Exécute une passe complète d'évaluation sur un fichier de données.
+**Signature :** `run_single_benchmark(dataset_path, mdl_name, sys_prompt, temperature=1, log_path='outputs/', print_each_run=True)`
+
+- **Entrées (Inputs) :**
+  - `dataset_path` (str) : Chemin vers le fichier CSV contenant les questions. **Important :** Le fichier est chargé via `pd.read_csv(dataset_path)` et doit contenir les colonnes `'question'` et `'answer'`.
+  - `mdl_name` (str) : Identifiant du modèle (ex: 'gpt-4o-mini').
+  - `sys_prompt` (str) : Instructions système données au LLM.
+  - `temperature` (float) : Paramètre de créativité du modèle.
+  - `log_path` (str) : Dossier de sortie.
+
+- **Logique interne :**
+  1. Lit le CSV source.
+  2. Pour chaque ligne, nettoie la question et la réponse attendue.
+  3. Envoie une requête POST à `https://openrouter.ai/api/v1/chat/completions`.
+  4. **Parsing de la réponse :** Le script s'attend à ce que le LLM formate sa réponse avec la balise `[Answer]`. Il utilise ensuite une regex `r'\[([a-zA-Z])\]'` pour extraire la lettre (a, b, c, etc.).
+  5. Compare la lettre extraite avec la réponse correcte (`is_correct`).
+
+- **Sorties (Outputs) :**
+  - Retourne une liste de booléens (`results_per_question`) indiquant le succès ou l'échec pour chaque question.
+  - Sauvegarde un fichier JSON détaillé (`{mdl_name}_{timestamp}.json`) dans `log_path` contenant tout l'historique (prompt, réponse complète, succès/échec).
+
+### B. `extract_failed_answers`
+**Rôle :** Agrège les résultats et isole les questions où le modèle a échoué pour analyse ultérieure.
+**Signature :** `extract_failed_answers(base_dict, prompt_chain=False)`
+
+- **Entrées :**
+  - `base_dict` (str) : Le dossier contenant les fichiers JSON de logs générés par `run_single_benchmark` et le fichier `df_results.csv`.
+  - `prompt_chain` (bool) : Flag pour gérer des structures de logs légèrement différentes (par défaut False).
+
+- **Logique interne :**
+  1. Lit `df_results.csv` pour obtenir les taux de réussite moyens.
+  2. Parcourt tous les fichiers `.json` dans le dossier.
+  3. Construit un DataFrame contenant : question, réponse du LLM, réponse correcte, statut (vrai/faux) et la réponse complète (explication).
+  4. Trie les données par taux de réussite ascendant (les échecs en premier).
+
+- **Sorties :**
+  - Génère un fichier `wrong_answers.csv` dans le dossier `base_dict`.
+
+## 3. Workflow d'Exécution (`if __name__ == '__main__':`)
+
+Le bloc principal orchestre le processus :
+
+1.  **Définition des chemins :**
+    - `dataset_path` est codé en dur : `'eval_baseline/create_dataset_data_challenge_2026/dataset_kaggle_original/train.csv'`. *C'est ici qu'il faut modifier le chemin si on change de source de données.*
+
+2.  **Configuration de l'expérience :**
+    - Modèle défini sur `'gpt-4.1-mini'`.
+    - Prompt système (`sys_prompt`) défini pour forcer le format `[Answer] [x]`.
+
+3.  **Gestion des dossiers :**
+    - Crée un dossier unique horodaté dans `outputs/` pour stocker les résultats de cette session.
+
+4.  **Boucle d'expérimentation :**
+    - Lance `run_single_benchmark` `n_experiments` fois (pour lisser la variance, actuellement n=1).
+    - Stocke les résultats (booléens) dans un DataFrame `df_results`.
+
+5.  **Calculs Statistiques :**
+    - Calcule la moyenne (mean) et l'écart-type (std) des succès par question.
+    - Calcule l'accuracy globale.
+
+6.  **Sauvegarde Finale :**
+    - Sauvegarde `df_results.csv`.
+    - Appelle `extract_failed_answers` pour générer le fichier d'analyse des erreurs.
+
+# Documentation du Script sample_code_one_run.py
+
+Ce script Python est conçu pour générer des prédictions sur un dataset de test (questions QCM) en utilisant un modèle de langage via l'API OpenRouter. Il effectue plusieurs passes pour générer un fichier de soumission robuste.
+
+## 1. Dépendances et Configuration
+- **Bibliothèques principales :** `requests` (appels API), `pandas` (manipulation de données), `numpy`, `json`, `os`, `re` (regex), `datetime`.
+- **Authentification :** Le script attend une variable d'environnement `OPENROUTER_API_KEY`.
+
+## 2. Fonctions Principales
+
+### `run_single_benchmark`
+**Rôle :** Exécute une passe complète de prédiction sur le fichier de test.
+**Signature :** `run_single_benchmark(dataset_path, mdl_name, sys_prompt, temperature=1, log_path='outputs/')`
+
+- **Entrées (Inputs) :**
+  - `dataset_path` (str) : Chemin vers le fichier CSV contenant les questions de test. **Important :** Le fichier est chargé via `pd.read_csv` et doit contenir une colonne `'question'`.
+  - `mdl_name` (str) : Identifiant du modèle (ex: 'gpt-4.1-mini').
+  - `sys_prompt` (str) : Instructions système données au LLM.
+  - `temperature` (float) : Paramètre de créativité (défaut=1).
+  - `log_path` (str) : Dossier de sortie pour les logs JSON.
+
+- **Logique interne :**
+  1. Lit le CSV source.
+  2. Pour chaque ligne (`iterrows`), nettoie la question.
+  3. Envoie une requête POST à `https://openrouter.ai/api/v1/chat/completions`.
+  4. **Parsing de la réponse :**
+     - Sépare la réponse sur la balise `[Answer]`.
+     - Utilise une regex `r'\[([a-zA-Z])\]'` pour extraire la ou les lettres de réponse.
+     - Formate la réponse extraite (ex: "a" ou "a, b").
+  5. Loggue la réponse complète et les métadonnées dans une liste `log_entries`.
+
+- **Sorties (Outputs) :**
+  - Retourne une liste `predicted_result` contenant les réponses extraites (lettres) pour chaque question.
+  - Sauvegarde un fichier JSON de logs (`{mdl_name}_{timestamp}.json`) dans `log_path`.
+
+## 3. Workflow d'Exécution (`if __name__ == '__main__':`)
+
+Le bloc principal orchestre la génération du fichier de soumission final :
+
+1.  **Définition des chemins :**
+    - `dataset_path` est codé en dur : `'eval_baseline/create_dataset_data_challenge_2026/dataset_kaggle_original/test.csv'`. *C'est ici qu'il faut modifier le chemin pour pointer vers le fichier de test réel.*
+
+2.  **Configuration de l'expérience :**
+    - Modèle : `'gpt-4.1-mini'`.
+    - Prompt système (`sys_prompt`) : Instructions strictes pour ne sortir que la lettre de la réponse au format `[Answer] [x]`.
+
+3.  **Gestion des dossiers :**
+    - Crée un dossier unique horodaté dans `outputs/` pour stocker les résultats.
+
+4.  **Boucle de Prédiction Multiple (Ensemble) :**
+    - Exécute `run_single_benchmark` **5 fois** (`for i in range(1, 6)`).
+    - Cela permet de générer 5 colonnes de prédictions (`prediction_1` à `prediction_5`) pour capturer l'incertitude du modèle.
+    - Stocke les résultats dans un DataFrame `df_results`.
+    - Ajoute une colonne `question_id` (index + 1).
+
+5.  **Sauvegarde Finale :**
+    - Sauvegarde le fichier CSV final `predition_{mdl_name}_{prompt_name}.csv` prêt pour la soumission ou l'évaluation.
+
+
+# Documentation du Script prompt.py
+
+Ce script Python interroge une API LLM (OpenRouter) pour répondre à des questions à choix multiples (QCM) extraites d'un fichier CSV. Il utilise une méthode d'ensemble (5 prédictions par question) pour améliorer la fiabilité.
+
+## 1. Configuration Globale & Constantes
+- **Authentification** : Récupère la clé API via `os.getenv("OPENROUTER_API_KEY")`. Lève une erreur si absente.
+- **Endpoint** : `https://openrouter.ai/api/v1/chat/completions`.
+- **Modèle** : Utilise `"arcee-ai/trinity-large-preview:free"`.
+- **System Prompt** : Instructions strictes demandant au modèle d'agir comme un correcteur d'examen, de ne fournir aucune explication, et de répondre uniquement par une lettre minuscule (a-z).
+
+## 2. Fonctions Utilitaires
+
+### `extract_letter(text: str) -> str`
+- **Rôle** : Nettoie la réponse brute du LLM pour isoler la lettre de réponse.
+- **Logique** : Utilise une expression régulière (`re.compile(r"[a-z]")`) pour trouver la première lettre minuscule. Retourne une chaîne vide si aucune lettre n'est trouvée.
+
+### `call_model(question_text: str, temperature: float, max_tokens: int) -> str`
+- **Rôle** : Effectue l'appel API vers OpenRouter.
+- **Entrées** : Le texte de la question.
+- **Sortie** : La lettre extraite de la réponse (via `extract_letter`).
+- **Gestion d'erreurs** : Lève une `RuntimeError` si la requête HTTP échoue (status code != 200).
+
+## 3. Fonction Principale : `main(input_csv_path, output_csv_path)`
+- **Lecture des Données** :
+  - Ouvre `input_csv_path` avec `csv.DictReader`.
+  - **Pré-requis** : Le fichier CSV d'entrée DOIT contenir les colonnes `"question_id"` et `"question"`.
+- **Boucle de Traitement** :
+  - Pour chaque ligne (question), effectue une boucle de 5 itérations (`N_PREDICTIONS`).
+  - Ajoute un délai (`time.sleep(0.2)`) pour respecter les limites de débit (Rate Limiting).
+  - Appelle `call_model`. En cas d'exception (ex: timeout, erreur API), la prédiction par défaut devient `"z"`.
+- **Écriture des Données** :
+  - Sauvegarde les résultats dans `output_csv_path`.
+  - **Format de sortie** : Colonnes `question_id`, `predition_1`, `predition_2`, `predition_3`, `predition_4`, `predition_5`.
+
+## 4. Workflow d'Exécution (`if __name__ == "__main__":`)
+Ce bloc orchestre l'exécution et le post-traitement des fichiers.
+
+1.  **Exécution de la prédiction** :
+    - Appelle `main("train.csv", "predictions_train2.csv")`.
+    - *Note pour l'agent* : C'est ici qu'il faut modifier le premier argument si le fichier source change (ex: passer de "train.csv" à "test.csv").
+
+2.  **Post-traitement (Nettoyage)** :
+    - Ouvre le fichier généré `predictions_train2.csv`.
+    - Convertit toutes les colonnes de prédictions (à partir de l'index 1) en minuscules (`cell.lower()`).
+    - Écrit le résultat final dans un nouveau fichier `train_predictions2.csv`.
+
+## 5. Résumé des Entrées/Sorties (I/O)
+- **Input** : Fichier CSV (ex: `train.csv`). Colonnes requises : `question_id`, `question`.
+- **Output Intermédiaire** : `predictions_train2.csv` (Brut).
+- **Output Final** : `train_predictions2.csv` (Cellules normalisées en minuscules).

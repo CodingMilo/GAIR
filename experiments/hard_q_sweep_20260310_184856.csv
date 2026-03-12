@@ -1,0 +1,15 @@
+config,accuracy,n_correct,n_total,n_empty,cost_usd
+grokfast|precise+RAG+t0.3,75.0%,12,16,0,$0.07006
+gemini3flash|deep_think+RAG,68.8%,11,16,1,$0.04467
+mistrallarge|precise+RAG+t0.3,62.5%,10,16,0,$0.03235
+deepseekv32|precise+RAG+t0.3,62.5%,10,16,1,$0.06296
+gemini3flash|precise+RAG+t0.3,56.2%,9,16,0,$0.05879
+gpt41mini|precise+RAG+t0.3,56.2%,9,16,1,$0.03043
+gpt41mini|fewshot5_loo+RAG+precise,50.0%,8,16,0,$0.03504
+qwen235b|deep_think+RAG,50.0%,8,16,0,$0.01477
+gpt41mini|precise+RAG+critique,50.0%,8,16,2,$0.04860
+gpt41mini|precise+noRAG,43.8%,7,16,0,$0.02325
+qwen235b|precise+RAG+t0.3,43.8%,7,16,0,$0.01202
+gpt5mini|deep_think+RAG,18.8%,3,16,10,$0.04612
+gpt5mini|precise+RAG+t0.0,12.5%,2,16,12,$0.03791
+gpt5mini|precise+RAG+t0.3,6.2%,1,16,13,$0.03872

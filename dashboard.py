@@ -33,6 +33,44 @@ def get_models():
             return json.load(f)
     return {"openai/gpt-4o-mini": "GPT-4o Mini", "google/gemini-2.0-flash-001": "Gemini 2.0 Flash"}
 
+
+def load_run_cost_breakdown(run_path: Path) -> pd.DataFrame:
+    rows = []
+    for result_file in sorted(run_path.glob("run_*_results.json")):
+        run_name = result_file.stem.replace("_results", "")
+        try:
+            with open(result_file, "r", encoding="utf-8") as f:
+                entries = json.load(f)
+        except Exception:
+            continue
+
+        total_cost = 0.0
+        total_tokens = 0
+        prompt_tokens = 0
+        completion_tokens = 0
+        request_count = 0
+        question_count = len(entries)
+
+        for entry in entries:
+            usage = entry.get("usage", {}) or {}
+            total_cost += usage.get("cost", 0.0) or 0.0
+            total_tokens += usage.get("total_tokens", 0) or 0
+            prompt_tokens += usage.get("prompt_tokens", 0) or 0
+            completion_tokens += usage.get("completion_tokens", 0) or 0
+            request_count += usage.get("request_count", 0) or 0
+
+        rows.append({
+            "run": run_name,
+            "cost_usd": total_cost,
+            "avg_cost_per_question_usd": (total_cost / question_count) if question_count else 0.0,
+            "total_tokens": total_tokens,
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "request_count": request_count,
+        })
+
+    return pd.DataFrame(rows)
+
 st.set_page_config(page_title="GAIR Dashboard", layout="wide", page_icon="🛡️")
 
 # --- SIDEBAR: Configuration ---
@@ -47,9 +85,55 @@ prompt_choice = st.sidebar.selectbox("System Prompt", list(prompts_dict.keys()))
 with st.sidebar.expander("⚙️ Hyperparameters", expanded=True):
     temp = st.slider("Temperature", 0.0, 2.0, 1.0, 0.1)
     n_runs = st.number_input("Number of Runs", 1, 10, 5 if mode == "test" else 1)
+    max_tokens = st.number_input(
+        "Max Output Tokens",
+        min_value=50, max_value=8000, value=512, step=50,
+        help="Limit per-response token length. Lower = faster & cheaper (e.g. 256 for simple prompts, 512-1024 for CoT)."
+    )
     use_rag = st.checkbox("Enable RAG", value=True)
-    rag_k = st.number_input("RAG k", 1, 5, 2)
+    rag_k = st.number_input("RAG k", 1, 20, 8)
     workers = st.number_input("Parallel Workers", 1, 20, 5)
+    rate_limit = st.number_input(
+        "Rate Limit (s between calls)", 0.0, 5.0, 0.3, 0.1,
+        help="Minimum seconds between API calls across all parallel workers."
+    )
+
+st.sidebar.divider()
+st.sidebar.subheader("🧠 Advanced Techniques")
+use_fewshot = st.sidebar.checkbox(
+    "Few-shot Examples (from train set)",
+    value=False,
+    help="Retrieve the k most similar training Q&A pairs and prepend them to each question. During train evaluation, the current question is excluded (leave-one-out) to avoid answer leakage. Costs extra embedding tokens."
+)
+if use_fewshot:
+    fewshot_k = st.sidebar.number_input("Few-shot k", 1, 10, 3)
+else:
+    fewshot_k = 3
+
+use_self_critique = st.sidebar.checkbox(
+    "Self-Critique Pass (2× cost)",
+    value=False,
+    help="After the first answer, send a second call asking the model to check common CRE pitfalls and correct itself."
+)
+
+use_tool_calling = st.sidebar.checkbox(
+    "Tool Calling — Python math executor",
+    value=False,
+    help=(
+        "Gives the LLM a sandboxed Python tool (execute_python_math) for precise "
+        "Weibull / Poisson / MTBF calculations. Recommended with the 'deep_think_json' prompt. "
+        "May add 1-3 extra API calls per question when math is detected."
+    )
+)
+
+use_json_format = st.sidebar.checkbox(
+    "Structured JSON Output",
+    value=False,
+    help=(
+        "Expects a final JSON block containing 'selected_letter' while still allowing the model to "
+        "show its reasoning above it. Use with the 'deep_think_json' prompt."
+    )
+)
 
 st.sidebar.divider()
 hard_only = st.sidebar.checkbox("Hard Questions Only", value=False)
@@ -128,18 +212,26 @@ if st.session_state.is_running:
     st.session_state.callback.live_table = live_table
     
     try:
-        bridge.run_experiment(
+        result_df = bridge.run_experiment(
             mode=mode, n_runs=n_runs, use_rag=use_rag, hard_only=hard_only,
             model_name=model_choice, prompt_name=prompt_choice,
             custom_system_prompt=edited_prompt, temperature=temp,
             rag_k=rag_k, max_workers=workers,
+            max_tokens=max_tokens, rate_limit_seconds=rate_limit,
+            use_fewshot=use_fewshot, fewshot_k=fewshot_k,
+            use_self_critique=use_self_critique,
+            use_tool_calling=use_tool_calling,
+            use_json_format=use_json_format,
             progress_callback=st.session_state.callback
         )
         st.session_state.is_running = False
+        st.session_state.last_result_df = result_df
         
         # After run, show summary
         if not st.session_state.callback.stop_requested:
             st.success("Campaign finished!")
+            if mode == "test":
+                st.info("Test mode complete. Download the Kaggle submission CSV from the Results History below.")
             st.balloons()
             # Refresh to show historical analysis tabs
             st.rerun()
@@ -169,16 +261,21 @@ elif st.session_state.live_data:
             
         c2.metric("Mean Accuracy", f"{acc:.1%}")
         
-        # Kaggle Score Calculation (Accuracy - 0.15 * Cost_75)
-        # We need the average cost for ONE complete run of 75 questions
+        # Kaggle Score: accuracy - 0.15 * avg_cost_per_run (for 75 questions); 0 if cost > 0.4
         total_questions_processed = len(ldf)
         total_cost = ldf["cost"].sum() if "cost" in ldf.columns else 0
+        n_runs_done = ldf["run"].nunique() if "run" in ldf.columns else 1
         
-        if total_questions_processed > 0:
+        if total_questions_processed > 0 and n_runs_done > 0:
             avg_cost_per_question = total_cost / total_questions_processed
-            est_cost_75 = avg_cost_per_question * 75
-            kaggle_score = acc - (0.15 * est_cost_75)
-            c3.metric("Est. Kaggle Score", f"{kaggle_score:.3f}", help=f"Formula: Accuracy - 0.15 * (AvgCostPerQ * 75). Estimated cost for 75 questions: ${est_cost_75:.4f}")
+            est_cost_per_run = avg_cost_per_question * 75
+            if est_cost_per_run > 0.4:
+                kaggle_score = 0.0
+                score_help = f"Cost ${est_cost_per_run:.4f} > $0.40 threshold → score = 0"
+            else:
+                kaggle_score = max(0, min(1, acc - 0.15 * est_cost_per_run))
+                score_help = f"acc - 0.15 × cost = {acc:.3f} - 0.15 × {est_cost_per_run:.4f}. Threshold: $0.40/run."
+            c3.metric("Est. Kaggle Score", f"{kaggle_score:.3f}", help=score_help)
     
     c4.metric("Questions", len(ldf))
 
@@ -228,16 +325,60 @@ if runs:
     with t1:
         if solution_file.exists():
             df = pd.read_csv(solution_file)
+            pred_cols = [c for c in df.columns if c.startswith("prediction_")]
+            
+            # Check if this is a test run (no answer column) or train run
+            kaggle_file = run_path / "kaggle_submission.csv"
+            if kaggle_file.exists():
+                st.success("TEST RUN — Kaggle submission ready for download!")
+                with open(kaggle_file, "rb") as kf:
+                    st.download_button(
+                        label="⬇️ Download kaggle_submission.csv",
+                        data=kf.read(),
+                        file_name="kaggle_submission.csv",
+                        mime="text/csv",
+                    )
+                kaggle_df = pd.read_csv(kaggle_file)
+                avg_cost = kaggle_df["Average cost per run"].mean() if "Average cost per run" in kaggle_df.columns else 0.0
+                per_question_cost = (avg_cost / len(df)) if len(df) else 0.0
+                run_costs_df = load_run_cost_breakdown(run_path)
+                total_job_cost = run_costs_df["cost_usd"].sum() if not run_costs_df.empty else avg_cost * max(len(pred_cols), 1)
+
+                mc1, mc2, mc3 = st.columns(3)
+                mc1.metric(
+                    "Kaggle Cost / Full Run",
+                    f"${avg_cost:.6f}",
+                    help="Cost of one complete 75-question submission run. This is the value used by the Kaggle evaluator."
+                )
+                mc2.metric(
+                    "Average Cost / Question",
+                    f"${per_question_cost:.6f}",
+                    help="Average cost per answered question, estimated from the full-run Kaggle cost divided by the number of questions."
+                )
+                mc3.metric(
+                    "Total Cost For This Job",
+                    f"${total_job_cost:.6f}",
+                    help="Sum of all repetitions executed in this dashboard run."
+                )
+
+                st.caption(
+                    "The `Average cost per run` field is intentionally identical on every row of `kaggle_submission.csv`: "
+                    "the competition scorer reads the column mean as one global cost for a full submission run."
+                )
+
+                if not run_costs_df.empty:
+                    st.subheader("Run Cost Breakdown")
+                    st.dataframe(run_costs_df, width='stretch')
+            
             st.dataframe(df, width='stretch')
             
-            # Improved stats for historical view
+            # Improved stats for historical view (only for train runs with ground truth)
             train_data_path = Path(__file__).parent / "data" / "train.csv"
             if train_data_path.exists():
                 train_df = pd.read_csv(train_data_path)
                 merged = df.merge(train_df[["question_id", "answer"]], on="question_id", how="inner")
                 if not merged.empty:
                     # Calculate accuracy for EACH prediction column
-                    pred_cols = [c for c in df.columns if c.startswith("prediction_")]
                     accuracies = []
                     for col in pred_cols:
                         acc_run = (merged[col].astype(str).str.lower().str.strip() == merged["answer"].astype(str).str.lower().str.strip()).mean()
@@ -245,24 +386,28 @@ if runs:
                     
                     mean_acc = sum(accuracies) / len(accuracies)
                     
-                    # Try to get cost from JSON to calculate Kaggle Score
+                    # Try to get cost from JSON to calculate Kaggle Score (threshold 0.4)
                     c1, c2 = st.columns(2)
                     c1.metric("Mean Accuracy (All Runs)", f"{mean_acc:.1%}")
                     
-                    # Estimate Kaggle Score if cost info is available in a results JSON
                     run_json = run_path / "run_1_results.json"
                     if run_json.exists():
                         try:
-                            with open(run_json, "r") as f:
-                                data = json.load(f)
-                                total_run_cost = sum(q.get("usage", {}).get("cost", 0) for q in data)
-                                n_q = len(data)
+                            with open(run_json, "r") as fj:
+                                rdata = json.load(fj)
+                                total_run_cost = sum(q.get("usage", {}).get("cost", 0) for q in rdata)
+                                n_q = len(rdata)
                                 if n_q > 0:
                                     avg_cost_q = total_run_cost / n_q
                                     est_75 = avg_cost_q * 75
-                                    k_score = mean_acc - (0.15 * est_75)
-                                    c2.metric("Est. Kaggle Score", f"{k_score:.3f}", help=f"Based on Run 1 average cost: ${est_75:.4f} for 75 questions")
-                        except:
+                                    if est_75 > 0.4:
+                                        k_score = 0.0
+                                        help_txt = f"Cost ${est_75:.4f} > $0.40 threshold → score = 0"
+                                    else:
+                                        k_score = max(0, min(1, mean_acc - 0.15 * est_75))
+                                        help_txt = f"acc - 0.15 × cost = {mean_acc:.3f} - 0.15 × {est_75:.4f}"
+                                    c2.metric("Est. Kaggle Score", f"{k_score:.3f}", help=help_txt)
+                        except Exception:
                             pass
     
     with t2:

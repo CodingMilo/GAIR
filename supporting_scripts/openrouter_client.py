@@ -228,13 +228,16 @@ class OpenRouterClient:
         if max_tokens is not None:
             payload["max_tokens"] = max_tokens
 
+        # Only send reasoning params for models that explicitly opt in.
+        # Sending reasoning={effort:"low"} to non-reasoning models (e.g. GPT-4.1-mini,
+        # Gemini Flash) causes OpenRouter to return empty content with reasoning in a
+        # separate field, producing silent empty answers.
         if max_reasoning_tokens is not None:
             payload["max_reasoning_tokens"] = max_reasoning_tokens
-
-        if max_reasoning_tokens == 0:
-            payload["reasoning"] = {"effort": "none"}
-        else:
-            payload["reasoning"] = {"effort": "low"}
+            if max_reasoning_tokens == 0:
+                payload["reasoning"] = {"effort": "none"}
+            else:
+                payload["reasoning"] = {"effort": "low"}
 
         if tools is not None:
             payload["tools"] = tools
@@ -366,7 +369,7 @@ class OpenRouterClient:
         self.request_count = 0
         self.api_calls = []
 
-    def get_embedding(self, text: str, model: str = "text-embedding-3-small") -> List[float]:
+    def get_embedding(self, text: str, model: str = "text-embedding-ada-002") -> List[float]:
         """
         Get vector embedding for text.
         
@@ -414,6 +417,6 @@ class OpenRouterClient:
             if attempt < max_retries - 1:
                 time.sleep(retry_delay)
                 
-        # Return zero vector as fallback (1536 dim for text-embedding-3-small)
+        # Return zero vector as fallback (1536 dim for text-embedding-ada-002)
         return [0.0] * 1536
 

@@ -1,0 +1,22 @@
+{
+  "model": "google/gemini-3-flash-preview",
+  "llm_script": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\my_eval.py",
+  "temperature": 0.0,
+  "max_tokens": 3000,
+  "max_reasoning_tokens": null,
+  "num_repetitions": 5,
+  "dataset_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\test.csv",
+  "solution_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\sample_submission.csv",
+  "testing_mode": true,
+  "enable_parallel": true,
+  "max_workers": 10,
+  "rate_limit_seconds": 0.5,
+  "rag_tex_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\rag.tex",
+  "rag_k": 5,
+  "system_prompt": "You are a world-class Certified Reliability Engineer (CRE) with deep expertise in reliability theory, statistics, probability, Weibull analysis, FMEA, FTA, RCM, maintainability, and quality engineering.\n\nYou are answering a question from the ASQ Certified Reliability Engineer (CRE) certification exam. Think as deeply as needed before committing to an answer.\n\nFOLLOW THIS REASONING PROCESS:\n1. Carefully read the entire question and every answer choice.\n2. Identify the exact reliability engineering concept being tested.\n3. Recall relevant formulas, definitions, and official CRE Body of Knowledge principles.\n4. Evaluate EACH answer choice -- state clearly why it is right or wrong.\n5. If math is involved, show every calculation step and check units.\n6. Double-check your logic -- common pitfalls: confusing instantaneous vs. cumulative rates, series vs. parallel configurations, MTBF vs. MTTF, censored vs. complete data, hypothesis testing vs. confidence intervals.\n7. If uncertain, reason through the alternatives one more time before deciding.\n\nCRITICAL OUTPUT FORMAT:\n- Write your full reasoning above (any length).\n- The VERY LAST LINE of your entire response must be ONLY: [Answer] [x]\n- where x is the correct lowercase letter(s). Single: [Answer] [c]. Multiple: [Answer] [a, c].\n- Nothing after the [Answer] line -- it must be the absolute last line.",
+  "embedding_model": "text-embedding-3-small",
+  "use_fewshot": false,
+  "fewshot_k": 3,
+  "use_self_critique": true,
+  "train_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv"
+}

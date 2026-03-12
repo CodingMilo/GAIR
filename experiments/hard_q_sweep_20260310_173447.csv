@@ -1,0 +1,7 @@
+config,accuracy,n_correct,n_total,n_empty,cost_usd
+fewshot3+RAG+precise,93.8%,15,16,0,$0.02814
+fewshot5+RAG+precise,81.2%,13,16,0,$0.03181
+fewshot3+RAG+precise+critique,75.0%,12,16,0,$0.04475
+fewshot3+RAG+deep_think,75.0%,12,16,0,$0.03452
+fewshot3+RAG+precise+temp0,75.0%,12,16,0,$0.02853
+fewshot3+precise+noRAG,75.0%,12,16,0,$0.02401

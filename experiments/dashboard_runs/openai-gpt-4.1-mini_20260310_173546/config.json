@@ -1,0 +1,22 @@
+{
+  "model": "openai/gpt-4.1-mini",
+  "llm_script": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\my_eval.py",
+  "temperature": 0.3,
+  "max_tokens": 900,
+  "max_reasoning_tokens": null,
+  "num_repetitions": 1,
+  "dataset_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv",
+  "solution_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv",
+  "testing_mode": false,
+  "enable_parallel": true,
+  "max_workers": 8,
+  "rate_limit_seconds": 0.3,
+  "rag_tex_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\scripts\\rag.tex",
+  "rag_k": 2,
+  "system_prompt": null,
+  "embedding_model": "text-embedding-3-small",
+  "use_fewshot": true,
+  "fewshot_k": 3,
+  "use_self_critique": false,
+  "train_path": "C:\\Users\\miloh\\Documents\\Etudes\\CS\\3A\\Mention ORRA\\GAIR_TEAM_PROJECT\\data\\train.csv"
+}
