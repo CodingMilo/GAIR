@@ -345,6 +345,9 @@ def evaluate_question(
         'request_count': 0,
     }
 
+    # Tracking for tool usage logs
+    tool_logs = []
+
     def _accumulate(resp: dict) -> None:
         u = resp.get('usage', {}) or {}
         total_usage['cost'] += u.get('cost', 0.0) or 0.0
@@ -397,7 +400,14 @@ def evaluate_question(
                     fn_args = {}
 
                 if fn_name == 'execute_python_math':
-                    tool_result = run_python_code(fn_args.get('code', ''))
+                    code = fn_args.get('code', '')
+                    tool_result = run_python_code(code)
+                    _log(f"[Tool] Question {config.get('current_question_id')} used execute_python_math")
+                    tool_logs.append({
+                        "tool": fn_name,
+                        "code": code,
+                        "output": tool_result
+                    })
                 else:
                     tool_result = f"Unknown tool '{fn_name}'."
 
@@ -437,6 +447,7 @@ def evaluate_question(
             "{\"available_options\": {\"a\": \"...\", \"b\": \"...\", \"c\": \"...\", \"d\": \"...\"}, "
             "\"reasoning\": \"short direct reasoning\", "
             "\"selected_letter\": \"a\"}. "
+            "selected_letter can be one letter (\"a\") or multiple letters separated by comma (\"a, c\"). "
             "Do not output anything after that final JSON line."
             if use_json_format else
             "State your final answer clearly."
@@ -469,7 +480,8 @@ def evaluate_question(
             "You may explain the correction in plain text, but you must end with exactly one valid JSON object on the last non-empty line, using the same schema: "
             "{\"available_options\": {\"a\": \"...\", \"b\": \"...\", \"c\": \"...\", \"d\": \"...\"}, "
             "\"reasoning\": \"short direct reasoning\", "
-            "\"selected_letter\": \"a\"}."
+            "\"selected_letter\": \"a\"}. "
+            "selected_letter can be one letter (\"a\") or multiple letters separated by comma (\"a, c\")."
             if use_json_format else
             (
                 f"Your current answer is: {first_answer or '(unclear)'}\n\n"
@@ -520,6 +532,7 @@ def evaluate_question(
             'finish_reason': response['choices'][0].get('finish_reason'),
             'used_fewshot': bool(fewshot_block),
             'used_self_critique': bool(config.get('use_self_critique')),
+            'tool_usage': tool_logs,
         }
     }
 
@@ -538,6 +551,30 @@ def extract_answer(response_content: str) -> dict:
         Dictionary with 'answer' and 'reasoning' keys
     """
     result = {"answer": "", "reasoning": ""}
+
+    def _normalize_selected_letters(value) -> str:
+        """Normalize model-selected letters to Kaggle-compatible format.
+
+        Accepts formats like "a", "a, c", ["a", "c"], or mixed tokens.
+        Returns comma-separated lowercase letters preserving first-seen order.
+        """
+        letters = []
+        if isinstance(value, list):
+            for item in value:
+                letters.extend(re.findall(r"[a-z]", str(item).lower()))
+        else:
+            letters = re.findall(r"[a-z]", str(value).lower())
+
+        ordered_unique = []
+        for letter in letters:
+            if letter not in ordered_unique:
+                ordered_unique.append(letter)
+
+        if not ordered_unique:
+            return ""
+        if len(ordered_unique) == 1:
+            return ordered_unique[0]
+        return ", ".join(ordered_unique)
 
     # FIX: Un-escape literal escape sequences before JSON parsing
     # Some LLMs return literal \n, \t, etc. instead of actual characters
@@ -567,12 +604,12 @@ def extract_answer(response_content: str) -> dict:
         data = json.loads(cleaned_content)
 
         # Priority: strict selected_letter schema.
-        if 'selected_letter' in data:
-            letter = str(data.get('selected_letter', '')).strip().lower()
-            if letter and len(letter) == 1 and letter.isalpha():
-                result["answer"] = letter
-                result["reasoning"] = str(data.get('reasoning', '')).strip()
-                return result
+        selected_value = data.get('selected_letter', data.get('selected_letters', ''))
+        letter = _normalize_selected_letters(selected_value)
+        if letter:
+            result["answer"] = letter
+            result["reasoning"] = str(data.get('reasoning', '')).strip()
+            return result
 
     except (json.JSONDecodeError, AttributeError, KeyError):
         pass
@@ -589,13 +626,13 @@ def extract_answer(response_content: str) -> dict:
                 data, end_idx = decoder.raw_decode(response_content[idx:])
                 if not isinstance(data, dict):
                     continue
-                if 'selected_letter' in data:
-                    letter = str(data.get('selected_letter', '')).strip().lower()
-                    if letter and len(letter) == 1 and letter.isalpha():
-                        last_valid_result = {
-                            "answer": letter,
-                            "reasoning": str(data.get('reasoning', '')).strip()
-                        }
+                selected_value = data.get('selected_letter', data.get('selected_letters', ''))
+                letter = _normalize_selected_letters(selected_value)
+                if letter:
+                    last_valid_result = {
+                        "answer": letter,
+                        "reasoning": str(data.get('reasoning', '')).strip()
+                    }
             except json.JSONDecodeError:
                 continue
 

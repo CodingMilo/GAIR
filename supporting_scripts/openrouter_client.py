@@ -246,104 +246,132 @@ class OpenRouterClient:
         valid_kwargs = {k: v for k, v in kwargs.items() if k in _KNOWN_OPENROUTER_PARAMS}
         payload.update(valid_kwargs)
 
-        # Acquire rate limit before making API request (if rate limiter configured)
-        # This ensures all clients respect the global rate limit
-        if self.rate_limiter:
-            self.rate_limiter.acquire()
+        max_retries = 3
+        retryable_statuses = {429, 500, 502, 503, 504}
+        retry_delay = 1.5
 
-        try:
-            response = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers=headers,
-                json=payload,
-                timeout=effective_timeout
-            )
+        for attempt in range(max_retries):
+            try:
+                # Acquire rate limit before each API attempt.
+                if self.rate_limiter:
+                    self.rate_limiter.acquire()
 
-            if response.status_code != 200:
+                response = requests.post(
+                    "https://openrouter.ai/api/v1/chat/completions",
+                    headers=headers,
+                    json=payload,
+                    timeout=effective_timeout
+                )
+
+                if response.status_code == 200:
+                    response_data = response.json()
+                    usage = response_data.get('usage', {})
+
+                    cost = usage.get('cost', 0.0)
+                    prompt_tokens = usage.get('prompt_tokens', 0)
+                    completion_tokens = usage.get('completion_tokens', 0)
+                    total_tokens = usage.get('total_tokens', 0)
+                    reasoning_tokens = usage.get('completion_tokens_details', {}).get('reasoning_tokens', 0)
+                    cached_tokens = usage.get('prompt_tokens_details', {}).get('cached_tokens', 0)
+
+                    self.cumulative_cost += cost
+                    self.total_prompt_tokens += prompt_tokens
+                    self.total_completion_tokens += completion_tokens
+                    self.total_tokens += total_tokens
+                    self.total_reasoning_tokens += reasoning_tokens
+                    self.total_cached_tokens += cached_tokens
+                    self.request_count += 1
+
+                    call_info = {
+                        "request_id": response_data.get('id'),
+                        "model": model,
+                        "prompt_tokens": prompt_tokens,
+                        "completion_tokens": completion_tokens,
+                        "total_tokens": total_tokens,
+                        "reasoning_tokens": reasoning_tokens,
+                        "cached_tokens": cached_tokens,
+                        "cost": cost,
+                        "cost_details": usage.get('cost_details', {}),
+                        "response": response_data['choices'][0]['message']['content'],
+                        "error_type": None
+                    }
+                    self.api_calls.append(call_info)
+
+                    return response_data
+
+                # Retry transient server/rate-limit failures
+                if response.status_code in retryable_statuses and attempt < max_retries - 1:
+                    logger.warning(
+                        "Transient OpenRouter error %s on attempt %s/%s. Retrying in %.1fs.",
+                        response.status_code,
+                        attempt + 1,
+                        max_retries,
+                        retry_delay,
+                    )
+                    time.sleep(retry_delay)
+                    continue
                 raise Exception(f"API request failed with status {response.status_code}: {response.text}")
 
-            response_data = response.json()
-            usage = response_data.get('usage', {})
+            except requests.exceptions.Timeout:
+                if attempt < max_retries - 1:
+                    logger.warning(
+                        "OpenRouter timeout on attempt %s/%s. Retrying in %.1fs.",
+                        attempt + 1,
+                        max_retries,
+                        retry_delay,
+                    )
+                    time.sleep(retry_delay)
+                    continue
+                break
 
-            cost = usage.get('cost', 0.0)
-            prompt_tokens = usage.get('prompt_tokens', 0)
-            completion_tokens = usage.get('completion_tokens', 0)
-            total_tokens = usage.get('total_tokens', 0)
-            reasoning_tokens = usage.get('completion_tokens_details', {}).get('reasoning_tokens', 0)
-            cached_tokens = usage.get('prompt_tokens_details', {}).get('cached_tokens', 0)
+            except requests.exceptions.RequestException as e:
+                if attempt < max_retries - 1:
+                    logger.warning(
+                        "OpenRouter request exception %s on attempt %s/%s. Retrying in %.1fs.",
+                        type(e).__name__,
+                        attempt + 1,
+                        max_retries,
+                        retry_delay,
+                    )
+                    time.sleep(retry_delay)
+                    continue
+                break
 
-            self.cumulative_cost += cost
-            self.total_prompt_tokens += prompt_tokens
-            self.total_completion_tokens += completion_tokens
-            self.total_tokens += total_tokens
-            self.total_reasoning_tokens += reasoning_tokens
-            self.total_cached_tokens += cached_tokens
-            self.request_count += 1
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    logger.warning(
+                        "OpenRouter API error on attempt %s/%s: %s. Retrying in %.1fs.",
+                        attempt + 1,
+                        max_retries,
+                        str(e)[:200],
+                        retry_delay,
+                    )
+                    time.sleep(retry_delay)
+                    continue
+                break
 
-            call_info = {
-                "request_id": response_data.get('id'),
-                "model": model,
-                "prompt_tokens": prompt_tokens,
-                "completion_tokens": completion_tokens,
-                "total_tokens": total_tokens,
-                "reasoning_tokens": reasoning_tokens,
-                "cached_tokens": cached_tokens,
-                "cost": cost,
-                "cost_details": usage.get('cost_details', {}),
-                "response": response_data['choices'][0]['message']['content'],
-                "error_type": None
-            }
-            self.api_calls.append(call_info)
+        # Final fallback: never raise here, return empty content so the benchmark can continue.
+        self.request_count += 1
+        call_info = {
+            "request_id": None,
+            "model": model,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "reasoning_tokens": 0,
+            "cached_tokens": 0,
+            "cost": 0.0,
+            "cost_details": {},
+            "response": "",
+            "error_type": "api_failed_after_retries"
+        }
+        self.api_calls.append(call_info)
 
-            return response_data
-
-        except requests.exceptions.Timeout:
-            self.request_count += 1
-
-            call_info = {
-                "request_id": None,
-                "model": model,
-                "prompt_tokens": 0,
-                "completion_tokens": 0,
-                "total_tokens": 0,
-                "reasoning_tokens": 0,
-                "cached_tokens": 0,
-                "cost": 0.0,
-                "cost_details": {},
-                "response": "",
-                "error_type": "timeout"
-            }
-            self.api_calls.append(call_info)
-
-            return {
-                "choices": [{"message": {"content": ""}}],
-                "id": None,
-                "usage": None
-            }
-
-        except requests.exceptions.RequestException as e:
-            self.request_count += 1
-
-            call_info = {
-                "request_id": None,
-                "model": model,
-                "prompt_tokens": 0,
-                "completion_tokens": 0,
-                "total_tokens": 0,
-                "reasoning_tokens": 0,
-                "cached_tokens": 0,
-                "cost": 0.0,
-                "cost_details": {},
-                "response": "",
-                "error_type": str(type(e).__name__)
-            }
-            self.api_calls.append(call_info)
-
-            return {
-                "choices": [{"message": {"content": ""}}],
-                "id": None,
-                "usage": None
-            }
+        return {
+            "choices": [{"message": {"content": ""}}],
+            "id": None,
+            "usage": None
+        }
 
     def get_usage_summary(self) -> Dict:
         """Get summary of API usage."""
